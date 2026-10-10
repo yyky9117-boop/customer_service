@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:snack-customer-service:contracts:v1:session-state",
+  "title": "服务端会话状态",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "conversation_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,80}$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "active_module": {
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "product_recommendation"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "module_states": {
+      "type": "object",
+      "properties": {
+        "product_recommendation": {
+          "$ref": "urn:snack-customer-service:contracts:v1:common#/$defs/recommendation_state"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "conversation_id",
+    "revision",
+    "active_module",
+    "updated_at",
+    "module_states"
+  ],
+  "additionalProperties": false
+}

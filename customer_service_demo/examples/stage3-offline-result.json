@@ -1,0 +1,213 @@
+{
+  "mode": "structured_input_offline",
+  "live_model_used": false,
+  "session_persisted": false,
+  "reference_time": "2026-10-07T12:00:00+08:00",
+  "input": "办公室吃，必须独立小包，不辣，不要坚果，不要临期，最好低糖，买三件，含运费最多60元",
+  "result": {
+    "schema_version": "1.0",
+    "conversation_id": "conv_offline",
+    "request_id": "req_offline",
+    "turn_id": "turn_offline",
+    "base_revision": 0,
+    "revision": 1,
+    "module": "product_recommendation",
+    "status": "completed",
+    "message": {
+      "id": "msg_offline",
+      "role": "assistant",
+      "content": "根据这次需求，以下是可选方案；每张卡片是一种购买选择。\n1. 原味燕麦小饼干 × 3；商品应付 38.70 元，运费 6.00 元，整单 44.70 元。\n2. 无糖薄荷糖 × 1、低糖谷物棒 × 2；商品应付 53.70 元，运费 6.00 元，整单 59.70 元。 偏好说明：没有完全匹配低糖偏好，可与首选方案比较。\n3. 原味燕麦小饼干 × 1、无糖薄荷糖 × 2；商品应付 28.70 元，运费 6.00 元，整单 34.70 元。 偏好说明：没有完全匹配低糖偏好，可与首选方案比较。",
+      "cards": [
+        {
+          "type": "recommendation_plan",
+          "plan_id": "plan_e874b9d3a66cf9d882e8",
+          "plan_type": "multi_quantity",
+          "title": "首选方案",
+          "rank": 1,
+          "group_id": "group_office",
+          "items": [
+            {
+              "sku_id": "P001",
+              "product_name": "原味燕麦小饼干",
+              "quantity": 3,
+              "unit_price_fen": 1290,
+              "image_url": null
+            }
+          ],
+          "pricing": {
+            "currency": "CNY",
+            "status": "confirmed",
+            "subtotal_fen": 3870,
+            "discounts": [],
+            "merchandise_payable_fen": 3870,
+            "shipping_fen": 600,
+            "total_payable_fen": 4470,
+            "conditions": []
+          },
+          "reasons": [
+            "符合已确认的硬条件和基础购买数量。",
+            "匹配你提出的低糖偏好。",
+            "商品应付和运费分别列出，便于比较实际支出。"
+          ],
+          "notes": [
+            "商品、身份与优惠为演示资料。"
+          ]
+        },
+        {
+          "type": "recommendation_plan",
+          "plan_id": "plan_8e4436932b6d60d99ec4",
+          "plan_type": "bundle",
+          "title": "备选方案 1",
+          "rank": 2,
+          "group_id": "group_office",
+          "items": [
+            {
+              "sku_id": "P009",
+              "product_name": "无糖薄荷糖",
+              "quantity": 1,
+              "unit_price_fen": 790,
+              "image_url": null
+            },
+            {
+              "sku_id": "P013",
+              "product_name": "低糖谷物棒",
+              "quantity": 2,
+              "unit_price_fen": 2290,
+              "image_url": null
+            }
+          ],
+          "pricing": {
+            "currency": "CNY",
+            "status": "confirmed",
+            "subtotal_fen": 5370,
+            "discounts": [],
+            "merchandise_payable_fen": 5370,
+            "shipping_fen": 600,
+            "total_payable_fen": 5970,
+            "conditions": []
+          },
+          "reasons": [
+            "符合已确认的硬条件和基础购买数量。",
+            "商品应付和运费分别列出，便于比较实际支出。"
+          ],
+          "notes": [
+            "商品、身份与优惠为演示资料。",
+            "偏好说明：没有完全匹配低糖偏好，可与首选方案比较。"
+          ]
+        },
+        {
+          "type": "recommendation_plan",
+          "plan_id": "plan_9f8d2ba6295622712369",
+          "plan_type": "bundle",
+          "title": "备选方案 2",
+          "rank": 3,
+          "group_id": "group_office",
+          "items": [
+            {
+              "sku_id": "P001",
+              "product_name": "原味燕麦小饼干",
+              "quantity": 1,
+              "unit_price_fen": 1290,
+              "image_url": null
+            },
+            {
+              "sku_id": "P009",
+              "product_name": "无糖薄荷糖",
+              "quantity": 2,
+              "unit_price_fen": 790,
+              "image_url": null
+            }
+          ],
+          "pricing": {
+            "currency": "CNY",
+            "status": "confirmed",
+            "subtotal_fen": 2870,
+            "discounts": [],
+            "merchandise_payable_fen": 2870,
+            "shipping_fen": 600,
+            "total_payable_fen": 3470,
+            "conditions": []
+          },
+          "reasons": [
+            "符合已确认的硬条件和基础购买数量。",
+            "商品应付和运费分别列出，便于比较实际支出。"
+          ],
+          "notes": [
+            "商品、身份与优惠为演示资料。",
+            "偏好说明：没有完全匹配低糖偏好，可与首选方案比较。"
+          ]
+        }
+      ]
+    },
+    "clarification": null,
+    "error": null
+  },
+  "debug": {
+    "engine": "structured_input_offline",
+    "rejections": {
+      "group_office": {
+        "P004": [
+          "constraint:c_spice"
+        ],
+        "P005": [
+          "constraint:c_spice"
+        ],
+        "P006": [
+          "constraint:c_nuts"
+        ],
+        "P007": [
+          "constraint:c_nuts"
+        ],
+        "P011": [
+          "constraint:c_small"
+        ],
+        "P012": [
+          "constraint:c_small"
+        ],
+        "P014": [
+          "constraint:c_nuts"
+        ],
+        "P016": [
+          "constraint:c_nuts"
+        ],
+        "P017": [
+          "constraint:c_small"
+        ],
+        "P020": [
+          "constraint:c_small",
+          "constraint:c_spice"
+        ],
+        "P022": [
+          "stock_unknown_or_empty"
+        ],
+        "P023": [
+          "constraint:c_small",
+          "constraint:c_spice",
+          "constraint:c_nuts"
+        ],
+        "P024": [
+          "constraint:c_near"
+        ],
+        "P025": [
+          "expired_or_unknown",
+          "constraint:c_near"
+        ],
+        "P026": [
+          "price_unknown"
+        ],
+        "P027": [
+          "constraint:c_small"
+        ],
+        "P029": [
+          "constraint:c_small"
+        ],
+        "P030": [
+          "constraint:c_spice"
+        ]
+      }
+    },
+    "quarantined_skus": [],
+    "candidate_count": 364,
+    "priced_cart_count": 364
+  }
+}

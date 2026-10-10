@@ -1,0 +1,469 @@
+{
+  "case_id": "M10",
+  "title": "共同预算不能每人重复用",
+  "repetition": 1,
+  "implementation_hash": "2e9c47bbd36d1749",
+  "executed_at": "2026-10-08T12:59:09.348618+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_f195a0f8bb314d838d950ecd156966de",
+        "expected_revision": 0,
+        "message": "给同事和自己各一份，共 80 元，口味不同",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_f195a0f8bb314d838d950ecd156966de",
+        "turn_id": null,
+        "base_revision": 0,
+        "revision": 0,
+        "module": "product_recommendation",
+        "status": "error",
+        "message": {
+          "id": "msg_8d48522d3a5942f380556dcf8c826713",
+          "role": "assistant",
+          "content": "需求理解结果未通过核验，请重新描述；本轮未保存。",
+          "cards": []
+        },
+        "clarification": null,
+        "error": {
+          "code": "invalid_model_output",
+          "retryable": true
+        }
+      },
+      "session": null,
+      "history": [],
+      "diagnostics": null
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "给同事和自己各一份，共 80 元，口味不同",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "自己的零食",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_qty_self",
+                "field": "quantity",
+                "operator": "equals",
+                "value": 1,
+                "strength": "hard",
+                "source_text": "各一份",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_taste_self",
+                "field": "taste",
+                "operator": "equals",
+                "value": "spice:none",
+                "strength": "soft",
+                "source_text": "口味不同",
+                "origin": "inferred",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          },
+          {
+            "group_id": "group_colleague",
+            "label": "同事的零食",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_qty_colleague",
+                "field": "quantity",
+                "operator": "equals",
+                "value": 1,
+                "strength": "hard",
+                "source_text": "各一份",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_taste_colleague",
+                "field": "taste",
+                "operator": "equals",
+                "value": "spice:hot",
+                "strength": "soft",
+                "source_text": "口味不同",
+                "origin": "inferred",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "shared_budget": {
+          "min_fen": null,
+          "max_fen": 8000,
+          "strictness": "strict",
+          "scope": "order_total",
+          "source_text": "共 80 元",
+          "min_is_hard": false
+        },
+        "clarification": {
+          "question": "两位分别想要什么口味的零食？预算是否含运费？",
+          "asked_fields": [
+            "taste",
+            "budget_scope"
+          ],
+          "group_id": null
+        },
+        "retrieval_hints": []
+      },
+      "seconds": 1.813
+    },
+    {
+      "stage": "extract",
+      "repair": "推测条件必须是带来源的软偏好",
+      "input": {
+        "message": "给同事和自己各一份，共 80 元，口味不同",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "自己",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_self_recipient",
+                "field": "other",
+                "operator": "equals",
+                "value": "recipient:self",
+                "strength": "hard",
+                "source_text": "自己各一份",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          },
+          {
+            "group_id": "group_colleague",
+            "label": "同事",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_colleague_recipient",
+                "field": "other",
+                "operator": "equals",
+                "value": "recipient:colleague",
+                "strength": "hard",
+                "source_text": "给同事",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "shared_budget": {
+          "min_fen": null,
+          "max_fen": 8000,
+          "strictness": "strict",
+          "scope": "goods_total",
+          "source_text": "共 80 元",
+          "min_is_hard": false
+        },
+        "clarification": {
+          "question": "自己这份和同事这份分别想要什么口味？",
+          "asked_fields": [
+            "taste"
+          ],
+          "group_id": null
+        },
+        "retrieval_hints": []
+      },
+      "seconds": 1.77
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 3.606,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": false,
+      "actual": "error"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "共同预算80元没有复制到各组",
+      "passed": false,
+      "actual": null
+    }
+  ],
+  "passed": false
+}

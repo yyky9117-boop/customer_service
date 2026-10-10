@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#42664d">
+  <meta name="description" content="与零食客服聊聊口味、预算与用途，获得清楚的商品推荐和优惠说明。">
+  <title>拾味 · 零食客服</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" type="module"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside id="sidebar" class="sidebar" aria-label="对话导航">
+      <a class="brand" href="/" aria-label="拾味客服首页">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M7 12c0-4 3-7 7-7h7v8c0 7-4 12-10 12H7Z"/><path d="m11 22 9-12"/></svg></span>
+        <span>拾味<span class="brand-en">SHIWEI</span></span>
+      </a>
+      <button id="new-chat" class="new-chat"><span aria-hidden="true">＋</span> 开始新的咨询</button>
+      <div class="nav-label">你的对话</div>
+      <nav id="conversations" class="conversation-list" aria-label="历史对话"><p class="empty-history">从第一句开始，慢慢挑。</p></nav>
+      <div class="sidebar-bottom">
+        <div class="module-row"><span class="module-icon" aria-hidden="true">✦</span><span>商品推荐</span><span class="module-tag">已接入</span></div>
+        <div class="module-row"><span class="module-icon" aria-hidden="true">▦</span><span>订单查询</span><span class="module-tag">已接入</span></div>
+        <div class="module-next">模拟物流<span>已接入</span></div>
+        <div class="module-next">售后 · 人工<span>后续接入</span></div>
+        <div class="demo-note"><span class="tiny-dot" aria-hidden="true"></span>演示商城<span>商品与优惠为模拟数据</span></div>
+      </div>
+    </aside>
+    <button id="sidebar-scrim" class="sidebar-scrim" aria-label="关闭对话导航" hidden></button>
+    <main class="chat-shell">
+      <header class="chat-header">
+        <button id="menu-toggle" class="icon-button menu-toggle" aria-label="打开对话导航" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <div class="header-title"><h1>拾味零食客服</h1><p><span id="connection-dot" class="status-dot"></span><span id="connection-label">正在连接客服</span></p></div>
+        <div class="header-actions">
+          <span class="demo-pill">DEMO</span>
+          <label class="profile-control"><span>演示身份</span><select id="demo-profile" aria-label="选择演示身份"><option value="U_GUEST">匿名顾客</option></select></label>
+          <button id="about-toggle" class="icon-button" aria-label="查看演示说明" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg></button>
+        </div>
+      </header>
+      <div id="about-panel" class="about-panel" hidden>商品、优惠、订单及身份均为演示数据。推荐默认排除临期商品。订单支持订单号或下单手机号查询：账号 A 手机号13800000001，账号 B 手机号13800000002。请先选择对应的“普通新客 · 订单账号 A”或“普通老客 · 订单账号 B”，其他身份没有绑定订单。物流由本机模拟接口返回；售后与人工尚未接入。切换身份会开始新对话。<span id="demo-time"></span></div>
+      <div id="connection-banner" class="connection-banner" role="status" hidden></div>
+      <section id="chat-scroll" class="chat-scroll" aria-label="客服对话">
+        <div id="welcome" class="welcome">
+          <div class="welcome-avatar" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M18 17h28l4 8-4 25H18l-4-25Z"/><path d="M18 17v-5h28v5M22 17l4 7m12-7-4 7M27 35c3 4 7 4 10 0"/><circle cx="25" cy="30" r="1.8"/><circle cx="39" cy="30" r="1.8"/></svg><span class="avatar-spark">✦</span></div>
+          <div class="eyebrow">一点好吃的，一点刚刚好</div>
+          <h2>今天，想吃点什么？</h2>
+          <p class="welcome-copy">聊聊你的口味、预算和用途，也可以查询订单。<br>提供订单号或下单手机号，我帮你核对订单与发货进度。</p>
+          <div class="starter-grid">
+            <button class="starter" data-prompt="办公室吃，必须独立小包，不辣，不要坚果，不要临期，最好低糖，买三件，含运费最多60元"><span class="starter-icon ochre" aria-hidden="true">☕</span><strong>办公室的日常补给</strong><span>独立小包，分着吃也方便</span><span class="starter-arrow" aria-hidden="true">↗</span></button>
+            <button class="starter" data-prompt="想买一份送人的零食礼盒，必须礼盒包装，不要临期，含运费150元以内"><span class="starter-icon rose" aria-hidden="true">♧</span><strong>挑一份送人的礼物</strong><span>体面包装，预算说清楚</span><span class="starter-arrow" aria-hidden="true">↗</span></button>
+            <button class="starter" data-prompt="我对花生过敏，要排除配料、过敏原和可能含有花生的商品，不辣，买两件，含运费60元以内"><span class="starter-icon sage" aria-hidden="true">◉</span><strong>先确认配料要求</strong><span>告诉我必须避开的原料</span><span class="starter-arrow" aria-hidden="true">↗</span></button>
+            <button class="starter" data-prompt="查询订单 SN-DEMO-0001 是否发货"><span class="starter-icon lavender" aria-hidden="true">▦</span><strong>查询订单与发货</strong><span>先选择订单账号 A，再开始咨询</span><span class="starter-arrow" aria-hidden="true">↗</span></button>
+            <button class="starter" data-prompt="我的下单手机号是13800000001，帮我查询对应订单"><span class="starter-icon lavender" aria-hidden="true">☎</span><strong>用手机号找订单</strong><span>账号 A：13800000001，多笔订单可选择</span><span class="starter-arrow" aria-hidden="true">↗</span></button>
+          </div>
+          <div class="welcome-foot">从一句自然的需求开始，不用先填表。</div>
+        </div>
+        <div id="messages" class="messages" role="log" aria-live="polite" aria-relevant="additions"></div>
+      </section>
+      <div class="composer-area">
+        <div id="reference-chip" class="reference-chip" hidden><span aria-hidden="true">↳</span><span id="reference-label"></span><button id="clear-reference" aria-label="取消所选商品或方案">×</button></div>
+        <form id="composer" class="composer">
+          <label class="sr-only" for="message-input">输入零食需求或订单问题</label>
+          <textarea id="message-input" maxlength="2000" rows="1" placeholder="说说零食需求，或提供订单号、下单手机号查订单…"></textarea>
+          <div class="composer-toolbar"><span class="composer-hint"><span aria-hidden="true">✦</span> 说需求，也可以接着修改</span><span id="character-count" class="character-count" hidden>0 / 2000</span><button id="stop-wait" class="stop-button" type="button" hidden>停止等待</button><button id="send-button" class="send-button" type="submit" aria-label="发送消息" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 18 0-12m-5 5 5-5 5 5"/></svg></button></div>
+        </form>
+        <p class="composer-footer"><span>Enter 发送 · Shift + Enter 换行</span><span>演示咨询，不下单</span></p>
+      </div>
+      <div id="toast" class="toast" role="status" hidden></div>
+    </main>
+  </div>
+</body>
+</html>

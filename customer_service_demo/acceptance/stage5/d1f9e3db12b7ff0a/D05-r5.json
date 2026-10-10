@@ -1,0 +1,113 @@
+{
+  "case_id": "D05",
+  "title": "对未知成分保持未知",
+  "repetition": 5,
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "executed_at": "2026-10-08T13:12:06.027695+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_946872bcf82f4dbfb80661069dd10a56",
+        "expected_revision": 0,
+        "message": "P023 含不含花生",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_973ce1b8636841a58a31f5d53da04572",
+        "request_id": "req_946872bcf82f4dbfb80661069dd10a56",
+        "turn_id": "turn_8c93d7c0cbca4bd3b8fbd83daaf0d410",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "needs_clarification",
+        "message": {
+          "id": "msg_2eed45ec9f3948c4a627ecade9d7d281",
+          "role": "assistant",
+          "content": "这款商品的原料和过敏原资料尚未完整，暂时无法确认是否含花生。需要按花生过敏要求筛选其它商品吗？",
+          "cards": []
+        },
+        "clarification": {
+          "question": "这款商品的原料和过敏原资料尚未完整，暂时无法确认是否含花生。需要按花生过敏要求筛选其它商品吗？",
+          "asked_fields": [
+            "allergy"
+          ],
+          "group_id": null
+        },
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_973ce1b8636841a58a31f5d53da04572",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [],
+            "pending_clarification": {
+              "question": "这款商品的原料和过敏原资料尚未完整，暂时无法确认是否含花生。需要按花生过敏要求筛选其它商品吗？",
+              "asked_fields": [
+                "allergy"
+              ],
+              "group_id": null
+            },
+            "last_presentation": null,
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_c67396cdd13a4822854104d770e845e5",
+          "role": "user",
+          "content": "P023 含不含花生",
+          "turn_id": "turn_8c93d7c0cbca4bd3b8fbd83daaf0d410"
+        },
+        {
+          "id": "msg_2eed45ec9f3948c4a627ecade9d7d281",
+          "role": "assistant",
+          "content": "这款商品的原料和过敏原资料尚未完整，暂时无法确认是否含花生。需要按花生过敏要求筛选其它商品吗？",
+          "cards": [],
+          "turn_id": "turn_8c93d7c0cbca4bd3b8fbd83daaf0d410",
+          "status": "needs_clarification"
+        }
+      ],
+      "diagnostics": {
+        "engine": "unknown_ingredient_guard",
+        "model_attempts": 0
+      }
+    }
+  ],
+  "model_calls": [],
+  "pricing_goldens": [],
+  "seconds": 0.027,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "needs_clarification"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "追问最多两个字段",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "未知花生成分没有确定结论",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": true
+}

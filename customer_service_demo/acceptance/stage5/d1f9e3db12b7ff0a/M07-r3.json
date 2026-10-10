@@ -1,0 +1,1733 @@
+{
+  "case_id": "M07",
+  "title": "数量变更重算优惠",
+  "repetition": 3,
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "executed_at": "2026-10-08T13:09:52.417772+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_10db8a41ed474864926b2eed5490a796",
+        "expected_revision": 0,
+        "message": "两件苏打饼干",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_c919ff9caec6461fb01b5426dd8400c2",
+        "request_id": "req_10db8a41ed474864926b2eed5490a796",
+        "turn_id": "turn_c1ef9f2687f44b2f81bb81925eca2fc7",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_3a4c3a07756743cdbe3e627206eb51e6",
+          "role": "assistant",
+          "content": "亲～，按您要的两件苏打饼干，帮您挑好了😊\n\n首选是原味苏打饼干（2件），独立内包装，办公时按小包分次取用方便，这款正好对上您的需求；价格是含运费23.80元，已计入苏打饼干限两件秒杀价。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_50b4a05b935acc04b43e",
+              "plan_type": "multi_quantity",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_soda_biscuit",
+              "items": [
+                {
+                  "sku_id": "P019",
+                  "product_name": "原味苏打饼干",
+                  "quantity": 2,
+                  "unit_price_fen": 1090,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 2180,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_FIXED",
+                    "label": "苏打饼干限两件秒杀价",
+                    "amount_fen": 400,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 1780,
+                "shipping_fen": 600,
+                "total_payable_fen": 2380,
+                "conditions": []
+              },
+              "reasons": [
+                "独立内包装，办公时按小包分次取用方便",
+                "不辣且低甜度，适合偏好清淡口味"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_c919ff9caec6461fb01b5426dd8400c2",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_soda_biscuit",
+                "label": "苏打饼干",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_sku_soda",
+                    "field": "other",
+                    "operator": "equals",
+                    "value": "sku:P019",
+                    "strength": "hard",
+                    "source_text": "苏打饼干",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_c1ef9f2687f44b2f81bb81925eca2fc7"
+                  },
+                  {
+                    "constraint_id": "c_qty_soda",
+                    "field": "quantity",
+                    "operator": "equals",
+                    "value": 2,
+                    "strength": "hard",
+                    "source_text": "两件",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_c1ef9f2687f44b2f81bb81925eca2fc7"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_3a4c3a07756743cdbe3e627206eb51e6",
+              "turn_id": "turn_c1ef9f2687f44b2f81bb81925eca2fc7",
+              "plan_order": [
+                {
+                  "plan_id": "plan_50b4a05b935acc04b43e",
+                  "sku_ids": [
+                    "P019"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_e0f78e61f9b049c2bddaee51307225b7",
+          "role": "user",
+          "content": "两件苏打饼干",
+          "turn_id": "turn_c1ef9f2687f44b2f81bb81925eca2fc7"
+        },
+        {
+          "id": "msg_3a4c3a07756743cdbe3e627206eb51e6",
+          "role": "assistant",
+          "content": "亲～，按您要的两件苏打饼干，帮您挑好了😊\n\n首选是原味苏打饼干（2件），独立内包装，办公时按小包分次取用方便，这款正好对上您的需求；价格是含运费23.80元，已计入苏打饼干限两件秒杀价。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_50b4a05b935acc04b43e",
+              "plan_type": "multi_quantity",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_soda_biscuit",
+              "items": [
+                {
+                  "sku_id": "P019",
+                  "product_name": "原味苏打饼干",
+                  "quantity": 2,
+                  "unit_price_fen": 1090,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 2180,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_FIXED",
+                    "label": "苏打饼干限两件秒杀价",
+                    "amount_fen": 400,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 1780,
+                "shipping_fen": 600,
+                "total_payable_fen": 2380,
+                "conditions": []
+              },
+              "reasons": [
+                "独立内包装，办公时按小包分次取用方便",
+                "不辣且低甜度，适合偏好清淡口味"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_c1ef9f2687f44b2f81bb81925eca2fc7",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {},
+        "quarantined_skus": [],
+        "candidate_count": 1,
+        "priced_cart_count": 1,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 1,
+        "reply_review_passed": true
+      }
+    },
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_c919ff9caec6461fb01b5426dd8400c2",
+        "request_id": "req_de0d85b5264f460bb09e47e0388e3101",
+        "expected_revision": 1,
+        "message": "改成三件",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_c919ff9caec6461fb01b5426dd8400c2",
+        "request_id": "req_de0d85b5264f460bb09e47e0388e3101",
+        "turn_id": "turn_9d70050951604f9ba3cce79f18945957",
+        "base_revision": 1,
+        "revision": 2,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_ce329ee3da694dbfb1f26eab149bf81f",
+          "role": "assistant",
+          "content": "亲～，三件的苏打饼干给您整理好了😊\n\n首选是原味苏打饼干（3件），独立内包装，适合办公室分次取用，直接按三件带走，价格是含运费38.70元。\n\n这次只有这一个组合，没有别的备选；其中不辣、低甜度标签，口味方向较明确。如果觉得数量或搭配想再调，想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_8298a58376c195e46db8",
+              "plan_type": "multi_quantity",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_soda_biscuit",
+              "items": [
+                {
+                  "sku_id": "P019",
+                  "product_name": "原味苏打饼干",
+                  "quantity": 3,
+                  "unit_price_fen": 1090,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 3270,
+                "discounts": [],
+                "merchandise_payable_fen": 3270,
+                "shipping_fen": 600,
+                "total_payable_fen": 3870,
+                "conditions": []
+              },
+              "reasons": [
+                "独立内包装，适合办公室分次取用。",
+                "不辣、低甜度标签，口味方向较明确。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_c919ff9caec6461fb01b5426dd8400c2",
+        "revision": 2,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_soda_biscuit",
+                "label": "苏打饼干",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_sku_soda",
+                    "field": "other",
+                    "operator": "equals",
+                    "value": "sku:P019",
+                    "strength": "hard",
+                    "source_text": "苏打饼干",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_c1ef9f2687f44b2f81bb81925eca2fc7"
+                  },
+                  {
+                    "constraint_id": "c_qty_soda",
+                    "field": "quantity",
+                    "operator": "equals",
+                    "value": 3,
+                    "strength": "hard",
+                    "source_text": "三件",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_9d70050951604f9ba3cce79f18945957"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_ce329ee3da694dbfb1f26eab149bf81f",
+              "turn_id": "turn_9d70050951604f9ba3cce79f18945957",
+              "plan_order": [
+                {
+                  "plan_id": "plan_8298a58376c195e46db8",
+                  "sku_ids": [
+                    "P019"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_e0f78e61f9b049c2bddaee51307225b7",
+          "role": "user",
+          "content": "两件苏打饼干",
+          "turn_id": "turn_c1ef9f2687f44b2f81bb81925eca2fc7"
+        },
+        {
+          "id": "msg_3a4c3a07756743cdbe3e627206eb51e6",
+          "role": "assistant",
+          "content": "亲～，按您要的两件苏打饼干，帮您挑好了😊\n\n首选是原味苏打饼干（2件），独立内包装，办公时按小包分次取用方便，这款正好对上您的需求；价格是含运费23.80元，已计入苏打饼干限两件秒杀价。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_50b4a05b935acc04b43e",
+              "plan_type": "multi_quantity",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_soda_biscuit",
+              "items": [
+                {
+                  "sku_id": "P019",
+                  "product_name": "原味苏打饼干",
+                  "quantity": 2,
+                  "unit_price_fen": 1090,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 2180,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_FIXED",
+                    "label": "苏打饼干限两件秒杀价",
+                    "amount_fen": 400,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 1780,
+                "shipping_fen": 600,
+                "total_payable_fen": 2380,
+                "conditions": []
+              },
+              "reasons": [
+                "独立内包装，办公时按小包分次取用方便",
+                "不辣且低甜度，适合偏好清淡口味"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_c1ef9f2687f44b2f81bb81925eca2fc7",
+          "status": "completed"
+        },
+        {
+          "id": "msg_98e8979ddf72419aaa9702f502194940",
+          "role": "user",
+          "content": "改成三件",
+          "turn_id": "turn_9d70050951604f9ba3cce79f18945957"
+        },
+        {
+          "id": "msg_ce329ee3da694dbfb1f26eab149bf81f",
+          "role": "assistant",
+          "content": "亲～，三件的苏打饼干给您整理好了😊\n\n首选是原味苏打饼干（3件），独立内包装，适合办公室分次取用，直接按三件带走，价格是含运费38.70元。\n\n这次只有这一个组合，没有别的备选；其中不辣、低甜度标签，口味方向较明确。如果觉得数量或搭配想再调，想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_8298a58376c195e46db8",
+              "plan_type": "multi_quantity",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_soda_biscuit",
+              "items": [
+                {
+                  "sku_id": "P019",
+                  "product_name": "原味苏打饼干",
+                  "quantity": 3,
+                  "unit_price_fen": 1090,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 3270,
+                "discounts": [],
+                "merchandise_payable_fen": 3270,
+                "shipping_fen": 600,
+                "total_payable_fen": 3870,
+                "conditions": []
+              },
+              "reasons": [
+                "独立内包装，适合办公室分次取用。",
+                "不辣、低甜度标签，口味方向较明确。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_9d70050951604f9ba3cce79f18945957",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {},
+        "quarantined_skus": [],
+        "candidate_count": 1,
+        "priced_cart_count": 1,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 1,
+        "reply_review_passed": true
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "两件苏打饼干",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_soda_biscuit",
+            "label": "苏打饼干",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_sku_soda",
+                "field": "other",
+                "operator": "equals",
+                "value": "sku:P019",
+                "strength": "hard",
+                "source_text": "苏打饼干",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_qty_soda",
+                "field": "quantity",
+                "operator": "equals",
+                "value": 2,
+                "strength": "hard",
+                "source_text": "两件",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": [
+          "P019"
+        ]
+      },
+      "seconds": 1.314
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "两件苏打饼干",
+        "need_summary": "买2件",
+        "plans": [
+          {
+            "plan_id": "plan_50b4a05b935acc04b43e",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P019",
+                "product_name": "原味苏打饼干",
+                "quantity": 2,
+                "unit_price_fen": 1090,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味苏打饼干，购买2件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味苏打饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味苏打饼干：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味苏打饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味苏打饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味苏打饼干：已知单个内包15克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味苏打饼干：ingredients=['wheat', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味苏打饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味苏打饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味苏打饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味苏打饼干：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费23.80元；商品应付17.80元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P019，符合的商品仅为：原味苏打饼干。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "offer",
+                "text": "已计入苏打饼干限两件秒杀价。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_50b4a05b935acc04b43e",
+            "reasons": [
+              {
+                "text": "独立内包装，办公时按小包分次取用方便",
+                "fact_ids": [
+                  "p1_f5",
+                  "p1_f11"
+                ]
+              },
+              {
+                "text": "不辣且低甜度，适合偏好清淡口味",
+                "fact_ids": [
+                  "p1_f2",
+                  "p1_f4"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 0.99
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "两件苏打饼干",
+        "need_summary": "买2件",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_soda_biscuit",
+              "label": "苏打饼干",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_sku_soda",
+                  "field": "other",
+                  "operator": "equals",
+                  "value": "sku:P019",
+                  "strength": "hard",
+                  "source_text": "苏打饼干",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_c1ef9f2687f44b2f81bb81925eca2fc7"
+                },
+                {
+                  "constraint_id": "c_qty_soda",
+                  "field": "quantity",
+                  "operator": "equals",
+                  "value": 2,
+                  "strength": "hard",
+                  "source_text": "两件",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_c1ef9f2687f44b2f81bb81925eca2fc7"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_50b4a05b935acc04b43e",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P019",
+                "product_name": "原味苏打饼干",
+                "quantity": 2,
+                "unit_price_fen": 1090,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2180,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_FIXED",
+                  "label": "苏打饼干限两件秒杀价",
+                  "amount_fen": 400,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 1780,
+              "shipping_fen": 600,
+              "total_payable_fen": 2380,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味苏打饼干，购买2件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味苏打饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味苏打饼干：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味苏打饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味苏打饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味苏打饼干：已知单个内包15克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味苏打饼干：ingredients=['wheat', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味苏打饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味苏打饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味苏打饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味苏打饼干：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味苏打饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费23.80元；商品应付17.80元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P019，符合的商品仅为：原味苏打饼干。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "offer",
+                "text": "已计入苏打饼干限两件秒杀价。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "买2件",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味苏打饼干（2件）",
+          "p1_price": "含运费23.80元",
+          "p1_offer": "已计入苏打饼干限两件秒杀价。",
+          "p1_reason_1": "独立内包装，办公时按小包分次取用方便",
+          "p1_reason_2": "不辣且低甜度，适合偏好清淡口味"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_50b4a05b935acc04b43e",
+              "reasons": [
+                {
+                  "text": "独立内包装，办公时按小包分次取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f11"
+                  ]
+                },
+                {
+                  "text": "不辣且低甜度，适合偏好清淡口味",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f4"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，按您要的两件苏打饼干，帮您挑好了😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，这款正好对上您的需求；价格是{{p1_price}}，{{p1_offer}}\n\n{{follow_up}}"
+      },
+      "seconds": 1.127
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "两件苏打饼干",
+        "need_summary": "买2件",
+        "plans": [
+          {
+            "plan_id": "plan_50b4a05b935acc04b43e",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P019",
+                "product_name": "原味苏打饼干",
+                "quantity": 2,
+                "unit_price_fen": 1090,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2180,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_FIXED",
+                  "label": "苏打饼干限两件秒杀价",
+                  "amount_fen": 400,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 1780,
+              "shipping_fen": 600,
+              "total_payable_fen": 2380,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味苏打饼干，购买2件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味苏打饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味苏打饼干：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味苏打饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味苏打饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味苏打饼干：已知单个内包15克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味苏打饼干：ingredients=['wheat', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味苏打饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味苏打饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味苏打饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味苏打饼干：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味苏打饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费23.80元；商品应付17.80元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P019，符合的商品仅为：原味苏打饼干。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "offer",
+                "text": "已计入苏打饼干限两件秒杀价。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "买2件",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味苏打饼干（2件）",
+          "p1_price": "含运费23.80元",
+          "p1_offer": "已计入苏打饼干限两件秒杀价。",
+          "p1_reason_1": "独立内包装，办公时按小包分次取用方便",
+          "p1_reason_2": "不辣且低甜度，适合偏好清淡口味"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_50b4a05b935acc04b43e",
+              "reasons": [
+                {
+                  "text": "独立内包装，办公时按小包分次取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f11"
+                  ]
+                },
+                {
+                  "text": "不辣且低甜度，适合偏好清淡口味",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f4"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，按您要的两件苏打饼干，帮您挑好了😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，这款正好对上您的需求；价格是{{p1_price}}，{{p1_offer}}\n\n{{follow_up}}",
+        "reply": "亲～，按您要的两件苏打饼干，帮您挑好了😊\n\n首选是原味苏打饼干（2件），独立内包装，办公时按小包分次取用方便，这款正好对上您的需求；价格是含运费23.80元，已计入苏打饼干限两件秒杀价。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 0.629
+    },
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "改成三件",
+        "module_state": {
+          "need_groups": [
+            {
+              "group_id": "group_soda_biscuit",
+              "label": "苏打饼干",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_sku_soda",
+                  "field": "other",
+                  "operator": "equals",
+                  "value": "sku:P019",
+                  "strength": "hard",
+                  "source_text": "苏打饼干",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_c1ef9f2687f44b2f81bb81925eca2fc7"
+                },
+                {
+                  "constraint_id": "c_qty_soda",
+                  "field": "quantity",
+                  "operator": "equals",
+                  "value": 2,
+                  "strength": "hard",
+                  "source_text": "两件",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_c1ef9f2687f44b2f81bb81925eca2fc7"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": {
+            "message_id": "msg_3a4c3a07756743cdbe3e627206eb51e6",
+            "turn_id": "turn_c1ef9f2687f44b2f81bb81925eca2fc7",
+            "plan_order": [
+              {
+                "plan_id": "plan_50b4a05b935acc04b43e",
+                "sku_ids": [
+                  "P019"
+                ]
+              }
+            ]
+          },
+          "shared_budget": null
+        },
+        "history": [
+          {
+            "id": "msg_e0f78e61f9b049c2bddaee51307225b7",
+            "role": "user",
+            "content": "两件苏打饼干",
+            "turn_id": "turn_c1ef9f2687f44b2f81bb81925eca2fc7"
+          },
+          {
+            "id": "msg_3a4c3a07756743cdbe3e627206eb51e6",
+            "role": "assistant",
+            "content": "亲～，按您要的两件苏打饼干，帮您挑好了😊\n\n首选是原味苏打饼干（2件），独立内包装，办公时按小包分次取用方便，这款正好对上您的需求；价格是含运费23.80元，已计入苏打饼干限两件秒杀价。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+            "cards": [
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_50b4a05b935acc04b43e",
+                "plan_type": "multi_quantity",
+                "title": "首选方案",
+                "rank": 1,
+                "group_id": "group_soda_biscuit",
+                "items": [
+                  {
+                    "sku_id": "P019",
+                    "product_name": "原味苏打饼干",
+                    "quantity": 2,
+                    "unit_price_fen": 1090,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 2180,
+                  "discounts": [
+                    {
+                      "kind": "activity",
+                      "id": "A_FIXED",
+                      "label": "苏打饼干限两件秒杀价",
+                      "amount_fen": 400,
+                      "eligibility": "eligible"
+                    }
+                  ],
+                  "merchandise_payable_fen": 1780,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 2380,
+                  "conditions": []
+                },
+                "reasons": [
+                  "独立内包装，办公时按小包分次取用方便",
+                  "不辣且低甜度，适合偏好清淡口味"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。"
+                ]
+              }
+            ],
+            "turn_id": "turn_c1ef9f2687f44b2f81bb81925eca2fc7",
+            "status": "completed"
+          }
+        ],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_soda_biscuit",
+            "label": "苏打饼干",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_qty_soda",
+                "field": "quantity",
+                "operator": "equals",
+                "value": 3,
+                "strength": "hard",
+                "source_text": "三件",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.4
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "改成三件",
+        "need_summary": "买3件",
+        "plans": [
+          {
+            "plan_id": "plan_8298a58376c195e46db8",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P019",
+                "product_name": "原味苏打饼干",
+                "quantity": 3,
+                "unit_price_fen": 1090,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味苏打饼干，购买3件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味苏打饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味苏打饼干：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味苏打饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味苏打饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味苏打饼干：已知单个内包15克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味苏打饼干：ingredients=['wheat', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味苏打饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味苏打饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味苏打饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味苏打饼干：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费38.70元；商品应付32.70元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P019，符合的商品仅为：原味苏打饼干。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_8298a58376c195e46db8",
+            "reasons": [
+              {
+                "text": "独立内包装，适合办公室分次取用。",
+                "fact_ids": [
+                  "p1_f5",
+                  "p1_f11"
+                ]
+              },
+              {
+                "text": "不辣、低甜度标签，口味方向较明确。",
+                "fact_ids": [
+                  "p1_f2",
+                  "p1_f4"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 0.811
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "改成三件",
+        "need_summary": "买3件",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_soda_biscuit",
+              "label": "苏打饼干",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_sku_soda",
+                  "field": "other",
+                  "operator": "equals",
+                  "value": "sku:P019",
+                  "strength": "hard",
+                  "source_text": "苏打饼干",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_c1ef9f2687f44b2f81bb81925eca2fc7"
+                },
+                {
+                  "constraint_id": "c_qty_soda",
+                  "field": "quantity",
+                  "operator": "equals",
+                  "value": 3,
+                  "strength": "hard",
+                  "source_text": "三件",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_9d70050951604f9ba3cce79f18945957"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": {
+            "message_id": "msg_3a4c3a07756743cdbe3e627206eb51e6",
+            "turn_id": "turn_c1ef9f2687f44b2f81bb81925eca2fc7",
+            "plan_order": [
+              {
+                "plan_id": "plan_50b4a05b935acc04b43e",
+                "sku_ids": [
+                  "P019"
+                ]
+              }
+            ]
+          },
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_8298a58376c195e46db8",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P019",
+                "product_name": "原味苏打饼干",
+                "quantity": 3,
+                "unit_price_fen": 1090,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 3270,
+              "discounts": [],
+              "merchandise_payable_fen": 3270,
+              "shipping_fen": 600,
+              "total_payable_fen": 3870,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味苏打饼干，购买3件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味苏打饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味苏打饼干：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味苏打饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味苏打饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味苏打饼干：已知单个内包15克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味苏打饼干：ingredients=['wheat', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味苏打饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味苏打饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味苏打饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味苏打饼干：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味苏打饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费38.70元；商品应付32.70元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P019，符合的商品仅为：原味苏打饼干。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "买3件",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味苏打饼干（3件）",
+          "p1_price": "含运费38.70元",
+          "p1_reason_1": "独立内包装，适合办公室分次取用",
+          "p1_reason_2": "不辣、低甜度标签，口味方向较明确"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_8298a58376c195e46db8",
+              "reasons": [
+                {
+                  "text": "独立内包装，适合办公室分次取用。",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f11"
+                  ]
+                },
+                {
+                  "text": "不辣、低甜度标签，口味方向较明确。",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f4"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，三件的苏打饼干给您整理好了😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，直接按三件带走，价格是{{p1_price}}。\n\n这次只有这一个组合，没有别的备选；其中{{p1_reason_2}}。如果觉得数量或搭配想再调，{{follow_up}}"
+      },
+      "seconds": 1.323
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "改成三件",
+        "need_summary": "买3件",
+        "plans": [
+          {
+            "plan_id": "plan_8298a58376c195e46db8",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P019",
+                "product_name": "原味苏打饼干",
+                "quantity": 3,
+                "unit_price_fen": 1090,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 3270,
+              "discounts": [],
+              "merchandise_payable_fen": 3270,
+              "shipping_fen": 600,
+              "total_payable_fen": 3870,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味苏打饼干，购买3件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味苏打饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味苏打饼干：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味苏打饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味苏打饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味苏打饼干：已知单个内包15克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味苏打饼干：ingredients=['wheat', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味苏打饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味苏打饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味苏打饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味苏打饼干：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味苏打饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费38.70元；商品应付32.70元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P019，符合的商品仅为：原味苏打饼干。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "买3件",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味苏打饼干（3件）",
+          "p1_price": "含运费38.70元",
+          "p1_reason_1": "独立内包装，适合办公室分次取用",
+          "p1_reason_2": "不辣、低甜度标签，口味方向较明确"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_8298a58376c195e46db8",
+              "reasons": [
+                {
+                  "text": "独立内包装，适合办公室分次取用。",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f11"
+                  ]
+                },
+                {
+                  "text": "不辣、低甜度标签，口味方向较明确。",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f4"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，三件的苏打饼干给您整理好了😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，直接按三件带走，价格是{{p1_price}}。\n\n这次只有这一个组合，没有别的备选；其中{{p1_reason_2}}。如果觉得数量或搭配想再调，{{follow_up}}",
+        "reply": "亲～，三件的苏打饼干给您整理好了😊\n\n首选是原味苏打饼干（3件），独立内包装，适合办公室分次取用，直接按三件带走，价格是含运费38.70元。\n\n这次只有这一个组合，没有别的备选；其中不辣、低甜度标签，口味方向较明确。如果觉得数量或搭配想再调，想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 1.269
+    }
+  ],
+  "pricing_goldens": [
+    {
+      "id": "G015",
+      "passed": true,
+      "expected": {
+        "eligible": true,
+        "activity_discount_fen": 400,
+        "coupon_discount_fen": 0,
+        "merchandise_payable_fen": 1780,
+        "shipping_fen": 600,
+        "total_payable_fen": 2380,
+        "pricing_status": "confirmed",
+        "gifts": []
+      },
+      "actual": {
+        "eligible": true,
+        "activity_id": "A_FIXED",
+        "coupon_id": null,
+        "activity_discount_fen": 400,
+        "coupon_discount_fen": 0,
+        "merchandise_payable_fen": 1780,
+        "shipping_fen": 600,
+        "total_payable_fen": 2380,
+        "pricing_status": "confirmed",
+        "coupon_conditional": false,
+        "gifts": [],
+        "line_allocations": [
+          {
+            "sku_id": "P019",
+            "activity_discount_fen": 400,
+            "coupon_discount_fen": 0,
+            "payable_fen": 1780
+          }
+        ]
+      }
+    },
+    {
+      "id": "G016",
+      "passed": true,
+      "expected": {
+        "eligible": false,
+        "rejection_code": "activity_quantity_limit"
+      },
+      "actual": {
+        "eligible": false,
+        "rejection_code": "activity_quantity_limit"
+      }
+    }
+  ],
+  "seconds": 8.928,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "completed"
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "关联固定购物方案的独立数值基准",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "改为三件后取消两件秒杀",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": true
+}

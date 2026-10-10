@@ -1,0 +1,191 @@
+{
+  "verified_at": "2026-10-08T14:49:21.683005+00:00",
+  "scope": "订单接入、默认临期排除、会话边界；不是98场景全量复测",
+  "order_integration_verified": true,
+  "overall_customer_service_acceptance": "not_passed",
+  "automated_tests": {
+    "run": 239,
+    "passed": true,
+    "pricing_goldens": 53
+  },
+  "browser": {
+    "file": "acceptance/stage4-browser-orders.json",
+    "checks": 14,
+    "all_passed": true,
+    "console_errors": []
+  },
+  "actual_order_reply_and_http_evidence": [
+    {
+      "check": "order_shipping_reply_respects_current_ui_capabilities",
+      "request_id": "req_06e538738c294e7ba8db82165e80f57e",
+      "conversation_id": "conv_02e64fb7a03343f2a30d0424dde7fdb5",
+      "module": "order_query",
+      "status": "completed",
+      "reply_mode": "deepseek_grounded_reply",
+      "independent_review_passed": true,
+      "retrieval": [
+        {
+          "id": "waiting_shipment",
+          "version": "order-reply-demo-v1",
+          "source": "reconstructed_demo",
+          "score": 12,
+          "matched_keywords": [
+            "发货"
+          ],
+          "guide": "先承接用户想知道是否发货的诉求，再说明当前待发货。没有发货时间就不推测，没有催单接口就不说已经催促。"
+        },
+        {
+          "id": "waiting_shipment_urgent",
+          "version": "order-reply-demo-v1",
+          "source": "reconstructed_demo",
+          "score": 10,
+          "matched_keywords": [],
+          "guide": "用户明确表示着急时先简短承接情绪；不能捏造已催单、已通知仓库或加急成功。"
+        }
+      ],
+      "courier_calls": []
+    },
+    {
+      "check": "logistics_reply_uses_actual_mock_http_call",
+      "request_id": "req_7849207cbbe84b1c858786dc895a9b57",
+      "conversation_id": "conv_02e64fb7a03343f2a30d0424dde7fdb5",
+      "module": "order_query",
+      "status": "completed",
+      "reply_mode": "deepseek_grounded_reply",
+      "independent_review_passed": true,
+      "retrieval": [
+        {
+          "id": "parcel_transport",
+          "version": "order-reply-demo-v1",
+          "source": "reconstructed_demo",
+          "score": 14,
+          "matched_keywords": [
+            "物流",
+            "到哪"
+          ],
+          "guide": "先给当前运输进度，再说明有来源的预计时间；没有预计时间不要承诺今天或明天送达。"
+        },
+        {
+          "id": "arrival_time",
+          "version": "order-reply-demo-v1",
+          "source": "reconstructed_demo",
+          "score": 10,
+          "matched_keywords": [],
+          "guide": "优先回答预计送达。必须区分预计与保证，时间只认本轮接口事实；没有预计时间要明确说明。"
+        }
+      ],
+      "courier_calls": [
+        {
+          "provider": "mock_courier",
+          "is_simulated": true,
+          "transport": "http",
+          "http_status": 200,
+          "status": "success",
+          "tracking_number": "DEMO-TRACK-1002"
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "data/activities.json": "c8fa46cccff2d6d4a7f3a67cfa3fb1f53b0859da9c0b114dfb43fc382005bd6a",
+    "data/coupons.json": "dc44d6b8c44d88cd9ade7a235165488e3b3d89c597025af36a647c1bd02f6bc4",
+    "data/manifest.json": "dda45324101d67e86b891e24766884c7044b600adc66b87162f5cea71eb992b4",
+    "data/products.json": "1b1e2778aa262ed2660ffb5166b7b54470e8ef826a94e8089ac89733baf40457",
+    "data/users.json": "8cac104399c7072bd775c9d917a38be0d427b44fb0b4658c86a15b387afcfedb",
+    "integration/__init__.py": "9a056af285c4f9c241946711b61c33c29777730c5cc90b3223d9a80f99ceed55",
+    "integration/contracts.py": "e2ae9ac594bafd99b63d9337fbb3f369b3d9a0704f122edbd872f59aae04274c",
+    "integration/identity.py": "db422d01d6f033f1583e4a92427253382d468a61ce98b19dfe6eddfc2691bf88",
+    "integration/legacy_loader.py": "3617b33b42806668fca99101ead93d4f826b77ff11f28afa824d4ec0550b2807",
+    "integration/order_adapter.py": "4ce7c92e8eb3ea942172230df563e31cd505e8f4a9ba89d68221a7fae559e40e",
+    "integration/registry.py": "0141cf6dae7ed4261c007f9665bd1220704eb1646e82d096efaff6e4b5071ad9",
+    "integration/router.py": "18be0cc097a169676983c5bfe7c99d523fe97c3e6e80525fd748c116c03879a2",
+    "integration/service.py": "ec5a928916eb25f7c62fa54fc87920a4ff0cdbaf47ec9234a8eecc2cf4e53add",
+    "integration/store.py": "6a479c5c08017e4dcdc6308106921cfb96471a0ebcc466ebce603e026f915b91",
+    "prompts/customer_reply.md": "042fb1763049ef6f8a275535d4ec1d472be34e5057ffc8718a452ff96b6e778d",
+    "prompts/need_extraction.md": "bb6aaf25c99b61368511aafc54b0f207457c150d1252e0bb860934d7a87cebb1",
+    "prompts/recommendation_reasons.md": "a2a31ff0d01872b97900bdb1bb67093b6c660ca40be576025e299968ce353270",
+    "prompts/reply_review.md": "bd8e8bb06a3c332198cbe555b70b80fbfd9d7d598b4611ffea3486f0307aa74d",
+    "runtime/__init__.py": "8181cdbd6feffd69d890d0d133e867b5c8bf1cf2dc63f3dbbd50066fe3c0c43b",
+    "runtime/catalog.py": "0a94f19acdd8959a0dded6a366e86e075efa7644c7259375f0edf232e93914e7",
+    "runtime/cli.py": "ac6667401edf0b09b195357c18f043a3e36c1654e83edfb136634f7a7dc7abec",
+    "runtime/errors.py": "4875fa2899dca93bb87536ec29e8f4b139cdba516721fd6b95110e787382f01b",
+    "runtime/model.py": "161066ec8a0c7d26dddaffb327ed29c5aedcd55abfaa5a0d86662199c3d44b0d",
+    "runtime/module_interface.py": "9210fa563d701a7351d13afe3a21af64492edf81917d8be2ff4dd7d8525eeb8a",
+    "runtime/needs.py": "e564feae6ef7dd345f2d61e816addf62cde36d775ae88959f27f6c9e8c290262",
+    "runtime/pricing.py": "7e5c6422af258805381d037ba5c9461e1132e375e386c0b82df62f509fcd816e",
+    "runtime/recommendation.py": "2baebba35d6276427461ceff73b07b222069499f6c31018b002d959c05bdb5ca",
+    "runtime/reply.py": "7e9d6b097832c30a8013a2bf28e5265e0b2da4f00669c50af4d31f39d2d8fc24",
+    "runtime/service.py": "d3fd0ce8832b1681b900aeada55ce305b7e850d17758513b7743c744d7ac4a10",
+    "runtime/validation.py": "20c26cbd75b2fb51ff6dc1287f16ace7a9aed118cf2def953cc59e9bd333bf32",
+    "runtime/web.py": "7b0cf0d35ca0db7808935f18449f8fa7f705310e6815ca79c818f3b1d479a455",
+    "web/app.js": "60c567a85c3d5a46a6ea6790b466e107b7c236efeefc6ca3b42c5ccb231a1e07",
+    "web/favicon.svg": "249b541ce659732c3662eecef659bf80b481e66158f21e81c5c987672bb9ee10",
+    "web/index.html": "13575735840b932cab5174cea280e7127a0e1d012e786c71a1bc8d1251391cf5",
+    "web/styles.css": "ed5788569dbebe134e8b3035d1ed4e19d76f2179622a6d987186654656f714ee"
+  },
+  "expiry_policy": {
+    "near_days": 30,
+    "day_30_excluded": true,
+    "day_31_allowed_if_other_requirements_met": true,
+    "applies_to": [
+      "主推",
+      "备选",
+      "混搭",
+      "凑单",
+      "赠品"
+    ],
+    "unknown_expiry_excluded": true,
+    "user_cannot_override": true
+  },
+  "remaining_model_failures": [
+    {
+      "file": "acceptance/integrated-browser-second-attempt.json",
+      "stage": "需求理解核验",
+      "passed": false
+    },
+    {
+      "file": "acceptance/stage4-browser-integrated.json",
+      "stage": "推荐客服话术核验",
+      "passed": false
+    }
+  ],
+  "first_browser_attempt": "acceptance/integrated-browser-first-attempt.json",
+  "historical_full_acceptance": "acceptance/stage5_execution.json",
+  "tokens": {
+    "requested_ceiling": 10000000,
+    "per_server_model_conservative_limit": 500000,
+    "last_test_server_usage": {
+      "calls": 22,
+      "reported_total_tokens": 38504,
+      "unreported_calls": 0,
+      "reserved_upper_bound": 400756,
+      "charged_upper_bound": 38504
+    },
+    "earlier_test_server_exact_usage_available": false,
+    "earlier_test_server_conservative_upper_bound": 500000,
+    "live_model_conservative_upper_bound": 538504,
+    "new_server_after_tests_has_no_live_model_test_calls": true,
+    "agent_usage_source": "Codex update_goal complete 的最终账本",
+    "agent_goal_tokens": 200743,
+    "agent_goal_budget": 10000000,
+    "agent_elapsed_seconds": 2558,
+    "combined_conservative_upper_bound": 739247,
+    "within_requested_ceiling": true
+  },
+  "original_order_project_modified_by_this_integration": false,
+  "source_order_database_mode": "ro",
+  "human_service_integrated": false,
+  "logistics_source": "local_simulated_http",
+  "history_migration_backup": ".local/unified-backups/",
+  "final_server_smoke": {
+    "status": "needs_clarification",
+    "modules": [
+      "product_recommendation",
+      "order_query",
+      "conversation_router"
+    ],
+    "model_calls": 0,
+    "module": "order_query",
+    "request_id": "req_final_multiple_orders"
+  }
+}

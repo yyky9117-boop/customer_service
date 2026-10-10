@@ -1,0 +1,47 @@
+{
+  "verified_at": "2026-10-08T08:25:16.495822+00:00",
+  "all_passed": true,
+  "automated_tests": {
+    "run": 202,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "unification_tests": 24
+  },
+  "readonly_cross_module_smoke": {
+    "passed": true,
+    "steps": [
+      {
+        "module": "product_recommendation",
+        "status": "completed",
+        "revision": 1
+      },
+      {
+        "module": "order_query",
+        "status": "completed",
+        "revision": 2
+      },
+      {
+        "module": "product_recommendation",
+        "status": "completed",
+        "revision": 3
+      }
+    ],
+    "history_messages": 6,
+    "order_source": "existing_demo_database_readonly",
+    "live_model_used": false,
+    "model_extraction": "scripted_need_patch_for_boundary_check",
+    "logistics_api_called": false,
+    "human_api_called": false
+  },
+  "web_routing_enabled": false,
+  "existing_core_sha256_at_verification": {
+    "runtime/service.py": "65fa9f43208c0d7ae23c78694b04d4aca5237a3c8c34fa18342228306e666550",
+    "runtime/recommendation.py": "480d8aaa4719b354f4c12e1e9ab51ae8d5a10636e89f22d34c86aae34f14b3cc",
+    "runtime/pricing.py": "7e5c6422af258805381d037ba5c9461e1132e375e386c0b82df62f509fcd816e",
+    "runtime/model.py": "faa51cdcd912fd810dfad370b245d4317bb68c57eda30df4e2d1352d960c579b",
+    "runtime/module_interface.py": "9210fa563d701a7351d13afe3a21af64492edf81917d8be2ff4dd7d8525eeb8a"
+  },
+  "live_model_accuracy_verified": false,
+  "full_integration_completed": false
+}

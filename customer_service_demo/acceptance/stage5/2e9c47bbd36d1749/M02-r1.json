@@ -1,0 +1,3973 @@
+{
+  "case_id": "M02",
+  "title": "撤销送礼推测",
+  "repetition": 1,
+  "implementation_hash": "2e9c47bbd36d1749",
+  "executed_at": "2026-10-08T12:57:26.584519+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_601d99b959b44c86ba3d77174401ce70",
+        "expected_revision": 0,
+        "message": "送朋友，100 元左右",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_aac7b944b6c54178ad93915156adc2ce",
+        "request_id": "req_601d99b959b44c86ba3d77174401ce70",
+        "turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_d1cd03a86b594a33a96eaaa5e9955de3",
+          "role": "assistant",
+          "content": "亲～，想给朋友挑一份百元左右的零食，我帮您看了两款礼盒可以选，价格都直接整理好了😊\n\n首选是混合坚果礼盒（1件），礼盒装适合送朋友，混合坚果口味多样，正好适合送人的场景，已计入礼盒 9 折。到手含运费95.10元\n\n要是想换个口味，备选可以看看饼干礼盒（1件），同为礼盒装，饼干口味与坚果方案不同，总价比首选高一些，已计入礼盒 9 折。到手含运费116.10元，此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。\n\n您比较倾向哪一款，或者想换预算、数量，都可以直接选中卡片上的商品告诉我。想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_8e73630b0b89ec3730ea",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_gift",
+              "items": [
+                {
+                  "sku_id": "P014",
+                  "product_name": "混合坚果礼盒",
+                  "quantity": 1,
+                  "unit_price_fen": 9900,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 9900,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_GIFT",
+                    "label": "礼盒 9 折",
+                    "amount_fen": 990,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 8910,
+                "shipping_fen": 600,
+                "total_payable_fen": 9510,
+                "conditions": []
+              },
+              "reasons": [
+                "礼盒装适合送朋友，混合坚果口味多样。",
+                "内包独立分装，每包25克方便分享取用。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_14adf6504b36c138df84",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_gift",
+              "items": [
+                {
+                  "sku_id": "P015",
+                  "product_name": "饼干礼盒",
+                  "quantity": 1,
+                  "unit_price_fen": 12900,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 12900,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_GIFT",
+                    "label": "礼盒 9 折",
+                    "amount_fen": 1290,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 11610,
+                "shipping_fen": 0,
+                "total_payable_fen": 11610,
+                "conditions": []
+              },
+              "reasons": [
+                "同为礼盒装，饼干口味与坚果方案不同。",
+                "独立小包每包20克，适合分次取用。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_aac7b944b6c54178ad93915156adc2ce",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_gift",
+                "label": "送朋友的零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": 10000,
+                  "strictness": "approximate",
+                  "scope": "goods_total",
+                  "source_text": "100 元左右",
+                  "min_is_hard": false,
+                  "source_turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e"
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_purpose",
+                    "field": "purpose",
+                    "operator": "equals",
+                    "value": "gift",
+                    "strength": "hard",
+                    "source_text": "送朋友",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e"
+                  },
+                  {
+                    "constraint_id": "c_gift_need",
+                    "field": "gift_need",
+                    "operator": "equals",
+                    "value": true,
+                    "strength": "hard",
+                    "source_text": "送朋友",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_d1cd03a86b594a33a96eaaa5e9955de3",
+              "turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e",
+              "plan_order": [
+                {
+                  "plan_id": "plan_8e73630b0b89ec3730ea",
+                  "sku_ids": [
+                    "P014"
+                  ]
+                },
+                {
+                  "plan_id": "plan_14adf6504b36c138df84",
+                  "sku_ids": [
+                    "P015"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_2af020ad2f6c4cbd8cc6f172baf0bc3f",
+          "role": "user",
+          "content": "送朋友，100 元左右",
+          "turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e"
+        },
+        {
+          "id": "msg_d1cd03a86b594a33a96eaaa5e9955de3",
+          "role": "assistant",
+          "content": "亲～，想给朋友挑一份百元左右的零食，我帮您看了两款礼盒可以选，价格都直接整理好了😊\n\n首选是混合坚果礼盒（1件），礼盒装适合送朋友，混合坚果口味多样，正好适合送人的场景，已计入礼盒 9 折。到手含运费95.10元\n\n要是想换个口味，备选可以看看饼干礼盒（1件），同为礼盒装，饼干口味与坚果方案不同，总价比首选高一些，已计入礼盒 9 折。到手含运费116.10元，此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。\n\n您比较倾向哪一款，或者想换预算、数量，都可以直接选中卡片上的商品告诉我。想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_8e73630b0b89ec3730ea",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_gift",
+              "items": [
+                {
+                  "sku_id": "P014",
+                  "product_name": "混合坚果礼盒",
+                  "quantity": 1,
+                  "unit_price_fen": 9900,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 9900,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_GIFT",
+                    "label": "礼盒 9 折",
+                    "amount_fen": 990,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 8910,
+                "shipping_fen": 600,
+                "total_payable_fen": 9510,
+                "conditions": []
+              },
+              "reasons": [
+                "礼盒装适合送朋友，混合坚果口味多样。",
+                "内包独立分装，每包25克方便分享取用。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_14adf6504b36c138df84",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_gift",
+              "items": [
+                {
+                  "sku_id": "P015",
+                  "product_name": "饼干礼盒",
+                  "quantity": 1,
+                  "unit_price_fen": 12900,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 12900,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_GIFT",
+                    "label": "礼盒 9 折",
+                    "amount_fen": 1290,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 11610,
+                "shipping_fen": 0,
+                "total_payable_fen": 11610,
+                "conditions": []
+              },
+              "reasons": [
+                "同为礼盒装，饼干口味与坚果方案不同。",
+                "独立小包每包20克，适合分次取用。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              ]
+            }
+          ],
+          "turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_gift": {
+            "P001": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P002": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P003": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P004": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P005": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P006": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P007": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P008": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P009": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P010": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P011": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P012": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P013": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P016": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P017": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P018": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P019": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P020": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P021": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P022": [
+              "stock_unknown_or_empty",
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P023": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P024": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P025": [
+              "expired_or_unknown",
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P026": [
+              "price_unknown",
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P027": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P028": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P029": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ],
+            "P030": [
+              "constraint:c_purpose",
+              "constraint:c_gift_need"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 2,
+        "priced_cart_count": 2,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 1,
+        "reply_review_passed": true
+      }
+    },
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_aac7b944b6c54178ad93915156adc2ce",
+        "request_id": "req_ec31b9de40f84696bad71879ddd20694",
+        "expected_revision": 1,
+        "message": "改成自己吃，不用送礼",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_aac7b944b6c54178ad93915156adc2ce",
+        "request_id": "req_ec31b9de40f84696bad71879ddd20694",
+        "turn_id": "turn_ecfe0acc53d84d398acba96ee41fe133",
+        "base_revision": 1,
+        "revision": 2,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_a4595f24cad741d687329f66765cebbd",
+          "role": "assistant",
+          "content": "亲～，改成自己吃、不用送礼的话，这边按商品合计约100.00元重新帮您挑了几款日常零食😊\n\n首选是无糖气泡水（1件），自己饮用无送礼需求，无糖标签的气泡水适合日常喝，含运费11.90元。\n\n备选则是临期燕麦饼干（1件），低糖标签加低甜度，自己吃时甜度负担较轻，总价比首选高一些，含运费12.90元；临期燕麦饼干为临期商品，标注到期日为2026年10月20日。\n\n另外还可以看看无糖薄荷糖（1件），无糖标签的薄荷糖，自己吃不挑送礼场合，总价比首选高一些，含运费13.90元。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_aa3185d01585ac480702",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_gift",
+              "items": [
+                {
+                  "sku_id": "P027",
+                  "product_name": "无糖气泡水",
+                  "quantity": 1,
+                  "unit_price_fen": 590,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 590,
+                "discounts": [],
+                "merchandise_payable_fen": 590,
+                "shipping_fen": 600,
+                "total_payable_fen": 1190,
+                "conditions": []
+              },
+              "reasons": [
+                "自己饮用无送礼需求，无糖标签的气泡水适合日常喝",
+                "独立内包装，办公室分次取用方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_1ee1381da3397e56704c",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_gift",
+              "items": [
+                {
+                  "sku_id": "P024",
+                  "product_name": "临期燕麦饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 690,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 690,
+                "discounts": [],
+                "merchandise_payable_fen": 690,
+                "shipping_fen": 600,
+                "total_payable_fen": 1290,
+                "conditions": []
+              },
+              "reasons": [
+                "低糖标签加低甜度，自己吃时甜度负担较轻",
+                "独立内包每包18克，方便分次取用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_c53e74b611d05220e55f",
+              "plan_type": "single_product",
+              "title": "备选方案 2",
+              "rank": 3,
+              "group_id": "group_gift",
+              "items": [
+                {
+                  "sku_id": "P009",
+                  "product_name": "无糖薄荷糖",
+                  "quantity": 1,
+                  "unit_price_fen": 790,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 790,
+                "discounts": [],
+                "merchandise_payable_fen": 790,
+                "shipping_fen": 600,
+                "total_payable_fen": 1390,
+                "conditions": []
+              },
+              "reasons": [
+                "无糖标签的薄荷糖，自己吃不挑送礼场合",
+                "独立内包单个3克，办公室分次取用方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_aac7b944b6c54178ad93915156adc2ce",
+        "revision": 2,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_gift",
+                "label": "自己吃的零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": 10000,
+                  "strictness": "approximate",
+                  "scope": "goods_total",
+                  "source_text": "100 元左右",
+                  "min_is_hard": false,
+                  "source_turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e"
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_purpose",
+                    "field": "purpose",
+                    "operator": "equals",
+                    "value": "self",
+                    "strength": "hard",
+                    "source_text": "改成自己吃",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_ecfe0acc53d84d398acba96ee41fe133"
+                  },
+                  {
+                    "constraint_id": "c_gift_need",
+                    "field": "gift_need",
+                    "operator": "equals",
+                    "value": false,
+                    "strength": "hard",
+                    "source_text": "不用送礼",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_ecfe0acc53d84d398acba96ee41fe133"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_a4595f24cad741d687329f66765cebbd",
+              "turn_id": "turn_ecfe0acc53d84d398acba96ee41fe133",
+              "plan_order": [
+                {
+                  "plan_id": "plan_aa3185d01585ac480702",
+                  "sku_ids": [
+                    "P027"
+                  ]
+                },
+                {
+                  "plan_id": "plan_1ee1381da3397e56704c",
+                  "sku_ids": [
+                    "P024"
+                  ]
+                },
+                {
+                  "plan_id": "plan_c53e74b611d05220e55f",
+                  "sku_ids": [
+                    "P009"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_2af020ad2f6c4cbd8cc6f172baf0bc3f",
+          "role": "user",
+          "content": "送朋友，100 元左右",
+          "turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e"
+        },
+        {
+          "id": "msg_d1cd03a86b594a33a96eaaa5e9955de3",
+          "role": "assistant",
+          "content": "亲～，想给朋友挑一份百元左右的零食，我帮您看了两款礼盒可以选，价格都直接整理好了😊\n\n首选是混合坚果礼盒（1件），礼盒装适合送朋友，混合坚果口味多样，正好适合送人的场景，已计入礼盒 9 折。到手含运费95.10元\n\n要是想换个口味，备选可以看看饼干礼盒（1件），同为礼盒装，饼干口味与坚果方案不同，总价比首选高一些，已计入礼盒 9 折。到手含运费116.10元，此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。\n\n您比较倾向哪一款，或者想换预算、数量，都可以直接选中卡片上的商品告诉我。想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_8e73630b0b89ec3730ea",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_gift",
+              "items": [
+                {
+                  "sku_id": "P014",
+                  "product_name": "混合坚果礼盒",
+                  "quantity": 1,
+                  "unit_price_fen": 9900,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 9900,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_GIFT",
+                    "label": "礼盒 9 折",
+                    "amount_fen": 990,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 8910,
+                "shipping_fen": 600,
+                "total_payable_fen": 9510,
+                "conditions": []
+              },
+              "reasons": [
+                "礼盒装适合送朋友，混合坚果口味多样。",
+                "内包独立分装，每包25克方便分享取用。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_14adf6504b36c138df84",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_gift",
+              "items": [
+                {
+                  "sku_id": "P015",
+                  "product_name": "饼干礼盒",
+                  "quantity": 1,
+                  "unit_price_fen": 12900,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 12900,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_GIFT",
+                    "label": "礼盒 9 折",
+                    "amount_fen": 1290,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 11610,
+                "shipping_fen": 0,
+                "total_payable_fen": 11610,
+                "conditions": []
+              },
+              "reasons": [
+                "同为礼盒装，饼干口味与坚果方案不同。",
+                "独立小包每包20克，适合分次取用。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              ]
+            }
+          ],
+          "turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e",
+          "status": "completed"
+        },
+        {
+          "id": "msg_ea5ad761a513431faad7f7bdac6adc08",
+          "role": "user",
+          "content": "改成自己吃，不用送礼",
+          "turn_id": "turn_ecfe0acc53d84d398acba96ee41fe133"
+        },
+        {
+          "id": "msg_a4595f24cad741d687329f66765cebbd",
+          "role": "assistant",
+          "content": "亲～，改成自己吃、不用送礼的话，这边按商品合计约100.00元重新帮您挑了几款日常零食😊\n\n首选是无糖气泡水（1件），自己饮用无送礼需求，无糖标签的气泡水适合日常喝，含运费11.90元。\n\n备选则是临期燕麦饼干（1件），低糖标签加低甜度，自己吃时甜度负担较轻，总价比首选高一些，含运费12.90元；临期燕麦饼干为临期商品，标注到期日为2026年10月20日。\n\n另外还可以看看无糖薄荷糖（1件），无糖标签的薄荷糖，自己吃不挑送礼场合，总价比首选高一些，含运费13.90元。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_aa3185d01585ac480702",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_gift",
+              "items": [
+                {
+                  "sku_id": "P027",
+                  "product_name": "无糖气泡水",
+                  "quantity": 1,
+                  "unit_price_fen": 590,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 590,
+                "discounts": [],
+                "merchandise_payable_fen": 590,
+                "shipping_fen": 600,
+                "total_payable_fen": 1190,
+                "conditions": []
+              },
+              "reasons": [
+                "自己饮用无送礼需求，无糖标签的气泡水适合日常喝",
+                "独立内包装，办公室分次取用方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_1ee1381da3397e56704c",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_gift",
+              "items": [
+                {
+                  "sku_id": "P024",
+                  "product_name": "临期燕麦饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 690,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 690,
+                "discounts": [],
+                "merchandise_payable_fen": 690,
+                "shipping_fen": 600,
+                "total_payable_fen": 1290,
+                "conditions": []
+              },
+              "reasons": [
+                "低糖标签加低甜度，自己吃时甜度负担较轻",
+                "独立内包每包18克，方便分次取用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_c53e74b611d05220e55f",
+              "plan_type": "single_product",
+              "title": "备选方案 2",
+              "rank": 3,
+              "group_id": "group_gift",
+              "items": [
+                {
+                  "sku_id": "P009",
+                  "product_name": "无糖薄荷糖",
+                  "quantity": 1,
+                  "unit_price_fen": 790,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 790,
+                "discounts": [],
+                "merchandise_payable_fen": 790,
+                "shipping_fen": 600,
+                "total_payable_fen": 1390,
+                "conditions": []
+              },
+              "reasons": [
+                "无糖标签的薄荷糖，自己吃不挑送礼场合",
+                "独立内包单个3克，办公室分次取用方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_ecfe0acc53d84d398acba96ee41fe133",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 2,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_gift": {
+            "P014": [
+              "constraint:c_gift_need"
+            ],
+            "P015": [
+              "constraint:c_gift_need"
+            ],
+            "P022": [
+              "stock_unknown_or_empty"
+            ],
+            "P025": [
+              "expired_or_unknown"
+            ],
+            "P026": [
+              "price_unknown"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 25,
+        "priced_cart_count": 25,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 1,
+        "reply_review_passed": true
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "送朋友，100 元左右",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_gift",
+            "label": "送朋友的零食",
+            "budget": {
+              "min_fen": null,
+              "max_fen": 10000,
+              "strictness": "approximate",
+              "scope": "goods_total",
+              "source_text": "100 元左右",
+              "min_is_hard": false
+            },
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_purpose",
+                "field": "purpose",
+                "operator": "equals",
+                "value": "gift",
+                "strength": "hard",
+                "source_text": "送朋友",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_gift_need",
+                "field": "gift_need",
+                "operator": "equals",
+                "value": true,
+                "strength": "hard",
+                "source_text": "送朋友",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.422
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "送朋友，100 元左右",
+        "need_summary": "送人、商品合计约100.00元",
+        "plans": [
+          {
+            "plan_id": "plan_8e73630b0b89ec3730ea",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P014",
+                "product_name": "混合坚果礼盒",
+                "quantity": 1,
+                "unit_price_fen": 9900,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "混合坚果礼盒，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "混合坚果礼盒：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "混合坚果礼盒：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "混合坚果礼盒：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "混合坚果礼盒：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "混合坚果礼盒：已知单个内包25克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "混合坚果礼盒：ingredients=['peanut', 'cashew', 'almond']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "混合坚果礼盒：declared_allergens=['peanut', 'tree_nuts']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "混合坚果礼盒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "混合坚果礼盒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "混合坚果礼盒：scene_tags=['gift']"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费95.10元；商品应付89.10元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals gift，符合的商品仅为：混合坚果礼盒。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 gift_need equals True，符合的商品仅为：混合坚果礼盒。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "offer",
+                "text": "已计入礼盒 9 折。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_14adf6504b36c138df84",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P015",
+                "product_name": "饼干礼盒",
+                "quantity": 1,
+                "unit_price_fen": 12900,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "饼干礼盒，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "饼干礼盒：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "饼干礼盒：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "饼干礼盒：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "饼干礼盒：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "饼干礼盒：已知单个内包20克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "饼干礼盒：ingredients=['wheat', 'milk', 'egg', 'sugar']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "饼干礼盒：declared_allergens=['gluten', 'milk', 'egg']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "饼干礼盒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "饼干礼盒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "饼干礼盒：scene_tags=['gift']"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费116.10元；商品应付116.10元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals gift，符合的商品仅为：饼干礼盒。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "need_match",
+                "text": "对于需求 gift_need equals True，符合的商品仅为：饼干礼盒。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              },
+              {
+                "id": "p2_f19",
+                "kind": "offer",
+                "text": "已计入礼盒 9 折。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_8e73630b0b89ec3730ea",
+            "reasons": [
+              {
+                "text": "礼盒装适合送朋友，混合坚果口味多样。",
+                "fact_ids": [
+                  "p1_f11",
+                  "p1_f7"
+                ]
+              },
+              {
+                "text": "内包独立分装，每包25克方便分享取用。",
+                "fact_ids": [
+                  "p1_f5",
+                  "p1_f6"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_14adf6504b36c138df84",
+            "reasons": [
+              {
+                "text": "同为礼盒装，饼干口味与坚果方案不同。",
+                "fact_ids": [
+                  "p2_f11"
+                ]
+              },
+              {
+                "text": "独立小包每包20克，适合分次取用。",
+                "fact_ids": [
+                  "p2_f5",
+                  "p2_f6"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 1.605
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "送朋友，100 元左右",
+        "need_summary": "送人、商品合计约100.00元",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_gift",
+              "label": "送朋友的零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": 10000,
+                "strictness": "approximate",
+                "scope": "goods_total",
+                "source_text": "100 元左右",
+                "min_is_hard": false,
+                "source_turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e"
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_purpose",
+                  "field": "purpose",
+                  "operator": "equals",
+                  "value": "gift",
+                  "strength": "hard",
+                  "source_text": "送朋友",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e"
+                },
+                {
+                  "constraint_id": "c_gift_need",
+                  "field": "gift_need",
+                  "operator": "equals",
+                  "value": true,
+                  "strength": "hard",
+                  "source_text": "送朋友",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_8e73630b0b89ec3730ea",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P014",
+                "product_name": "混合坚果礼盒",
+                "quantity": 1,
+                "unit_price_fen": 9900,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 9900,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_GIFT",
+                  "label": "礼盒 9 折",
+                  "amount_fen": 990,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 8910,
+              "shipping_fen": 600,
+              "total_payable_fen": 9510,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "混合坚果礼盒，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "混合坚果礼盒：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "混合坚果礼盒：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "混合坚果礼盒：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "混合坚果礼盒：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "混合坚果礼盒：已知单个内包25克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "混合坚果礼盒：ingredients=['peanut', 'cashew', 'almond']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "混合坚果礼盒：declared_allergens=['peanut', 'tree_nuts']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "混合坚果礼盒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "混合坚果礼盒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "混合坚果礼盒：scene_tags=['gift']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "混合坚果礼盒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费95.10元；商品应付89.10元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals gift，符合的商品仅为：混合坚果礼盒。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 gift_need equals True，符合的商品仅为：混合坚果礼盒。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "offer",
+                "text": "已计入礼盒 9 折。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_14adf6504b36c138df84",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P015",
+                "product_name": "饼干礼盒",
+                "quantity": 1,
+                "unit_price_fen": 12900,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 12900,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_GIFT",
+                  "label": "礼盒 9 折",
+                  "amount_fen": 1290,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 11610,
+              "shipping_fen": 0,
+              "total_payable_fen": 11610,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "饼干礼盒，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "饼干礼盒：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "饼干礼盒：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "饼干礼盒：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "饼干礼盒：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "饼干礼盒：已知单个内包20克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "饼干礼盒：ingredients=['wheat', 'milk', 'egg', 'sugar']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "饼干礼盒：declared_allergens=['gluten', 'milk', 'egg']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "饼干礼盒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "饼干礼盒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "饼干礼盒：scene_tags=['gift']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "饼干礼盒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费116.10元；商品应付116.10元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals gift，符合的商品仅为：饼干礼盒。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "need_match",
+                "text": "对于需求 gift_need equals True，符合的商品仅为：饼干礼盒。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "boundary",
+                "text": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              },
+              {
+                "id": "p2_f19",
+                "kind": "offer",
+                "text": "已计入礼盒 9 折。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "送人、商品合计约100.00元",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "混合坚果礼盒（1件）",
+          "p1_price": "含运费95.10元",
+          "p1_offer": "已计入礼盒 9 折。",
+          "p2_items": "饼干礼盒（1件）",
+          "p2_price": "含运费116.10元",
+          "p2_difference": "总价比首选高一些",
+          "p2_notice": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。",
+          "p2_offer": "已计入礼盒 9 折。",
+          "p1_reason_1": "礼盒装适合送朋友，混合坚果口味多样",
+          "p1_reason_2": "内包独立分装，每包25克方便分享取用",
+          "p2_reason_1": "同为礼盒装，饼干口味与坚果方案不同",
+          "p2_reason_2": "独立小包每包20克，适合分次取用"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_8e73630b0b89ec3730ea",
+              "reasons": [
+                {
+                  "text": "礼盒装适合送朋友，混合坚果口味多样。",
+                  "fact_ids": [
+                    "p1_f11",
+                    "p1_f7"
+                  ]
+                },
+                {
+                  "text": "内包独立分装，每包25克方便分享取用。",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f6"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_14adf6504b36c138df84",
+              "reasons": [
+                {
+                  "text": "同为礼盒装，饼干口味与坚果方案不同。",
+                  "fact_ids": [
+                    "p2_f11"
+                  ]
+                },
+                {
+                  "text": "独立小包每包20克，适合分次取用。",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f6"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，想给朋友挑一份百元左右的零食，我帮您看了两款礼盒可以选，价格都直接整理好了😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，正好适合送人的场景，{{p1_offer}}到手{{p1_price}}\n\n要是想换个口味，备选可以看看{{p2_items}}，{{p2_reason_1}}，{{p2_difference}}，{{p2_offer}}到手{{p2_price}}，{{p2_notice}}\n\n您比较倾向哪一款，或者想换预算、数量，都可以直接选中卡片上的商品告诉我。{{follow_up}}"
+      },
+      "seconds": 1.618
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "送朋友，100 元左右",
+        "need_summary": "送人、商品合计约100.00元",
+        "plans": [
+          {
+            "plan_id": "plan_8e73630b0b89ec3730ea",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P014",
+                "product_name": "混合坚果礼盒",
+                "quantity": 1,
+                "unit_price_fen": 9900,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 9900,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_GIFT",
+                  "label": "礼盒 9 折",
+                  "amount_fen": 990,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 8910,
+              "shipping_fen": 600,
+              "total_payable_fen": 9510,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "混合坚果礼盒，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "混合坚果礼盒：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "混合坚果礼盒：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "混合坚果礼盒：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "混合坚果礼盒：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "混合坚果礼盒：已知单个内包25克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "混合坚果礼盒：ingredients=['peanut', 'cashew', 'almond']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "混合坚果礼盒：declared_allergens=['peanut', 'tree_nuts']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "混合坚果礼盒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "混合坚果礼盒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "混合坚果礼盒：scene_tags=['gift']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "混合坚果礼盒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费95.10元；商品应付89.10元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals gift，符合的商品仅为：混合坚果礼盒。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 gift_need equals True，符合的商品仅为：混合坚果礼盒。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "offer",
+                "text": "已计入礼盒 9 折。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_14adf6504b36c138df84",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P015",
+                "product_name": "饼干礼盒",
+                "quantity": 1,
+                "unit_price_fen": 12900,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 12900,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_GIFT",
+                  "label": "礼盒 9 折",
+                  "amount_fen": 1290,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 11610,
+              "shipping_fen": 0,
+              "total_payable_fen": 11610,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "饼干礼盒，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "饼干礼盒：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "饼干礼盒：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "饼干礼盒：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "饼干礼盒：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "饼干礼盒：已知单个内包20克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "饼干礼盒：ingredients=['wheat', 'milk', 'egg', 'sugar']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "饼干礼盒：declared_allergens=['gluten', 'milk', 'egg']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "饼干礼盒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "饼干礼盒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "饼干礼盒：scene_tags=['gift']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "饼干礼盒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费116.10元；商品应付116.10元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals gift，符合的商品仅为：饼干礼盒。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "need_match",
+                "text": "对于需求 gift_need equals True，符合的商品仅为：饼干礼盒。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "boundary",
+                "text": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              },
+              {
+                "id": "p2_f19",
+                "kind": "offer",
+                "text": "已计入礼盒 9 折。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "送人、商品合计约100.00元",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "混合坚果礼盒（1件）",
+          "p1_price": "含运费95.10元",
+          "p1_offer": "已计入礼盒 9 折。",
+          "p2_items": "饼干礼盒（1件）",
+          "p2_price": "含运费116.10元",
+          "p2_difference": "总价比首选高一些",
+          "p2_notice": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。",
+          "p2_offer": "已计入礼盒 9 折。",
+          "p1_reason_1": "礼盒装适合送朋友，混合坚果口味多样",
+          "p1_reason_2": "内包独立分装，每包25克方便分享取用",
+          "p2_reason_1": "同为礼盒装，饼干口味与坚果方案不同",
+          "p2_reason_2": "独立小包每包20克，适合分次取用"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_8e73630b0b89ec3730ea",
+              "reasons": [
+                {
+                  "text": "礼盒装适合送朋友，混合坚果口味多样。",
+                  "fact_ids": [
+                    "p1_f11",
+                    "p1_f7"
+                  ]
+                },
+                {
+                  "text": "内包独立分装，每包25克方便分享取用。",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f6"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_14adf6504b36c138df84",
+              "reasons": [
+                {
+                  "text": "同为礼盒装，饼干口味与坚果方案不同。",
+                  "fact_ids": [
+                    "p2_f11"
+                  ]
+                },
+                {
+                  "text": "独立小包每包20克，适合分次取用。",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f6"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，想给朋友挑一份百元左右的零食，我帮您看了两款礼盒可以选，价格都直接整理好了😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，正好适合送人的场景，{{p1_offer}}到手{{p1_price}}\n\n要是想换个口味，备选可以看看{{p2_items}}，{{p2_reason_1}}，{{p2_difference}}，{{p2_offer}}到手{{p2_price}}，{{p2_notice}}\n\n您比较倾向哪一款，或者想换预算、数量，都可以直接选中卡片上的商品告诉我。{{follow_up}}",
+        "reply": "亲～，想给朋友挑一份百元左右的零食，我帮您看了两款礼盒可以选，价格都直接整理好了😊\n\n首选是混合坚果礼盒（1件），礼盒装适合送朋友，混合坚果口味多样，正好适合送人的场景，已计入礼盒 9 折。到手含运费95.10元\n\n要是想换个口味，备选可以看看饼干礼盒（1件），同为礼盒装，饼干口味与坚果方案不同，总价比首选高一些，已计入礼盒 9 折。到手含运费116.10元，此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。\n\n您比较倾向哪一款，或者想换预算、数量，都可以直接选中卡片上的商品告诉我。想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 0.968
+    },
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "改成自己吃，不用送礼",
+        "module_state": {
+          "need_groups": [
+            {
+              "group_id": "group_gift",
+              "label": "送朋友的零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": 10000,
+                "strictness": "approximate",
+                "scope": "goods_total",
+                "source_text": "100 元左右",
+                "min_is_hard": false,
+                "source_turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e"
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_purpose",
+                  "field": "purpose",
+                  "operator": "equals",
+                  "value": "gift",
+                  "strength": "hard",
+                  "source_text": "送朋友",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e"
+                },
+                {
+                  "constraint_id": "c_gift_need",
+                  "field": "gift_need",
+                  "operator": "equals",
+                  "value": true,
+                  "strength": "hard",
+                  "source_text": "送朋友",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": {
+            "message_id": "msg_d1cd03a86b594a33a96eaaa5e9955de3",
+            "turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e",
+            "plan_order": [
+              {
+                "plan_id": "plan_8e73630b0b89ec3730ea",
+                "sku_ids": [
+                  "P014"
+                ]
+              },
+              {
+                "plan_id": "plan_14adf6504b36c138df84",
+                "sku_ids": [
+                  "P015"
+                ]
+              }
+            ]
+          },
+          "shared_budget": null
+        },
+        "history": [
+          {
+            "id": "msg_2af020ad2f6c4cbd8cc6f172baf0bc3f",
+            "role": "user",
+            "content": "送朋友，100 元左右",
+            "turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e"
+          },
+          {
+            "id": "msg_d1cd03a86b594a33a96eaaa5e9955de3",
+            "role": "assistant",
+            "content": "亲～，想给朋友挑一份百元左右的零食，我帮您看了两款礼盒可以选，价格都直接整理好了😊\n\n首选是混合坚果礼盒（1件），礼盒装适合送朋友，混合坚果口味多样，正好适合送人的场景，已计入礼盒 9 折。到手含运费95.10元\n\n要是想换个口味，备选可以看看饼干礼盒（1件），同为礼盒装，饼干口味与坚果方案不同，总价比首选高一些，已计入礼盒 9 折。到手含运费116.10元，此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。\n\n您比较倾向哪一款，或者想换预算、数量，都可以直接选中卡片上的商品告诉我。想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+            "cards": [
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_8e73630b0b89ec3730ea",
+                "plan_type": "single_product",
+                "title": "首选方案",
+                "rank": 1,
+                "group_id": "group_gift",
+                "items": [
+                  {
+                    "sku_id": "P014",
+                    "product_name": "混合坚果礼盒",
+                    "quantity": 1,
+                    "unit_price_fen": 9900,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 9900,
+                  "discounts": [
+                    {
+                      "kind": "activity",
+                      "id": "A_GIFT",
+                      "label": "礼盒 9 折",
+                      "amount_fen": 990,
+                      "eligibility": "eligible"
+                    }
+                  ],
+                  "merchandise_payable_fen": 8910,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 9510,
+                  "conditions": []
+                },
+                "reasons": [
+                  "礼盒装适合送朋友，混合坚果口味多样。",
+                  "内包独立分装，每包25克方便分享取用。"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。"
+                ]
+              },
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_14adf6504b36c138df84",
+                "plan_type": "single_product",
+                "title": "备选方案 1",
+                "rank": 2,
+                "group_id": "group_gift",
+                "items": [
+                  {
+                    "sku_id": "P015",
+                    "product_name": "饼干礼盒",
+                    "quantity": 1,
+                    "unit_price_fen": 12900,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 12900,
+                  "discounts": [
+                    {
+                      "kind": "activity",
+                      "id": "A_GIFT",
+                      "label": "礼盒 9 折",
+                      "amount_fen": 1290,
+                      "eligibility": "eligible"
+                    }
+                  ],
+                  "merchandise_payable_fen": 11610,
+                  "shipping_fen": 0,
+                  "total_payable_fen": 11610,
+                  "conditions": []
+                },
+                "reasons": [
+                  "同为礼盒装，饼干口味与坚果方案不同。",
+                  "独立小包每包20克，适合分次取用。"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。",
+                  "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+                ]
+              }
+            ],
+            "turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e",
+            "status": "completed"
+          }
+        ],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_gift",
+            "label": "自己吃的零食",
+            "budget": null,
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_purpose",
+                "field": "purpose",
+                "operator": "equals",
+                "value": "self",
+                "strength": "hard",
+                "source_text": "自己吃",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_gift_need",
+                "field": "gift_need",
+                "operator": "equals",
+                "value": false,
+                "strength": "hard",
+                "source_text": "不用送礼",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.213
+    },
+    {
+      "stage": "extract",
+      "repair": "需求 JSON 结构错误: None is not of type 'object'",
+      "input": {
+        "message": "改成自己吃，不用送礼",
+        "module_state": {
+          "need_groups": [
+            {
+              "group_id": "group_gift",
+              "label": "送朋友的零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": 10000,
+                "strictness": "approximate",
+                "scope": "goods_total",
+                "source_text": "100 元左右",
+                "min_is_hard": false,
+                "source_turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e"
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_purpose",
+                  "field": "purpose",
+                  "operator": "equals",
+                  "value": "gift",
+                  "strength": "hard",
+                  "source_text": "送朋友",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e"
+                },
+                {
+                  "constraint_id": "c_gift_need",
+                  "field": "gift_need",
+                  "operator": "equals",
+                  "value": true,
+                  "strength": "hard",
+                  "source_text": "送朋友",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": {
+            "message_id": "msg_d1cd03a86b594a33a96eaaa5e9955de3",
+            "turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e",
+            "plan_order": [
+              {
+                "plan_id": "plan_8e73630b0b89ec3730ea",
+                "sku_ids": [
+                  "P014"
+                ]
+              },
+              {
+                "plan_id": "plan_14adf6504b36c138df84",
+                "sku_ids": [
+                  "P015"
+                ]
+              }
+            ]
+          },
+          "shared_budget": null
+        },
+        "history": [
+          {
+            "id": "msg_2af020ad2f6c4cbd8cc6f172baf0bc3f",
+            "role": "user",
+            "content": "送朋友，100 元左右",
+            "turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e"
+          },
+          {
+            "id": "msg_d1cd03a86b594a33a96eaaa5e9955de3",
+            "role": "assistant",
+            "content": "亲～，想给朋友挑一份百元左右的零食，我帮您看了两款礼盒可以选，价格都直接整理好了😊\n\n首选是混合坚果礼盒（1件），礼盒装适合送朋友，混合坚果口味多样，正好适合送人的场景，已计入礼盒 9 折。到手含运费95.10元\n\n要是想换个口味，备选可以看看饼干礼盒（1件），同为礼盒装，饼干口味与坚果方案不同，总价比首选高一些，已计入礼盒 9 折。到手含运费116.10元，此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。\n\n您比较倾向哪一款，或者想换预算、数量，都可以直接选中卡片上的商品告诉我。想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+            "cards": [
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_8e73630b0b89ec3730ea",
+                "plan_type": "single_product",
+                "title": "首选方案",
+                "rank": 1,
+                "group_id": "group_gift",
+                "items": [
+                  {
+                    "sku_id": "P014",
+                    "product_name": "混合坚果礼盒",
+                    "quantity": 1,
+                    "unit_price_fen": 9900,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 9900,
+                  "discounts": [
+                    {
+                      "kind": "activity",
+                      "id": "A_GIFT",
+                      "label": "礼盒 9 折",
+                      "amount_fen": 990,
+                      "eligibility": "eligible"
+                    }
+                  ],
+                  "merchandise_payable_fen": 8910,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 9510,
+                  "conditions": []
+                },
+                "reasons": [
+                  "礼盒装适合送朋友，混合坚果口味多样。",
+                  "内包独立分装，每包25克方便分享取用。"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。"
+                ]
+              },
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_14adf6504b36c138df84",
+                "plan_type": "single_product",
+                "title": "备选方案 1",
+                "rank": 2,
+                "group_id": "group_gift",
+                "items": [
+                  {
+                    "sku_id": "P015",
+                    "product_name": "饼干礼盒",
+                    "quantity": 1,
+                    "unit_price_fen": 12900,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 12900,
+                  "discounts": [
+                    {
+                      "kind": "activity",
+                      "id": "A_GIFT",
+                      "label": "礼盒 9 折",
+                      "amount_fen": 1290,
+                      "eligibility": "eligible"
+                    }
+                  ],
+                  "merchandise_payable_fen": 11610,
+                  "shipping_fen": 0,
+                  "total_payable_fen": 11610,
+                  "conditions": []
+                },
+                "reasons": [
+                  "同为礼盒装，饼干口味与坚果方案不同。",
+                  "独立小包每包20克，适合分次取用。"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。",
+                  "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+                ]
+              }
+            ],
+            "turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e",
+            "status": "completed"
+          }
+        ],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_gift",
+            "label": "自己吃的零食",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_purpose",
+                "field": "purpose",
+                "operator": "equals",
+                "value": "self",
+                "strength": "hard",
+                "source_text": "改成自己吃",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_gift_need",
+                "field": "gift_need",
+                "operator": "equals",
+                "value": false,
+                "strength": "hard",
+                "source_text": "不用送礼",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "shared_budget": null,
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.402
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "改成自己吃，不用送礼",
+        "need_summary": "商品合计约100.00元",
+        "plans": [
+          {
+            "plan_id": "plan_aa3185d01585ac480702",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P027",
+                "product_name": "无糖气泡水",
+                "quantity": 1,
+                "unit_price_fen": 590,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "无糖气泡水，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "无糖气泡水：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "无糖气泡水：无糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "无糖气泡水：无甜味标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "无糖气泡水：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "ingredients",
+                "text": "无糖气泡水：ingredients=['water', 'carbon_dioxide']"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "declared_allergens",
+                "text": "无糖气泡水：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "may_contain_allergens",
+                "text": "无糖气泡水：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "selling_points",
+                "text": "无糖气泡水：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "scene_tags",
+                "text": "无糖气泡水：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "pricing",
+                "text": "含运费11.90元；商品应付5.90元。"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals self，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 gift_need equals False，符合的商品仅为：无糖气泡水。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_1ee1381da3397e56704c",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费12.90元；商品应付6.90元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals self，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "need_match",
+                "text": "对于需求 gift_need equals False，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_c53e74b611d05220e55f",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P009",
+                "product_name": "无糖薄荷糖",
+                "quantity": 1,
+                "unit_price_fen": 790,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "无糖薄荷糖，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "无糖薄荷糖：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "无糖薄荷糖：无糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "无糖薄荷糖：中甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：已知单个内包3克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "无糖薄荷糖：ingredients=['mint', 'sweetener']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "无糖薄荷糖：declared_allergens=[]"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "无糖薄荷糖：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "无糖薄荷糖：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "无糖薄荷糖：scene_tags=['office']"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "pricing",
+                "text": "含运费13.90元；商品应付7.90元。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals self，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "need_match",
+                "text": "对于需求 gift_need equals False，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f17",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_aa3185d01585ac480702",
+            "reasons": [
+              {
+                "text": "自己饮用无送礼需求，无糖标签的气泡水适合日常喝",
+                "fact_ids": [
+                  "p1_f3",
+                  "p1_f13"
+                ]
+              },
+              {
+                "text": "独立内包装，办公室分次取用方便",
+                "fact_ids": [
+                  "p1_f5",
+                  "p1_f10"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_1ee1381da3397e56704c",
+            "reasons": [
+              {
+                "text": "低糖标签加低甜度，自己吃时甜度负担较轻",
+                "fact_ids": [
+                  "p2_f3",
+                  "p2_f4"
+                ]
+              },
+              {
+                "text": "独立内包每包18克，方便分次取用",
+                "fact_ids": [
+                  "p2_f5",
+                  "p2_f6"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_c53e74b611d05220e55f",
+            "reasons": [
+              {
+                "text": "无糖标签的薄荷糖，自己吃不挑送礼场合",
+                "fact_ids": [
+                  "p3_f3",
+                  "p3_f14"
+                ]
+              },
+              {
+                "text": "独立内包单个3克，办公室分次取用方便",
+                "fact_ids": [
+                  "p3_f5",
+                  "p3_f11"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 1.497
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "改成自己吃，不用送礼",
+        "need_summary": "商品合计约100.00元",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_gift",
+              "label": "自己吃的零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": 10000,
+                "strictness": "approximate",
+                "scope": "goods_total",
+                "source_text": "100 元左右",
+                "min_is_hard": false,
+                "source_turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e"
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_purpose",
+                  "field": "purpose",
+                  "operator": "equals",
+                  "value": "self",
+                  "strength": "hard",
+                  "source_text": "改成自己吃",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_ecfe0acc53d84d398acba96ee41fe133"
+                },
+                {
+                  "constraint_id": "c_gift_need",
+                  "field": "gift_need",
+                  "operator": "equals",
+                  "value": false,
+                  "strength": "hard",
+                  "source_text": "不用送礼",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_ecfe0acc53d84d398acba96ee41fe133"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": {
+            "message_id": "msg_d1cd03a86b594a33a96eaaa5e9955de3",
+            "turn_id": "turn_ff086eb5b6d4492a878f9086debdc32e",
+            "plan_order": [
+              {
+                "plan_id": "plan_8e73630b0b89ec3730ea",
+                "sku_ids": [
+                  "P014"
+                ]
+              },
+              {
+                "plan_id": "plan_14adf6504b36c138df84",
+                "sku_ids": [
+                  "P015"
+                ]
+              }
+            ]
+          },
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_aa3185d01585ac480702",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P027",
+                "product_name": "无糖气泡水",
+                "quantity": 1,
+                "unit_price_fen": 590,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 590,
+              "discounts": [],
+              "merchandise_payable_fen": 590,
+              "shipping_fen": 600,
+              "total_payable_fen": 1190,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "无糖气泡水，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "无糖气泡水：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "无糖气泡水：无糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "无糖气泡水：无甜味标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "无糖气泡水：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "ingredients",
+                "text": "无糖气泡水：ingredients=['water', 'carbon_dioxide']"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "declared_allergens",
+                "text": "无糖气泡水：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "may_contain_allergens",
+                "text": "无糖气泡水：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "selling_points",
+                "text": "无糖气泡水：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "scene_tags",
+                "text": "无糖气泡水：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "expiry",
+                "text": "无糖气泡水：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "pricing",
+                "text": "含运费11.90元；商品应付5.90元。"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals self，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 gift_need equals False，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_1ee1381da3397e56704c",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 690,
+              "discounts": [],
+              "merchandise_payable_fen": 690,
+              "shipping_fen": 600,
+              "total_payable_fen": 1290,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "临期燕麦饼干：标注到期时间 2026-10-20T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费12.90元；商品应付6.90元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals self，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "need_match",
+                "text": "对于需求 gift_need equals False，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "boundary",
+                "text": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_c53e74b611d05220e55f",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P009",
+                "product_name": "无糖薄荷糖",
+                "quantity": 1,
+                "unit_price_fen": 790,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 790,
+              "discounts": [],
+              "merchandise_payable_fen": 790,
+              "shipping_fen": 600,
+              "total_payable_fen": 1390,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "无糖薄荷糖，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "无糖薄荷糖：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "无糖薄荷糖：无糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "无糖薄荷糖：中甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：已知单个内包3克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "无糖薄荷糖：ingredients=['mint', 'sweetener']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "无糖薄荷糖：declared_allergens=[]"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "无糖薄荷糖：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "无糖薄荷糖：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "无糖薄荷糖：scene_tags=['office']"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "expiry",
+                "text": "无糖薄荷糖：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "pricing",
+                "text": "含运费13.90元；商品应付7.90元。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals self，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "need_match",
+                "text": "对于需求 gift_need equals False，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f17",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "商品合计约100.00元",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "无糖气泡水（1件）",
+          "p1_price": "含运费11.90元",
+          "p2_items": "临期燕麦饼干（1件）",
+          "p2_price": "含运费12.90元",
+          "p2_difference": "总价比首选高一些",
+          "p2_notice": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。",
+          "p3_items": "无糖薄荷糖（1件）",
+          "p3_price": "含运费13.90元",
+          "p3_difference": "总价比首选高一些",
+          "p1_reason_1": "自己饮用无送礼需求，无糖标签的气泡水适合日常喝",
+          "p1_reason_2": "独立内包装，办公室分次取用方便",
+          "p2_reason_1": "低糖标签加低甜度，自己吃时甜度负担较轻",
+          "p2_reason_2": "独立内包每包18克，方便分次取用",
+          "p3_reason_1": "无糖标签的薄荷糖，自己吃不挑送礼场合",
+          "p3_reason_2": "独立内包单个3克，办公室分次取用方便"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_aa3185d01585ac480702",
+              "reasons": [
+                {
+                  "text": "自己饮用无送礼需求，无糖标签的气泡水适合日常喝",
+                  "fact_ids": [
+                    "p1_f3",
+                    "p1_f13"
+                  ]
+                },
+                {
+                  "text": "独立内包装，办公室分次取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f10"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_1ee1381da3397e56704c",
+              "reasons": [
+                {
+                  "text": "低糖标签加低甜度，自己吃时甜度负担较轻",
+                  "fact_ids": [
+                    "p2_f3",
+                    "p2_f4"
+                  ]
+                },
+                {
+                  "text": "独立内包每包18克，方便分次取用",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f6"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_c53e74b611d05220e55f",
+              "reasons": [
+                {
+                  "text": "无糖标签的薄荷糖，自己吃不挑送礼场合",
+                  "fact_ids": [
+                    "p3_f3",
+                    "p3_f14"
+                  ]
+                },
+                {
+                  "text": "独立内包单个3克，办公室分次取用方便",
+                  "fact_ids": [
+                    "p3_f5",
+                    "p3_f11"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，改成自己吃、不用送礼的话，这边按{{need_summary}}重新帮您挑了几款日常零食😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}。\n\n备选则是{{p2_items}}，{{p2_reason_1}}，{{p2_difference}}，{{p2_price}}；{{p2_notice}}\n\n另外还可以看看{{p3_items}}，{{p3_reason_1}}，{{p3_difference}}，{{p3_price}}。\n\n{{follow_up}}"
+      },
+      "seconds": 1.364
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "改成自己吃，不用送礼",
+        "need_summary": "商品合计约100.00元",
+        "plans": [
+          {
+            "plan_id": "plan_aa3185d01585ac480702",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P027",
+                "product_name": "无糖气泡水",
+                "quantity": 1,
+                "unit_price_fen": 590,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 590,
+              "discounts": [],
+              "merchandise_payable_fen": 590,
+              "shipping_fen": 600,
+              "total_payable_fen": 1190,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "无糖气泡水，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "无糖气泡水：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "无糖气泡水：无糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "无糖气泡水：无甜味标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "无糖气泡水：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "ingredients",
+                "text": "无糖气泡水：ingredients=['water', 'carbon_dioxide']"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "declared_allergens",
+                "text": "无糖气泡水：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "may_contain_allergens",
+                "text": "无糖气泡水：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "selling_points",
+                "text": "无糖气泡水：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "scene_tags",
+                "text": "无糖气泡水：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "expiry",
+                "text": "无糖气泡水：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "pricing",
+                "text": "含运费11.90元；商品应付5.90元。"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals self，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 gift_need equals False，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_1ee1381da3397e56704c",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 690,
+              "discounts": [],
+              "merchandise_payable_fen": 690,
+              "shipping_fen": 600,
+              "total_payable_fen": 1290,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "临期燕麦饼干：标注到期时间 2026-10-20T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费12.90元；商品应付6.90元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals self，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "need_match",
+                "text": "对于需求 gift_need equals False，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "boundary",
+                "text": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_c53e74b611d05220e55f",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P009",
+                "product_name": "无糖薄荷糖",
+                "quantity": 1,
+                "unit_price_fen": 790,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 790,
+              "discounts": [],
+              "merchandise_payable_fen": 790,
+              "shipping_fen": 600,
+              "total_payable_fen": 1390,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "无糖薄荷糖，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "无糖薄荷糖：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "无糖薄荷糖：无糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "无糖薄荷糖：中甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：已知单个内包3克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "无糖薄荷糖：ingredients=['mint', 'sweetener']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "无糖薄荷糖：declared_allergens=[]"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "无糖薄荷糖：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "无糖薄荷糖：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "无糖薄荷糖：scene_tags=['office']"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "expiry",
+                "text": "无糖薄荷糖：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "pricing",
+                "text": "含运费13.90元；商品应付7.90元。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals self，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "need_match",
+                "text": "对于需求 gift_need equals False，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f17",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "商品合计约100.00元",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "无糖气泡水（1件）",
+          "p1_price": "含运费11.90元",
+          "p2_items": "临期燕麦饼干（1件）",
+          "p2_price": "含运费12.90元",
+          "p2_difference": "总价比首选高一些",
+          "p2_notice": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。",
+          "p3_items": "无糖薄荷糖（1件）",
+          "p3_price": "含运费13.90元",
+          "p3_difference": "总价比首选高一些",
+          "p1_reason_1": "自己饮用无送礼需求，无糖标签的气泡水适合日常喝",
+          "p1_reason_2": "独立内包装，办公室分次取用方便",
+          "p2_reason_1": "低糖标签加低甜度，自己吃时甜度负担较轻",
+          "p2_reason_2": "独立内包每包18克，方便分次取用",
+          "p3_reason_1": "无糖标签的薄荷糖，自己吃不挑送礼场合",
+          "p3_reason_2": "独立内包单个3克，办公室分次取用方便"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_aa3185d01585ac480702",
+              "reasons": [
+                {
+                  "text": "自己饮用无送礼需求，无糖标签的气泡水适合日常喝",
+                  "fact_ids": [
+                    "p1_f3",
+                    "p1_f13"
+                  ]
+                },
+                {
+                  "text": "独立内包装，办公室分次取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f10"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_1ee1381da3397e56704c",
+              "reasons": [
+                {
+                  "text": "低糖标签加低甜度，自己吃时甜度负担较轻",
+                  "fact_ids": [
+                    "p2_f3",
+                    "p2_f4"
+                  ]
+                },
+                {
+                  "text": "独立内包每包18克，方便分次取用",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f6"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_c53e74b611d05220e55f",
+              "reasons": [
+                {
+                  "text": "无糖标签的薄荷糖，自己吃不挑送礼场合",
+                  "fact_ids": [
+                    "p3_f3",
+                    "p3_f14"
+                  ]
+                },
+                {
+                  "text": "独立内包单个3克，办公室分次取用方便",
+                  "fact_ids": [
+                    "p3_f5",
+                    "p3_f11"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，改成自己吃、不用送礼的话，这边按{{need_summary}}重新帮您挑了几款日常零食😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}。\n\n备选则是{{p2_items}}，{{p2_reason_1}}，{{p2_difference}}，{{p2_price}}；{{p2_notice}}\n\n另外还可以看看{{p3_items}}，{{p3_reason_1}}，{{p3_difference}}，{{p3_price}}。\n\n{{follow_up}}",
+        "reply": "亲～，改成自己吃、不用送礼的话，这边按商品合计约100.00元重新帮您挑了几款日常零食😊\n\n首选是无糖气泡水（1件），自己饮用无送礼需求，无糖标签的气泡水适合日常喝，含运费11.90元。\n\n备选则是临期燕麦饼干（1件），低糖标签加低甜度，自己吃时甜度负担较轻，总价比首选高一些，含运费12.90元；临期燕麦饼干为临期商品，标注到期日为2026年10月20日。\n\n另外还可以看看无糖薄荷糖（1件），无糖标签的薄荷糖，自己吃不挑送礼场合，总价比首选高一些，含运费13.90元。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 0.635
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 11.781,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "completed"
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "撤销送礼及其推测，保留预算",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": true
+}

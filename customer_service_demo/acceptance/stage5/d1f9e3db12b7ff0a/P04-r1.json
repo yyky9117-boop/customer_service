@@ -1,0 +1,333 @@
+{
+  "case_id": "P04",
+  "title": "券门槛使用活动后范围金额",
+  "repetition": 1,
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "executed_at": "2026-10-08T13:11:17.555182+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_220d5d74b9c44eb28cb05f060ba6092a",
+        "expected_revision": 0,
+        "message": "这组合满减后还能用饼干券吗",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_0257cdd708894dfbba85d2482a37dd47",
+        "request_id": "req_220d5d74b9c44eb28cb05f060ba6092a",
+        "turn_id": "turn_5f2f12383ea9400d93644cd6b1404c53",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "needs_clarification",
+        "message": {
+          "id": "msg_cec10984533a4f7fb5eeeb2e59be2b1e",
+          "role": "assistant",
+          "content": "请明确选中哪一个方案或商品。",
+          "cards": []
+        },
+        "clarification": {
+          "question": "请明确选中哪一个方案或商品。",
+          "asked_fields": [
+            "reference"
+          ],
+          "group_id": null
+        },
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_0257cdd708894dfbba85d2482a37dd47",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [],
+            "pending_clarification": {
+              "question": "请明确选中哪一个方案或商品。",
+              "asked_fields": [
+                "reference"
+              ],
+              "group_id": null
+            },
+            "last_presentation": null,
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_2581b804fb8945c19ebf4d17e591de41",
+          "role": "user",
+          "content": "这组合满减后还能用饼干券吗",
+          "turn_id": "turn_5f2f12383ea9400d93644cd6b1404c53"
+        },
+        {
+          "id": "msg_cec10984533a4f7fb5eeeb2e59be2b1e",
+          "role": "assistant",
+          "content": "请明确选中哪一个方案或商品。",
+          "cards": [],
+          "turn_id": "turn_5f2f12383ea9400d93644cd6b1404c53",
+          "status": "needs_clarification"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {},
+        "quarantined_skus": []
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "这组合满减后还能用饼干券吗",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [],
+        "remove_group_ids": [],
+        "clarification": {
+          "question": "你指的“这组合”是哪个商品组合或哪件商品呢？方便的话也说一下“饼干券”的具体名称或券类型。",
+          "asked_fields": [
+            "reference"
+          ],
+          "group_id": null
+        },
+        "retrieval_hints": [],
+        "reference_action": "recommend_alternatives",
+        "reference_source_text": "这组合满减后还能用饼干券吗"
+      },
+      "seconds": 1.117
+    }
+  ],
+  "pricing_goldens": [
+    {
+      "id": "G010",
+      "passed": true,
+      "expected": {
+        "eligible": false,
+        "rejection_code": "coupon_threshold",
+        "eligible_basis_fen": 7273
+      },
+      "actual": {
+        "eligible": false,
+        "rejection_code": "coupon_threshold",
+        "eligible_basis_fen": 7273
+      }
+    },
+    {
+      "id": "G011",
+      "passed": true,
+      "expected": {
+        "eligible": true,
+        "activity_discount_fen": 1000,
+        "coupon_discount_fen": 0,
+        "merchandise_payable_fen": 10000,
+        "shipping_fen": 0,
+        "total_payable_fen": 10000,
+        "pricing_status": "confirmed",
+        "gifts": [],
+        "line_allocations": [
+          {
+            "sku_id": "P001",
+            "activity_discount_fen": 727,
+            "coupon_discount_fen": 0
+          },
+          {
+            "sku_id": "P004",
+            "activity_discount_fen": 273,
+            "coupon_discount_fen": 0
+          }
+        ]
+      },
+      "actual": {
+        "eligible": true,
+        "activity_id": "A_ORDER",
+        "coupon_id": null,
+        "activity_discount_fen": 1000,
+        "coupon_discount_fen": 0,
+        "merchandise_payable_fen": 10000,
+        "shipping_fen": 0,
+        "total_payable_fen": 10000,
+        "pricing_status": "confirmed",
+        "coupon_conditional": false,
+        "gifts": [],
+        "line_allocations": [
+          {
+            "sku_id": "P001",
+            "activity_discount_fen": 727,
+            "coupon_discount_fen": 0,
+            "payable_fen": 7273
+          },
+          {
+            "sku_id": "P004",
+            "activity_discount_fen": 273,
+            "coupon_discount_fen": 0,
+            "payable_fen": 2727
+          }
+        ]
+      }
+    }
+  ],
+  "seconds": 1.158,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": false,
+      "actual": "needs_clarification"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "追问最多两个字段",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "关联固定购物方案的独立数值基准",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": false
+}

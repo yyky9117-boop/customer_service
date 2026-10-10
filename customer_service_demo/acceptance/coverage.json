@@ -1,0 +1,8 @@
+{
+  "semantic_case_count": 98,
+  "pricing_probe_count": 53,
+  "all_cases_executed": true,
+  "note": "第五步执行状态见逐项真实证据；已执行不代表验收通过。",
+  "all_cases_passed": false,
+  "execution_evidence": "acceptance/stage5_execution.json"
+}

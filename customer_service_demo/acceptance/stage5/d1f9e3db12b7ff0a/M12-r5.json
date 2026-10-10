@@ -1,0 +1,3039 @@
+{
+  "case_id": "M12",
+  "title": "否定纠正撤销旧品类",
+  "repetition": 5,
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "executed_at": "2026-10-08T13:10:50.294166+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_10f0a81e094c43d4aebad6a7be9a9bae",
+        "expected_revision": 0,
+        "message": "想买坚果",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_97e7d7c503564286b3520130bf0a33a0",
+        "request_id": "req_10f0a81e094c43d4aebad6a7be9a9bae",
+        "turn_id": "turn_cfc796ff66f34818a36cf7eaf535e8ef",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_1764111aa5054dfdb4c96d7bf148b10f",
+          "role": "assistant",
+          "content": "亲～，想买坚果的话，我这边帮您挑了三款，坚果种类和口味各有不同，您看看哪个更顺心😊\n\n首选是蜜汁花生米（1件），独立小包20克，适合多人分享分次取用，含运费14.90元，价位是这三款里最省的一款。\n\n备选是每日坚果混合包（1件），混合坚果含杏仁、腰果、核桃，口味更丰富，含运费25.90元；总价比首选高一些，如果想一次尝到几种坚果可以看看它。\n\n另一款备选是原味腰果（1件），原味腰果为低甜度标签，适合不喜欢太甜的人，含运费30.90元；总价比首选高一些，偏好原味口感的话更合适。\n\n就是这些啦，想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_536de090ced74f05e644",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_nuts",
+              "items": [
+                {
+                  "sku_id": "P007",
+                  "product_name": "蜜汁花生米",
+                  "quantity": 1,
+                  "unit_price_fen": 890,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 890,
+                "discounts": [],
+                "merchandise_payable_fen": 890,
+                "shipping_fen": 600,
+                "total_payable_fen": 1490,
+                "conditions": []
+              },
+              "reasons": [
+                "独立小包20克，适合多人分享分次取用",
+                "不辣且带高甜度标签，适合偏甜口味的人"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_98474e7cc0a90d3362e7",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_nuts",
+              "items": [
+                {
+                  "sku_id": "P016",
+                  "product_name": "每日坚果混合包",
+                  "quantity": 1,
+                  "unit_price_fen": 1990,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 1990,
+                "discounts": [],
+                "merchandise_payable_fen": 1990,
+                "shipping_fen": 600,
+                "total_payable_fen": 2590,
+                "conditions": []
+              },
+              "reasons": [
+                "混合坚果含杏仁、腰果、核桃，口味更丰富",
+                "独立小包25克，适合办公室分次取用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_448c8edb82273108b0b9",
+              "plan_type": "single_product",
+              "title": "备选方案 2",
+              "rank": 3,
+              "group_id": "group_nuts",
+              "items": [
+                {
+                  "sku_id": "P006",
+                  "product_name": "原味腰果",
+                  "quantity": 1,
+                  "unit_price_fen": 2490,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 2490,
+                "discounts": [],
+                "merchandise_payable_fen": 2490,
+                "shipping_fen": 600,
+                "total_payable_fen": 3090,
+                "conditions": []
+              },
+              "reasons": [
+                "原味腰果为低甜度标签，适合不喜欢太甜的人",
+                "独立小包20克，方便办公室分次取用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_97e7d7c503564286b3520130bf0a33a0",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_nuts",
+                "label": "坚果零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_category_nuts",
+                    "field": "category",
+                    "operator": "include",
+                    "value": "nuts",
+                    "strength": "hard",
+                    "source_text": "坚果",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_cfc796ff66f34818a36cf7eaf535e8ef"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_1764111aa5054dfdb4c96d7bf148b10f",
+              "turn_id": "turn_cfc796ff66f34818a36cf7eaf535e8ef",
+              "plan_order": [
+                {
+                  "plan_id": "plan_536de090ced74f05e644",
+                  "sku_ids": [
+                    "P007"
+                  ]
+                },
+                {
+                  "plan_id": "plan_98474e7cc0a90d3362e7",
+                  "sku_ids": [
+                    "P016"
+                  ]
+                },
+                {
+                  "plan_id": "plan_448c8edb82273108b0b9",
+                  "sku_ids": [
+                    "P006"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_6ada321abd054d13a252adcf103f3e7c",
+          "role": "user",
+          "content": "想买坚果",
+          "turn_id": "turn_cfc796ff66f34818a36cf7eaf535e8ef"
+        },
+        {
+          "id": "msg_1764111aa5054dfdb4c96d7bf148b10f",
+          "role": "assistant",
+          "content": "亲～，想买坚果的话，我这边帮您挑了三款，坚果种类和口味各有不同，您看看哪个更顺心😊\n\n首选是蜜汁花生米（1件），独立小包20克，适合多人分享分次取用，含运费14.90元，价位是这三款里最省的一款。\n\n备选是每日坚果混合包（1件），混合坚果含杏仁、腰果、核桃，口味更丰富，含运费25.90元；总价比首选高一些，如果想一次尝到几种坚果可以看看它。\n\n另一款备选是原味腰果（1件），原味腰果为低甜度标签，适合不喜欢太甜的人，含运费30.90元；总价比首选高一些，偏好原味口感的话更合适。\n\n就是这些啦，想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_536de090ced74f05e644",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_nuts",
+              "items": [
+                {
+                  "sku_id": "P007",
+                  "product_name": "蜜汁花生米",
+                  "quantity": 1,
+                  "unit_price_fen": 890,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 890,
+                "discounts": [],
+                "merchandise_payable_fen": 890,
+                "shipping_fen": 600,
+                "total_payable_fen": 1490,
+                "conditions": []
+              },
+              "reasons": [
+                "独立小包20克，适合多人分享分次取用",
+                "不辣且带高甜度标签，适合偏甜口味的人"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_98474e7cc0a90d3362e7",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_nuts",
+              "items": [
+                {
+                  "sku_id": "P016",
+                  "product_name": "每日坚果混合包",
+                  "quantity": 1,
+                  "unit_price_fen": 1990,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 1990,
+                "discounts": [],
+                "merchandise_payable_fen": 1990,
+                "shipping_fen": 600,
+                "total_payable_fen": 2590,
+                "conditions": []
+              },
+              "reasons": [
+                "混合坚果含杏仁、腰果、核桃，口味更丰富",
+                "独立小包25克，适合办公室分次取用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_448c8edb82273108b0b9",
+              "plan_type": "single_product",
+              "title": "备选方案 2",
+              "rank": 3,
+              "group_id": "group_nuts",
+              "items": [
+                {
+                  "sku_id": "P006",
+                  "product_name": "原味腰果",
+                  "quantity": 1,
+                  "unit_price_fen": 2490,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 2490,
+                "discounts": [],
+                "merchandise_payable_fen": 2490,
+                "shipping_fen": 600,
+                "total_payable_fen": 3090,
+                "conditions": []
+              },
+              "reasons": [
+                "原味腰果为低甜度标签，适合不喜欢太甜的人",
+                "独立小包20克，方便办公室分次取用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_cfc796ff66f34818a36cf7eaf535e8ef",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_nuts": {
+            "P001": [
+              "constraint:c_category_nuts"
+            ],
+            "P002": [
+              "constraint:c_category_nuts"
+            ],
+            "P003": [
+              "constraint:c_category_nuts"
+            ],
+            "P004": [
+              "constraint:c_category_nuts"
+            ],
+            "P005": [
+              "constraint:c_category_nuts"
+            ],
+            "P008": [
+              "constraint:c_category_nuts"
+            ],
+            "P009": [
+              "constraint:c_category_nuts"
+            ],
+            "P010": [
+              "constraint:c_category_nuts"
+            ],
+            "P011": [
+              "constraint:c_category_nuts"
+            ],
+            "P012": [
+              "constraint:c_category_nuts"
+            ],
+            "P013": [
+              "constraint:c_category_nuts"
+            ],
+            "P015": [
+              "constraint:c_category_nuts"
+            ],
+            "P017": [
+              "constraint:c_category_nuts"
+            ],
+            "P018": [
+              "constraint:c_category_nuts"
+            ],
+            "P019": [
+              "constraint:c_category_nuts"
+            ],
+            "P020": [
+              "constraint:c_category_nuts"
+            ],
+            "P021": [
+              "constraint:c_category_nuts"
+            ],
+            "P022": [
+              "stock_unknown_or_empty",
+              "constraint:c_category_nuts"
+            ],
+            "P023": [
+              "constraint:c_category_nuts"
+            ],
+            "P024": [
+              "constraint:c_category_nuts"
+            ],
+            "P025": [
+              "expired_or_unknown",
+              "constraint:c_category_nuts"
+            ],
+            "P026": [
+              "price_unknown",
+              "constraint:c_category_nuts"
+            ],
+            "P027": [
+              "constraint:c_category_nuts"
+            ],
+            "P028": [
+              "constraint:c_category_nuts"
+            ],
+            "P029": [
+              "constraint:c_category_nuts"
+            ],
+            "P030": [
+              "constraint:c_category_nuts"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 4,
+        "priced_cart_count": 4,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 1,
+        "reply_review_passed": true
+      }
+    },
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_97e7d7c503564286b3520130bf0a33a0",
+        "request_id": "req_b88d6c499ca146c8a2e90fbfe3fbd823",
+        "expected_revision": 1,
+        "message": "不是坚果，换成海苔，不要辣",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_97e7d7c503564286b3520130bf0a33a0",
+        "request_id": "req_b88d6c499ca146c8a2e90fbfe3fbd823",
+        "turn_id": "turn_7680fa1ee09e4cc7bc21dd96581b23e5",
+        "base_revision": 1,
+        "revision": 2,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_5883017d7c484f2987d2a4a39423aeba",
+          "role": "assistant",
+          "content": "亲～，明白啦，不要坚果、换成海苔、不要辣，我按这个重新给您挑了😊\n\n首选是原味海苔脆片（1件），主要是原味海苔脆片不辣，适合不吃辣的需求，正好对得上您的口味要求，含运费15.90元。\n\n这次只筛出这一款符合不吃辣的海苔，没有其他更合适的备选可换。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_796eb5457a71da240fa0",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_nuts",
+              "items": [
+                {
+                  "sku_id": "P002",
+                  "product_name": "原味海苔脆片",
+                  "quantity": 1,
+                  "unit_price_fen": 990,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 990,
+                "discounts": [],
+                "merchandise_payable_fen": 990,
+                "shipping_fen": 600,
+                "total_payable_fen": 1590,
+                "conditions": []
+              },
+              "reasons": [
+                "原味海苔脆片不辣，适合不吃辣的需求",
+                "独立内包装，办公室分次取用方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_97e7d7c503564286b3520130bf0a33a0",
+        "revision": 2,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_nuts",
+                "label": "坚果零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_category_nuts",
+                    "field": "category",
+                    "operator": "include",
+                    "value": "seaweed",
+                    "strength": "hard",
+                    "source_text": "换成海苔",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_7680fa1ee09e4cc7bc21dd96581b23e5"
+                  },
+                  {
+                    "constraint_id": "c_taste_spice",
+                    "field": "taste",
+                    "operator": "equals",
+                    "value": "spice:none",
+                    "strength": "hard",
+                    "source_text": "不要辣",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_7680fa1ee09e4cc7bc21dd96581b23e5"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_5883017d7c484f2987d2a4a39423aeba",
+              "turn_id": "turn_7680fa1ee09e4cc7bc21dd96581b23e5",
+              "plan_order": [
+                {
+                  "plan_id": "plan_796eb5457a71da240fa0",
+                  "sku_ids": [
+                    "P002"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_6ada321abd054d13a252adcf103f3e7c",
+          "role": "user",
+          "content": "想买坚果",
+          "turn_id": "turn_cfc796ff66f34818a36cf7eaf535e8ef"
+        },
+        {
+          "id": "msg_1764111aa5054dfdb4c96d7bf148b10f",
+          "role": "assistant",
+          "content": "亲～，想买坚果的话，我这边帮您挑了三款，坚果种类和口味各有不同，您看看哪个更顺心😊\n\n首选是蜜汁花生米（1件），独立小包20克，适合多人分享分次取用，含运费14.90元，价位是这三款里最省的一款。\n\n备选是每日坚果混合包（1件），混合坚果含杏仁、腰果、核桃，口味更丰富，含运费25.90元；总价比首选高一些，如果想一次尝到几种坚果可以看看它。\n\n另一款备选是原味腰果（1件），原味腰果为低甜度标签，适合不喜欢太甜的人，含运费30.90元；总价比首选高一些，偏好原味口感的话更合适。\n\n就是这些啦，想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_536de090ced74f05e644",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_nuts",
+              "items": [
+                {
+                  "sku_id": "P007",
+                  "product_name": "蜜汁花生米",
+                  "quantity": 1,
+                  "unit_price_fen": 890,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 890,
+                "discounts": [],
+                "merchandise_payable_fen": 890,
+                "shipping_fen": 600,
+                "total_payable_fen": 1490,
+                "conditions": []
+              },
+              "reasons": [
+                "独立小包20克，适合多人分享分次取用",
+                "不辣且带高甜度标签，适合偏甜口味的人"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_98474e7cc0a90d3362e7",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_nuts",
+              "items": [
+                {
+                  "sku_id": "P016",
+                  "product_name": "每日坚果混合包",
+                  "quantity": 1,
+                  "unit_price_fen": 1990,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 1990,
+                "discounts": [],
+                "merchandise_payable_fen": 1990,
+                "shipping_fen": 600,
+                "total_payable_fen": 2590,
+                "conditions": []
+              },
+              "reasons": [
+                "混合坚果含杏仁、腰果、核桃，口味更丰富",
+                "独立小包25克，适合办公室分次取用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_448c8edb82273108b0b9",
+              "plan_type": "single_product",
+              "title": "备选方案 2",
+              "rank": 3,
+              "group_id": "group_nuts",
+              "items": [
+                {
+                  "sku_id": "P006",
+                  "product_name": "原味腰果",
+                  "quantity": 1,
+                  "unit_price_fen": 2490,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 2490,
+                "discounts": [],
+                "merchandise_payable_fen": 2490,
+                "shipping_fen": 600,
+                "total_payable_fen": 3090,
+                "conditions": []
+              },
+              "reasons": [
+                "原味腰果为低甜度标签，适合不喜欢太甜的人",
+                "独立小包20克，方便办公室分次取用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_cfc796ff66f34818a36cf7eaf535e8ef",
+          "status": "completed"
+        },
+        {
+          "id": "msg_7338045d17914d279f3499edca5414f8",
+          "role": "user",
+          "content": "不是坚果，换成海苔，不要辣",
+          "turn_id": "turn_7680fa1ee09e4cc7bc21dd96581b23e5"
+        },
+        {
+          "id": "msg_5883017d7c484f2987d2a4a39423aeba",
+          "role": "assistant",
+          "content": "亲～，明白啦，不要坚果、换成海苔、不要辣，我按这个重新给您挑了😊\n\n首选是原味海苔脆片（1件），主要是原味海苔脆片不辣，适合不吃辣的需求，正好对得上您的口味要求，含运费15.90元。\n\n这次只筛出这一款符合不吃辣的海苔，没有其他更合适的备选可换。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_796eb5457a71da240fa0",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_nuts",
+              "items": [
+                {
+                  "sku_id": "P002",
+                  "product_name": "原味海苔脆片",
+                  "quantity": 1,
+                  "unit_price_fen": 990,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 990,
+                "discounts": [],
+                "merchandise_payable_fen": 990,
+                "shipping_fen": 600,
+                "total_payable_fen": 1590,
+                "conditions": []
+              },
+              "reasons": [
+                "原味海苔脆片不辣，适合不吃辣的需求",
+                "独立内包装，办公室分次取用方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_7680fa1ee09e4cc7bc21dd96581b23e5",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_nuts": {
+            "P001": [
+              "constraint:c_category_nuts"
+            ],
+            "P003": [
+              "constraint:c_category_nuts"
+            ],
+            "P004": [
+              "constraint:c_category_nuts",
+              "constraint:c_taste_spice"
+            ],
+            "P005": [
+              "constraint:c_category_nuts",
+              "constraint:c_taste_spice"
+            ],
+            "P006": [
+              "constraint:c_category_nuts"
+            ],
+            "P007": [
+              "constraint:c_category_nuts"
+            ],
+            "P008": [
+              "constraint:c_category_nuts"
+            ],
+            "P009": [
+              "constraint:c_category_nuts"
+            ],
+            "P010": [
+              "constraint:c_category_nuts"
+            ],
+            "P011": [
+              "constraint:c_category_nuts"
+            ],
+            "P012": [
+              "constraint:c_category_nuts"
+            ],
+            "P013": [
+              "constraint:c_category_nuts"
+            ],
+            "P014": [
+              "constraint:c_category_nuts"
+            ],
+            "P015": [
+              "constraint:c_category_nuts"
+            ],
+            "P016": [
+              "constraint:c_category_nuts"
+            ],
+            "P017": [
+              "constraint:c_category_nuts"
+            ],
+            "P018": [
+              "constraint:c_category_nuts"
+            ],
+            "P019": [
+              "constraint:c_category_nuts"
+            ],
+            "P020": [
+              "constraint:c_category_nuts",
+              "constraint:c_taste_spice"
+            ],
+            "P021": [
+              "constraint:c_category_nuts"
+            ],
+            "P022": [
+              "stock_unknown_or_empty"
+            ],
+            "P023": [
+              "constraint:c_category_nuts",
+              "constraint:c_taste_spice"
+            ],
+            "P024": [
+              "constraint:c_category_nuts"
+            ],
+            "P025": [
+              "expired_or_unknown",
+              "constraint:c_category_nuts"
+            ],
+            "P026": [
+              "price_unknown"
+            ],
+            "P027": [
+              "constraint:c_category_nuts"
+            ],
+            "P028": [
+              "constraint:c_category_nuts"
+            ],
+            "P029": [
+              "constraint:c_category_nuts"
+            ],
+            "P030": [
+              "constraint:c_category_nuts",
+              "constraint:c_taste_spice"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 1,
+        "priced_cart_count": 1,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 1,
+        "reply_review_passed": true
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "想买坚果",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_nuts",
+            "label": "坚果零食",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_category_nuts",
+                "field": "category",
+                "operator": "include",
+                "value": "nuts",
+                "strength": "hard",
+                "source_text": "坚果",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.659
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "想买坚果",
+        "need_summary": "坚果",
+        "plans": [
+          {
+            "plan_id": "plan_536de090ced74f05e644",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P007",
+                "product_name": "蜜汁花生米",
+                "quantity": 1,
+                "unit_price_fen": 890,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "蜜汁花生米，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "蜜汁花生米：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "蜜汁花生米：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "蜜汁花生米：高甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "蜜汁花生米：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "蜜汁花生米：已知单个内包20克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "蜜汁花生米：ingredients=['peanut', 'sugar']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "蜜汁花生米：declared_allergens=['peanut']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "蜜汁花生米：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "蜜汁花生米：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "蜜汁花生米：scene_tags=['sharing']"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费14.90元；商品应付8.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include nuts，符合的商品仅为：蜜汁花生米。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_98474e7cc0a90d3362e7",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P016",
+                "product_name": "每日坚果混合包",
+                "quantity": 1,
+                "unit_price_fen": 1990,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "每日坚果混合包，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "每日坚果混合包：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "每日坚果混合包：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "每日坚果混合包：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "每日坚果混合包：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "每日坚果混合包：已知单个内包25克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "每日坚果混合包：ingredients=['almond', 'cashew', 'walnut']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "每日坚果混合包：declared_allergens=['tree_nuts']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "每日坚果混合包：may_contain_allergens=['peanut']"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "每日坚果混合包：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "每日坚果混合包：scene_tags=['office']"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费25.90元；商品应付19.90元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include nuts，符合的商品仅为：每日坚果混合包。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_448c8edb82273108b0b9",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P006",
+                "product_name": "原味腰果",
+                "quantity": 1,
+                "unit_price_fen": 2490,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "原味腰果，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "原味腰果：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "原味腰果：普通糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "原味腰果：低甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "原味腰果：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "原味腰果：已知单个内包20克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "原味腰果：ingredients=['cashew']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "原味腰果：declared_allergens=['tree_nuts']"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味腰果：may_contain_allergens=['peanut']"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "原味腰果：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "原味腰果：scene_tags=['office']"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "pricing",
+                "text": "含运费30.90元；商品应付24.90元。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include nuts，符合的商品仅为：原味腰果。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_536de090ced74f05e644",
+            "reasons": [
+              {
+                "text": "独立小包20克，适合多人分享分次取用",
+                "fact_ids": [
+                  "p1_f5",
+                  "p1_f6",
+                  "p1_f11"
+                ]
+              },
+              {
+                "text": "不辣且带高甜度标签，适合偏甜口味的人",
+                "fact_ids": [
+                  "p1_f2",
+                  "p1_f4"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_98474e7cc0a90d3362e7",
+            "reasons": [
+              {
+                "text": "混合坚果含杏仁、腰果、核桃，口味更丰富",
+                "fact_ids": [
+                  "p2_f7"
+                ]
+              },
+              {
+                "text": "独立小包25克，适合办公室分次取用",
+                "fact_ids": [
+                  "p2_f5",
+                  "p2_f6",
+                  "p2_f11"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_448c8edb82273108b0b9",
+            "reasons": [
+              {
+                "text": "原味腰果为低甜度标签，适合不喜欢太甜的人",
+                "fact_ids": [
+                  "p3_f4"
+                ]
+              },
+              {
+                "text": "独立小包20克，方便办公室分次取用",
+                "fact_ids": [
+                  "p3_f5",
+                  "p3_f6",
+                  "p3_f11"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 1.71
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "想买坚果",
+        "need_summary": "坚果",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_nuts",
+              "label": "坚果零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_category_nuts",
+                  "field": "category",
+                  "operator": "include",
+                  "value": "nuts",
+                  "strength": "hard",
+                  "source_text": "坚果",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_cfc796ff66f34818a36cf7eaf535e8ef"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_536de090ced74f05e644",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P007",
+                "product_name": "蜜汁花生米",
+                "quantity": 1,
+                "unit_price_fen": 890,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 890,
+              "discounts": [],
+              "merchandise_payable_fen": 890,
+              "shipping_fen": 600,
+              "total_payable_fen": 1490,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "蜜汁花生米，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "蜜汁花生米：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "蜜汁花生米：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "蜜汁花生米：高甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "蜜汁花生米：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "蜜汁花生米：已知单个内包20克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "蜜汁花生米：ingredients=['peanut', 'sugar']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "蜜汁花生米：declared_allergens=['peanut']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "蜜汁花生米：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "蜜汁花生米：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "蜜汁花生米：scene_tags=['sharing']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "蜜汁花生米：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费14.90元；商品应付8.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include nuts，符合的商品仅为：蜜汁花生米。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_98474e7cc0a90d3362e7",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P016",
+                "product_name": "每日坚果混合包",
+                "quantity": 1,
+                "unit_price_fen": 1990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 1990,
+              "discounts": [],
+              "merchandise_payable_fen": 1990,
+              "shipping_fen": 600,
+              "total_payable_fen": 2590,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "每日坚果混合包，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "每日坚果混合包：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "每日坚果混合包：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "每日坚果混合包：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "每日坚果混合包：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "每日坚果混合包：已知单个内包25克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "每日坚果混合包：ingredients=['almond', 'cashew', 'walnut']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "每日坚果混合包：declared_allergens=['tree_nuts']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "每日坚果混合包：may_contain_allergens=['peanut']"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "每日坚果混合包：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "每日坚果混合包：scene_tags=['office']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "每日坚果混合包：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费25.90元；商品应付19.90元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include nuts，符合的商品仅为：每日坚果混合包。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_448c8edb82273108b0b9",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P006",
+                "product_name": "原味腰果",
+                "quantity": 1,
+                "unit_price_fen": 2490,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2490,
+              "discounts": [],
+              "merchandise_payable_fen": 2490,
+              "shipping_fen": 600,
+              "total_payable_fen": 3090,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "原味腰果，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "原味腰果：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "原味腰果：普通糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "原味腰果：低甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "原味腰果：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "原味腰果：已知单个内包20克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "原味腰果：ingredients=['cashew']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "原味腰果：declared_allergens=['tree_nuts']"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味腰果：may_contain_allergens=['peanut']"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "原味腰果：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "原味腰果：scene_tags=['office']"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "expiry",
+                "text": "原味腰果：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "pricing",
+                "text": "含运费30.90元；商品应付24.90元。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include nuts，符合的商品仅为：原味腰果。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "坚果",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "蜜汁花生米（1件）",
+          "p1_price": "含运费14.90元",
+          "p2_items": "每日坚果混合包（1件）",
+          "p2_price": "含运费25.90元",
+          "p2_difference": "总价比首选高一些",
+          "p3_items": "原味腰果（1件）",
+          "p3_price": "含运费30.90元",
+          "p3_difference": "总价比首选高一些",
+          "p1_reason_1": "独立小包20克，适合多人分享分次取用",
+          "p1_reason_2": "不辣且带高甜度标签，适合偏甜口味的人",
+          "p2_reason_1": "混合坚果含杏仁、腰果、核桃，口味更丰富",
+          "p2_reason_2": "独立小包25克，适合办公室分次取用",
+          "p3_reason_1": "原味腰果为低甜度标签，适合不喜欢太甜的人",
+          "p3_reason_2": "独立小包20克，方便办公室分次取用"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_536de090ced74f05e644",
+              "reasons": [
+                {
+                  "text": "独立小包20克，适合多人分享分次取用",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f6",
+                    "p1_f11"
+                  ]
+                },
+                {
+                  "text": "不辣且带高甜度标签，适合偏甜口味的人",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f4"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_98474e7cc0a90d3362e7",
+              "reasons": [
+                {
+                  "text": "混合坚果含杏仁、腰果、核桃，口味更丰富",
+                  "fact_ids": [
+                    "p2_f7"
+                  ]
+                },
+                {
+                  "text": "独立小包25克，适合办公室分次取用",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f6",
+                    "p2_f11"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_448c8edb82273108b0b9",
+              "reasons": [
+                {
+                  "text": "原味腰果为低甜度标签，适合不喜欢太甜的人",
+                  "fact_ids": [
+                    "p3_f4"
+                  ]
+                },
+                {
+                  "text": "独立小包20克，方便办公室分次取用",
+                  "fact_ids": [
+                    "p3_f5",
+                    "p3_f6",
+                    "p3_f11"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，想买坚果的话，我这边帮您挑了三款，坚果种类和口味各有不同，您看看哪个更顺心😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}，价位是这三款里最省的一款。\n\n备选是{{p2_items}}，{{p2_reason_1}}，{{p2_price}}；{{p2_difference}}，如果想一次尝到几种坚果可以看看它。\n\n另一款备选是{{p3_items}}，{{p3_reason_1}}，{{p3_price}}；{{p3_difference}}，偏好原味口感的话更合适。\n\n就是这些啦，{{follow_up}}"
+      },
+      "seconds": 1.596
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "想买坚果",
+        "need_summary": "坚果",
+        "plans": [
+          {
+            "plan_id": "plan_536de090ced74f05e644",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P007",
+                "product_name": "蜜汁花生米",
+                "quantity": 1,
+                "unit_price_fen": 890,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 890,
+              "discounts": [],
+              "merchandise_payable_fen": 890,
+              "shipping_fen": 600,
+              "total_payable_fen": 1490,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "蜜汁花生米，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "蜜汁花生米：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "蜜汁花生米：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "蜜汁花生米：高甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "蜜汁花生米：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "蜜汁花生米：已知单个内包20克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "蜜汁花生米：ingredients=['peanut', 'sugar']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "蜜汁花生米：declared_allergens=['peanut']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "蜜汁花生米：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "蜜汁花生米：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "蜜汁花生米：scene_tags=['sharing']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "蜜汁花生米：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费14.90元；商品应付8.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include nuts，符合的商品仅为：蜜汁花生米。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_98474e7cc0a90d3362e7",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P016",
+                "product_name": "每日坚果混合包",
+                "quantity": 1,
+                "unit_price_fen": 1990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 1990,
+              "discounts": [],
+              "merchandise_payable_fen": 1990,
+              "shipping_fen": 600,
+              "total_payable_fen": 2590,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "每日坚果混合包，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "每日坚果混合包：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "每日坚果混合包：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "每日坚果混合包：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "每日坚果混合包：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "每日坚果混合包：已知单个内包25克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "每日坚果混合包：ingredients=['almond', 'cashew', 'walnut']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "每日坚果混合包：declared_allergens=['tree_nuts']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "每日坚果混合包：may_contain_allergens=['peanut']"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "每日坚果混合包：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "每日坚果混合包：scene_tags=['office']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "每日坚果混合包：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费25.90元；商品应付19.90元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include nuts，符合的商品仅为：每日坚果混合包。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_448c8edb82273108b0b9",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P006",
+                "product_name": "原味腰果",
+                "quantity": 1,
+                "unit_price_fen": 2490,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2490,
+              "discounts": [],
+              "merchandise_payable_fen": 2490,
+              "shipping_fen": 600,
+              "total_payable_fen": 3090,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "原味腰果，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "原味腰果：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "原味腰果：普通糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "原味腰果：低甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "原味腰果：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "原味腰果：已知单个内包20克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "原味腰果：ingredients=['cashew']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "原味腰果：declared_allergens=['tree_nuts']"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味腰果：may_contain_allergens=['peanut']"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "原味腰果：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "原味腰果：scene_tags=['office']"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "expiry",
+                "text": "原味腰果：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "pricing",
+                "text": "含运费30.90元；商品应付24.90元。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include nuts，符合的商品仅为：原味腰果。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "坚果",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "蜜汁花生米（1件）",
+          "p1_price": "含运费14.90元",
+          "p2_items": "每日坚果混合包（1件）",
+          "p2_price": "含运费25.90元",
+          "p2_difference": "总价比首选高一些",
+          "p3_items": "原味腰果（1件）",
+          "p3_price": "含运费30.90元",
+          "p3_difference": "总价比首选高一些",
+          "p1_reason_1": "独立小包20克，适合多人分享分次取用",
+          "p1_reason_2": "不辣且带高甜度标签，适合偏甜口味的人",
+          "p2_reason_1": "混合坚果含杏仁、腰果、核桃，口味更丰富",
+          "p2_reason_2": "独立小包25克，适合办公室分次取用",
+          "p3_reason_1": "原味腰果为低甜度标签，适合不喜欢太甜的人",
+          "p3_reason_2": "独立小包20克，方便办公室分次取用"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_536de090ced74f05e644",
+              "reasons": [
+                {
+                  "text": "独立小包20克，适合多人分享分次取用",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f6",
+                    "p1_f11"
+                  ]
+                },
+                {
+                  "text": "不辣且带高甜度标签，适合偏甜口味的人",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f4"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_98474e7cc0a90d3362e7",
+              "reasons": [
+                {
+                  "text": "混合坚果含杏仁、腰果、核桃，口味更丰富",
+                  "fact_ids": [
+                    "p2_f7"
+                  ]
+                },
+                {
+                  "text": "独立小包25克，适合办公室分次取用",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f6",
+                    "p2_f11"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_448c8edb82273108b0b9",
+              "reasons": [
+                {
+                  "text": "原味腰果为低甜度标签，适合不喜欢太甜的人",
+                  "fact_ids": [
+                    "p3_f4"
+                  ]
+                },
+                {
+                  "text": "独立小包20克，方便办公室分次取用",
+                  "fact_ids": [
+                    "p3_f5",
+                    "p3_f6",
+                    "p3_f11"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，想买坚果的话，我这边帮您挑了三款，坚果种类和口味各有不同，您看看哪个更顺心😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}，价位是这三款里最省的一款。\n\n备选是{{p2_items}}，{{p2_reason_1}}，{{p2_price}}；{{p2_difference}}，如果想一次尝到几种坚果可以看看它。\n\n另一款备选是{{p3_items}}，{{p3_reason_1}}，{{p3_price}}；{{p3_difference}}，偏好原味口感的话更合适。\n\n就是这些啦，{{follow_up}}",
+        "reply": "亲～，想买坚果的话，我这边帮您挑了三款，坚果种类和口味各有不同，您看看哪个更顺心😊\n\n首选是蜜汁花生米（1件），独立小包20克，适合多人分享分次取用，含运费14.90元，价位是这三款里最省的一款。\n\n备选是每日坚果混合包（1件），混合坚果含杏仁、腰果、核桃，口味更丰富，含运费25.90元；总价比首选高一些，如果想一次尝到几种坚果可以看看它。\n\n另一款备选是原味腰果（1件），原味腰果为低甜度标签，适合不喜欢太甜的人，含运费30.90元；总价比首选高一些，偏好原味口感的话更合适。\n\n就是这些啦，想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 0.526
+    },
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "不是坚果，换成海苔，不要辣",
+        "module_state": {
+          "need_groups": [
+            {
+              "group_id": "group_nuts",
+              "label": "坚果零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_category_nuts",
+                  "field": "category",
+                  "operator": "include",
+                  "value": "nuts",
+                  "strength": "hard",
+                  "source_text": "坚果",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_cfc796ff66f34818a36cf7eaf535e8ef"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": {
+            "message_id": "msg_1764111aa5054dfdb4c96d7bf148b10f",
+            "turn_id": "turn_cfc796ff66f34818a36cf7eaf535e8ef",
+            "plan_order": [
+              {
+                "plan_id": "plan_536de090ced74f05e644",
+                "sku_ids": [
+                  "P007"
+                ]
+              },
+              {
+                "plan_id": "plan_98474e7cc0a90d3362e7",
+                "sku_ids": [
+                  "P016"
+                ]
+              },
+              {
+                "plan_id": "plan_448c8edb82273108b0b9",
+                "sku_ids": [
+                  "P006"
+                ]
+              }
+            ]
+          },
+          "shared_budget": null
+        },
+        "history": [
+          {
+            "id": "msg_6ada321abd054d13a252adcf103f3e7c",
+            "role": "user",
+            "content": "想买坚果",
+            "turn_id": "turn_cfc796ff66f34818a36cf7eaf535e8ef"
+          },
+          {
+            "id": "msg_1764111aa5054dfdb4c96d7bf148b10f",
+            "role": "assistant",
+            "content": "亲～，想买坚果的话，我这边帮您挑了三款，坚果种类和口味各有不同，您看看哪个更顺心😊\n\n首选是蜜汁花生米（1件），独立小包20克，适合多人分享分次取用，含运费14.90元，价位是这三款里最省的一款。\n\n备选是每日坚果混合包（1件），混合坚果含杏仁、腰果、核桃，口味更丰富，含运费25.90元；总价比首选高一些，如果想一次尝到几种坚果可以看看它。\n\n另一款备选是原味腰果（1件），原味腰果为低甜度标签，适合不喜欢太甜的人，含运费30.90元；总价比首选高一些，偏好原味口感的话更合适。\n\n就是这些啦，想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+            "cards": [
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_536de090ced74f05e644",
+                "plan_type": "single_product",
+                "title": "首选方案",
+                "rank": 1,
+                "group_id": "group_nuts",
+                "items": [
+                  {
+                    "sku_id": "P007",
+                    "product_name": "蜜汁花生米",
+                    "quantity": 1,
+                    "unit_price_fen": 890,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 890,
+                  "discounts": [],
+                  "merchandise_payable_fen": 890,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 1490,
+                  "conditions": []
+                },
+                "reasons": [
+                  "独立小包20克，适合多人分享分次取用",
+                  "不辣且带高甜度标签，适合偏甜口味的人"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。"
+                ]
+              },
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_98474e7cc0a90d3362e7",
+                "plan_type": "single_product",
+                "title": "备选方案 1",
+                "rank": 2,
+                "group_id": "group_nuts",
+                "items": [
+                  {
+                    "sku_id": "P016",
+                    "product_name": "每日坚果混合包",
+                    "quantity": 1,
+                    "unit_price_fen": 1990,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 1990,
+                  "discounts": [],
+                  "merchandise_payable_fen": 1990,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 2590,
+                  "conditions": []
+                },
+                "reasons": [
+                  "混合坚果含杏仁、腰果、核桃，口味更丰富",
+                  "独立小包25克，适合办公室分次取用"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。"
+                ]
+              },
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_448c8edb82273108b0b9",
+                "plan_type": "single_product",
+                "title": "备选方案 2",
+                "rank": 3,
+                "group_id": "group_nuts",
+                "items": [
+                  {
+                    "sku_id": "P006",
+                    "product_name": "原味腰果",
+                    "quantity": 1,
+                    "unit_price_fen": 2490,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 2490,
+                  "discounts": [],
+                  "merchandise_payable_fen": 2490,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 3090,
+                  "conditions": []
+                },
+                "reasons": [
+                  "原味腰果为低甜度标签，适合不喜欢太甜的人",
+                  "独立小包20克，方便办公室分次取用"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。"
+                ]
+              }
+            ],
+            "turn_id": "turn_cfc796ff66f34818a36cf7eaf535e8ef",
+            "status": "completed"
+          }
+        ],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_nuts",
+            "label": "坚果零食",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_category_nuts",
+                "field": "category",
+                "operator": "include",
+                "value": "seaweed",
+                "strength": "hard",
+                "source_text": "换成海苔",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_taste_spice",
+                "field": "taste",
+                "operator": "equals",
+                "value": "spice:none",
+                "strength": "hard",
+                "source_text": "不要辣",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.3
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "不是坚果，换成海苔，不要辣",
+        "need_summary": "不辣",
+        "plans": [
+          {
+            "plan_id": "plan_796eb5457a71da240fa0",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 990,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费15.90元；商品应付9.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include seaweed，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：原味海苔脆片。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_796eb5457a71da240fa0",
+            "reasons": [
+              {
+                "text": "原味海苔脆片不辣，适合不吃辣的需求",
+                "fact_ids": [
+                  "p1_f2",
+                  "p1_f15"
+                ]
+              },
+              {
+                "text": "独立内包装，办公室分次取用方便",
+                "fact_ids": [
+                  "p1_f5",
+                  "p1_f11"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 1.004
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "不是坚果，换成海苔，不要辣",
+        "need_summary": "不辣",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_nuts",
+              "label": "坚果零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_category_nuts",
+                  "field": "category",
+                  "operator": "include",
+                  "value": "seaweed",
+                  "strength": "hard",
+                  "source_text": "换成海苔",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_7680fa1ee09e4cc7bc21dd96581b23e5"
+                },
+                {
+                  "constraint_id": "c_taste_spice",
+                  "field": "taste",
+                  "operator": "equals",
+                  "value": "spice:none",
+                  "strength": "hard",
+                  "source_text": "不要辣",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_7680fa1ee09e4cc7bc21dd96581b23e5"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": {
+            "message_id": "msg_1764111aa5054dfdb4c96d7bf148b10f",
+            "turn_id": "turn_cfc796ff66f34818a36cf7eaf535e8ef",
+            "plan_order": [
+              {
+                "plan_id": "plan_536de090ced74f05e644",
+                "sku_ids": [
+                  "P007"
+                ]
+              },
+              {
+                "plan_id": "plan_98474e7cc0a90d3362e7",
+                "sku_ids": [
+                  "P016"
+                ]
+              },
+              {
+                "plan_id": "plan_448c8edb82273108b0b9",
+                "sku_ids": [
+                  "P006"
+                ]
+              }
+            ]
+          },
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_796eb5457a71da240fa0",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 990,
+              "discounts": [],
+              "merchandise_payable_fen": 990,
+              "shipping_fen": 600,
+              "total_payable_fen": 1590,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味海苔脆片：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费15.90元；商品应付9.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include seaweed，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "不辣",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味海苔脆片（1件）",
+          "p1_price": "含运费15.90元",
+          "p1_reason_1": "原味海苔脆片不辣，适合不吃辣的需求",
+          "p1_reason_2": "独立内包装，办公室分次取用方便"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_796eb5457a71da240fa0",
+              "reasons": [
+                {
+                  "text": "原味海苔脆片不辣，适合不吃辣的需求",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f15"
+                  ]
+                },
+                {
+                  "text": "独立内包装，办公室分次取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f11"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，明白啦，不要坚果、换成海苔、不要辣，我按这个重新给您挑了😊\n\n首选是{{p1_items}}，主要是{{p1_reason_1}}，正好对得上您的口味要求，{{p1_price}}。\n\n这次只筛出这一款符合不吃辣的海苔，没有其他更合适的备选可换。\n\n{{follow_up}}"
+      },
+      "seconds": 1.341
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "不是坚果，换成海苔，不要辣",
+        "need_summary": "不辣",
+        "plans": [
+          {
+            "plan_id": "plan_796eb5457a71da240fa0",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 990,
+              "discounts": [],
+              "merchandise_payable_fen": 990,
+              "shipping_fen": 600,
+              "total_payable_fen": 1590,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味海苔脆片：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费15.90元；商品应付9.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include seaweed，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "不辣",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味海苔脆片（1件）",
+          "p1_price": "含运费15.90元",
+          "p1_reason_1": "原味海苔脆片不辣，适合不吃辣的需求",
+          "p1_reason_2": "独立内包装，办公室分次取用方便"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_796eb5457a71da240fa0",
+              "reasons": [
+                {
+                  "text": "原味海苔脆片不辣，适合不吃辣的需求",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f15"
+                  ]
+                },
+                {
+                  "text": "独立内包装，办公室分次取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f11"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，明白啦，不要坚果、换成海苔、不要辣，我按这个重新给您挑了😊\n\n首选是{{p1_items}}，主要是{{p1_reason_1}}，正好对得上您的口味要求，{{p1_price}}。\n\n这次只筛出这一款符合不吃辣的海苔，没有其他更合适的备选可换。\n\n{{follow_up}}",
+        "reply": "亲～，明白啦，不要坚果、换成海苔、不要辣，我按这个重新给您挑了😊\n\n首选是原味海苔脆片（1件），主要是原味海苔脆片不辣，适合不吃辣的需求，正好对得上您的口味要求，含运费15.90元。\n\n这次只筛出这一款符合不吃辣的海苔，没有其他更合适的备选可换。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 0.909
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 10.101,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "completed"
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "品类纠正撤销坚果正向要求，保留海苔不辣",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": true
+}

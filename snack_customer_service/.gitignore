@@ -1,0 +1,6 @@
+.env.local
+__pycache__/
+coze_sync_state.json
+tests/test-db-*
+artifacts/*profile/
+artifacts/*.log

@@ -1,0 +1,355 @@
+{
+  "case_id": "P10",
+  "title": "赠品与购买共享库存",
+  "repetition": 1,
+  "implementation_hash": "03c8fc87a9d9e031",
+  "executed_at": "2026-10-08T12:51:48.242744+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_5580e90baf6545bfbbd820584c8e1470",
+        "expected_revision": 0,
+        "message": "买三件海苔参加买赠",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_b72399e9d86b4715b0e4cfa4258bd540",
+        "request_id": "req_5580e90baf6545bfbbd820584c8e1470",
+        "turn_id": "turn_c57ec68bc90c496ba27a01259e05173d",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "needs_clarification",
+        "message": {
+          "id": "msg_69fe89afd25b48509069726d4b0812ae",
+          "role": "assistant",
+          "content": "准备自己吃、分享，还是送人？对内包装或外包装有什么具体要求？",
+          "cards": []
+        },
+        "clarification": {
+          "question": "准备自己吃、分享，还是送人？对内包装或外包装有什么具体要求？",
+          "asked_fields": [
+            "purpose",
+            "package"
+          ],
+          "group_id": "group_seaweed"
+        },
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_b72399e9d86b4715b0e4cfa4258bd540",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_seaweed",
+                "label": "海苔",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_category",
+                    "field": "category",
+                    "operator": "include",
+                    "value": "seaweed",
+                    "strength": "hard",
+                    "source_text": "海苔",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_c57ec68bc90c496ba27a01259e05173d"
+                  },
+                  {
+                    "constraint_id": "c_quantity",
+                    "field": "quantity",
+                    "operator": "equals",
+                    "value": 3,
+                    "strength": "hard",
+                    "source_text": "三件",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_c57ec68bc90c496ba27a01259e05173d"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": {
+              "question": "准备自己吃、分享，还是送人？对内包装或外包装有什么具体要求？",
+              "asked_fields": [
+                "purpose",
+                "package"
+              ],
+              "group_id": "group_seaweed"
+            },
+            "last_presentation": null,
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_8a94a686b2744b089d054a0ad1630771",
+          "role": "user",
+          "content": "买三件海苔参加买赠",
+          "turn_id": "turn_c57ec68bc90c496ba27a01259e05173d"
+        },
+        {
+          "id": "msg_69fe89afd25b48509069726d4b0812ae",
+          "role": "assistant",
+          "content": "准备自己吃、分享，还是送人？对内包装或外包装有什么具体要求？",
+          "cards": [],
+          "turn_id": "turn_c57ec68bc90c496ba27a01259e05173d",
+          "status": "needs_clarification"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {},
+        "quarantined_skus": []
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "买三件海苔参加买赠",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_seaweed",
+            "label": "海苔",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_category",
+                "field": "category",
+                "operator": "include",
+                "value": "seaweed",
+                "strength": "hard",
+                "source_text": "海苔",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_quantity",
+                "field": "quantity",
+                "operator": "equals",
+                "value": 3,
+                "strength": "hard",
+                "source_text": "三件",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": {
+          "question": "“参加买赠”是指您要按活动规则购买，还是也需要我优先挑有买赠活动的海苔呢？",
+          "asked_fields": [
+            "purpose",
+            "package"
+          ],
+          "group_id": "group_seaweed"
+        },
+        "retrieval_hints": [
+          "P002",
+          "P022",
+          "P026"
+        ]
+      },
+      "seconds": 1.415
+    }
+  ],
+  "pricing_goldens": [
+    {
+      "id": "G018",
+      "passed": true,
+      "expected": {
+        "eligible": false,
+        "rejection_code": "gift_stock_insufficient"
+      },
+      "actual": {
+        "eligible": false,
+        "rejection_code": "gift_stock_insufficient"
+      }
+    }
+  ],
+  "seconds": 1.453,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": false,
+      "actual": "needs_clarification"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "追问最多两个字段",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "关联固定购物方案的独立数值基准",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "三件海苔/苏打购买量正确",
+      "passed": false,
+      "actual": null
+    }
+  ],
+  "passed": false
+}

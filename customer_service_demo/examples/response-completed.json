@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "conversation_id": "conv_demo_001",
+  "request_id": "req_demo_001",
+  "turn_id": "turn_demo_001",
+  "base_revision": 0,
+  "revision": 1,
+  "module": "product_recommendation",
+  "status": "completed",
+  "message": {
+    "id": "msg_demo_001",
+    "role": "assistant",
+    "content": "这是协议演示组合：A 两件和 B 一件，原价 115 元，演示优惠合计 15 元，含演示运费的总价 100 元。",
+    "cards": [
+      {
+        "type": "recommendation_plan",
+        "plan_id": "plan_demo_001",
+        "plan_type": "bundle",
+        "title": "办公室分享组合（协议示例）",
+        "rank": 1,
+        "group_id": "group_self",
+        "items": [
+          {
+            "sku_id": "demo_a",
+            "product_name": "演示商品 A",
+            "quantity": 2,
+            "unit_price_fen": 3500,
+            "image_url": null
+          },
+          {
+            "sku_id": "demo_b",
+            "product_name": "演示商品 B",
+            "quantity": 1,
+            "unit_price_fen": 4500,
+            "image_url": null
+          }
+        ],
+        "pricing": {
+          "currency": "CNY",
+          "status": "confirmed",
+          "subtotal_fen": 11500,
+          "discounts": [
+            {
+              "kind": "activity",
+              "id": "demo_activity",
+              "label": "演示活动减 10 元",
+              "amount_fen": 1000,
+              "eligibility": "eligible"
+            },
+            {
+              "kind": "coupon",
+              "id": "demo_coupon",
+              "label": "演示券减 5 元",
+              "amount_fen": 500,
+              "eligibility": "eligible"
+            }
+          ],
+          "merchandise_payable_fen": 10000,
+          "shipping_fen": 0,
+          "total_payable_fen": 10000,
+          "conditions": []
+        },
+        "reasons": [
+          "本示例用于验证组合数量、优惠明细与总价关系。"
+        ],
+        "notes": [
+          "仅为协议示例，尚未查询商品或运行推荐。"
+        ]
+      }
+    ]
+  },
+  "clarification": null,
+  "error": null
+}

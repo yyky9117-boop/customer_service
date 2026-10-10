@@ -1,0 +1,1490 @@
+[
+  {
+    "id": "G001",
+    "title": "单件原价与标准运费",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": null,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 1290,
+      "shipping_fen": 600,
+      "total_payable_fen": 1890,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G002",
+    "title": "券门槛少一分钱",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_PRICE_4999",
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_ALL",
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_threshold",
+      "eligible_basis_fen": 4999
+    }
+  },
+  {
+    "id": "G003",
+    "title": "券门槛正好达到",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_PRICE_5000",
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_ALL",
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 500,
+      "merchandise_payable_fen": 4500,
+      "shipping_fen": 600,
+      "total_payable_fen": 5100,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G004",
+    "title": "券门槛多一分钱",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_PRICE_5001",
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_ALL",
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 500,
+      "merchandise_payable_fen": 4501,
+      "shipping_fen": 600,
+      "total_payable_fen": 5101,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G005",
+    "title": "活动门槛少一分钱",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_ACTIVITY_9999",
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": "A_ORDER",
+    "coupon_id": null,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "activity_threshold",
+      "eligible_basis_fen": 9999
+    }
+  },
+  {
+    "id": "G006",
+    "title": "活动门槛正好达到",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_ACTIVITY_10000",
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": "A_ORDER",
+    "coupon_id": null,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 1000,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 9000,
+      "shipping_fen": 600,
+      "total_payable_fen": 9600,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G007",
+    "title": "活动门槛多一分钱",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_ACTIVITY_10001",
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": "A_ORDER",
+    "coupon_id": null,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 1000,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 9001,
+      "shipping_fen": 600,
+      "total_payable_fen": 9601,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G008",
+    "title": "同款肉类两件九折",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P004",
+        "quantity": 2
+      }
+    ],
+    "activity_id": "A_MEAT",
+    "coupon_id": null,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 518,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 4662,
+      "shipping_fen": 600,
+      "total_payable_fen": 5262,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G009",
+    "title": "百分比半分取整与最大余数",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_ROUNDING",
+    "items": [
+      {
+        "sku_id": "P004",
+        "quantity": 1
+      },
+      {
+        "sku_id": "P005",
+        "quantity": 1
+      }
+    ],
+    "activity_id": "A_MEAT",
+    "coupon_id": null,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 551,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 4954,
+      "shipping_fen": 600,
+      "total_payable_fen": 5554,
+      "pricing_status": "confirmed",
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P004",
+          "activity_discount_fen": 251,
+          "coupon_discount_fen": 0
+        },
+        {
+          "sku_id": "P005",
+          "activity_discount_fen": 300,
+          "coupon_discount_fen": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "G010",
+    "title": "活动分摊后饼干券未达门槛",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_PARTIAL_SCOPE",
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      },
+      {
+        "sku_id": "P004",
+        "quantity": 1
+      }
+    ],
+    "activity_id": "A_ORDER",
+    "coupon_id": "C_BISCUIT",
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_threshold",
+      "eligible_basis_fen": 7273
+    }
+  },
+  {
+    "id": "G011",
+    "title": "同一原价组合只使用合法活动",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_PARTIAL_SCOPE",
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      },
+      {
+        "sku_id": "P004",
+        "quantity": 1
+      }
+    ],
+    "activity_id": "A_ORDER",
+    "coupon_id": null,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 1000,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 10000,
+      "shipping_fen": 0,
+      "total_payable_fen": 10000,
+      "pricing_status": "confirmed",
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 727,
+          "coupon_discount_fen": 0
+        },
+        {
+          "sku_id": "P004",
+          "activity_discount_fen": 273,
+          "coupon_discount_fen": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "G012",
+    "title": "非参与商品不能凑券金额",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      },
+      {
+        "sku_id": "P002",
+        "quantity": 1
+      },
+      {
+        "sku_id": "P004",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_SCOPE",
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_threshold",
+      "eligible_basis_fen": 990
+    }
+  },
+  {
+    "id": "G013",
+    "title": "指定 SKU 券只在范围内分摊",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P002",
+        "quantity": 1
+      },
+      {
+        "sku_id": "P019",
+        "quantity": 1
+      },
+      {
+        "sku_id": "P004",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_SCOPE",
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 200,
+      "merchandise_payable_fen": 4470,
+      "shipping_fen": 600,
+      "total_payable_fen": 5070,
+      "pricing_status": "confirmed",
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P002",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 95
+        },
+        {
+          "sku_id": "P019",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 105
+        },
+        {
+          "sku_id": "P004",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "G014",
+    "title": "百分比券取整后应用封顶",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P013",
+        "quantity": 3
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_GRAIN",
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 1200,
+      "merchandise_payable_fen": 5670,
+      "shipping_fen": 600,
+      "total_payable_fen": 6270,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G015",
+    "title": "秒杀单价与两件数量上限",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P019",
+        "quantity": 2
+      }
+    ],
+    "activity_id": "A_FIXED",
+    "coupon_id": null,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 400,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 1780,
+      "shipping_fen": 600,
+      "total_payable_fen": 2380,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G016",
+    "title": "三件不能擅自套两件秒杀",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P019",
+        "quantity": 3
+      }
+    ],
+    "activity_id": "A_FIXED",
+    "coupon_id": null,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "activity_quantity_limit"
+    }
+  },
+  {
+    "id": "G017",
+    "title": "买赠不抵扣现金且只赠一次",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P002",
+        "quantity": 3
+      }
+    ],
+    "activity_id": "A_SEA_GIFT",
+    "coupon_id": null,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 2970,
+      "shipping_fen": 600,
+      "total_payable_fen": 3570,
+      "pricing_status": "confirmed",
+      "gifts": [
+        {
+          "sku_id": "P002",
+          "quantity": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "G018",
+    "title": "购买与赠品共用库存",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_GIFT_STOCK",
+    "items": [
+      {
+        "sku_id": "P002",
+        "quantity": 3
+      }
+    ],
+    "activity_id": "A_SEA_GIFT",
+    "coupon_id": null,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "gift_stock_insufficient"
+    }
+  },
+  {
+    "id": "G019",
+    "title": "六件购买也只赠一次",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P002",
+        "quantity": 6
+      }
+    ],
+    "activity_id": "A_SEA_GIFT",
+    "coupon_id": null,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 5940,
+      "shipping_fen": 600,
+      "total_payable_fen": 6540,
+      "pricing_status": "confirmed",
+      "gifts": [
+        {
+          "sku_id": "P002",
+          "quantity": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "G020",
+    "title": "礼盒折扣使商品跌破包邮门槛",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P014",
+        "quantity": 1
+      }
+    ],
+    "activity_id": "A_GIFT",
+    "coupon_id": null,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 990,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 8910,
+      "shipping_fen": 600,
+      "total_payable_fen": 9510,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G021",
+    "title": "礼盒原价基线已包邮",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P014",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": null,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 9900,
+      "shipping_fen": 0,
+      "total_payable_fen": 9900,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G022",
+    "title": "用两元券反而增加整单支出",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_ACTIVITY_10000",
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_WEB",
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 200,
+      "merchandise_payable_fen": 9800,
+      "shipping_fen": 600,
+      "total_payable_fen": 10400,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G023",
+    "title": "不用券的相同购物基线",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_ACTIVITY_10000",
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": null,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 10000,
+      "shipping_fen": 0,
+      "total_payable_fen": 10000,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G024",
+    "title": "先活动再用券",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P004",
+        "quantity": 4
+      }
+    ],
+    "activity_id": "A_ORDER",
+    "coupon_id": "C_ALL",
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 1000,
+      "coupon_discount_fen": 500,
+      "merchandise_payable_fen": 8860,
+      "shipping_fen": 600,
+      "total_payable_fen": 9460,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G025",
+    "title": "不可叠加券与活动互斥",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P004",
+        "quantity": 4
+      }
+    ],
+    "activity_id": "A_ORDER",
+    "coupon_id": "C_NO_STACK",
+    "expected": {
+      "eligible": false,
+      "rejection_code": "stacking_not_allowed"
+    }
+  },
+  {
+    "id": "G026",
+    "title": "独立使用不可叠加券",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P004",
+        "quantity": 4
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_NO_STACK",
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 1500,
+      "merchandise_payable_fen": 8860,
+      "shipping_fen": 600,
+      "total_payable_fen": 9460,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G027",
+    "title": "未持券不能算确定优惠",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_GUEST",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 4
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_ALL",
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_not_owned"
+    }
+  },
+  {
+    "id": "G028",
+    "title": "持券资料未知不能当作已持有",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_UNKNOWN",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 4
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_ALL",
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_ownership_unknown"
+    }
+  },
+  {
+    "id": "G029",
+    "title": "已使用券不可用",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_RETURN",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_USED",
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_used"
+    }
+  },
+  {
+    "id": "G030",
+    "title": "锁定券不可用",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_LOCKED",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 4
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_ALL",
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_locked"
+    }
+  },
+  {
+    "id": "G031",
+    "title": "普通用户不能套会员券",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_RETURN",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P014",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_VIP",
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_audience"
+    }
+  },
+  {
+    "id": "G032",
+    "title": "老客不能套新客券",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_RETURN",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P004",
+        "quantity": 2
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_NEW",
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_audience"
+    }
+  },
+  {
+    "id": "G033",
+    "title": "未来券未生效",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 4
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_FUTURE",
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_not_started"
+    }
+  },
+  {
+    "id": "G034",
+    "title": "过期券已结束",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 4
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_EXPIRED",
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_expired"
+    }
+  },
+  {
+    "id": "G035",
+    "title": "券开始时刻包含",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-01T00:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_PRICE_5000",
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_ALL",
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 500,
+      "merchandise_payable_fen": 4500,
+      "shipping_fen": 600,
+      "total_payable_fen": 5100,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G036",
+    "title": "券结束时刻不包含",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-11-01T00:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_PRICE_5000",
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_ALL",
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_expired"
+    }
+  },
+  {
+    "id": "G037",
+    "title": "秒杀结束时刻不包含",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:30:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P019",
+        "quantity": 2
+      }
+    ],
+    "activity_id": "A_FIXED",
+    "coupon_id": null,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "activity_expired"
+    }
+  },
+  {
+    "id": "G038",
+    "title": "偏远区域运费",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_LOCKED",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": null,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 1290,
+      "shipping_fen": 1200,
+      "total_payable_fen": 2490,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G039",
+    "title": "未知运费不声称整单总价",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_UNKNOWN",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": null,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 1290,
+      "shipping_fen": null,
+      "total_payable_fen": null,
+      "pricing_status": "conditional",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G040",
+    "title": "可领券不等于已持有",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_GUEST",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P004",
+        "quantity": 2
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_CLAIM",
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_claim_required"
+    }
+  },
+  {
+    "id": "G041",
+    "title": "不完整活动不能补出折扣",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 4
+      }
+    ],
+    "activity_id": "A_INCOMPLETE",
+    "coupon_id": null,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "activity_rule_incomplete"
+    }
+  },
+  {
+    "id": "G042",
+    "title": "价格未知不能构造确认金额",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P026",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": null,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "product_price_unknown"
+    }
+  },
+  {
+    "id": "G043",
+    "title": "购买数量超过库存",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P002",
+        "quantity": 41
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": null,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "product_stock_insufficient"
+    }
+  },
+  {
+    "id": "G044",
+    "title": "过期商品不能参与计价推荐",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P025",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": null,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "product_expired"
+    }
+  },
+  {
+    "id": "G045",
+    "title": "礼盒不自动变成坚果活动范围",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P014",
+        "quantity": 1
+      }
+    ],
+    "activity_id": "A_NUTS",
+    "coupon_id": null,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "activity_scope_empty"
+    }
+  },
+  {
+    "id": "G046",
+    "title": "折扣仅作用于参与肉类",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P004",
+        "quantity": 1
+      },
+      {
+        "sku_id": "P005",
+        "quantity": 1
+      },
+      {
+        "sku_id": "P010",
+        "quantity": 1
+      }
+    ],
+    "activity_id": "A_MEAT",
+    "coupon_id": null,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 558,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 6212,
+      "shipping_fen": 600,
+      "total_payable_fen": 6812,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G047",
+    "title": "网页券不能用于其他渠道",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "mini_program"
+    },
+    "fixture_id": null,
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_WEB",
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_channel"
+    }
+  },
+  {
+    "id": "G048",
+    "title": "库存未知不能认定可购买",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_UNKNOWN_STOCK",
+    "items": [
+      {
+        "sku_id": "P002",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": null,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "product_stock_unknown"
+    }
+  },
+  {
+    "id": "G049",
+    "title": "相同余数按 SKU 字典序分摊",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_ALLOC_TIE",
+    "items": [
+      {
+        "sku_id": "P002",
+        "quantity": 1
+      },
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": "A_ORDER",
+    "coupon_id": null,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 1,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 2001,
+      "shipping_fen": 600,
+      "total_payable_fen": 2601,
+      "pricing_status": "confirmed",
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 1,
+          "coupon_discount_fen": 0
+        },
+        {
+          "sku_id": "P002",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "G050",
+    "title": "包邮门槛少一分钱",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_SHIPPING_9899",
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": null,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 9899,
+      "shipping_fen": 600,
+      "total_payable_fen": 10499,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G051",
+    "title": "包邮门槛多一分钱",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_SHIPPING_9901",
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": null,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 9901,
+      "shipping_fen": 0,
+      "total_payable_fen": 9901,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G052",
+    "title": "优惠最多抵商品金额，零商品应付仍有运费",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_OVERDISCOUNT",
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": "C_WEB",
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 1290,
+      "merchandise_payable_fen": 0,
+      "shipping_fen": 600,
+      "total_payable_fen": 600,
+      "pricing_status": "confirmed",
+      "gifts": []
+    }
+  },
+  {
+    "id": "G053",
+    "title": "商品到期时刻不再有效",
+    "selection_mode": "explicit_combination_probe",
+    "context": {
+      "user_id": "U_NEW",
+      "now": "2026-10-07T12:00:00+08:00",
+      "channel": "web"
+    },
+    "fixture_id": "F_EXPIRES_NOW",
+    "items": [
+      {
+        "sku_id": "P001",
+        "quantity": 1
+      }
+    ],
+    "activity_id": null,
+    "coupon_id": null,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "product_expired"
+    }
+  }
+]

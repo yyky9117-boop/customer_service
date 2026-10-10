@@ -1,0 +1,1382 @@
+[
+  {
+    "id": "G001",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 1290,
+      "shipping_fen": 600,
+      "total_payable_fen": 1890,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": null,
+      "coupon_id": null,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 1290,
+      "shipping_fen": 600,
+      "total_payable_fen": 1890,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 0,
+          "payable_fen": 1290
+        }
+      ]
+    }
+  },
+  {
+    "id": "G002",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_threshold",
+      "eligible_basis_fen": 4999
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "coupon_threshold",
+      "eligible_basis_fen": 4999
+    }
+  },
+  {
+    "id": "G003",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 500,
+      "merchandise_payable_fen": 4500,
+      "shipping_fen": 600,
+      "total_payable_fen": 5100,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": null,
+      "coupon_id": "C_ALL",
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 500,
+      "merchandise_payable_fen": 4500,
+      "shipping_fen": 600,
+      "total_payable_fen": 5100,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 500,
+          "payable_fen": 4500
+        }
+      ]
+    }
+  },
+  {
+    "id": "G004",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 500,
+      "merchandise_payable_fen": 4501,
+      "shipping_fen": 600,
+      "total_payable_fen": 5101,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": null,
+      "coupon_id": "C_ALL",
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 500,
+      "merchandise_payable_fen": 4501,
+      "shipping_fen": 600,
+      "total_payable_fen": 5101,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 500,
+          "payable_fen": 4501
+        }
+      ]
+    }
+  },
+  {
+    "id": "G005",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "activity_threshold",
+      "eligible_basis_fen": 9999
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "activity_threshold",
+      "eligible_basis_fen": 9999
+    }
+  },
+  {
+    "id": "G006",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 1000,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 9000,
+      "shipping_fen": 600,
+      "total_payable_fen": 9600,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": "A_ORDER",
+      "coupon_id": null,
+      "activity_discount_fen": 1000,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 9000,
+      "shipping_fen": 600,
+      "total_payable_fen": 9600,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 1000,
+          "coupon_discount_fen": 0,
+          "payable_fen": 9000
+        }
+      ]
+    }
+  },
+  {
+    "id": "G007",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 1000,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 9001,
+      "shipping_fen": 600,
+      "total_payable_fen": 9601,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": "A_ORDER",
+      "coupon_id": null,
+      "activity_discount_fen": 1000,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 9001,
+      "shipping_fen": 600,
+      "total_payable_fen": 9601,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 1000,
+          "coupon_discount_fen": 0,
+          "payable_fen": 9001
+        }
+      ]
+    }
+  },
+  {
+    "id": "G008",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 518,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 4662,
+      "shipping_fen": 600,
+      "total_payable_fen": 5262,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": "A_MEAT",
+      "coupon_id": null,
+      "activity_discount_fen": 518,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 4662,
+      "shipping_fen": 600,
+      "total_payable_fen": 5262,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P004",
+          "activity_discount_fen": 518,
+          "coupon_discount_fen": 0,
+          "payable_fen": 4662
+        }
+      ]
+    }
+  },
+  {
+    "id": "G009",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 551,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 4954,
+      "shipping_fen": 600,
+      "total_payable_fen": 5554,
+      "pricing_status": "confirmed",
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P004",
+          "activity_discount_fen": 251,
+          "coupon_discount_fen": 0
+        },
+        {
+          "sku_id": "P005",
+          "activity_discount_fen": 300,
+          "coupon_discount_fen": 0
+        }
+      ]
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": "A_MEAT",
+      "coupon_id": null,
+      "activity_discount_fen": 551,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 4954,
+      "shipping_fen": 600,
+      "total_payable_fen": 5554,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P004",
+          "activity_discount_fen": 251,
+          "coupon_discount_fen": 0,
+          "payable_fen": 2254
+        },
+        {
+          "sku_id": "P005",
+          "activity_discount_fen": 300,
+          "coupon_discount_fen": 0,
+          "payable_fen": 2700
+        }
+      ]
+    }
+  },
+  {
+    "id": "G010",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_threshold",
+      "eligible_basis_fen": 7273
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "coupon_threshold",
+      "eligible_basis_fen": 7273
+    }
+  },
+  {
+    "id": "G011",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 1000,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 10000,
+      "shipping_fen": 0,
+      "total_payable_fen": 10000,
+      "pricing_status": "confirmed",
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 727,
+          "coupon_discount_fen": 0
+        },
+        {
+          "sku_id": "P004",
+          "activity_discount_fen": 273,
+          "coupon_discount_fen": 0
+        }
+      ]
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": "A_ORDER",
+      "coupon_id": null,
+      "activity_discount_fen": 1000,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 10000,
+      "shipping_fen": 0,
+      "total_payable_fen": 10000,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 727,
+          "coupon_discount_fen": 0,
+          "payable_fen": 7273
+        },
+        {
+          "sku_id": "P004",
+          "activity_discount_fen": 273,
+          "coupon_discount_fen": 0,
+          "payable_fen": 2727
+        }
+      ]
+    }
+  },
+  {
+    "id": "G012",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_threshold",
+      "eligible_basis_fen": 990
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "coupon_threshold",
+      "eligible_basis_fen": 990
+    }
+  },
+  {
+    "id": "G013",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 200,
+      "merchandise_payable_fen": 4470,
+      "shipping_fen": 600,
+      "total_payable_fen": 5070,
+      "pricing_status": "confirmed",
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P002",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 95
+        },
+        {
+          "sku_id": "P019",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 105
+        },
+        {
+          "sku_id": "P004",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 0
+        }
+      ]
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": null,
+      "coupon_id": "C_SCOPE",
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 200,
+      "merchandise_payable_fen": 4470,
+      "shipping_fen": 600,
+      "total_payable_fen": 5070,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P002",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 95,
+          "payable_fen": 895
+        },
+        {
+          "sku_id": "P004",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 0,
+          "payable_fen": 2590
+        },
+        {
+          "sku_id": "P019",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 105,
+          "payable_fen": 985
+        }
+      ]
+    }
+  },
+  {
+    "id": "G014",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 1200,
+      "merchandise_payable_fen": 5670,
+      "shipping_fen": 600,
+      "total_payable_fen": 6270,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": null,
+      "coupon_id": "C_GRAIN",
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 1200,
+      "merchandise_payable_fen": 5670,
+      "shipping_fen": 600,
+      "total_payable_fen": 6270,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P013",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 1200,
+          "payable_fen": 5670
+        }
+      ]
+    }
+  },
+  {
+    "id": "G015",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 400,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 1780,
+      "shipping_fen": 600,
+      "total_payable_fen": 2380,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": "A_FIXED",
+      "coupon_id": null,
+      "activity_discount_fen": 400,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 1780,
+      "shipping_fen": 600,
+      "total_payable_fen": 2380,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P019",
+          "activity_discount_fen": 400,
+          "coupon_discount_fen": 0,
+          "payable_fen": 1780
+        }
+      ]
+    }
+  },
+  {
+    "id": "G016",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "activity_quantity_limit"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "activity_quantity_limit"
+    }
+  },
+  {
+    "id": "G017",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 2970,
+      "shipping_fen": 600,
+      "total_payable_fen": 3570,
+      "pricing_status": "confirmed",
+      "gifts": [
+        {
+          "sku_id": "P002",
+          "quantity": 1
+        }
+      ]
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": "A_SEA_GIFT",
+      "coupon_id": null,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 2970,
+      "shipping_fen": 600,
+      "total_payable_fen": 3570,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [
+        {
+          "sku_id": "P002",
+          "quantity": 1
+        }
+      ],
+      "line_allocations": [
+        {
+          "sku_id": "P002",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 0,
+          "payable_fen": 2970
+        }
+      ]
+    }
+  },
+  {
+    "id": "G018",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "gift_stock_insufficient"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "gift_stock_insufficient"
+    }
+  },
+  {
+    "id": "G019",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 5940,
+      "shipping_fen": 600,
+      "total_payable_fen": 6540,
+      "pricing_status": "confirmed",
+      "gifts": [
+        {
+          "sku_id": "P002",
+          "quantity": 1
+        }
+      ]
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": "A_SEA_GIFT",
+      "coupon_id": null,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 5940,
+      "shipping_fen": 600,
+      "total_payable_fen": 6540,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [
+        {
+          "sku_id": "P002",
+          "quantity": 1
+        }
+      ],
+      "line_allocations": [
+        {
+          "sku_id": "P002",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 0,
+          "payable_fen": 5940
+        }
+      ]
+    }
+  },
+  {
+    "id": "G020",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 990,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 8910,
+      "shipping_fen": 600,
+      "total_payable_fen": 9510,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": "A_GIFT",
+      "coupon_id": null,
+      "activity_discount_fen": 990,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 8910,
+      "shipping_fen": 600,
+      "total_payable_fen": 9510,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P014",
+          "activity_discount_fen": 990,
+          "coupon_discount_fen": 0,
+          "payable_fen": 8910
+        }
+      ]
+    }
+  },
+  {
+    "id": "G021",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 9900,
+      "shipping_fen": 0,
+      "total_payable_fen": 9900,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": null,
+      "coupon_id": null,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 9900,
+      "shipping_fen": 0,
+      "total_payable_fen": 9900,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P014",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 0,
+          "payable_fen": 9900
+        }
+      ]
+    }
+  },
+  {
+    "id": "G022",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 200,
+      "merchandise_payable_fen": 9800,
+      "shipping_fen": 600,
+      "total_payable_fen": 10400,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": null,
+      "coupon_id": "C_WEB",
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 200,
+      "merchandise_payable_fen": 9800,
+      "shipping_fen": 600,
+      "total_payable_fen": 10400,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 200,
+          "payable_fen": 9800
+        }
+      ]
+    }
+  },
+  {
+    "id": "G023",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 10000,
+      "shipping_fen": 0,
+      "total_payable_fen": 10000,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": null,
+      "coupon_id": null,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 10000,
+      "shipping_fen": 0,
+      "total_payable_fen": 10000,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 0,
+          "payable_fen": 10000
+        }
+      ]
+    }
+  },
+  {
+    "id": "G024",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 1000,
+      "coupon_discount_fen": 500,
+      "merchandise_payable_fen": 8860,
+      "shipping_fen": 600,
+      "total_payable_fen": 9460,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": "A_ORDER",
+      "coupon_id": "C_ALL",
+      "activity_discount_fen": 1000,
+      "coupon_discount_fen": 500,
+      "merchandise_payable_fen": 8860,
+      "shipping_fen": 600,
+      "total_payable_fen": 9460,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P004",
+          "activity_discount_fen": 1000,
+          "coupon_discount_fen": 500,
+          "payable_fen": 8860
+        }
+      ]
+    }
+  },
+  {
+    "id": "G025",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "stacking_not_allowed"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "stacking_not_allowed"
+    }
+  },
+  {
+    "id": "G026",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 1500,
+      "merchandise_payable_fen": 8860,
+      "shipping_fen": 600,
+      "total_payable_fen": 9460,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": null,
+      "coupon_id": "C_NO_STACK",
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 1500,
+      "merchandise_payable_fen": 8860,
+      "shipping_fen": 600,
+      "total_payable_fen": 9460,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P004",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 1500,
+          "payable_fen": 8860
+        }
+      ]
+    }
+  },
+  {
+    "id": "G027",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_not_owned"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "coupon_not_owned"
+    }
+  },
+  {
+    "id": "G028",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_ownership_unknown"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "coupon_ownership_unknown"
+    }
+  },
+  {
+    "id": "G029",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_used"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "coupon_used"
+    }
+  },
+  {
+    "id": "G030",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_locked"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "coupon_locked"
+    }
+  },
+  {
+    "id": "G031",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_audience"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "coupon_audience"
+    }
+  },
+  {
+    "id": "G032",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_audience"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "coupon_audience"
+    }
+  },
+  {
+    "id": "G033",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_not_started"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "coupon_not_started"
+    }
+  },
+  {
+    "id": "G034",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_expired"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "coupon_expired"
+    }
+  },
+  {
+    "id": "G035",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 500,
+      "merchandise_payable_fen": 4500,
+      "shipping_fen": 600,
+      "total_payable_fen": 5100,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": null,
+      "coupon_id": "C_ALL",
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 500,
+      "merchandise_payable_fen": 4500,
+      "shipping_fen": 600,
+      "total_payable_fen": 5100,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 500,
+          "payable_fen": 4500
+        }
+      ]
+    }
+  },
+  {
+    "id": "G036",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_expired"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "coupon_expired"
+    }
+  },
+  {
+    "id": "G037",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "activity_expired"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "activity_expired"
+    }
+  },
+  {
+    "id": "G038",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 1290,
+      "shipping_fen": 1200,
+      "total_payable_fen": 2490,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": null,
+      "coupon_id": null,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 1290,
+      "shipping_fen": 1200,
+      "total_payable_fen": 2490,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 0,
+          "payable_fen": 1290
+        }
+      ]
+    }
+  },
+  {
+    "id": "G039",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 1290,
+      "shipping_fen": null,
+      "total_payable_fen": null,
+      "pricing_status": "conditional",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": null,
+      "coupon_id": null,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 1290,
+      "shipping_fen": null,
+      "total_payable_fen": null,
+      "pricing_status": "conditional",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 0,
+          "payable_fen": 1290
+        }
+      ]
+    }
+  },
+  {
+    "id": "G040",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_claim_required"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "coupon_claim_required"
+    }
+  },
+  {
+    "id": "G041",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "activity_rule_incomplete"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "activity_rule_incomplete"
+    }
+  },
+  {
+    "id": "G042",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "product_price_unknown"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "product_price_unknown"
+    }
+  },
+  {
+    "id": "G043",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "product_stock_insufficient"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "product_stock_insufficient"
+    }
+  },
+  {
+    "id": "G044",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "product_expired"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "product_expired"
+    }
+  },
+  {
+    "id": "G045",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "activity_scope_empty"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "activity_scope_empty"
+    }
+  },
+  {
+    "id": "G046",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 558,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 6212,
+      "shipping_fen": 600,
+      "total_payable_fen": 6812,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": "A_MEAT",
+      "coupon_id": null,
+      "activity_discount_fen": 558,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 6212,
+      "shipping_fen": 600,
+      "total_payable_fen": 6812,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P004",
+          "activity_discount_fen": 259,
+          "coupon_discount_fen": 0,
+          "payable_fen": 2331
+        },
+        {
+          "sku_id": "P005",
+          "activity_discount_fen": 299,
+          "coupon_discount_fen": 0,
+          "payable_fen": 2691
+        },
+        {
+          "sku_id": "P010",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 0,
+          "payable_fen": 1190
+        }
+      ]
+    }
+  },
+  {
+    "id": "G047",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "coupon_channel"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "coupon_channel"
+    }
+  },
+  {
+    "id": "G048",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "product_stock_unknown"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "product_stock_unknown"
+    }
+  },
+  {
+    "id": "G049",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 1,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 2001,
+      "shipping_fen": 600,
+      "total_payable_fen": 2601,
+      "pricing_status": "confirmed",
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 1,
+          "coupon_discount_fen": 0
+        },
+        {
+          "sku_id": "P002",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 0
+        }
+      ]
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": "A_ORDER",
+      "coupon_id": null,
+      "activity_discount_fen": 1,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 2001,
+      "shipping_fen": 600,
+      "total_payable_fen": 2601,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 1,
+          "coupon_discount_fen": 0,
+          "payable_fen": 1000
+        },
+        {
+          "sku_id": "P002",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 0,
+          "payable_fen": 1001
+        }
+      ]
+    }
+  },
+  {
+    "id": "G050",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 9899,
+      "shipping_fen": 600,
+      "total_payable_fen": 10499,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": null,
+      "coupon_id": null,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 9899,
+      "shipping_fen": 600,
+      "total_payable_fen": 10499,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 0,
+          "payable_fen": 9899
+        }
+      ]
+    }
+  },
+  {
+    "id": "G051",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 9901,
+      "shipping_fen": 0,
+      "total_payable_fen": 9901,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": null,
+      "coupon_id": null,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 0,
+      "merchandise_payable_fen": 9901,
+      "shipping_fen": 0,
+      "total_payable_fen": 9901,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 0,
+          "payable_fen": 9901
+        }
+      ]
+    }
+  },
+  {
+    "id": "G052",
+    "passed": true,
+    "expected": {
+      "eligible": true,
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 1290,
+      "merchandise_payable_fen": 0,
+      "shipping_fen": 600,
+      "total_payable_fen": 600,
+      "pricing_status": "confirmed",
+      "gifts": []
+    },
+    "actual": {
+      "eligible": true,
+      "activity_id": null,
+      "coupon_id": "C_WEB",
+      "activity_discount_fen": 0,
+      "coupon_discount_fen": 1290,
+      "merchandise_payable_fen": 0,
+      "shipping_fen": 600,
+      "total_payable_fen": 600,
+      "pricing_status": "confirmed",
+      "coupon_conditional": false,
+      "gifts": [],
+      "line_allocations": [
+        {
+          "sku_id": "P001",
+          "activity_discount_fen": 0,
+          "coupon_discount_fen": 1290,
+          "payable_fen": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "G053",
+    "passed": true,
+    "expected": {
+      "eligible": false,
+      "rejection_code": "product_expired"
+    },
+    "actual": {
+      "eligible": false,
+      "rejection_code": "product_expired"
+    }
+  }
+]

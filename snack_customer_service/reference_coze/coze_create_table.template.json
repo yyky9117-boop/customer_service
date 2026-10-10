@@ -1,0 +1,119 @@
+{
+  "workspace_id": "",
+  "table_name": "snack_orders_v2_demo",
+  "table_desc": "零食订单查询优化版；仅模拟订单；旧表不删除",
+  "fields": [
+    {
+      "name": "order_id",
+      "type": "string",
+      "desc": "商城订单号，不是快递运单号",
+      "is_required": true
+    },
+    {
+      "name": "user_id",
+      "type": "string",
+      "desc": "演示账号归属；查询时必须限定",
+      "is_required": true
+    },
+    {
+      "name": "user_phonenumber",
+      "type": "string",
+      "desc": "下单手机号，只作为查询条件",
+      "is_required": false
+    },
+    {
+      "name": "order_status",
+      "type": "string",
+      "desc": "pending_payment/paid/completed/cancelled/unknown",
+      "is_required": true
+    },
+    {
+      "name": "shipping_status",
+      "type": "string",
+      "desc": "unshipped/partially_shipped/shipped/unknown",
+      "is_required": true
+    },
+    {
+      "name": "amount_fen",
+      "type": "integer",
+      "desc": "金额，单位为分",
+      "is_required": false
+    },
+    {
+      "name": "created_at",
+      "type": "string",
+      "desc": "带时区的下单时间",
+      "is_required": false
+    },
+    {
+      "name": "paid_at",
+      "type": "string",
+      "desc": "付款时间，无数据则留空",
+      "is_required": false
+    },
+    {
+      "name": "shipped_at",
+      "type": "string",
+      "desc": "发货时间，无数据则留空",
+      "is_required": false
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "desc": "demo/legacy_demo，全部为演示数据",
+      "is_required": true
+    },
+    {
+      "name": "legacy_tracking_number",
+      "type": "string",
+      "desc": "原表 order_id 的运单值，迁移保留",
+      "is_required": false
+    },
+    {
+      "name": "needs_review",
+      "type": "integer",
+      "desc": "0已确认，1需核对",
+      "is_required": true
+    },
+    {
+      "name": "items_json",
+      "type": "string",
+      "desc": "商品明细 JSON 数组",
+      "is_required": true
+    },
+    {
+      "name": "shipments_json",
+      "type": "string",
+      "desc": "包裹及物流轨迹 JSON 数组，支持多包裹",
+      "is_required": true
+    }
+  ],
+  "rw_mode": "unlimited_read_write",
+  "indexs": [
+    {
+      "index_name": "idx_order_id",
+      "field_names": [
+        "order_id"
+      ]
+    },
+    {
+      "index_name": "idx_user_id",
+      "field_names": [
+        "user_id"
+      ]
+    },
+    {
+      "index_name": "idx_phone",
+      "field_names": [
+        "user_phonenumber"
+      ]
+    }
+  ],
+  "connector_read_mode": "shared_all_connectors",
+  "connector_rw_config": [
+    {
+      "connector_id": "1024",
+      "connector_rw_mode": "draft"
+    }
+  ]
+}

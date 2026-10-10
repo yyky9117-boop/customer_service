@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小食光 · 订单客服</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="小食光首页"><span class="brand-mark">食</span><span>小食光<small>让每一口，都有着落</small></span></a>
+    <div class="account"><span class="demo-label">模拟订单演示</span><label for="account-select">当前账号</label><select id="account-select" aria-label="切换演示账号"><option value="demo_user_a">演示用户 A</option><option value="demo_user_b">演示用户 B</option></select></div>
+  </header>
+  <main class="workspace">
+    <section class="chat-panel" aria-label="订单客服对话">
+      <div class="chat-heading"><div><span class="eyebrow">CUSTOMER CARE</span><h1>你的零食，到哪了？</h1><p>订单、发货、物流，一起帮你查清楚。</p></div><span class="service-status"><i></i><span id="engine-label">查询服务在线</span></span></div>
+      <div id="messages" class="messages" aria-live="polite" aria-relevant="additions"></div>
+      <div class="composer-area">
+        <div class="quick-actions"><button type="button" data-message="帮我查一下订单">查订单</button><button type="button" data-message="它发货了吗">是否发货</button><button type="button" data-message="它的物流到哪了">查物流</button><button type="button" data-message="预计什么时候到">预计送达</button><button type="button" id="human-button">联系人工</button></div>
+        <form id="chat-form" class="composer"><label class="sr-only" for="message-input">输入咨询内容</label><textarea id="message-input" rows="1" maxlength="2000" placeholder="输入订单号、快递运单号，或告诉我你买了什么…"></textarea><button id="send-button" type="submit" aria-label="发送消息">发送 <span aria-hidden="true">↗</span></button></form>
+        <div class="composer-note"><span>Enter 发送 · Shift + Enter 换行</span><button id="new-chat" type="button">开启新对话</button></div>
+      </div>
+    </section>
+    <aside class="order-panel" aria-label="订单信息">
+      <div class="panel-heading"><div><span class="eyebrow">MY ORDERS</span><h2>订单小助手</h2></div><span class="count" id="order-count">—</span></div>
+      <div id="order-detail" class="order-detail"><div class="empty-detail"><span aria-hidden="true">▤</span><h3>查到的订单会显示在这里</h3><p>订单状态和物流轨迹，都以查询结果为准。</p></div></div>
+      <details id="reply-demo" class="courier-demo reply-demo">
+        <summary>订单模块：话术检索与回复生成</summary>
+        <p class="demo-explanation">仅用于调试订单模块。话术库为补建的演示资料，订单事实以本轮查询为准。</p>
+        <div id="reply-trace" class="courier-calls"><p>咨询后可查看命中的场景话术与生成结果。</p></div>
+      </details>
+      <details id="human-demo" class="courier-demo human-demo">
+        <summary>模拟人工转接与接口调用</summary>
+        <p class="demo-explanation">工单由独立 HTTP 服务创建。坐席与处理动作均为模拟。</p>
+        <label for="human-fault">转接接口场景</label>
+        <select id="human-fault"><option value="">正常排队</option><option value="no_agents">模拟无人在线</option><option value="timeout">创建接口超时</option><option value="http_error">接口返回错误</option><option value="malformed">响应格式异常</option></select>
+        <div id="human-ticket" class="human-ticket" aria-live="polite">点击“联系人工”或回复中的转接入口即可创建工单。</div>
+        <div class="human-actions"><button id="refresh-human" type="button" disabled>刷新工单状态</button><button id="connect-human" type="button" disabled>模拟坐席接入</button><button id="close-human" type="button" disabled>模拟处理完成</button></div>
+        <div id="human-calls" class="courier-calls"><p>转接后显示实际请求与响应。</p></div>
+      </details>
+      <details class="courier-demo" open>
+        <summary>模拟物流与接口调用</summary>
+        <p class="demo-explanation">轨迹为虚构数据。查询通过独立的模拟快递 HTTP 接口完成。</p>
+        <label for="courier-fault">本次查询的接口场景</label>
+        <select id="courier-fault"><option value="">正常响应</option><option value="logistics_timeout">接口超时</option><option value="logistics_error">接口返回错误</option><option value="logistics_empty">暂无物流轨迹</option><option value="logistics_malformed">返回格式异常</option></select>
+        <label for="courier-tracking">选择当前订单的包裹</label>
+        <select id="courier-tracking" disabled><option value="">先查询一笔有运单的订单</option></select>
+        <div class="scenario-controls"><select id="courier-scenario" aria-label="模拟包裹状态"><option value="default">恢复初始状态</option><option value="collected">已揽收</option><option value="in_transit">运输中</option><option value="delivering">派送中</option><option value="delivered">已签收</option><option value="stalled">超过48小时未更新</option><option value="exception">配送异常</option><option value="no_records">暂无轨迹</option></select><button type="button" id="apply-scenario" disabled>更新并查询</button></div>
+        <div id="courier-calls" class="courier-calls" aria-live="polite"><p>查询物流后，这里会显示实际接口请求与响应。</p></div>
+      </details>
+      <div class="order-list-heading"><h3>我的演示订单</h3><span>点击即可查询</span></div>
+      <div id="order-list" class="order-list"></div>
+      <div class="support-note"><span>需要进一步协助？</span><p>异常物流与售后问题可转接模拟人工服务。</p><button id="view-requests" type="button">查看人工请求 <span aria-hidden="true">↗</span></button></div>
+    </aside>
+  </main>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

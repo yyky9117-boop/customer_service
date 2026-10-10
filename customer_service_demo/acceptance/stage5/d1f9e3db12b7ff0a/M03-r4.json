@@ -1,0 +1,3305 @@
+{
+  "case_id": "M03",
+  "title": "撤销送礼不撤销明确礼盒",
+  "repetition": 4,
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "executed_at": "2026-10-08T13:08:57.340070+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_8896edfe08c44690b3c55092d72754ce",
+        "expected_revision": 0,
+        "message": "我喜欢礼盒包装，送朋友，150 元以内",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_fb77f82cbcbd4cb68f87959abfcbc56d",
+        "request_id": "req_8896edfe08c44690b3c55092d72754ce",
+        "turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_f44b283bd93f4095b30b0b6cd1b03bc4",
+          "role": "assistant",
+          "content": "亲～，按礼盒包装、送朋友、商品合计不超过一百五十元来选，有两款比较合适😊\n\n首选是混合坚果礼盒（1件），礼盒装适合送朋友，独立内包装每包25克，比较贴合您送礼的诉求。这款含运费95.10元，已计入已计入礼盒 9 折。\n\n如果更想换成饼干方向，可以考虑饼干礼盒（1件），同为礼盒装适合送人，独立小包每包20克；和首选相比，总价比首选高一些，这款含运费116.10元，也已计入已计入礼盒 9 折。\n\n两款都是礼盒装，送人都拿得出手，主要看朋友更爱坚果还是饼干。想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_7fdb7947cc554d11dab8",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P014",
+                  "product_name": "混合坚果礼盒",
+                  "quantity": 1,
+                  "unit_price_fen": 9900,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 9900,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_GIFT",
+                    "label": "礼盒 9 折",
+                    "amount_fen": 990,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 8910,
+                "shipping_fen": 600,
+                "total_payable_fen": 9510,
+                "conditions": []
+              },
+              "reasons": [
+                "礼盒装适合送朋友，独立内包装每包25克",
+                "不辣且低甜度，混合坚果组合分享方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_201c6333010f7948e85c",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P015",
+                  "product_name": "饼干礼盒",
+                  "quantity": 1,
+                  "unit_price_fen": 12900,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 12900,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_GIFT",
+                    "label": "礼盒 9 折",
+                    "amount_fen": 1290,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 11610,
+                "shipping_fen": 0,
+                "total_payable_fen": 11610,
+                "conditions": []
+              },
+              "reasons": [
+                "同为礼盒装适合送人，独立小包每包20克",
+                "不辣且低甜度，饼干组合与坚果方案口味方向不同"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_fb77f82cbcbd4cb68f87959abfcbc56d",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_self",
+                "label": "送朋友零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": 15000,
+                  "strictness": "strict",
+                  "scope": "goods_total",
+                  "source_text": "150 元以内",
+                  "min_is_hard": false,
+                  "source_turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764"
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_package_gift_box",
+                    "field": "package",
+                    "operator": "equals",
+                    "value": "gift_box",
+                    "strength": "hard",
+                    "source_text": "礼盒包装",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764"
+                  },
+                  {
+                    "constraint_id": "c_purpose_gift",
+                    "field": "purpose",
+                    "operator": "equals",
+                    "value": "gift",
+                    "strength": "hard",
+                    "source_text": "送朋友",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_f44b283bd93f4095b30b0b6cd1b03bc4",
+              "turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764",
+              "plan_order": [
+                {
+                  "plan_id": "plan_7fdb7947cc554d11dab8",
+                  "sku_ids": [
+                    "P014"
+                  ]
+                },
+                {
+                  "plan_id": "plan_201c6333010f7948e85c",
+                  "sku_ids": [
+                    "P015"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_56e448a80f874e82814a5d5ee8d778b2",
+          "role": "user",
+          "content": "我喜欢礼盒包装，送朋友，150 元以内",
+          "turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764"
+        },
+        {
+          "id": "msg_f44b283bd93f4095b30b0b6cd1b03bc4",
+          "role": "assistant",
+          "content": "亲～，按礼盒包装、送朋友、商品合计不超过一百五十元来选，有两款比较合适😊\n\n首选是混合坚果礼盒（1件），礼盒装适合送朋友，独立内包装每包25克，比较贴合您送礼的诉求。这款含运费95.10元，已计入已计入礼盒 9 折。\n\n如果更想换成饼干方向，可以考虑饼干礼盒（1件），同为礼盒装适合送人，独立小包每包20克；和首选相比，总价比首选高一些，这款含运费116.10元，也已计入已计入礼盒 9 折。\n\n两款都是礼盒装，送人都拿得出手，主要看朋友更爱坚果还是饼干。想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_7fdb7947cc554d11dab8",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P014",
+                  "product_name": "混合坚果礼盒",
+                  "quantity": 1,
+                  "unit_price_fen": 9900,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 9900,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_GIFT",
+                    "label": "礼盒 9 折",
+                    "amount_fen": 990,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 8910,
+                "shipping_fen": 600,
+                "total_payable_fen": 9510,
+                "conditions": []
+              },
+              "reasons": [
+                "礼盒装适合送朋友，独立内包装每包25克",
+                "不辣且低甜度，混合坚果组合分享方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_201c6333010f7948e85c",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P015",
+                  "product_name": "饼干礼盒",
+                  "quantity": 1,
+                  "unit_price_fen": 12900,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 12900,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_GIFT",
+                    "label": "礼盒 9 折",
+                    "amount_fen": 1290,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 11610,
+                "shipping_fen": 0,
+                "total_payable_fen": 11610,
+                "conditions": []
+              },
+              "reasons": [
+                "同为礼盒装适合送人，独立小包每包20克",
+                "不辣且低甜度，饼干组合与坚果方案口味方向不同"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_self": {
+            "P001": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P002": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P003": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P004": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P005": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P006": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P007": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P008": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P009": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P010": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P011": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P012": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P013": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P016": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P017": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P018": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P019": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P020": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P021": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P022": [
+              "stock_unknown_or_empty",
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P023": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P024": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P025": [
+              "expired_or_unknown",
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P026": [
+              "price_unknown",
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P027": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P028": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P029": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ],
+            "P030": [
+              "constraint:c_package_gift_box",
+              "constraint:c_purpose_gift"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 2,
+        "priced_cart_count": 2,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 1,
+        "reply_review_passed": true
+      }
+    },
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_fb77f82cbcbd4cb68f87959abfcbc56d",
+        "request_id": "req_dffc585ce67d42409acebc044cb7adbe",
+        "expected_revision": 1,
+        "message": "不送人了，还是要礼盒",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_fb77f82cbcbd4cb68f87959abfcbc56d",
+        "request_id": "req_dffc585ce67d42409acebc044cb7adbe",
+        "turn_id": "turn_817840467bcb47449b46115a5cac94e3",
+        "base_revision": 1,
+        "revision": 2,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_3798ea6e7e84429baefdb44d285325be",
+          "role": "assistant",
+          "content": "亲～，按礼盒包装、商品合计最多150元来挑，给您留了两个选择😊\n\n首选是混合坚果礼盒（1件），礼盒包装，不送人也适合直接收存或自用，含运费95.10元，已计入礼盒 9 折。\n\n备选是饼干礼盒（1件），礼盒包装，符合自用场景，含运费116.10元，已计入礼盒 9 折。总价比首选高一些，您看哪个更合心意。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_62cfabcdc488cb361c95",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P014",
+                  "product_name": "混合坚果礼盒",
+                  "quantity": 1,
+                  "unit_price_fen": 9900,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 9900,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_GIFT",
+                    "label": "礼盒 9 折",
+                    "amount_fen": 990,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 8910,
+                "shipping_fen": 600,
+                "total_payable_fen": 9510,
+                "conditions": []
+              },
+              "reasons": [
+                "礼盒包装，不送人也适合直接收存或自用",
+                "独立内包装，单包25克，可分次取用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_08ba4338cb24c3ac8503",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P015",
+                  "product_name": "饼干礼盒",
+                  "quantity": 1,
+                  "unit_price_fen": 12900,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 12900,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_GIFT",
+                    "label": "礼盒 9 折",
+                    "amount_fen": 1290,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 11610,
+                "shipping_fen": 0,
+                "total_payable_fen": 11610,
+                "conditions": []
+              },
+              "reasons": [
+                "礼盒包装，符合自用场景",
+                "独立内包装，单包20克，方便分次取用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_fb77f82cbcbd4cb68f87959abfcbc56d",
+        "revision": 2,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_self",
+                "label": "自用礼盒零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": 15000,
+                  "strictness": "strict",
+                  "scope": "goods_total",
+                  "source_text": "150 元以内",
+                  "min_is_hard": false,
+                  "source_turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764"
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_package_gift_box",
+                    "field": "package",
+                    "operator": "equals",
+                    "value": "gift_box",
+                    "strength": "hard",
+                    "source_text": "还是要礼盒",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_817840467bcb47449b46115a5cac94e3"
+                  },
+                  {
+                    "constraint_id": "c_purpose_gift",
+                    "field": "purpose",
+                    "operator": "equals",
+                    "value": "gift",
+                    "strength": "hard",
+                    "source_text": "送朋友",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "removed",
+                    "source_turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_3798ea6e7e84429baefdb44d285325be",
+              "turn_id": "turn_817840467bcb47449b46115a5cac94e3",
+              "plan_order": [
+                {
+                  "plan_id": "plan_62cfabcdc488cb361c95",
+                  "sku_ids": [
+                    "P014"
+                  ]
+                },
+                {
+                  "plan_id": "plan_08ba4338cb24c3ac8503",
+                  "sku_ids": [
+                    "P015"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_56e448a80f874e82814a5d5ee8d778b2",
+          "role": "user",
+          "content": "我喜欢礼盒包装，送朋友，150 元以内",
+          "turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764"
+        },
+        {
+          "id": "msg_f44b283bd93f4095b30b0b6cd1b03bc4",
+          "role": "assistant",
+          "content": "亲～，按礼盒包装、送朋友、商品合计不超过一百五十元来选，有两款比较合适😊\n\n首选是混合坚果礼盒（1件），礼盒装适合送朋友，独立内包装每包25克，比较贴合您送礼的诉求。这款含运费95.10元，已计入已计入礼盒 9 折。\n\n如果更想换成饼干方向，可以考虑饼干礼盒（1件），同为礼盒装适合送人，独立小包每包20克；和首选相比，总价比首选高一些，这款含运费116.10元，也已计入已计入礼盒 9 折。\n\n两款都是礼盒装，送人都拿得出手，主要看朋友更爱坚果还是饼干。想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_7fdb7947cc554d11dab8",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P014",
+                  "product_name": "混合坚果礼盒",
+                  "quantity": 1,
+                  "unit_price_fen": 9900,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 9900,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_GIFT",
+                    "label": "礼盒 9 折",
+                    "amount_fen": 990,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 8910,
+                "shipping_fen": 600,
+                "total_payable_fen": 9510,
+                "conditions": []
+              },
+              "reasons": [
+                "礼盒装适合送朋友，独立内包装每包25克",
+                "不辣且低甜度，混合坚果组合分享方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_201c6333010f7948e85c",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P015",
+                  "product_name": "饼干礼盒",
+                  "quantity": 1,
+                  "unit_price_fen": 12900,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 12900,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_GIFT",
+                    "label": "礼盒 9 折",
+                    "amount_fen": 1290,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 11610,
+                "shipping_fen": 0,
+                "total_payable_fen": 11610,
+                "conditions": []
+              },
+              "reasons": [
+                "同为礼盒装适合送人，独立小包每包20克",
+                "不辣且低甜度，饼干组合与坚果方案口味方向不同"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764",
+          "status": "completed"
+        },
+        {
+          "id": "msg_1536e485571e416e89bc4f9586ad5df4",
+          "role": "user",
+          "content": "不送人了，还是要礼盒",
+          "turn_id": "turn_817840467bcb47449b46115a5cac94e3"
+        },
+        {
+          "id": "msg_3798ea6e7e84429baefdb44d285325be",
+          "role": "assistant",
+          "content": "亲～，按礼盒包装、商品合计最多150元来挑，给您留了两个选择😊\n\n首选是混合坚果礼盒（1件），礼盒包装，不送人也适合直接收存或自用，含运费95.10元，已计入礼盒 9 折。\n\n备选是饼干礼盒（1件），礼盒包装，符合自用场景，含运费116.10元，已计入礼盒 9 折。总价比首选高一些，您看哪个更合心意。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_62cfabcdc488cb361c95",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P014",
+                  "product_name": "混合坚果礼盒",
+                  "quantity": 1,
+                  "unit_price_fen": 9900,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 9900,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_GIFT",
+                    "label": "礼盒 9 折",
+                    "amount_fen": 990,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 8910,
+                "shipping_fen": 600,
+                "total_payable_fen": 9510,
+                "conditions": []
+              },
+              "reasons": [
+                "礼盒包装，不送人也适合直接收存或自用",
+                "独立内包装，单包25克，可分次取用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_08ba4338cb24c3ac8503",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P015",
+                  "product_name": "饼干礼盒",
+                  "quantity": 1,
+                  "unit_price_fen": 12900,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 12900,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_GIFT",
+                    "label": "礼盒 9 折",
+                    "amount_fen": 1290,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 11610,
+                "shipping_fen": 0,
+                "total_payable_fen": 11610,
+                "conditions": []
+              },
+              "reasons": [
+                "礼盒包装，符合自用场景",
+                "独立内包装，单包20克，方便分次取用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_817840467bcb47449b46115a5cac94e3",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_self": {
+            "P001": [
+              "constraint:c_package_gift_box"
+            ],
+            "P002": [
+              "constraint:c_package_gift_box"
+            ],
+            "P003": [
+              "constraint:c_package_gift_box"
+            ],
+            "P004": [
+              "constraint:c_package_gift_box"
+            ],
+            "P005": [
+              "constraint:c_package_gift_box"
+            ],
+            "P006": [
+              "constraint:c_package_gift_box"
+            ],
+            "P007": [
+              "constraint:c_package_gift_box"
+            ],
+            "P008": [
+              "constraint:c_package_gift_box"
+            ],
+            "P009": [
+              "constraint:c_package_gift_box"
+            ],
+            "P010": [
+              "constraint:c_package_gift_box"
+            ],
+            "P011": [
+              "constraint:c_package_gift_box"
+            ],
+            "P012": [
+              "constraint:c_package_gift_box"
+            ],
+            "P013": [
+              "constraint:c_package_gift_box"
+            ],
+            "P016": [
+              "constraint:c_package_gift_box"
+            ],
+            "P017": [
+              "constraint:c_package_gift_box"
+            ],
+            "P018": [
+              "constraint:c_package_gift_box"
+            ],
+            "P019": [
+              "constraint:c_package_gift_box"
+            ],
+            "P020": [
+              "constraint:c_package_gift_box"
+            ],
+            "P021": [
+              "constraint:c_package_gift_box"
+            ],
+            "P022": [
+              "stock_unknown_or_empty",
+              "constraint:c_package_gift_box"
+            ],
+            "P023": [
+              "constraint:c_package_gift_box"
+            ],
+            "P024": [
+              "constraint:c_package_gift_box"
+            ],
+            "P025": [
+              "expired_or_unknown",
+              "constraint:c_package_gift_box"
+            ],
+            "P026": [
+              "price_unknown",
+              "constraint:c_package_gift_box"
+            ],
+            "P027": [
+              "constraint:c_package_gift_box"
+            ],
+            "P028": [
+              "constraint:c_package_gift_box"
+            ],
+            "P029": [
+              "constraint:c_package_gift_box"
+            ],
+            "P030": [
+              "constraint:c_package_gift_box"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 2,
+        "priced_cart_count": 2,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 1,
+        "reply_review_passed": true
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "我喜欢礼盒包装，送朋友，150 元以内",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "送朋友零食",
+            "budget": {
+              "min_fen": null,
+              "max_fen": 15000,
+              "strictness": "strict",
+              "scope": "goods_total",
+              "source_text": "150 元以内",
+              "min_is_hard": false
+            },
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_package_gift_box",
+                "field": "package",
+                "operator": "equals",
+                "value": "gift_box",
+                "strength": "hard",
+                "source_text": "礼盒包装",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_purpose_gift",
+                "field": "purpose",
+                "operator": "equals",
+                "value": "gift",
+                "strength": "hard",
+                "source_text": "送朋友",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.83
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "我喜欢礼盒包装，送朋友，150 元以内",
+        "need_summary": "礼盒包装、送人、商品合计最多150.00元",
+        "plans": [
+          {
+            "plan_id": "plan_7fdb7947cc554d11dab8",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P014",
+                "product_name": "混合坚果礼盒",
+                "quantity": 1,
+                "unit_price_fen": 9900,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "混合坚果礼盒，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "混合坚果礼盒：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "混合坚果礼盒：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "混合坚果礼盒：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "混合坚果礼盒：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "混合坚果礼盒：已知单个内包25克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "混合坚果礼盒：ingredients=['peanut', 'cashew', 'almond']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "混合坚果礼盒：declared_allergens=['peanut', 'tree_nuts']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "混合坚果礼盒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "混合坚果礼盒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "混合坚果礼盒：scene_tags=['gift']"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费95.10元；商品应付89.10元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 package equals gift_box，符合的商品仅为：混合坚果礼盒。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals gift，符合的商品仅为：混合坚果礼盒。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "offer",
+                "text": "已计入礼盒 9 折。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_201c6333010f7948e85c",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P015",
+                "product_name": "饼干礼盒",
+                "quantity": 1,
+                "unit_price_fen": 12900,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "饼干礼盒，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "饼干礼盒：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "饼干礼盒：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "饼干礼盒：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "饼干礼盒：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "饼干礼盒：已知单个内包20克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "饼干礼盒：ingredients=['wheat', 'milk', 'egg', 'sugar']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "饼干礼盒：declared_allergens=['gluten', 'milk', 'egg']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "饼干礼盒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "饼干礼盒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "饼干礼盒：scene_tags=['gift']"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费116.10元；商品应付116.10元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 package equals gift_box，符合的商品仅为：饼干礼盒。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals gift，符合的商品仅为：饼干礼盒。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "offer",
+                "text": "已计入礼盒 9 折。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_7fdb7947cc554d11dab8",
+            "reasons": [
+              {
+                "text": "礼盒装适合送朋友，独立内包装每包25克",
+                "fact_ids": [
+                  "p1_f11",
+                  "p1_f5",
+                  "p1_f6"
+                ]
+              },
+              {
+                "text": "不辣且低甜度，混合坚果组合分享方便",
+                "fact_ids": [
+                  "p1_f2",
+                  "p1_f4",
+                  "p1_f7"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_201c6333010f7948e85c",
+            "reasons": [
+              {
+                "text": "同为礼盒装适合送人，独立小包每包20克",
+                "fact_ids": [
+                  "p2_f11",
+                  "p2_f5",
+                  "p2_f6"
+                ]
+              },
+              {
+                "text": "不辣且低甜度，饼干组合与坚果方案口味方向不同",
+                "fact_ids": [
+                  "p2_f2",
+                  "p2_f4",
+                  "p2_f7"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 1.214
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "我喜欢礼盒包装，送朋友，150 元以内",
+        "need_summary": "礼盒包装、送人、商品合计最多150.00元",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_self",
+              "label": "送朋友零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": 15000,
+                "strictness": "strict",
+                "scope": "goods_total",
+                "source_text": "150 元以内",
+                "min_is_hard": false,
+                "source_turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764"
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_package_gift_box",
+                  "field": "package",
+                  "operator": "equals",
+                  "value": "gift_box",
+                  "strength": "hard",
+                  "source_text": "礼盒包装",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764"
+                },
+                {
+                  "constraint_id": "c_purpose_gift",
+                  "field": "purpose",
+                  "operator": "equals",
+                  "value": "gift",
+                  "strength": "hard",
+                  "source_text": "送朋友",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_7fdb7947cc554d11dab8",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P014",
+                "product_name": "混合坚果礼盒",
+                "quantity": 1,
+                "unit_price_fen": 9900,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 9900,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_GIFT",
+                  "label": "礼盒 9 折",
+                  "amount_fen": 990,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 8910,
+              "shipping_fen": 600,
+              "total_payable_fen": 9510,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "混合坚果礼盒，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "混合坚果礼盒：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "混合坚果礼盒：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "混合坚果礼盒：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "混合坚果礼盒：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "混合坚果礼盒：已知单个内包25克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "混合坚果礼盒：ingredients=['peanut', 'cashew', 'almond']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "混合坚果礼盒：declared_allergens=['peanut', 'tree_nuts']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "混合坚果礼盒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "混合坚果礼盒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "混合坚果礼盒：scene_tags=['gift']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "混合坚果礼盒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费95.10元；商品应付89.10元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 package equals gift_box，符合的商品仅为：混合坚果礼盒。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals gift，符合的商品仅为：混合坚果礼盒。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "offer",
+                "text": "已计入礼盒 9 折。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_201c6333010f7948e85c",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P015",
+                "product_name": "饼干礼盒",
+                "quantity": 1,
+                "unit_price_fen": 12900,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 12900,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_GIFT",
+                  "label": "礼盒 9 折",
+                  "amount_fen": 1290,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 11610,
+              "shipping_fen": 0,
+              "total_payable_fen": 11610,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "饼干礼盒，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "饼干礼盒：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "饼干礼盒：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "饼干礼盒：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "饼干礼盒：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "饼干礼盒：已知单个内包20克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "饼干礼盒：ingredients=['wheat', 'milk', 'egg', 'sugar']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "饼干礼盒：declared_allergens=['gluten', 'milk', 'egg']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "饼干礼盒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "饼干礼盒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "饼干礼盒：scene_tags=['gift']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "饼干礼盒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费116.10元；商品应付116.10元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 package equals gift_box，符合的商品仅为：饼干礼盒。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals gift，符合的商品仅为：饼干礼盒。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "offer",
+                "text": "已计入礼盒 9 折。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "礼盒包装、送人、商品合计最多150.00元",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "混合坚果礼盒（1件）",
+          "p1_price": "含运费95.10元",
+          "p1_offer": "已计入礼盒 9 折。",
+          "p2_items": "饼干礼盒（1件）",
+          "p2_price": "含运费116.10元",
+          "p2_difference": "总价比首选高一些",
+          "p2_offer": "已计入礼盒 9 折。",
+          "p1_reason_1": "礼盒装适合送朋友，独立内包装每包25克",
+          "p1_reason_2": "不辣且低甜度，混合坚果组合分享方便",
+          "p2_reason_1": "同为礼盒装适合送人，独立小包每包20克",
+          "p2_reason_2": "不辣且低甜度，饼干组合与坚果方案口味方向不同"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_7fdb7947cc554d11dab8",
+              "reasons": [
+                {
+                  "text": "礼盒装适合送朋友，独立内包装每包25克",
+                  "fact_ids": [
+                    "p1_f11",
+                    "p1_f5",
+                    "p1_f6"
+                  ]
+                },
+                {
+                  "text": "不辣且低甜度，混合坚果组合分享方便",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f4",
+                    "p1_f7"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_201c6333010f7948e85c",
+              "reasons": [
+                {
+                  "text": "同为礼盒装适合送人，独立小包每包20克",
+                  "fact_ids": [
+                    "p2_f11",
+                    "p2_f5",
+                    "p2_f6"
+                  ]
+                },
+                {
+                  "text": "不辣且低甜度，饼干组合与坚果方案口味方向不同",
+                  "fact_ids": [
+                    "p2_f2",
+                    "p2_f4",
+                    "p2_f7"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，按礼盒包装、送朋友、商品合计不超过一百五十元来选，有两款比较合适😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，比较贴合您送礼的诉求。这款{{p1_price}}，已计入{{p1_offer}}\n\n如果更想换成饼干方向，可以考虑{{p2_items}}，{{p2_reason_1}}；和首选相比，{{p2_difference}}，这款{{p2_price}}，也已计入{{p2_offer}}\n\n两款都是礼盒装，送人都拿得出手，主要看朋友更爱坚果还是饼干。{{follow_up}}"
+      },
+      "seconds": 1.445
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "我喜欢礼盒包装，送朋友，150 元以内",
+        "need_summary": "礼盒包装、送人、商品合计最多150.00元",
+        "plans": [
+          {
+            "plan_id": "plan_7fdb7947cc554d11dab8",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P014",
+                "product_name": "混合坚果礼盒",
+                "quantity": 1,
+                "unit_price_fen": 9900,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 9900,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_GIFT",
+                  "label": "礼盒 9 折",
+                  "amount_fen": 990,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 8910,
+              "shipping_fen": 600,
+              "total_payable_fen": 9510,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "混合坚果礼盒，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "混合坚果礼盒：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "混合坚果礼盒：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "混合坚果礼盒：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "混合坚果礼盒：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "混合坚果礼盒：已知单个内包25克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "混合坚果礼盒：ingredients=['peanut', 'cashew', 'almond']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "混合坚果礼盒：declared_allergens=['peanut', 'tree_nuts']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "混合坚果礼盒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "混合坚果礼盒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "混合坚果礼盒：scene_tags=['gift']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "混合坚果礼盒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费95.10元；商品应付89.10元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 package equals gift_box，符合的商品仅为：混合坚果礼盒。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals gift，符合的商品仅为：混合坚果礼盒。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "offer",
+                "text": "已计入礼盒 9 折。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_201c6333010f7948e85c",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P015",
+                "product_name": "饼干礼盒",
+                "quantity": 1,
+                "unit_price_fen": 12900,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 12900,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_GIFT",
+                  "label": "礼盒 9 折",
+                  "amount_fen": 1290,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 11610,
+              "shipping_fen": 0,
+              "total_payable_fen": 11610,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "饼干礼盒，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "饼干礼盒：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "饼干礼盒：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "饼干礼盒：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "饼干礼盒：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "饼干礼盒：已知单个内包20克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "饼干礼盒：ingredients=['wheat', 'milk', 'egg', 'sugar']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "饼干礼盒：declared_allergens=['gluten', 'milk', 'egg']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "饼干礼盒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "饼干礼盒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "饼干礼盒：scene_tags=['gift']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "饼干礼盒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费116.10元；商品应付116.10元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 package equals gift_box，符合的商品仅为：饼干礼盒。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals gift，符合的商品仅为：饼干礼盒。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "offer",
+                "text": "已计入礼盒 9 折。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "礼盒包装、送人、商品合计最多150.00元",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "混合坚果礼盒（1件）",
+          "p1_price": "含运费95.10元",
+          "p1_offer": "已计入礼盒 9 折。",
+          "p2_items": "饼干礼盒（1件）",
+          "p2_price": "含运费116.10元",
+          "p2_difference": "总价比首选高一些",
+          "p2_offer": "已计入礼盒 9 折。",
+          "p1_reason_1": "礼盒装适合送朋友，独立内包装每包25克",
+          "p1_reason_2": "不辣且低甜度，混合坚果组合分享方便",
+          "p2_reason_1": "同为礼盒装适合送人，独立小包每包20克",
+          "p2_reason_2": "不辣且低甜度，饼干组合与坚果方案口味方向不同"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_7fdb7947cc554d11dab8",
+              "reasons": [
+                {
+                  "text": "礼盒装适合送朋友，独立内包装每包25克",
+                  "fact_ids": [
+                    "p1_f11",
+                    "p1_f5",
+                    "p1_f6"
+                  ]
+                },
+                {
+                  "text": "不辣且低甜度，混合坚果组合分享方便",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f4",
+                    "p1_f7"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_201c6333010f7948e85c",
+              "reasons": [
+                {
+                  "text": "同为礼盒装适合送人，独立小包每包20克",
+                  "fact_ids": [
+                    "p2_f11",
+                    "p2_f5",
+                    "p2_f6"
+                  ]
+                },
+                {
+                  "text": "不辣且低甜度，饼干组合与坚果方案口味方向不同",
+                  "fact_ids": [
+                    "p2_f2",
+                    "p2_f4",
+                    "p2_f7"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，按礼盒包装、送朋友、商品合计不超过一百五十元来选，有两款比较合适😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，比较贴合您送礼的诉求。这款{{p1_price}}，已计入{{p1_offer}}\n\n如果更想换成饼干方向，可以考虑{{p2_items}}，{{p2_reason_1}}；和首选相比，{{p2_difference}}，这款{{p2_price}}，也已计入{{p2_offer}}\n\n两款都是礼盒装，送人都拿得出手，主要看朋友更爱坚果还是饼干。{{follow_up}}",
+        "reply": "亲～，按礼盒包装、送朋友、商品合计不超过一百五十元来选，有两款比较合适😊\n\n首选是混合坚果礼盒（1件），礼盒装适合送朋友，独立内包装每包25克，比较贴合您送礼的诉求。这款含运费95.10元，已计入已计入礼盒 9 折。\n\n如果更想换成饼干方向，可以考虑饼干礼盒（1件），同为礼盒装适合送人，独立小包每包20克；和首选相比，总价比首选高一些，这款含运费116.10元，也已计入已计入礼盒 9 折。\n\n两款都是礼盒装，送人都拿得出手，主要看朋友更爱坚果还是饼干。想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 1.285
+    },
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "不送人了，还是要礼盒",
+        "module_state": {
+          "need_groups": [
+            {
+              "group_id": "group_self",
+              "label": "送朋友零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": 15000,
+                "strictness": "strict",
+                "scope": "goods_total",
+                "source_text": "150 元以内",
+                "min_is_hard": false,
+                "source_turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764"
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_package_gift_box",
+                  "field": "package",
+                  "operator": "equals",
+                  "value": "gift_box",
+                  "strength": "hard",
+                  "source_text": "礼盒包装",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764"
+                },
+                {
+                  "constraint_id": "c_purpose_gift",
+                  "field": "purpose",
+                  "operator": "equals",
+                  "value": "gift",
+                  "strength": "hard",
+                  "source_text": "送朋友",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": {
+            "message_id": "msg_f44b283bd93f4095b30b0b6cd1b03bc4",
+            "turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764",
+            "plan_order": [
+              {
+                "plan_id": "plan_7fdb7947cc554d11dab8",
+                "sku_ids": [
+                  "P014"
+                ]
+              },
+              {
+                "plan_id": "plan_201c6333010f7948e85c",
+                "sku_ids": [
+                  "P015"
+                ]
+              }
+            ]
+          },
+          "shared_budget": null
+        },
+        "history": [
+          {
+            "id": "msg_56e448a80f874e82814a5d5ee8d778b2",
+            "role": "user",
+            "content": "我喜欢礼盒包装，送朋友，150 元以内",
+            "turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764"
+          },
+          {
+            "id": "msg_f44b283bd93f4095b30b0b6cd1b03bc4",
+            "role": "assistant",
+            "content": "亲～，按礼盒包装、送朋友、商品合计不超过一百五十元来选，有两款比较合适😊\n\n首选是混合坚果礼盒（1件），礼盒装适合送朋友，独立内包装每包25克，比较贴合您送礼的诉求。这款含运费95.10元，已计入已计入礼盒 9 折。\n\n如果更想换成饼干方向，可以考虑饼干礼盒（1件），同为礼盒装适合送人，独立小包每包20克；和首选相比，总价比首选高一些，这款含运费116.10元，也已计入已计入礼盒 9 折。\n\n两款都是礼盒装，送人都拿得出手，主要看朋友更爱坚果还是饼干。想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+            "cards": [
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_7fdb7947cc554d11dab8",
+                "plan_type": "single_product",
+                "title": "首选方案",
+                "rank": 1,
+                "group_id": "group_self",
+                "items": [
+                  {
+                    "sku_id": "P014",
+                    "product_name": "混合坚果礼盒",
+                    "quantity": 1,
+                    "unit_price_fen": 9900,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 9900,
+                  "discounts": [
+                    {
+                      "kind": "activity",
+                      "id": "A_GIFT",
+                      "label": "礼盒 9 折",
+                      "amount_fen": 990,
+                      "eligibility": "eligible"
+                    }
+                  ],
+                  "merchandise_payable_fen": 8910,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 9510,
+                  "conditions": []
+                },
+                "reasons": [
+                  "礼盒装适合送朋友，独立内包装每包25克",
+                  "不辣且低甜度，混合坚果组合分享方便"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。"
+                ]
+              },
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_201c6333010f7948e85c",
+                "plan_type": "single_product",
+                "title": "备选方案 1",
+                "rank": 2,
+                "group_id": "group_self",
+                "items": [
+                  {
+                    "sku_id": "P015",
+                    "product_name": "饼干礼盒",
+                    "quantity": 1,
+                    "unit_price_fen": 12900,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 12900,
+                  "discounts": [
+                    {
+                      "kind": "activity",
+                      "id": "A_GIFT",
+                      "label": "礼盒 9 折",
+                      "amount_fen": 1290,
+                      "eligibility": "eligible"
+                    }
+                  ],
+                  "merchandise_payable_fen": 11610,
+                  "shipping_fen": 0,
+                  "total_payable_fen": 11610,
+                  "conditions": []
+                },
+                "reasons": [
+                  "同为礼盒装适合送人，独立小包每包20克",
+                  "不辣且低甜度，饼干组合与坚果方案口味方向不同"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。"
+                ]
+              }
+            ],
+            "turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764",
+            "status": "completed"
+          }
+        ],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "自用礼盒零食",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_package_gift_box",
+                "field": "package",
+                "operator": "equals",
+                "value": "gift_box",
+                "strength": "hard",
+                "source_text": "还是要礼盒",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": [
+              "c_purpose_gift"
+            ]
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.211
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "不送人了，还是要礼盒",
+        "need_summary": "礼盒包装、商品合计最多150.00元",
+        "plans": [
+          {
+            "plan_id": "plan_62cfabcdc488cb361c95",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P014",
+                "product_name": "混合坚果礼盒",
+                "quantity": 1,
+                "unit_price_fen": 9900,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "混合坚果礼盒，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "混合坚果礼盒：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "混合坚果礼盒：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "混合坚果礼盒：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "混合坚果礼盒：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "混合坚果礼盒：已知单个内包25克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "混合坚果礼盒：ingredients=['peanut', 'cashew', 'almond']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "混合坚果礼盒：declared_allergens=['peanut', 'tree_nuts']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "混合坚果礼盒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "混合坚果礼盒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "混合坚果礼盒：scene_tags=['gift']"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费95.10元；商品应付89.10元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 package equals gift_box，符合的商品仅为：混合坚果礼盒。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "offer",
+                "text": "已计入礼盒 9 折。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_08ba4338cb24c3ac8503",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P015",
+                "product_name": "饼干礼盒",
+                "quantity": 1,
+                "unit_price_fen": 12900,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "饼干礼盒，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "饼干礼盒：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "饼干礼盒：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "饼干礼盒：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "饼干礼盒：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "饼干礼盒：已知单个内包20克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "饼干礼盒：ingredients=['wheat', 'milk', 'egg', 'sugar']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "饼干礼盒：declared_allergens=['gluten', 'milk', 'egg']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "饼干礼盒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "饼干礼盒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "饼干礼盒：scene_tags=['gift']"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费116.10元；商品应付116.10元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 package equals gift_box，符合的商品仅为：饼干礼盒。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "offer",
+                "text": "已计入礼盒 9 折。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_62cfabcdc488cb361c95",
+            "reasons": [
+              {
+                "text": "礼盒包装，不送人也适合直接收存或自用",
+                "fact_ids": [
+                  "p1_f11",
+                  "p1_f14"
+                ]
+              },
+              {
+                "text": "独立内包装，单包25克，可分次取用",
+                "fact_ids": [
+                  "p1_f5",
+                  "p1_f6"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_08ba4338cb24c3ac8503",
+            "reasons": [
+              {
+                "text": "礼盒包装，符合自用场景",
+                "fact_ids": [
+                  "p2_f11",
+                  "p2_f14"
+                ]
+              },
+              {
+                "text": "独立内包装，单包20克，方便分次取用",
+                "fact_ids": [
+                  "p2_f5",
+                  "p2_f6"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 1.523
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "不送人了，还是要礼盒",
+        "need_summary": "礼盒包装、商品合计最多150.00元",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_self",
+              "label": "自用礼盒零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": 15000,
+                "strictness": "strict",
+                "scope": "goods_total",
+                "source_text": "150 元以内",
+                "min_is_hard": false,
+                "source_turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764"
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_package_gift_box",
+                  "field": "package",
+                  "operator": "equals",
+                  "value": "gift_box",
+                  "strength": "hard",
+                  "source_text": "还是要礼盒",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_817840467bcb47449b46115a5cac94e3"
+                },
+                {
+                  "constraint_id": "c_purpose_gift",
+                  "field": "purpose",
+                  "operator": "equals",
+                  "value": "gift",
+                  "strength": "hard",
+                  "source_text": "送朋友",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "removed",
+                  "source_turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": {
+            "message_id": "msg_f44b283bd93f4095b30b0b6cd1b03bc4",
+            "turn_id": "turn_8ba749a55b1e46b7a4b90d63f190c764",
+            "plan_order": [
+              {
+                "plan_id": "plan_7fdb7947cc554d11dab8",
+                "sku_ids": [
+                  "P014"
+                ]
+              },
+              {
+                "plan_id": "plan_201c6333010f7948e85c",
+                "sku_ids": [
+                  "P015"
+                ]
+              }
+            ]
+          },
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_62cfabcdc488cb361c95",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P014",
+                "product_name": "混合坚果礼盒",
+                "quantity": 1,
+                "unit_price_fen": 9900,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 9900,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_GIFT",
+                  "label": "礼盒 9 折",
+                  "amount_fen": 990,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 8910,
+              "shipping_fen": 600,
+              "total_payable_fen": 9510,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "混合坚果礼盒，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "混合坚果礼盒：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "混合坚果礼盒：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "混合坚果礼盒：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "混合坚果礼盒：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "混合坚果礼盒：已知单个内包25克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "混合坚果礼盒：ingredients=['peanut', 'cashew', 'almond']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "混合坚果礼盒：declared_allergens=['peanut', 'tree_nuts']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "混合坚果礼盒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "混合坚果礼盒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "混合坚果礼盒：scene_tags=['gift']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "混合坚果礼盒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费95.10元；商品应付89.10元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 package equals gift_box，符合的商品仅为：混合坚果礼盒。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "offer",
+                "text": "已计入礼盒 9 折。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_08ba4338cb24c3ac8503",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P015",
+                "product_name": "饼干礼盒",
+                "quantity": 1,
+                "unit_price_fen": 12900,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 12900,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_GIFT",
+                  "label": "礼盒 9 折",
+                  "amount_fen": 1290,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 11610,
+              "shipping_fen": 0,
+              "total_payable_fen": 11610,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "饼干礼盒，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "饼干礼盒：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "饼干礼盒：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "饼干礼盒：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "饼干礼盒：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "饼干礼盒：已知单个内包20克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "饼干礼盒：ingredients=['wheat', 'milk', 'egg', 'sugar']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "饼干礼盒：declared_allergens=['gluten', 'milk', 'egg']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "饼干礼盒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "饼干礼盒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "饼干礼盒：scene_tags=['gift']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "饼干礼盒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费116.10元；商品应付116.10元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 package equals gift_box，符合的商品仅为：饼干礼盒。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "offer",
+                "text": "已计入礼盒 9 折。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "礼盒包装、商品合计最多150.00元",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "混合坚果礼盒（1件）",
+          "p1_price": "含运费95.10元",
+          "p1_offer": "已计入礼盒 9 折。",
+          "p2_items": "饼干礼盒（1件）",
+          "p2_price": "含运费116.10元",
+          "p2_difference": "总价比首选高一些",
+          "p2_offer": "已计入礼盒 9 折。",
+          "p1_reason_1": "礼盒包装，不送人也适合直接收存或自用",
+          "p1_reason_2": "独立内包装，单包25克，可分次取用",
+          "p2_reason_1": "礼盒包装，符合自用场景",
+          "p2_reason_2": "独立内包装，单包20克，方便分次取用"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_62cfabcdc488cb361c95",
+              "reasons": [
+                {
+                  "text": "礼盒包装，不送人也适合直接收存或自用",
+                  "fact_ids": [
+                    "p1_f11",
+                    "p1_f14"
+                  ]
+                },
+                {
+                  "text": "独立内包装，单包25克，可分次取用",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f6"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_08ba4338cb24c3ac8503",
+              "reasons": [
+                {
+                  "text": "礼盒包装，符合自用场景",
+                  "fact_ids": [
+                    "p2_f11",
+                    "p2_f14"
+                  ]
+                },
+                {
+                  "text": "独立内包装，单包20克，方便分次取用",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f6"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，按礼盒包装、商品合计最多150元来挑，给您留了两个选择😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}，{{p1_offer}}\n\n备选是{{p2_items}}，{{p2_reason_1}}，{{p2_price}}，{{p2_offer}}{{p2_difference}}，您看哪个更合心意。\n\n{{follow_up}}"
+      },
+      "seconds": 1.283
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "不送人了，还是要礼盒",
+        "need_summary": "礼盒包装、商品合计最多150.00元",
+        "plans": [
+          {
+            "plan_id": "plan_62cfabcdc488cb361c95",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P014",
+                "product_name": "混合坚果礼盒",
+                "quantity": 1,
+                "unit_price_fen": 9900,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 9900,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_GIFT",
+                  "label": "礼盒 9 折",
+                  "amount_fen": 990,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 8910,
+              "shipping_fen": 600,
+              "total_payable_fen": 9510,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "混合坚果礼盒，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "混合坚果礼盒：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "混合坚果礼盒：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "混合坚果礼盒：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "混合坚果礼盒：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "混合坚果礼盒：已知单个内包25克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "混合坚果礼盒：ingredients=['peanut', 'cashew', 'almond']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "混合坚果礼盒：declared_allergens=['peanut', 'tree_nuts']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "混合坚果礼盒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "混合坚果礼盒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "混合坚果礼盒：scene_tags=['gift']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "混合坚果礼盒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费95.10元；商品应付89.10元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 package equals gift_box，符合的商品仅为：混合坚果礼盒。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "offer",
+                "text": "已计入礼盒 9 折。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_08ba4338cb24c3ac8503",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P015",
+                "product_name": "饼干礼盒",
+                "quantity": 1,
+                "unit_price_fen": 12900,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 12900,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_GIFT",
+                  "label": "礼盒 9 折",
+                  "amount_fen": 1290,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 11610,
+              "shipping_fen": 0,
+              "total_payable_fen": 11610,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "饼干礼盒，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "饼干礼盒：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "饼干礼盒：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "饼干礼盒：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "饼干礼盒：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "饼干礼盒：已知单个内包20克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "饼干礼盒：ingredients=['wheat', 'milk', 'egg', 'sugar']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "饼干礼盒：declared_allergens=['gluten', 'milk', 'egg']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "饼干礼盒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "饼干礼盒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "饼干礼盒：scene_tags=['gift']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "饼干礼盒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费116.10元；商品应付116.10元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 package equals gift_box，符合的商品仅为：饼干礼盒。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "offer",
+                "text": "已计入礼盒 9 折。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "礼盒包装、商品合计最多150.00元",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "混合坚果礼盒（1件）",
+          "p1_price": "含运费95.10元",
+          "p1_offer": "已计入礼盒 9 折。",
+          "p2_items": "饼干礼盒（1件）",
+          "p2_price": "含运费116.10元",
+          "p2_difference": "总价比首选高一些",
+          "p2_offer": "已计入礼盒 9 折。",
+          "p1_reason_1": "礼盒包装，不送人也适合直接收存或自用",
+          "p1_reason_2": "独立内包装，单包25克，可分次取用",
+          "p2_reason_1": "礼盒包装，符合自用场景",
+          "p2_reason_2": "独立内包装，单包20克，方便分次取用"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_62cfabcdc488cb361c95",
+              "reasons": [
+                {
+                  "text": "礼盒包装，不送人也适合直接收存或自用",
+                  "fact_ids": [
+                    "p1_f11",
+                    "p1_f14"
+                  ]
+                },
+                {
+                  "text": "独立内包装，单包25克，可分次取用",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f6"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_08ba4338cb24c3ac8503",
+              "reasons": [
+                {
+                  "text": "礼盒包装，符合自用场景",
+                  "fact_ids": [
+                    "p2_f11",
+                    "p2_f14"
+                  ]
+                },
+                {
+                  "text": "独立内包装，单包20克，方便分次取用",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f6"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，按礼盒包装、商品合计最多150元来挑，给您留了两个选择😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}，{{p1_offer}}\n\n备选是{{p2_items}}，{{p2_reason_1}}，{{p2_price}}，{{p2_offer}}{{p2_difference}}，您看哪个更合心意。\n\n{{follow_up}}",
+        "reply": "亲～，按礼盒包装、商品合计最多150元来挑，给您留了两个选择😊\n\n首选是混合坚果礼盒（1件），礼盒包装，不送人也适合直接收存或自用，含运费95.10元，已计入礼盒 9 折。\n\n备选是饼干礼盒（1件），礼盒包装，符合自用场景，含运费116.10元，已计入礼盒 9 折。总价比首选高一些，您看哪个更合心意。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 0.853
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 10.701,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "completed"
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "独立明确礼盒要求保留",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": true
+}

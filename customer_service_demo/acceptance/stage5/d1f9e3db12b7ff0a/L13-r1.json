@@ -1,0 +1,2269 @@
+{
+  "case_id": "L13",
+  "title": "不把预算下界当最低消费",
+  "repetition": 1,
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "executed_at": "2026-10-08T13:07:44.046837+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_c886db4be27b4d1685287738876b8b36",
+        "expected_revision": 0,
+        "message": "商品预算 50 到 100，办公室零食",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_696ffa4395c440af9d629c4e9a3457f4",
+        "request_id": "req_c886db4be27b4d1685287738876b8b36",
+        "turn_id": "turn_8aa909ee9ec544b3ba7cb24f4e9dfd3b",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_d7d3275df47a4bad95c9fd9333cde0fa",
+          "role": "assistant",
+          "content": "亲～，按办公室吃、商品合计最多100.00元挑了几款办公室小零食，都是独立小包装，放工位随手取用比较省心😊\n\n首选是原味腰果（1件），独立小包20克，办公室分次取用方便，含运费30.90元。此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。\n\n备选可以看低糖谷物棒（1件），独立小包30克，办公室存放和分次取用方便，含运费28.90元，总价比首选更低；此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。\n\n再换一个口味的话，黑巧克力（1件）也不错，独立小包20克，办公室分次取用方便，含运费25.90元，总价比首选更低；此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_52648690970974308b3c",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P006",
+                  "product_name": "原味腰果",
+                  "quantity": 1,
+                  "unit_price_fen": 2490,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 2490,
+                "discounts": [],
+                "merchandise_payable_fen": 2490,
+                "shipping_fen": 600,
+                "total_payable_fen": 3090,
+                "conditions": []
+              },
+              "reasons": [
+                "独立小包20克，办公室分次取用方便",
+                "原味不辣，低甜度标签，适合办公间隙"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_9478790d80de4d8d7147",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P013",
+                  "product_name": "低糖谷物棒",
+                  "quantity": 1,
+                  "unit_price_fen": 2290,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 2290,
+                "discounts": [],
+                "merchandise_payable_fen": 2290,
+                "shipping_fen": 600,
+                "total_payable_fen": 2890,
+                "conditions": []
+              },
+              "reasons": [
+                "独立小包30克，办公室存放和分次取用方便",
+                "低糖标签，不辣，符合办公室吃且偏好低糖"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_4a0ca5010e2accf5f605",
+              "plan_type": "single_product",
+              "title": "备选方案 2",
+              "rank": 3,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P008",
+                  "product_name": "黑巧克力",
+                  "quantity": 1,
+                  "unit_price_fen": 1990,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 1990,
+                "discounts": [],
+                "merchandise_payable_fen": 1990,
+                "shipping_fen": 600,
+                "total_payable_fen": 2590,
+                "conditions": []
+              },
+              "reasons": [
+                "独立小包20克，办公室分次取用方便",
+                "不辣且低甜度标签，适合办公场景食用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_696ffa4395c440af9d629c4e9a3457f4",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_self",
+                "label": "办公室零食",
+                "budget": {
+                  "min_fen": 5000,
+                  "max_fen": 10000,
+                  "strictness": "strict",
+                  "scope": "goods_total",
+                  "source_text": "商品预算 50 到 100",
+                  "min_is_hard": false,
+                  "source_turn_id": "turn_8aa909ee9ec544b3ba7cb24f4e9dfd3b"
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_scene_office",
+                    "field": "scene",
+                    "operator": "include",
+                    "value": "office",
+                    "strength": "soft",
+                    "source_text": "办公室零食",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_8aa909ee9ec544b3ba7cb24f4e9dfd3b"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_d7d3275df47a4bad95c9fd9333cde0fa",
+              "turn_id": "turn_8aa909ee9ec544b3ba7cb24f4e9dfd3b",
+              "plan_order": [
+                {
+                  "plan_id": "plan_52648690970974308b3c",
+                  "sku_ids": [
+                    "P006"
+                  ]
+                },
+                {
+                  "plan_id": "plan_9478790d80de4d8d7147",
+                  "sku_ids": [
+                    "P013"
+                  ]
+                },
+                {
+                  "plan_id": "plan_4a0ca5010e2accf5f605",
+                  "sku_ids": [
+                    "P008"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_f77e264dde974041ba4d68dc29b8ec60",
+          "role": "user",
+          "content": "商品预算 50 到 100，办公室零食",
+          "turn_id": "turn_8aa909ee9ec544b3ba7cb24f4e9dfd3b"
+        },
+        {
+          "id": "msg_d7d3275df47a4bad95c9fd9333cde0fa",
+          "role": "assistant",
+          "content": "亲～，按办公室吃、商品合计最多100.00元挑了几款办公室小零食，都是独立小包装，放工位随手取用比较省心😊\n\n首选是原味腰果（1件），独立小包20克，办公室分次取用方便，含运费30.90元。此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。\n\n备选可以看低糖谷物棒（1件），独立小包30克，办公室存放和分次取用方便，含运费28.90元，总价比首选更低；此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。\n\n再换一个口味的话，黑巧克力（1件）也不错，独立小包20克，办公室分次取用方便，含运费25.90元，总价比首选更低；此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_52648690970974308b3c",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P006",
+                  "product_name": "原味腰果",
+                  "quantity": 1,
+                  "unit_price_fen": 2490,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 2490,
+                "discounts": [],
+                "merchandise_payable_fen": 2490,
+                "shipping_fen": 600,
+                "total_payable_fen": 3090,
+                "conditions": []
+              },
+              "reasons": [
+                "独立小包20克，办公室分次取用方便",
+                "原味不辣，低甜度标签，适合办公间隙"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_9478790d80de4d8d7147",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P013",
+                  "product_name": "低糖谷物棒",
+                  "quantity": 1,
+                  "unit_price_fen": 2290,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 2290,
+                "discounts": [],
+                "merchandise_payable_fen": 2290,
+                "shipping_fen": 600,
+                "total_payable_fen": 2890,
+                "conditions": []
+              },
+              "reasons": [
+                "独立小包30克，办公室存放和分次取用方便",
+                "低糖标签，不辣，符合办公室吃且偏好低糖"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_4a0ca5010e2accf5f605",
+              "plan_type": "single_product",
+              "title": "备选方案 2",
+              "rank": 3,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P008",
+                  "product_name": "黑巧克力",
+                  "quantity": 1,
+                  "unit_price_fen": 1990,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 1990,
+                "discounts": [],
+                "merchandise_payable_fen": 1990,
+                "shipping_fen": 600,
+                "total_payable_fen": 2590,
+                "conditions": []
+              },
+              "reasons": [
+                "独立小包20克，办公室分次取用方便",
+                "不辣且低甜度标签，适合办公场景食用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              ]
+            }
+          ],
+          "turn_id": "turn_8aa909ee9ec544b3ba7cb24f4e9dfd3b",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_self": {
+            "P022": [
+              "stock_unknown_or_empty"
+            ],
+            "P025": [
+              "expired_or_unknown"
+            ],
+            "P026": [
+              "price_unknown"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 27,
+        "priced_cart_count": 27,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 2,
+        "reply_review_passed": true
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "商品预算 50 到 100，办公室零食",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "办公室零食",
+            "budget": {
+              "min_fen": 5000,
+              "max_fen": 10000,
+              "strictness": "strict",
+              "scope": "goods_total",
+              "source_text": "商品预算 50 到 100",
+              "min_is_hard": false
+            },
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_scene_office",
+                "field": "scene",
+                "operator": "include",
+                "value": "office",
+                "strength": "soft",
+                "source_text": "办公室零食",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.246
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "商品预算 50 到 100，办公室零食",
+        "need_summary": "办公室吃、商品合计最多100.00元",
+        "plans": [
+          {
+            "plan_id": "plan_52648690970974308b3c",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P006",
+                "product_name": "原味腰果",
+                "quantity": 1,
+                "unit_price_fen": 2490,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味腰果，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味腰果：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味腰果：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味腰果：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味腰果：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味腰果：已知单个内包20克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味腰果：ingredients=['cashew']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味腰果：declared_allergens=['tree_nuts']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味腰果：may_contain_allergens=['peanut']"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味腰果：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味腰果：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费30.90元；商品应付24.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：原味腰果。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_9478790d80de4d8d7147",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P013",
+                "product_name": "低糖谷物棒",
+                "quantity": 1,
+                "unit_price_fen": 2290,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "低糖谷物棒，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "低糖谷物棒：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "低糖谷物棒：低糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "低糖谷物棒：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "低糖谷物棒：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "低糖谷物棒：已知单个内包30克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "低糖谷物棒：ingredients=['oats', 'sesame', 'milk']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "低糖谷物棒：declared_allergens=['gluten', 'sesame', 'milk']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "低糖谷物棒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "低糖谷物棒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "低糖谷物棒：scene_tags=['office', 'outdoor']"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费28.90元；商品应付22.90元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：低糖谷物棒。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "comparison",
+                "text": "总价比首选更低。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_4a0ca5010e2accf5f605",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P008",
+                "product_name": "黑巧克力",
+                "quantity": 1,
+                "unit_price_fen": 1990,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "黑巧克力，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "黑巧克力：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "黑巧克力：普通糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "黑巧克力：低甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "黑巧克力：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "黑巧克力：已知单个内包20克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "黑巧克力：ingredients=['cocoa', 'sugar', 'milk']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "黑巧克力：declared_allergens=['milk']"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "黑巧克力：may_contain_allergens=['tree_nuts']"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "黑巧克力：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "黑巧克力：scene_tags=['office']"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "pricing",
+                "text": "含运费25.90元；商品应付19.90元。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：黑巧克力。"
+              },
+              {
+                "id": "p3_f17",
+                "kind": "comparison",
+                "text": "总价比首选更低。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_52648690970974308b3c",
+            "reasons": [
+              {
+                "text": "独立小包20克，办公室分次取用方便",
+                "fact_ids": [
+                  "p1_f5",
+                  "p1_f6"
+                ]
+              },
+              {
+                "text": "原味不辣，低甜度标签，适合办公间隙",
+                "fact_ids": [
+                  "p1_f2",
+                  "p1_f4"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_9478790d80de4d8d7147",
+            "reasons": [
+              {
+                "text": "独立小包30克，办公室存放和分次取用方便",
+                "fact_ids": [
+                  "p2_f5",
+                  "p2_f6"
+                ]
+              },
+              {
+                "text": "低糖标签，不辣，符合办公室吃且偏好低糖",
+                "fact_ids": [
+                  "p2_f3",
+                  "p2_f2"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_4a0ca5010e2accf5f605",
+            "reasons": [
+              {
+                "text": "独立小包20克，办公室分次取用方便",
+                "fact_ids": [
+                  "p3_f5",
+                  "p3_f6"
+                ]
+              },
+              {
+                "text": "不辣且低甜度标签，适合办公场景食用",
+                "fact_ids": [
+                  "p3_f2",
+                  "p3_f4"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 1.544
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "商品预算 50 到 100，办公室零食",
+        "need_summary": "办公室吃、商品合计最多100.00元",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_self",
+              "label": "办公室零食",
+              "budget": {
+                "min_fen": 5000,
+                "max_fen": 10000,
+                "strictness": "strict",
+                "scope": "goods_total",
+                "source_text": "商品预算 50 到 100",
+                "min_is_hard": false,
+                "source_turn_id": "turn_8aa909ee9ec544b3ba7cb24f4e9dfd3b"
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_scene_office",
+                  "field": "scene",
+                  "operator": "include",
+                  "value": "office",
+                  "strength": "soft",
+                  "source_text": "办公室零食",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_8aa909ee9ec544b3ba7cb24f4e9dfd3b"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_52648690970974308b3c",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P006",
+                "product_name": "原味腰果",
+                "quantity": 1,
+                "unit_price_fen": 2490,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2490,
+              "discounts": [],
+              "merchandise_payable_fen": 2490,
+              "shipping_fen": 600,
+              "total_payable_fen": 3090,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味腰果，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味腰果：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味腰果：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味腰果：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味腰果：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味腰果：已知单个内包20克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味腰果：ingredients=['cashew']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味腰果：declared_allergens=['tree_nuts']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味腰果：may_contain_allergens=['peanut']"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味腰果：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味腰果：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味腰果：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费30.90元；商品应付24.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：原味腰果。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "boundary",
+                "text": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_9478790d80de4d8d7147",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P013",
+                "product_name": "低糖谷物棒",
+                "quantity": 1,
+                "unit_price_fen": 2290,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2290,
+              "discounts": [],
+              "merchandise_payable_fen": 2290,
+              "shipping_fen": 600,
+              "total_payable_fen": 2890,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "低糖谷物棒，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "低糖谷物棒：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "低糖谷物棒：低糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "低糖谷物棒：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "低糖谷物棒：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "低糖谷物棒：已知单个内包30克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "低糖谷物棒：ingredients=['oats', 'sesame', 'milk']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "低糖谷物棒：declared_allergens=['gluten', 'sesame', 'milk']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "低糖谷物棒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "低糖谷物棒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "低糖谷物棒：scene_tags=['office', 'outdoor']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "低糖谷物棒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费28.90元；商品应付22.90元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：低糖谷物棒。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "boundary",
+                "text": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "comparison",
+                "text": "总价比首选更低。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_4a0ca5010e2accf5f605",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P008",
+                "product_name": "黑巧克力",
+                "quantity": 1,
+                "unit_price_fen": 1990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 1990,
+              "discounts": [],
+              "merchandise_payable_fen": 1990,
+              "shipping_fen": 600,
+              "total_payable_fen": 2590,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "黑巧克力，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "黑巧克力：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "黑巧克力：普通糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "黑巧克力：低甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "黑巧克力：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "黑巧克力：已知单个内包20克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "黑巧克力：ingredients=['cocoa', 'sugar', 'milk']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "黑巧克力：declared_allergens=['milk']"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "黑巧克力：may_contain_allergens=['tree_nuts']"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "黑巧克力：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "黑巧克力：scene_tags=['office']"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "expiry",
+                "text": "黑巧克力：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "pricing",
+                "text": "含运费25.90元；商品应付19.90元。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：黑巧克力。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "boundary",
+                "text": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              },
+              {
+                "id": "p3_f17",
+                "kind": "comparison",
+                "text": "总价比首选更低。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "办公室吃、商品合计最多100.00元",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味腰果（1件）",
+          "p1_price": "含运费30.90元",
+          "p1_notice": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。",
+          "p2_items": "低糖谷物棒（1件）",
+          "p2_price": "含运费28.90元",
+          "p2_difference": "总价比首选更低",
+          "p2_notice": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。",
+          "p3_items": "黑巧克力（1件）",
+          "p3_price": "含运费25.90元",
+          "p3_difference": "总价比首选更低",
+          "p3_notice": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。",
+          "p1_reason_1": "独立小包20克，办公室分次取用方便",
+          "p1_reason_2": "原味不辣，低甜度标签，适合办公间隙",
+          "p2_reason_1": "独立小包30克，办公室存放和分次取用方便",
+          "p2_reason_2": "低糖标签，不辣，符合办公室吃且偏好低糖",
+          "p3_reason_1": "独立小包20克，办公室分次取用方便",
+          "p3_reason_2": "不辣且低甜度标签，适合办公场景食用"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_52648690970974308b3c",
+              "reasons": [
+                {
+                  "text": "独立小包20克，办公室分次取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f6"
+                  ]
+                },
+                {
+                  "text": "原味不辣，低甜度标签，适合办公间隙",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f4"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_9478790d80de4d8d7147",
+              "reasons": [
+                {
+                  "text": "独立小包30克，办公室存放和分次取用方便",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f6"
+                  ]
+                },
+                {
+                  "text": "低糖标签，不辣，符合办公室吃且偏好低糖",
+                  "fact_ids": [
+                    "p2_f3",
+                    "p2_f2"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_4a0ca5010e2accf5f605",
+              "reasons": [
+                {
+                  "text": "独立小包20克，办公室分次取用方便",
+                  "fact_ids": [
+                    "p3_f5",
+                    "p3_f6"
+                  ]
+                },
+                {
+                  "text": "不辣且低甜度标签，适合办公场景食用",
+                  "fact_ids": [
+                    "p3_f2",
+                    "p3_f4"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，按{{need_summary}}挑了几款办公室小零食，都是独立小包装，放工位随手取用比较省心😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}。这款偏原味路线，接受度比较稳。\n\n备选可以看{{p2_items}}，{{p2_reason_1}}，{{p2_price}}，{{p2_difference}}；{{p2_notice}}\n\n再换一个口味的话，{{p3_items}}也是可以考虑的，{{p3_reason_1}}，{{p3_price}}，{{p3_difference}}；{{p3_notice}}\n\n{{follow_up}}"
+      },
+      "seconds": 1.46
+    },
+    {
+      "stage": "compose_reply",
+      "repair": "遗漏或重复必需占位符 {{p1_notice}}，请恰好引用一次；其它必需事实占位符也须保留。\n上次错误草稿（不是事实）：{\"template\": \"亲～，按{{need_summary}}挑了几款办公室小零食，都是独立小包装，放工位随手取用比较省心😊\\n\\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}。这款偏原味路线，接受度比较稳。\\n\\n备选可以看{{p2_items}}，{{p2_reason_1}}，{{p2_price}}，{{p2_difference}}；{{p2_notice}}\\n\\n再换一个口味的话，{{p3_items}}也是可以考虑的，{{p3_reason_1}}，{{p3_price}}，{{p3_difference}}；{{p3_notice}}\\n\\n{{follow_up}}\"}",
+      "input": {
+        "user_message": "商品预算 50 到 100，办公室零食",
+        "need_summary": "办公室吃、商品合计最多100.00元",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_self",
+              "label": "办公室零食",
+              "budget": {
+                "min_fen": 5000,
+                "max_fen": 10000,
+                "strictness": "strict",
+                "scope": "goods_total",
+                "source_text": "商品预算 50 到 100",
+                "min_is_hard": false,
+                "source_turn_id": "turn_8aa909ee9ec544b3ba7cb24f4e9dfd3b"
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_scene_office",
+                  "field": "scene",
+                  "operator": "include",
+                  "value": "office",
+                  "strength": "soft",
+                  "source_text": "办公室零食",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_8aa909ee9ec544b3ba7cb24f4e9dfd3b"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_52648690970974308b3c",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P006",
+                "product_name": "原味腰果",
+                "quantity": 1,
+                "unit_price_fen": 2490,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2490,
+              "discounts": [],
+              "merchandise_payable_fen": 2490,
+              "shipping_fen": 600,
+              "total_payable_fen": 3090,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味腰果，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味腰果：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味腰果：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味腰果：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味腰果：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味腰果：已知单个内包20克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味腰果：ingredients=['cashew']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味腰果：declared_allergens=['tree_nuts']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味腰果：may_contain_allergens=['peanut']"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味腰果：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味腰果：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味腰果：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费30.90元；商品应付24.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：原味腰果。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "boundary",
+                "text": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_9478790d80de4d8d7147",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P013",
+                "product_name": "低糖谷物棒",
+                "quantity": 1,
+                "unit_price_fen": 2290,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2290,
+              "discounts": [],
+              "merchandise_payable_fen": 2290,
+              "shipping_fen": 600,
+              "total_payable_fen": 2890,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "低糖谷物棒，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "低糖谷物棒：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "低糖谷物棒：低糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "低糖谷物棒：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "低糖谷物棒：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "低糖谷物棒：已知单个内包30克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "低糖谷物棒：ingredients=['oats', 'sesame', 'milk']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "低糖谷物棒：declared_allergens=['gluten', 'sesame', 'milk']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "低糖谷物棒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "低糖谷物棒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "低糖谷物棒：scene_tags=['office', 'outdoor']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "低糖谷物棒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费28.90元；商品应付22.90元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：低糖谷物棒。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "boundary",
+                "text": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "comparison",
+                "text": "总价比首选更低。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_4a0ca5010e2accf5f605",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P008",
+                "product_name": "黑巧克力",
+                "quantity": 1,
+                "unit_price_fen": 1990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 1990,
+              "discounts": [],
+              "merchandise_payable_fen": 1990,
+              "shipping_fen": 600,
+              "total_payable_fen": 2590,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "黑巧克力，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "黑巧克力：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "黑巧克力：普通糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "黑巧克力：低甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "黑巧克力：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "黑巧克力：已知单个内包20克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "黑巧克力：ingredients=['cocoa', 'sugar', 'milk']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "黑巧克力：declared_allergens=['milk']"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "黑巧克力：may_contain_allergens=['tree_nuts']"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "黑巧克力：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "黑巧克力：scene_tags=['office']"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "expiry",
+                "text": "黑巧克力：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "pricing",
+                "text": "含运费25.90元；商品应付19.90元。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：黑巧克力。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "boundary",
+                "text": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              },
+              {
+                "id": "p3_f17",
+                "kind": "comparison",
+                "text": "总价比首选更低。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "办公室吃、商品合计最多100.00元",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味腰果（1件）",
+          "p1_price": "含运费30.90元",
+          "p1_notice": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。",
+          "p2_items": "低糖谷物棒（1件）",
+          "p2_price": "含运费28.90元",
+          "p2_difference": "总价比首选更低",
+          "p2_notice": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。",
+          "p3_items": "黑巧克力（1件）",
+          "p3_price": "含运费25.90元",
+          "p3_difference": "总价比首选更低",
+          "p3_notice": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。",
+          "p1_reason_1": "独立小包20克，办公室分次取用方便",
+          "p1_reason_2": "原味不辣，低甜度标签，适合办公间隙",
+          "p2_reason_1": "独立小包30克，办公室存放和分次取用方便",
+          "p2_reason_2": "低糖标签，不辣，符合办公室吃且偏好低糖",
+          "p3_reason_1": "独立小包20克，办公室分次取用方便",
+          "p3_reason_2": "不辣且低甜度标签，适合办公场景食用"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_52648690970974308b3c",
+              "reasons": [
+                {
+                  "text": "独立小包20克，办公室分次取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f6"
+                  ]
+                },
+                {
+                  "text": "原味不辣，低甜度标签，适合办公间隙",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f4"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_9478790d80de4d8d7147",
+              "reasons": [
+                {
+                  "text": "独立小包30克，办公室存放和分次取用方便",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f6"
+                  ]
+                },
+                {
+                  "text": "低糖标签，不辣，符合办公室吃且偏好低糖",
+                  "fact_ids": [
+                    "p2_f3",
+                    "p2_f2"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_4a0ca5010e2accf5f605",
+              "reasons": [
+                {
+                  "text": "独立小包20克，办公室分次取用方便",
+                  "fact_ids": [
+                    "p3_f5",
+                    "p3_f6"
+                  ]
+                },
+                {
+                  "text": "不辣且低甜度标签，适合办公场景食用",
+                  "fact_ids": [
+                    "p3_f2",
+                    "p3_f4"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，按{{need_summary}}挑了几款办公室小零食，都是独立小包装，放工位随手取用比较省心😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}。{{p1_notice}}\n\n备选可以看{{p2_items}}，{{p2_reason_1}}，{{p2_price}}，{{p2_difference}}；{{p2_notice}}\n\n再换一个口味的话，{{p3_items}}也不错，{{p3_reason_1}}，{{p3_price}}，{{p3_difference}}；{{p3_notice}}\n\n{{follow_up}}"
+      },
+      "seconds": 0.988
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "商品预算 50 到 100，办公室零食",
+        "need_summary": "办公室吃、商品合计最多100.00元",
+        "plans": [
+          {
+            "plan_id": "plan_52648690970974308b3c",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P006",
+                "product_name": "原味腰果",
+                "quantity": 1,
+                "unit_price_fen": 2490,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2490,
+              "discounts": [],
+              "merchandise_payable_fen": 2490,
+              "shipping_fen": 600,
+              "total_payable_fen": 3090,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味腰果，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味腰果：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味腰果：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味腰果：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味腰果：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味腰果：已知单个内包20克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味腰果：ingredients=['cashew']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味腰果：declared_allergens=['tree_nuts']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味腰果：may_contain_allergens=['peanut']"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味腰果：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味腰果：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味腰果：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费30.90元；商品应付24.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：原味腰果。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "boundary",
+                "text": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_9478790d80de4d8d7147",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P013",
+                "product_name": "低糖谷物棒",
+                "quantity": 1,
+                "unit_price_fen": 2290,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2290,
+              "discounts": [],
+              "merchandise_payable_fen": 2290,
+              "shipping_fen": 600,
+              "total_payable_fen": 2890,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "低糖谷物棒，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "低糖谷物棒：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "低糖谷物棒：低糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "低糖谷物棒：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "低糖谷物棒：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "低糖谷物棒：已知单个内包30克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "低糖谷物棒：ingredients=['oats', 'sesame', 'milk']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "低糖谷物棒：declared_allergens=['gluten', 'sesame', 'milk']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "低糖谷物棒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "低糖谷物棒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "低糖谷物棒：scene_tags=['office', 'outdoor']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "低糖谷物棒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费28.90元；商品应付22.90元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：低糖谷物棒。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "boundary",
+                "text": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "comparison",
+                "text": "总价比首选更低。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_4a0ca5010e2accf5f605",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P008",
+                "product_name": "黑巧克力",
+                "quantity": 1,
+                "unit_price_fen": 1990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 1990,
+              "discounts": [],
+              "merchandise_payable_fen": 1990,
+              "shipping_fen": 600,
+              "total_payable_fen": 2590,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "黑巧克力，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "黑巧克力：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "黑巧克力：普通糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "黑巧克力：低甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "黑巧克力：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "黑巧克力：已知单个内包20克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "黑巧克力：ingredients=['cocoa', 'sugar', 'milk']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "黑巧克力：declared_allergens=['milk']"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "黑巧克力：may_contain_allergens=['tree_nuts']"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "黑巧克力：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "黑巧克力：scene_tags=['office']"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "expiry",
+                "text": "黑巧克力：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "pricing",
+                "text": "含运费25.90元；商品应付19.90元。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：黑巧克力。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "boundary",
+                "text": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。"
+              },
+              {
+                "id": "p3_f17",
+                "kind": "comparison",
+                "text": "总价比首选更低。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "办公室吃、商品合计最多100.00元",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味腰果（1件）",
+          "p1_price": "含运费30.90元",
+          "p1_notice": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。",
+          "p2_items": "低糖谷物棒（1件）",
+          "p2_price": "含运费28.90元",
+          "p2_difference": "总价比首选更低",
+          "p2_notice": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。",
+          "p3_items": "黑巧克力（1件）",
+          "p3_price": "含运费25.90元",
+          "p3_difference": "总价比首选更低",
+          "p3_notice": "此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。",
+          "p1_reason_1": "独立小包20克，办公室分次取用方便",
+          "p1_reason_2": "原味不辣，低甜度标签，适合办公间隙",
+          "p2_reason_1": "独立小包30克，办公室存放和分次取用方便",
+          "p2_reason_2": "低糖标签，不辣，符合办公室吃且偏好低糖",
+          "p3_reason_1": "独立小包20克，办公室分次取用方便",
+          "p3_reason_2": "不辣且低甜度标签，适合办公场景食用"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_52648690970974308b3c",
+              "reasons": [
+                {
+                  "text": "独立小包20克，办公室分次取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f6"
+                  ]
+                },
+                {
+                  "text": "原味不辣，低甜度标签，适合办公间隙",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f4"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_9478790d80de4d8d7147",
+              "reasons": [
+                {
+                  "text": "独立小包30克，办公室存放和分次取用方便",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f6"
+                  ]
+                },
+                {
+                  "text": "低糖标签，不辣，符合办公室吃且偏好低糖",
+                  "fact_ids": [
+                    "p2_f3",
+                    "p2_f2"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_4a0ca5010e2accf5f605",
+              "reasons": [
+                {
+                  "text": "独立小包20克，办公室分次取用方便",
+                  "fact_ids": [
+                    "p3_f5",
+                    "p3_f6"
+                  ]
+                },
+                {
+                  "text": "不辣且低甜度标签，适合办公场景食用",
+                  "fact_ids": [
+                    "p3_f2",
+                    "p3_f4"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，按{{need_summary}}挑了几款办公室小零食，都是独立小包装，放工位随手取用比较省心😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}。{{p1_notice}}\n\n备选可以看{{p2_items}}，{{p2_reason_1}}，{{p2_price}}，{{p2_difference}}；{{p2_notice}}\n\n再换一个口味的话，{{p3_items}}也不错，{{p3_reason_1}}，{{p3_price}}，{{p3_difference}}；{{p3_notice}}\n\n{{follow_up}}",
+        "reply": "亲～，按办公室吃、商品合计最多100.00元挑了几款办公室小零食，都是独立小包装，放工位随手取用比较省心😊\n\n首选是原味腰果（1件），独立小包20克，办公室分次取用方便，含运费30.90元。此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。\n\n备选可以看低糖谷物棒（1件），独立小包30克，办公室存放和分次取用方便，含运费28.90元，总价比首选更低；此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。\n\n再换一个口味的话，黑巧克力（1件）也不错，独立小包20克，办公室分次取用方便，含运费25.90元，总价比首选更低；此备选偏离近似预算目标或软下界；请以展示金额判断是否接受。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 1.051
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 6.327,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "completed"
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "预算金额未猜测或偷偷放宽",
+      "passed": true,
+      "actual": [
+        {
+          "min_fen": 5000,
+          "max_fen": 10000,
+          "strictness": "strict",
+          "scope": "goods_total",
+          "source_text": "商品预算 50 到 100",
+          "min_is_hard": false,
+          "source_turn_id": "turn_8aa909ee9ec544b3ba7cb24f4e9dfd3b"
+        }
+      ]
+    },
+    {
+      "name": "下界为软目标且不强制增加件数",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": true
+}

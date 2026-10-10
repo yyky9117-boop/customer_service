@@ -1,0 +1,695 @@
+{
+  "case_id": "M05",
+  "title": "引用此前第二方案",
+  "repetition": 1,
+  "implementation_hash": "03c8fc87a9d9e031",
+  "executed_at": "2026-10-08T12:50:55.556091+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": "preload_three_stable_plan_ids",
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_9781c94310074b4bb454511d36217d76",
+        "expected_revision": 0,
+        "message": "办公室不辣零食，预算 80",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_b88901ea5bda45698d991748a2008c44",
+        "request_id": "req_9781c94310074b4bb454511d36217d76",
+        "turn_id": "turn_95419db350dc4c3088e84a5cdf7de279",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "needs_clarification",
+        "message": {
+          "id": "msg_dd03cb85af504903b0444ea66fca8ee2",
+          "role": "assistant",
+          "content": "这个预算是每份、商品合计，还是包含运费的整单金额？",
+          "cards": []
+        },
+        "clarification": {
+          "question": "这个预算是每份、商品合计，还是包含运费的整单金额？",
+          "asked_fields": [
+            "budget_scope"
+          ],
+          "group_id": null
+        },
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_b88901ea5bda45698d991748a2008c44",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_office",
+                "label": "办公室不辣零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": 8000,
+                  "strictness": "strict",
+                  "scope": "unknown",
+                  "source_text": "预算 80",
+                  "min_is_hard": false,
+                  "source_turn_id": "turn_95419db350dc4c3088e84a5cdf7de279"
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_scene",
+                    "field": "scene",
+                    "operator": "include",
+                    "value": "office",
+                    "strength": "soft",
+                    "source_text": "办公室",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_95419db350dc4c3088e84a5cdf7de279"
+                  },
+                  {
+                    "constraint_id": "c_spice",
+                    "field": "taste",
+                    "operator": "equals",
+                    "value": "spice:none",
+                    "strength": "hard",
+                    "source_text": "不辣",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_95419db350dc4c3088e84a5cdf7de279"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": {
+              "question": "这个预算是每份、商品合计，还是包含运费的整单金额？",
+              "asked_fields": [
+                "budget_scope"
+              ],
+              "group_id": null
+            },
+            "last_presentation": null,
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_1bf76a2149a54f91bdac5ba9ab4a1dc1",
+          "role": "user",
+          "content": "办公室不辣零食，预算 80",
+          "turn_id": "turn_95419db350dc4c3088e84a5cdf7de279"
+        },
+        {
+          "id": "msg_dd03cb85af504903b0444ea66fca8ee2",
+          "role": "assistant",
+          "content": "这个预算是每份、商品合计，还是包含运费的整单金额？",
+          "cards": [],
+          "turn_id": "turn_95419db350dc4c3088e84a5cdf7de279",
+          "status": "needs_clarification"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {},
+        "quarantined_skus": []
+      }
+    },
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_b88901ea5bda45698d991748a2008c44",
+        "request_id": "req_25093753da554f2891808398363853ec",
+        "expected_revision": 1,
+        "message": "第二个换成低糖的",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_b88901ea5bda45698d991748a2008c44",
+        "request_id": "req_25093753da554f2891808398363853ec",
+        "turn_id": "turn_92f29670c0c0438491ddfadaefc86fe2",
+        "base_revision": 1,
+        "revision": 2,
+        "module": "product_recommendation",
+        "status": "needs_clarification",
+        "message": {
+          "id": "msg_837fc93ffc7d4c1ba37d4367613c6dca",
+          "role": "assistant",
+          "content": "请明确选中哪一个方案或商品。预算是每份、商品合计，还是含运费的整单金额？",
+          "cards": []
+        },
+        "clarification": {
+          "question": "请明确选中哪一个方案或商品。预算是每份、商品合计，还是含运费的整单金额？",
+          "asked_fields": [
+            "reference",
+            "budget_scope"
+          ],
+          "group_id": null
+        },
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_b88901ea5bda45698d991748a2008c44",
+        "revision": 2,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_office",
+                "label": "办公室不辣零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": 8000,
+                  "strictness": "strict",
+                  "scope": "unknown",
+                  "source_text": "预算 80",
+                  "min_is_hard": false,
+                  "source_turn_id": "turn_95419db350dc4c3088e84a5cdf7de279"
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_scene",
+                    "field": "scene",
+                    "operator": "include",
+                    "value": "office",
+                    "strength": "soft",
+                    "source_text": "办公室",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_95419db350dc4c3088e84a5cdf7de279"
+                  },
+                  {
+                    "constraint_id": "c_spice",
+                    "field": "taste",
+                    "operator": "equals",
+                    "value": "spice:none",
+                    "strength": "hard",
+                    "source_text": "不辣",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_95419db350dc4c3088e84a5cdf7de279"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": {
+              "question": "请明确选中哪一个方案或商品。预算是每份、商品合计，还是含运费的整单金额？",
+              "asked_fields": [
+                "reference",
+                "budget_scope"
+              ],
+              "group_id": null
+            },
+            "last_presentation": null,
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_1bf76a2149a54f91bdac5ba9ab4a1dc1",
+          "role": "user",
+          "content": "办公室不辣零食，预算 80",
+          "turn_id": "turn_95419db350dc4c3088e84a5cdf7de279"
+        },
+        {
+          "id": "msg_dd03cb85af504903b0444ea66fca8ee2",
+          "role": "assistant",
+          "content": "这个预算是每份、商品合计，还是包含运费的整单金额？",
+          "cards": [],
+          "turn_id": "turn_95419db350dc4c3088e84a5cdf7de279",
+          "status": "needs_clarification"
+        },
+        {
+          "id": "msg_f650b6a90d0743a7aec3b889a9c745dd",
+          "role": "user",
+          "content": "第二个换成低糖的",
+          "turn_id": "turn_92f29670c0c0438491ddfadaefc86fe2"
+        },
+        {
+          "id": "msg_837fc93ffc7d4c1ba37d4367613c6dca",
+          "role": "assistant",
+          "content": "请明确选中哪一个方案或商品。预算是每份、商品合计，还是含运费的整单金额？",
+          "cards": [],
+          "turn_id": "turn_92f29670c0c0438491ddfadaefc86fe2",
+          "status": "needs_clarification"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {},
+        "quarantined_skus": []
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "办公室不辣零食，预算 80",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_office",
+            "label": "办公室不辣零食",
+            "budget": {
+              "min_fen": null,
+              "max_fen": 8000,
+              "strictness": "strict",
+              "scope": "unknown",
+              "source_text": "预算 80",
+              "min_is_hard": false
+            },
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_scene",
+                "field": "scene",
+                "operator": "include",
+                "value": "office",
+                "strength": "soft",
+                "source_text": "办公室",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_spice",
+                "field": "taste",
+                "operator": "equals",
+                "value": "spice:none",
+                "strength": "hard",
+                "source_text": "不辣",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.549
+    },
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "第二个换成低糖的",
+        "module_state": {
+          "need_groups": [
+            {
+              "group_id": "group_office",
+              "label": "办公室不辣零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": 8000,
+                "strictness": "strict",
+                "scope": "unknown",
+                "source_text": "预算 80",
+                "min_is_hard": false,
+                "source_turn_id": "turn_95419db350dc4c3088e84a5cdf7de279"
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_scene",
+                  "field": "scene",
+                  "operator": "include",
+                  "value": "office",
+                  "strength": "soft",
+                  "source_text": "办公室",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_95419db350dc4c3088e84a5cdf7de279"
+                },
+                {
+                  "constraint_id": "c_spice",
+                  "field": "taste",
+                  "operator": "equals",
+                  "value": "spice:none",
+                  "strength": "hard",
+                  "source_text": "不辣",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_95419db350dc4c3088e84a5cdf7de279"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": {
+            "question": "这个预算是每份、商品合计，还是包含运费的整单金额？",
+            "asked_fields": [
+              "budget_scope"
+            ],
+            "group_id": null
+          },
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "history": [
+          {
+            "id": "msg_1bf76a2149a54f91bdac5ba9ab4a1dc1",
+            "role": "user",
+            "content": "办公室不辣零食，预算 80",
+            "turn_id": "turn_95419db350dc4c3088e84a5cdf7de279"
+          },
+          {
+            "id": "msg_dd03cb85af504903b0444ea66fca8ee2",
+            "role": "assistant",
+            "content": "这个预算是每份、商品合计，还是包含运费的整单金额？",
+            "cards": [],
+            "turn_id": "turn_95419db350dc4c3088e84a5cdf7de279",
+            "status": "needs_clarification"
+          }
+        ],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [],
+        "remove_group_ids": [],
+        "clarification": {
+          "question": "没有找到已展示的第二个商品，您指的是哪个商品想换成低糖的呢？或者这个预算是每份、商品合计，还是包含运费的整单金额？",
+          "asked_fields": [
+            "reference",
+            "budget_scope"
+          ],
+          "group_id": null
+        },
+        "retrieval_hints": []
+      },
+      "seconds": 1.267
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 2.868,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": false,
+      "actual": "needs_clarification"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "追问最多两个字段",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "追问最多两个字段",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "指定故障或对抗介入已实际应用",
+      "passed": false,
+      "actual": "preload_three_stable_plan_ids"
+    },
+    {
+      "name": "低糖来自资料标签",
+      "passed": false,
+      "actual": null
+    }
+  ],
+  "passed": false
+}

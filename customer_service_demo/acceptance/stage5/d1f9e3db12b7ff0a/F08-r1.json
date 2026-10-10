@@ -1,0 +1,211 @@
+{
+  "case_id": "F08",
+  "title": "库存不够不能生成多件",
+  "repetition": 1,
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "executed_at": "2026-10-08T13:10:58.245117+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_37f6da6335c34dbe9a24887a5dda7cd5",
+        "expected_revision": 0,
+        "message": "买 41 件原味海苔脆片",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_1b2da6116b81442cb090dc1cbe639b51",
+        "request_id": "req_37f6da6335c34dbe9a24887a5dda7cd5",
+        "turn_id": "turn_1a274d6153b343ebae28769c567077c0",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "no_match",
+        "message": {
+          "id": "msg_b440b49541eb463981191fac74e30ce0",
+          "role": "assistant",
+          "content": "现有演示商品中没有能同时满足这组硬要求和购买数量的方案。可以修改其中一项要求后再找。",
+          "cards": []
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_1b2da6116b81442cb090dc1cbe639b51",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_seaweed",
+                "label": "原味海苔脆片",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_sku_seaweed",
+                    "field": "other",
+                    "operator": "equals",
+                    "value": "sku:P002",
+                    "strength": "hard",
+                    "source_text": "原味海苔脆片",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_1a274d6153b343ebae28769c567077c0"
+                  },
+                  {
+                    "constraint_id": "c_qty_seaweed",
+                    "field": "quantity",
+                    "operator": "equals",
+                    "value": 41,
+                    "strength": "hard",
+                    "source_text": "买 41 件原味海苔脆片",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_1a274d6153b343ebae28769c567077c0"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": null,
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_7b6d0d1e3db042429aff35127cf70988",
+          "role": "user",
+          "content": "买 41 件原味海苔脆片",
+          "turn_id": "turn_1a274d6153b343ebae28769c567077c0"
+        },
+        {
+          "id": "msg_b440b49541eb463981191fac74e30ce0",
+          "role": "assistant",
+          "content": "现有演示商品中没有能同时满足这组硬要求和购买数量的方案。可以修改其中一项要求后再找。",
+          "cards": [],
+          "turn_id": "turn_1a274d6153b343ebae28769c567077c0",
+          "status": "no_match"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {},
+        "quarantined_skus": []
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "买 41 件原味海苔脆片",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_seaweed",
+            "label": "原味海苔脆片",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_sku_seaweed",
+                "field": "other",
+                "operator": "equals",
+                "value": "sku:P002",
+                "strength": "hard",
+                "source_text": "原味海苔脆片",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_qty_seaweed",
+                "field": "quantity",
+                "operator": "equals",
+                "value": 41,
+                "strength": "hard",
+                "source_text": "买 41 件原味海苔脆片",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": [
+          "P002"
+        ]
+      },
+      "seconds": 1.426
+    }
+  ],
+  "pricing_goldens": [
+    {
+      "id": "G043",
+      "passed": true,
+      "expected": {
+        "eligible": false,
+        "rejection_code": "product_stock_insufficient"
+      },
+      "actual": {
+        "eligible": false,
+        "rejection_code": "product_stock_insufficient"
+      }
+    }
+  ],
+  "seconds": 1.463,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "no_match"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "关联固定购物方案的独立数值基准",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存不足不偷偷降量",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,1940 @@
+{
+  "case_id": "T04",
+  "title": "过时片段不能覆盖权威价格",
+  "repetition": 1,
+  "implementation_hash": "03c8fc87a9d9e031",
+  "executed_at": "2026-10-08T12:51:44.912586+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": "retrieval_contains_old_price_999",
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_8c0ea7a3c0eb41699f5311efe6cb7cd0",
+        "expected_revision": 0,
+        "message": "两件苏打饼干多少钱",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_8c0ea7a3c0eb41699f5311efe6cb7cd0",
+        "turn_id": null,
+        "base_revision": 0,
+        "revision": 0,
+        "module": "product_recommendation",
+        "status": "error",
+        "message": {
+          "id": "msg_c5970a9de4ae4078b2b57aa45b2f673c",
+          "role": "assistant",
+          "content": "客服回复未通过事实与表达核验，本轮未保存，请重试。",
+          "cards": []
+        },
+        "clarification": null,
+        "error": {
+          "code": "invalid_model_output",
+          "retryable": true
+        }
+      },
+      "session": null,
+      "history": [],
+      "diagnostics": null
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "两件苏打饼干多少钱",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_soda_cracker",
+            "label": "苏打饼干",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_soda_cracker",
+                "field": "category",
+                "operator": "include",
+                "value": "biscuits",
+                "strength": "soft",
+                "source_text": "苏打饼干",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_qty_2",
+                "field": "quantity",
+                "operator": "equals",
+                "value": 2,
+                "strength": "hard",
+                "source_text": "两件",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": [
+          "P019",
+          "P017",
+          "P001"
+        ]
+      },
+      "seconds": 1.286
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "两件苏打饼干多少钱",
+        "need_summary": "优先饼干、买2件",
+        "plans": [
+          {
+            "plan_id": "plan_146e0388039160d3d96e",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 2,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买2件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费19.80元；商品应付13.80元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：临期燕麦饼干。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_bc0b365e98ece30e2e5f",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P019",
+                "product_name": "原味苏打饼干",
+                "quantity": 1,
+                "unit_price_fen": 1090,
+                "image_url": null
+              },
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "原味苏打饼干，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "原味苏打饼干：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "原味苏打饼干：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "原味苏打饼干：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "原味苏打饼干：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "原味苏打饼干：已知单个内包15克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "原味苏打饼干：ingredients=['wheat', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "原味苏打饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味苏打饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "原味苏打饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "原味苏打饼干：scene_tags=['office']"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p2_f19",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p2_f20",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p2_f21",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f22",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f23",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p2_f25",
+                "kind": "pricing",
+                "text": "含运费21.80元；商品应付15.80元。"
+              },
+              {
+                "id": "p2_f26",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：原味苏打饼干、临期燕麦饼干。"
+              },
+              {
+                "id": "p2_f29",
+                "kind": "comparison",
+                "text": "换成不同商品的组合，总价比首选高一些。"
+              },
+              {
+                "id": "p2_f30",
+                "kind": "offer",
+                "text": "已计入苏打饼干限两件秒杀价。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_9c918258e0781bd19c56",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 1290,
+                "image_url": null
+              },
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "原味燕麦小饼干，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "原味燕麦小饼干：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "原味燕麦小饼干：低糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "原味燕麦小饼干：低甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "原味燕麦小饼干：ingredients=['oats', 'wheat', 'soy']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "原味燕麦小饼干：declared_allergens=['gluten', 'soy']"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味燕麦小饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "原味燕麦小饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "原味燕麦小饼干：scene_tags=['office', 'breakfast']"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p3_f17",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p3_f18",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p3_f19",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p3_f20",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p3_f21",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f22",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f23",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p3_f25",
+                "kind": "pricing",
+                "text": "含运费25.80元；商品应付19.80元。"
+              },
+              {
+                "id": "p3_f26",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：原味燕麦小饼干、临期燕麦饼干。"
+              },
+              {
+                "id": "p3_f29",
+                "kind": "comparison",
+                "text": "换成不同商品的组合，总价比首选高一些。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_146e0388039160d3d96e",
+            "reasons": [
+              {
+                "text": "两件均为临期燕麦饼干，独立小包分次取用方便。",
+                "fact_ids": [
+                  "p1_f1",
+                  "p1_f5"
+                ]
+              },
+              {
+                "text": "低糖、低甜度标签，不辣，适合偏好清淡口味。",
+                "fact_ids": [
+                  "p1_f3",
+                  "p1_f4",
+                  "p1_f2"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_bc0b365e98ece30e2e5f",
+            "reasons": [
+              {
+                "text": "含原味苏打饼干1件，正是需求中的苏打饼干。",
+                "fact_ids": [
+                  "p2_f1",
+                  "p2_f26"
+                ]
+              },
+              {
+                "text": "两种饼干都是独立内包装，可分开取用。",
+                "fact_ids": [
+                  "p2_f5",
+                  "p2_f17"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_9c918258e0781bd19c56",
+            "reasons": [
+              {
+                "text": "原味燕麦小饼干配临期燕麦饼干，均为低糖、低甜度标签。",
+                "fact_ids": [
+                  "p3_f3",
+                  "p3_f4",
+                  "p3_f15",
+                  "p3_f16"
+                ]
+              },
+              {
+                "text": "两款都是不辣且独立内包装，适合随手分次食用。",
+                "fact_ids": [
+                  "p3_f2",
+                  "p3_f5",
+                  "p3_f14",
+                  "p3_f17"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 1.567
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "两件苏打饼干多少钱",
+        "need_summary": "优先饼干、买2件",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_soda_cracker",
+              "label": "苏打饼干",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_soda_cracker",
+                  "field": "category",
+                  "operator": "include",
+                  "value": "biscuits",
+                  "strength": "soft",
+                  "source_text": "苏打饼干",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_81b46f0cff9f498f8c3828bb594ce197"
+                },
+                {
+                  "constraint_id": "c_qty_2",
+                  "field": "quantity",
+                  "operator": "equals",
+                  "value": 2,
+                  "strength": "hard",
+                  "source_text": "两件",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_81b46f0cff9f498f8c3828bb594ce197"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_146e0388039160d3d96e",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 2,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 1380,
+              "discounts": [],
+              "merchandise_payable_fen": 1380,
+              "shipping_fen": 600,
+              "total_payable_fen": 1980,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买2件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "临期燕麦饼干：标注到期时间 2026-10-20T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费19.80元；商品应付13.80元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "boundary",
+                "text": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_bc0b365e98ece30e2e5f",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P019",
+                "product_name": "原味苏打饼干",
+                "quantity": 1,
+                "unit_price_fen": 1090,
+                "image_url": null
+              },
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 1780,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_FIXED",
+                  "label": "苏打饼干限两件秒杀价",
+                  "amount_fen": 200,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 1580,
+              "shipping_fen": 600,
+              "total_payable_fen": 2180,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "原味苏打饼干，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "原味苏打饼干：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "原味苏打饼干：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "原味苏打饼干：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "原味苏打饼干：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "原味苏打饼干：已知单个内包15克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "原味苏打饼干：ingredients=['wheat', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "原味苏打饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味苏打饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "原味苏打饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "原味苏打饼干：scene_tags=['office']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "原味苏打饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p2_f19",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p2_f20",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p2_f21",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f22",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f23",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p2_f24",
+                "kind": "expiry",
+                "text": "临期燕麦饼干：标注到期时间 2026-10-20T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f25",
+                "kind": "pricing",
+                "text": "含运费21.80元；商品应付15.80元。"
+              },
+              {
+                "id": "p2_f26",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：原味苏打饼干、临期燕麦饼干。"
+              },
+              {
+                "id": "p2_f27",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f28",
+                "kind": "boundary",
+                "text": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              },
+              {
+                "id": "p2_f29",
+                "kind": "comparison",
+                "text": "换成不同商品的组合，总价比首选高一些。"
+              },
+              {
+                "id": "p2_f30",
+                "kind": "offer",
+                "text": "已计入苏打饼干限两件秒杀价。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_9c918258e0781bd19c56",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 1290,
+                "image_url": null
+              },
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 1980,
+              "discounts": [],
+              "merchandise_payable_fen": 1980,
+              "shipping_fen": 600,
+              "total_payable_fen": 2580,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "原味燕麦小饼干，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "原味燕麦小饼干：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "原味燕麦小饼干：低糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "原味燕麦小饼干：低甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "原味燕麦小饼干：ingredients=['oats', 'wheat', 'soy']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "原味燕麦小饼干：declared_allergens=['gluten', 'soy']"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味燕麦小饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "原味燕麦小饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "原味燕麦小饼干：scene_tags=['office', 'breakfast']"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "expiry",
+                "text": "原味燕麦小饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p3_f17",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p3_f18",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p3_f19",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p3_f20",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p3_f21",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f22",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f23",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p3_f24",
+                "kind": "expiry",
+                "text": "临期燕麦饼干：标注到期时间 2026-10-20T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f25",
+                "kind": "pricing",
+                "text": "含运费25.80元；商品应付19.80元。"
+              },
+              {
+                "id": "p3_f26",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：原味燕麦小饼干、临期燕麦饼干。"
+              },
+              {
+                "id": "p3_f27",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f28",
+                "kind": "boundary",
+                "text": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              },
+              {
+                "id": "p3_f29",
+                "kind": "comparison",
+                "text": "换成不同商品的组合，总价比首选高一些。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "优先饼干、买2件",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "临期燕麦饼干（2件）",
+          "p1_price": "含运费19.80元",
+          "p1_notice": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。",
+          "p2_items": "原味苏打饼干（1件） + 临期燕麦饼干（1件）",
+          "p2_price": "含运费21.80元",
+          "p2_difference": "换成不同商品的组合，总价比首选高一些",
+          "p2_notice": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。",
+          "p2_offer": "已计入苏打饼干限两件秒杀价。",
+          "p3_items": "原味燕麦小饼干（1件） + 临期燕麦饼干（1件）",
+          "p3_price": "含运费25.80元",
+          "p3_difference": "换成不同商品的组合，总价比首选高一些",
+          "p3_notice": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。",
+          "p1_reason_1": "两件均为临期燕麦饼干，独立小包分次取用方便",
+          "p1_reason_2": "低糖、低甜度标签，不辣，适合偏好清淡口味",
+          "p2_reason_1": "含原味苏打饼干1件，正是需求中的苏打饼干",
+          "p2_reason_2": "两种饼干都是独立内包装，可分开取用",
+          "p3_reason_1": "原味燕麦小饼干配临期燕麦饼干，均为低糖、低甜度标签",
+          "p3_reason_2": "两款都是不辣且独立内包装，适合随手分次食用"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_146e0388039160d3d96e",
+              "reasons": [
+                {
+                  "text": "两件均为临期燕麦饼干，独立小包分次取用方便。",
+                  "fact_ids": [
+                    "p1_f1",
+                    "p1_f5"
+                  ]
+                },
+                {
+                  "text": "低糖、低甜度标签，不辣，适合偏好清淡口味。",
+                  "fact_ids": [
+                    "p1_f3",
+                    "p1_f4",
+                    "p1_f2"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_bc0b365e98ece30e2e5f",
+              "reasons": [
+                {
+                  "text": "含原味苏打饼干1件，正是需求中的苏打饼干。",
+                  "fact_ids": [
+                    "p2_f1",
+                    "p2_f26"
+                  ]
+                },
+                {
+                  "text": "两种饼干都是独立内包装，可分开取用。",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f17"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_9c918258e0781bd19c56",
+              "reasons": [
+                {
+                  "text": "原味燕麦小饼干配临期燕麦饼干，均为低糖、低甜度标签。",
+                  "fact_ids": [
+                    "p3_f3",
+                    "p3_f4",
+                    "p3_f15",
+                    "p3_f16"
+                  ]
+                },
+                {
+                  "text": "两款都是不辣且独立内包装，适合随手分次食用。",
+                  "fact_ids": [
+                    "p3_f2",
+                    "p3_f5",
+                    "p3_f14",
+                    "p3_f17"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，按{{need_summary}}来找，主要是想让您花合适的钱拿到合适的饼干，我这边帮您顺了三个方向😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}。需要提醒的是，{{p1_notice}}\n\n如果更想要苏打饼干本身，可以看{{p2_items}}，{{p2_reason_1}}，{{p2_price}}，{{p2_offer}}{{p2_difference}}。这款里也有一件临期商品，{{p2_notice}}\n\n第三款是{{p3_items}}，{{p3_reason_1}}，{{p3_price}}。{{p3_difference}}，其中临期商品同样要留意，{{p3_notice}}\n\n{{follow_up}}"
+      },
+      "seconds": 1.299
+    },
+    {
+      "stage": "compose_reply",
+      "repair": "话术过长，请压缩到约300字；每方案仅一句理由，不重复需求和差异，不漏必要提醒\n上次错误草稿（不是事实）：{\"template\": \"亲～，按{{need_summary}}来找，主要是想让您花合适的钱拿到合适的饼干，我这边帮您顺了三个方向😊\\n\\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}。需要提醒的是，{{p1_notice}}\\n\\n如果更想要苏打饼干本身，可以看{{p2_items}}，{{p2_reason_1}}，{{p2_price}}，{{p2_offer}}{{p2_difference}}。这款里也有一件临期商品，{{p2_notice}}\\n\\n第三款是{{p3_items}}，{{p3_reason_1}}，{{p3_price}}。{{p3_difference}}，其中临期商品同样要留意，{{p3_notice}}\\n\\n{{follow_up}}\"}",
+      "input": {
+        "user_message": "两件苏打饼干多少钱",
+        "need_summary": "优先饼干、买2件",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_soda_cracker",
+              "label": "苏打饼干",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_soda_cracker",
+                  "field": "category",
+                  "operator": "include",
+                  "value": "biscuits",
+                  "strength": "soft",
+                  "source_text": "苏打饼干",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_81b46f0cff9f498f8c3828bb594ce197"
+                },
+                {
+                  "constraint_id": "c_qty_2",
+                  "field": "quantity",
+                  "operator": "equals",
+                  "value": 2,
+                  "strength": "hard",
+                  "source_text": "两件",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_81b46f0cff9f498f8c3828bb594ce197"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_146e0388039160d3d96e",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 2,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 1380,
+              "discounts": [],
+              "merchandise_payable_fen": 1380,
+              "shipping_fen": 600,
+              "total_payable_fen": 1980,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买2件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "临期燕麦饼干：标注到期时间 2026-10-20T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费19.80元；商品应付13.80元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "boundary",
+                "text": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_bc0b365e98ece30e2e5f",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P019",
+                "product_name": "原味苏打饼干",
+                "quantity": 1,
+                "unit_price_fen": 1090,
+                "image_url": null
+              },
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 1780,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_FIXED",
+                  "label": "苏打饼干限两件秒杀价",
+                  "amount_fen": 200,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 1580,
+              "shipping_fen": 600,
+              "total_payable_fen": 2180,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "原味苏打饼干，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "原味苏打饼干：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "原味苏打饼干：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "原味苏打饼干：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "原味苏打饼干：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "原味苏打饼干：已知单个内包15克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "原味苏打饼干：ingredients=['wheat', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "原味苏打饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味苏打饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "原味苏打饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "原味苏打饼干：scene_tags=['office']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "原味苏打饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p2_f19",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p2_f20",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p2_f21",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f22",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f23",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p2_f24",
+                "kind": "expiry",
+                "text": "临期燕麦饼干：标注到期时间 2026-10-20T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f25",
+                "kind": "pricing",
+                "text": "含运费21.80元；商品应付15.80元。"
+              },
+              {
+                "id": "p2_f26",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：原味苏打饼干、临期燕麦饼干。"
+              },
+              {
+                "id": "p2_f27",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f28",
+                "kind": "boundary",
+                "text": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              },
+              {
+                "id": "p2_f29",
+                "kind": "comparison",
+                "text": "换成不同商品的组合，总价比首选高一些。"
+              },
+              {
+                "id": "p2_f30",
+                "kind": "offer",
+                "text": "已计入苏打饼干限两件秒杀价。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_9c918258e0781bd19c56",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 1290,
+                "image_url": null
+              },
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 1980,
+              "discounts": [],
+              "merchandise_payable_fen": 1980,
+              "shipping_fen": 600,
+              "total_payable_fen": 2580,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "原味燕麦小饼干，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "原味燕麦小饼干：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "原味燕麦小饼干：低糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "原味燕麦小饼干：低甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "原味燕麦小饼干：ingredients=['oats', 'wheat', 'soy']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "原味燕麦小饼干：declared_allergens=['gluten', 'soy']"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味燕麦小饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "原味燕麦小饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "原味燕麦小饼干：scene_tags=['office', 'breakfast']"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "expiry",
+                "text": "原味燕麦小饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p3_f17",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p3_f18",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p3_f19",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p3_f20",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p3_f21",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f22",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f23",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p3_f24",
+                "kind": "expiry",
+                "text": "临期燕麦饼干：标注到期时间 2026-10-20T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f25",
+                "kind": "pricing",
+                "text": "含运费25.80元；商品应付19.80元。"
+              },
+              {
+                "id": "p3_f26",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：原味燕麦小饼干、临期燕麦饼干。"
+              },
+              {
+                "id": "p3_f27",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f28",
+                "kind": "boundary",
+                "text": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              },
+              {
+                "id": "p3_f29",
+                "kind": "comparison",
+                "text": "换成不同商品的组合，总价比首选高一些。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "优先饼干、买2件",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "临期燕麦饼干（2件）",
+          "p1_price": "含运费19.80元",
+          "p1_notice": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。",
+          "p2_items": "原味苏打饼干（1件） + 临期燕麦饼干（1件）",
+          "p2_price": "含运费21.80元",
+          "p2_difference": "换成不同商品的组合，总价比首选高一些",
+          "p2_notice": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。",
+          "p2_offer": "已计入苏打饼干限两件秒杀价。",
+          "p3_items": "原味燕麦小饼干（1件） + 临期燕麦饼干（1件）",
+          "p3_price": "含运费25.80元",
+          "p3_difference": "换成不同商品的组合，总价比首选高一些",
+          "p3_notice": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。",
+          "p1_reason_1": "两件均为临期燕麦饼干，独立小包分次取用方便",
+          "p1_reason_2": "低糖、低甜度标签，不辣，适合偏好清淡口味",
+          "p2_reason_1": "含原味苏打饼干1件，正是需求中的苏打饼干",
+          "p2_reason_2": "两种饼干都是独立内包装，可分开取用",
+          "p3_reason_1": "原味燕麦小饼干配临期燕麦饼干，均为低糖、低甜度标签",
+          "p3_reason_2": "两款都是不辣且独立内包装，适合随手分次食用"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_146e0388039160d3d96e",
+              "reasons": [
+                {
+                  "text": "两件均为临期燕麦饼干，独立小包分次取用方便。",
+                  "fact_ids": [
+                    "p1_f1",
+                    "p1_f5"
+                  ]
+                },
+                {
+                  "text": "低糖、低甜度标签，不辣，适合偏好清淡口味。",
+                  "fact_ids": [
+                    "p1_f3",
+                    "p1_f4",
+                    "p1_f2"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_bc0b365e98ece30e2e5f",
+              "reasons": [
+                {
+                  "text": "含原味苏打饼干1件，正是需求中的苏打饼干。",
+                  "fact_ids": [
+                    "p2_f1",
+                    "p2_f26"
+                  ]
+                },
+                {
+                  "text": "两种饼干都是独立内包装，可分开取用。",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f17"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_9c918258e0781bd19c56",
+              "reasons": [
+                {
+                  "text": "原味燕麦小饼干配临期燕麦饼干，均为低糖、低甜度标签。",
+                  "fact_ids": [
+                    "p3_f3",
+                    "p3_f4",
+                    "p3_f15",
+                    "p3_f16"
+                  ]
+                },
+                {
+                  "text": "两款都是不辣且独立内包装，适合随手分次食用。",
+                  "fact_ids": [
+                    "p3_f2",
+                    "p3_f5",
+                    "p3_f14",
+                    "p3_f17"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，按{{need_summary}}帮您顺了三个方向，金额里运费都已含好😊\n\n首选{{p1_items}}，{{p1_reason_1}}，{{p1_price}}。{{p1_notice}}\n\n如果想饼干里带苏打，可以看{{p2_items}}，{{p2_reason_1}}，{{p2_price}}，{{p2_offer}}{{p2_difference}}。{{p2_notice}}\n\n第三款{{p3_items}}，{{p3_reason_1}}，{{p3_price}}。{{p3_difference}}，{{p3_notice}}\n\n{{follow_up}}"
+      },
+      "seconds": 1.06
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 5.269,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": false,
+      "actual": "error"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "指定故障或对抗介入已实际应用",
+      "passed": false,
+      "actual": "retrieval_contains_old_price_999"
+    },
+    {
+      "name": "过时价未覆盖真实单价",
+      "passed": false,
+      "actual": null
+    }
+  ],
+  "passed": false
+}

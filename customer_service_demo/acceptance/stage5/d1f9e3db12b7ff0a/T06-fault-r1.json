@@ -1,0 +1,68 @@
+{
+  "case_id": "T06",
+  "title": "完全数据源失败不是无匹配",
+  "repetition": 1,
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "executed_at": "2026-10-08T13:07:39.451014+00:00",
+  "layer": "fault_injection_with_real_model",
+  "intervention": "catalog_source_timeout",
+  "intervention_applied": true,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_04ce4f4b77294ccfa4f5e78bf34f25ca",
+        "expected_revision": 0,
+        "message": "推荐办公室不辣零食",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_04ce4f4b77294ccfa4f5e78bf34f25ca",
+        "turn_id": null,
+        "base_revision": 0,
+        "revision": 0,
+        "module": "product_recommendation",
+        "status": "error",
+        "message": {
+          "id": "msg_cd9331b3a3324d91afc68a3ab7a6e589",
+          "role": "assistant",
+          "content": "测试注入：商品资料暂时无法读取，请稍后重试。",
+          "cards": []
+        },
+        "clarification": null,
+        "error": {
+          "code": "data_unavailable",
+          "retryable": true
+        }
+      },
+      "session": null,
+      "history": [],
+      "diagnostics": null
+    }
+  ],
+  "model_calls": [],
+  "concurrency_evidence": null,
+  "pricing_goldens": [],
+  "seconds": 0.021,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "error"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "指定故障或对抗介入已实际应用",
+      "passed": true,
+      "actual": "catalog_source_timeout"
+    }
+  ],
+  "passed": true
+}

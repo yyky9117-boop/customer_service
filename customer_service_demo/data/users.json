@@ -1,0 +1,192 @@
+[
+  {
+    "user_id": "U_NEW",
+    "member_level": "ordinary",
+    "customer_type": "new",
+    "shipping_zone": "standard",
+    "owned_coupons": [
+      {
+        "coupon_id": "C_ALL",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_WEB",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_SCOPE",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_NO_STACK",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_NUTS",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_BISCUIT",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_GRAIN",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_FUTURE",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_EXPIRED",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_NEW",
+        "state": "unused"
+      }
+    ],
+    "preferred_tags": [],
+    "is_demo": true
+  },
+  {
+    "user_id": "U_RETURN",
+    "member_level": "ordinary",
+    "customer_type": "returning",
+    "shipping_zone": "standard",
+    "owned_coupons": [
+      {
+        "coupon_id": "C_ALL",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_WEB",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_SCOPE",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_NO_STACK",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_NUTS",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_BISCUIT",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_GRAIN",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_FUTURE",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_EXPIRED",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_USED",
+        "state": "used"
+      }
+    ],
+    "preferred_tags": [
+      "low_sugar"
+    ],
+    "is_demo": true
+  },
+  {
+    "user_id": "U_VIP",
+    "member_level": "vip",
+    "customer_type": "returning",
+    "shipping_zone": "standard",
+    "owned_coupons": [
+      {
+        "coupon_id": "C_ALL",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_WEB",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_SCOPE",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_NO_STACK",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_NUTS",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_BISCUIT",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_GRAIN",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_FUTURE",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_EXPIRED",
+        "state": "unused"
+      },
+      {
+        "coupon_id": "C_VIP",
+        "state": "unused"
+      }
+    ],
+    "preferred_tags": [
+      "nuts"
+    ],
+    "is_demo": true
+  },
+  {
+    "user_id": "U_GUEST",
+    "member_level": null,
+    "customer_type": null,
+    "shipping_zone": "standard",
+    "owned_coupons": [],
+    "preferred_tags": [],
+    "is_demo": true
+  },
+  {
+    "user_id": "U_UNKNOWN",
+    "member_level": null,
+    "customer_type": null,
+    "shipping_zone": "unknown",
+    "owned_coupons": null,
+    "preferred_tags": [],
+    "is_demo": true
+  },
+  {
+    "user_id": "U_LOCKED",
+    "member_level": "ordinary",
+    "customer_type": "returning",
+    "shipping_zone": "remote",
+    "owned_coupons": [
+      {
+        "coupon_id": "C_ALL",
+        "state": "locked"
+      },
+      {
+        "coupon_id": "C_WEB",
+        "state": "unused"
+      }
+    ],
+    "preferred_tags": [],
+    "is_demo": true
+  }
+]

@@ -1,0 +1,2935 @@
+{
+  "case_id": "P19",
+  "title": "一分分摊稳定且与顺序无关",
+  "repetition": 1,
+  "implementation_hash": "03c8fc87a9d9e031",
+  "executed_at": "2026-10-08T12:51:57.883374+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_b27ef1730c004eb8a5524e9d4212f9b0",
+        "expected_revision": 0,
+        "message": "一件饼干一件海苔",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_b3554a7b071141bcadc363fa4757873e",
+        "request_id": "req_b27ef1730c004eb8a5524e9d4212f9b0",
+        "turn_id": "turn_d9558266b57145b7b2f790b2a220c4d8",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_3b17ddaeac094bac8207c67146878487",
+          "role": "assistant",
+          "content": "亲～，按给不同对象分别搭配来帮您搭了两套，一件饼干配一件海苔，分开都能有对应的小份装😊\n\n首选是原味海苔脆片（1件） + 临期燕麦饼干（1件），其中海苔脆片独立小包，给对应对象分次取用方便，饼干也是低糖标签，给偏好低糖的一方更合适，含运费20.90元，已计入商品满 100 元减 10 元、网页渠道 2 元券。不过要提醒您，临期燕麦饼干为临期商品，标注到期日为2026年10月20日。 需求组 1：临期燕麦饼干 × 1\n\n备选是原味燕麦小饼干（1件） + 原味海苔脆片（1件），燕麦小饼干低糖标签，独立小包方便分给对应对象，总价比首选高一些，含运费24.01元，已计入商品满 100 元减 10 元、网页渠道 2 元券。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_7f41f967df9415492f69",
+              "plan_type": "bundle",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_biscuits",
+              "items": [
+                {
+                  "sku_id": "P002",
+                  "product_name": "原味海苔脆片",
+                  "quantity": 1,
+                  "unit_price_fen": 1001,
+                  "image_url": null
+                },
+                {
+                  "sku_id": "P024",
+                  "product_name": "临期燕麦饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 690,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 1691,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_ORDER",
+                    "label": "商品满 100 元减 10 元",
+                    "amount_fen": 1,
+                    "eligibility": "eligible"
+                  },
+                  {
+                    "kind": "coupon",
+                    "id": "C_WEB",
+                    "label": "网页渠道 2 元券",
+                    "amount_fen": 200,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 1490,
+                "shipping_fen": 600,
+                "total_payable_fen": 2090,
+                "conditions": []
+              },
+              "reasons": [
+                "海苔脆片独立小包，给对应对象分次取用方便",
+                "饼干是低糖标签，适合偏好低糖的一方"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。",
+                "需求组 1：临期燕麦饼干 × 1",
+                "需求组 2：原味海苔脆片 × 1",
+                "以上对象合并为一个订单计价；优惠券只使用一次。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_673ca4d5d624f57fff98",
+              "plan_type": "bundle",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_biscuits",
+              "items": [
+                {
+                  "sku_id": "P001",
+                  "product_name": "原味燕麦小饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 1001,
+                  "image_url": null
+                },
+                {
+                  "sku_id": "P002",
+                  "product_name": "原味海苔脆片",
+                  "quantity": 1,
+                  "unit_price_fen": 1001,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 2002,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_ORDER",
+                    "label": "商品满 100 元减 10 元",
+                    "amount_fen": 1,
+                    "eligibility": "eligible"
+                  },
+                  {
+                    "kind": "coupon",
+                    "id": "C_WEB",
+                    "label": "网页渠道 2 元券",
+                    "amount_fen": 200,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 1801,
+                "shipping_fen": 600,
+                "total_payable_fen": 2401,
+                "conditions": []
+              },
+              "reasons": [
+                "燕麦小饼干低糖标签，独立小包方便分给对应对象",
+                "海苔脆片不辣且独立内包装，适合另一对象单独取用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "需求组 1：原味燕麦小饼干 × 1",
+                "需求组 2：原味海苔脆片 × 1",
+                "以上对象合并为一个订单计价；优惠券只使用一次。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_b3554a7b071141bcadc363fa4757873e",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_biscuits",
+                "label": "饼干",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_cat_biscuits",
+                    "field": "category",
+                    "operator": "include",
+                    "value": "biscuits",
+                    "strength": "hard",
+                    "source_text": "一件饼干",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_d9558266b57145b7b2f790b2a220c4d8"
+                  },
+                  {
+                    "constraint_id": "c_qty_biscuits",
+                    "field": "quantity",
+                    "operator": "equals",
+                    "value": 1,
+                    "strength": "hard",
+                    "source_text": "一件饼干",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_d9558266b57145b7b2f790b2a220c4d8"
+                  }
+                ]
+              },
+              {
+                "group_id": "group_seaweed",
+                "label": "海苔",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_cat_seaweed",
+                    "field": "category",
+                    "operator": "include",
+                    "value": "seaweed",
+                    "strength": "hard",
+                    "source_text": "一件海苔",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_d9558266b57145b7b2f790b2a220c4d8"
+                  },
+                  {
+                    "constraint_id": "c_qty_seaweed",
+                    "field": "quantity",
+                    "operator": "equals",
+                    "value": 1,
+                    "strength": "hard",
+                    "source_text": "一件海苔",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_d9558266b57145b7b2f790b2a220c4d8"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_3b17ddaeac094bac8207c67146878487",
+              "turn_id": "turn_d9558266b57145b7b2f790b2a220c4d8",
+              "plan_order": [
+                {
+                  "plan_id": "plan_7f41f967df9415492f69",
+                  "sku_ids": [
+                    "P002",
+                    "P024"
+                  ]
+                },
+                {
+                  "plan_id": "plan_673ca4d5d624f57fff98",
+                  "sku_ids": [
+                    "P001",
+                    "P002"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_466a93861f764ffcbc5ca9f78f6a31ee",
+          "role": "user",
+          "content": "一件饼干一件海苔",
+          "turn_id": "turn_d9558266b57145b7b2f790b2a220c4d8"
+        },
+        {
+          "id": "msg_3b17ddaeac094bac8207c67146878487",
+          "role": "assistant",
+          "content": "亲～，按给不同对象分别搭配来帮您搭了两套，一件饼干配一件海苔，分开都能有对应的小份装😊\n\n首选是原味海苔脆片（1件） + 临期燕麦饼干（1件），其中海苔脆片独立小包，给对应对象分次取用方便，饼干也是低糖标签，给偏好低糖的一方更合适，含运费20.90元，已计入商品满 100 元减 10 元、网页渠道 2 元券。不过要提醒您，临期燕麦饼干为临期商品，标注到期日为2026年10月20日。 需求组 1：临期燕麦饼干 × 1\n\n备选是原味燕麦小饼干（1件） + 原味海苔脆片（1件），燕麦小饼干低糖标签，独立小包方便分给对应对象，总价比首选高一些，含运费24.01元，已计入商品满 100 元减 10 元、网页渠道 2 元券。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_7f41f967df9415492f69",
+              "plan_type": "bundle",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_biscuits",
+              "items": [
+                {
+                  "sku_id": "P002",
+                  "product_name": "原味海苔脆片",
+                  "quantity": 1,
+                  "unit_price_fen": 1001,
+                  "image_url": null
+                },
+                {
+                  "sku_id": "P024",
+                  "product_name": "临期燕麦饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 690,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 1691,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_ORDER",
+                    "label": "商品满 100 元减 10 元",
+                    "amount_fen": 1,
+                    "eligibility": "eligible"
+                  },
+                  {
+                    "kind": "coupon",
+                    "id": "C_WEB",
+                    "label": "网页渠道 2 元券",
+                    "amount_fen": 200,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 1490,
+                "shipping_fen": 600,
+                "total_payable_fen": 2090,
+                "conditions": []
+              },
+              "reasons": [
+                "海苔脆片独立小包，给对应对象分次取用方便",
+                "饼干是低糖标签，适合偏好低糖的一方"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。",
+                "需求组 1：临期燕麦饼干 × 1",
+                "需求组 2：原味海苔脆片 × 1",
+                "以上对象合并为一个订单计价；优惠券只使用一次。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_673ca4d5d624f57fff98",
+              "plan_type": "bundle",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_biscuits",
+              "items": [
+                {
+                  "sku_id": "P001",
+                  "product_name": "原味燕麦小饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 1001,
+                  "image_url": null
+                },
+                {
+                  "sku_id": "P002",
+                  "product_name": "原味海苔脆片",
+                  "quantity": 1,
+                  "unit_price_fen": 1001,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 2002,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_ORDER",
+                    "label": "商品满 100 元减 10 元",
+                    "amount_fen": 1,
+                    "eligibility": "eligible"
+                  },
+                  {
+                    "kind": "coupon",
+                    "id": "C_WEB",
+                    "label": "网页渠道 2 元券",
+                    "amount_fen": 200,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 1801,
+                "shipping_fen": 600,
+                "total_payable_fen": 2401,
+                "conditions": []
+              },
+              "reasons": [
+                "燕麦小饼干低糖标签，独立小包方便分给对应对象",
+                "海苔脆片不辣且独立内包装，适合另一对象单独取用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "需求组 1：原味燕麦小饼干 × 1",
+                "需求组 2：原味海苔脆片 × 1",
+                "以上对象合并为一个订单计价；优惠券只使用一次。"
+              ]
+            }
+          ],
+          "turn_id": "turn_d9558266b57145b7b2f790b2a220c4d8",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_biscuits": {
+            "P002": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P003": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P004": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P005": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P006": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P007": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P008": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P009": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P010": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P011": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P012": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P013": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P014": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P015": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P016": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P018": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P020": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P021": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P022": [
+              "stock_unknown_or_empty",
+              "constraint:c_cat_biscuits"
+            ],
+            "P023": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P025": [
+              "expired_or_unknown"
+            ],
+            "P026": [
+              "price_unknown",
+              "constraint:c_cat_biscuits"
+            ],
+            "P027": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P028": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P029": [
+              "constraint:c_cat_biscuits"
+            ],
+            "P030": [
+              "constraint:c_cat_biscuits"
+            ]
+          },
+          "group_seaweed": {
+            "P001": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P003": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P004": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P005": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P006": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P007": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P008": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P009": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P010": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P011": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P012": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P013": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P014": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P015": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P016": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P017": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P018": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P019": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P020": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P021": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P022": [
+              "stock_unknown_or_empty"
+            ],
+            "P023": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P024": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P025": [
+              "expired_or_unknown",
+              "constraint:c_cat_seaweed"
+            ],
+            "P026": [
+              "price_unknown"
+            ],
+            "P027": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P028": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P029": [
+              "constraint:c_cat_seaweed"
+            ],
+            "P030": [
+              "constraint:c_cat_seaweed"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 4,
+        "priced_cart_count": 4,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 2,
+        "reply_review_passed": true
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "一件饼干一件海苔",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_biscuits",
+            "label": "饼干",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_cat_biscuits",
+                "field": "category",
+                "operator": "include",
+                "value": "biscuits",
+                "strength": "hard",
+                "source_text": "一件饼干",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_qty_biscuits",
+                "field": "quantity",
+                "operator": "equals",
+                "value": 1,
+                "strength": "hard",
+                "source_text": "一件饼干",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          },
+          {
+            "group_id": "group_seaweed",
+            "label": "海苔",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_cat_seaweed",
+                "field": "category",
+                "operator": "include",
+                "value": "seaweed",
+                "strength": "hard",
+                "source_text": "一件海苔",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_qty_seaweed",
+                "field": "quantity",
+                "operator": "equals",
+                "value": 1,
+                "strength": "hard",
+                "source_text": "一件海苔",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.308
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "一件饼干一件海苔",
+        "need_summary": "给不同对象分别搭配",
+        "plans": [
+          {
+            "plan_id": "plan_7f41f967df9415492f69",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 1001,
+                "image_url": null
+              },
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f18",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p1_f19",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p1_f20",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p1_f21",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f22",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f23",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p1_f25",
+                "kind": "pricing",
+                "text": "含运费20.90元；商品应付14.90元。"
+              },
+              {
+                "id": "p1_f26",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p1_f27",
+                "kind": "need_match",
+                "text": "对于需求 category include seaweed，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f33",
+                "kind": "offer",
+                "text": "已计入商品满 100 元减 10 元、网页渠道 2 元券。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_673ca4d5d624f57fff98",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 1001,
+                "image_url": null
+              },
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 1001,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "原味燕麦小饼干，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "原味燕麦小饼干：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "原味燕麦小饼干：低糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "原味燕麦小饼干：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "原味燕麦小饼干：ingredients=['oats', 'wheat', 'soy']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "原味燕麦小饼干：declared_allergens=['gluten', 'soy']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味燕麦小饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "原味燕麦小饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "原味燕麦小饼干：scene_tags=['office', 'breakfast']"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p2_f19",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p2_f20",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p2_f21",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f22",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f23",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p2_f25",
+                "kind": "pricing",
+                "text": "含运费24.01元；商品应付18.01元。"
+              },
+              {
+                "id": "p2_f26",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p2_f27",
+                "kind": "need_match",
+                "text": "对于需求 category include seaweed，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p2_f32",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              },
+              {
+                "id": "p2_f33",
+                "kind": "offer",
+                "text": "已计入商品满 100 元减 10 元、网页渠道 2 元券。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_7f41f967df9415492f69",
+            "reasons": [
+              {
+                "text": "海苔脆片独立小包，给对应对象分次取用方便",
+                "fact_ids": [
+                  "p1_f5",
+                  "p1_f11"
+                ]
+              },
+              {
+                "text": "饼干是低糖标签，适合偏好低糖的一方",
+                "fact_ids": [
+                  "p1_f15"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_673ca4d5d624f57fff98",
+            "reasons": [
+              {
+                "text": "燕麦小饼干低糖标签，独立小包方便分给对应对象",
+                "fact_ids": [
+                  "p2_f3",
+                  "p2_f5"
+                ]
+              },
+              {
+                "text": "海苔脆片不辣且独立内包装，适合另一对象单独取用",
+                "fact_ids": [
+                  "p2_f14",
+                  "p2_f17"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 1.345
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "一件饼干一件海苔",
+        "need_summary": "给不同对象分别搭配",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_biscuits",
+              "label": "饼干",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_cat_biscuits",
+                  "field": "category",
+                  "operator": "include",
+                  "value": "biscuits",
+                  "strength": "hard",
+                  "source_text": "一件饼干",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_d9558266b57145b7b2f790b2a220c4d8"
+                },
+                {
+                  "constraint_id": "c_qty_biscuits",
+                  "field": "quantity",
+                  "operator": "equals",
+                  "value": 1,
+                  "strength": "hard",
+                  "source_text": "一件饼干",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_d9558266b57145b7b2f790b2a220c4d8"
+                }
+              ]
+            },
+            {
+              "group_id": "group_seaweed",
+              "label": "海苔",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_cat_seaweed",
+                  "field": "category",
+                  "operator": "include",
+                  "value": "seaweed",
+                  "strength": "hard",
+                  "source_text": "一件海苔",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_d9558266b57145b7b2f790b2a220c4d8"
+                },
+                {
+                  "constraint_id": "c_qty_seaweed",
+                  "field": "quantity",
+                  "operator": "equals",
+                  "value": 1,
+                  "strength": "hard",
+                  "source_text": "一件海苔",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_d9558266b57145b7b2f790b2a220c4d8"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_7f41f967df9415492f69",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 1001,
+                "image_url": null
+              },
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 1691,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_ORDER",
+                  "label": "商品满 100 元减 10 元",
+                  "amount_fen": 1,
+                  "eligibility": "eligible"
+                },
+                {
+                  "kind": "coupon",
+                  "id": "C_WEB",
+                  "label": "网页渠道 2 元券",
+                  "amount_fen": 200,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 1490,
+              "shipping_fen": 600,
+              "total_payable_fen": 2090,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味海苔脆片：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f18",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p1_f19",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p1_f20",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p1_f21",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f22",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f23",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p1_f24",
+                "kind": "expiry",
+                "text": "临期燕麦饼干：标注到期时间 2026-10-20T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f25",
+                "kind": "pricing",
+                "text": "含运费20.90元；商品应付14.90元。"
+              },
+              {
+                "id": "p1_f26",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p1_f27",
+                "kind": "need_match",
+                "text": "对于需求 category include seaweed，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f28",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f29",
+                "kind": "boundary",
+                "text": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              },
+              {
+                "id": "p1_f30",
+                "kind": "boundary",
+                "text": "需求组 1：临期燕麦饼干 × 1"
+              },
+              {
+                "id": "p1_f31",
+                "kind": "boundary",
+                "text": "需求组 2：原味海苔脆片 × 1"
+              },
+              {
+                "id": "p1_f32",
+                "kind": "boundary",
+                "text": "以上对象合并为一个订单计价；优惠券只使用一次。"
+              },
+              {
+                "id": "p1_f33",
+                "kind": "offer",
+                "text": "已计入商品满 100 元减 10 元、网页渠道 2 元券。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_673ca4d5d624f57fff98",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 1001,
+                "image_url": null
+              },
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 1001,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2002,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_ORDER",
+                  "label": "商品满 100 元减 10 元",
+                  "amount_fen": 1,
+                  "eligibility": "eligible"
+                },
+                {
+                  "kind": "coupon",
+                  "id": "C_WEB",
+                  "label": "网页渠道 2 元券",
+                  "amount_fen": 200,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 1801,
+              "shipping_fen": 600,
+              "total_payable_fen": 2401,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "原味燕麦小饼干，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "原味燕麦小饼干：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "原味燕麦小饼干：低糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "原味燕麦小饼干：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "原味燕麦小饼干：ingredients=['oats', 'wheat', 'soy']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "原味燕麦小饼干：declared_allergens=['gluten', 'soy']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味燕麦小饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "原味燕麦小饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "原味燕麦小饼干：scene_tags=['office', 'breakfast']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "原味燕麦小饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p2_f19",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p2_f20",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p2_f21",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f22",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f23",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p2_f24",
+                "kind": "expiry",
+                "text": "原味海苔脆片：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f25",
+                "kind": "pricing",
+                "text": "含运费24.01元；商品应付18.01元。"
+              },
+              {
+                "id": "p2_f26",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p2_f27",
+                "kind": "need_match",
+                "text": "对于需求 category include seaweed，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p2_f28",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f29",
+                "kind": "boundary",
+                "text": "需求组 1：原味燕麦小饼干 × 1"
+              },
+              {
+                "id": "p2_f30",
+                "kind": "boundary",
+                "text": "需求组 2：原味海苔脆片 × 1"
+              },
+              {
+                "id": "p2_f31",
+                "kind": "boundary",
+                "text": "以上对象合并为一个订单计价；优惠券只使用一次。"
+              },
+              {
+                "id": "p2_f32",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              },
+              {
+                "id": "p2_f33",
+                "kind": "offer",
+                "text": "已计入商品满 100 元减 10 元、网页渠道 2 元券。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "给不同对象分别搭配",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味海苔脆片（1件） + 临期燕麦饼干（1件）",
+          "p1_price": "含运费20.90元",
+          "p1_notice": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。 需求组 1：临期燕麦饼干 × 1",
+          "p1_offer": "已计入商品满 100 元减 10 元、网页渠道 2 元券。",
+          "p2_items": "原味燕麦小饼干（1件） + 原味海苔脆片（1件）",
+          "p2_price": "含运费24.01元",
+          "p2_difference": "总价比首选高一些",
+          "p2_offer": "已计入商品满 100 元减 10 元、网页渠道 2 元券。",
+          "p1_reason_1": "海苔脆片独立小包，给对应对象分次取用方便",
+          "p1_reason_2": "饼干是低糖标签，适合偏好低糖的一方",
+          "p2_reason_1": "燕麦小饼干低糖标签，独立小包方便分给对应对象",
+          "p2_reason_2": "海苔脆片不辣且独立内包装，适合另一对象单独取用"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_7f41f967df9415492f69",
+              "reasons": [
+                {
+                  "text": "海苔脆片独立小包，给对应对象分次取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f11"
+                  ]
+                },
+                {
+                  "text": "饼干是低糖标签，适合偏好低糖的一方",
+                  "fact_ids": [
+                    "p1_f15"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_673ca4d5d624f57fff98",
+              "reasons": [
+                {
+                  "text": "燕麦小饼干低糖标签，独立小包方便分给对应对象",
+                  "fact_ids": [
+                    "p2_f3",
+                    "p2_f5"
+                  ]
+                },
+                {
+                  "text": "海苔脆片不辣且独立内包装，适合另一对象单独取用",
+                  "fact_ids": [
+                    "p2_f14",
+                    "p2_f17"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，按{{need_summary}}来帮您搭了两套，一件饼干配一件海苔，分开都能有对应的小份装😊\n\n首选是{{p1_items}}，这套里{{p1_reason_1}}，给不同对象分着拿都顺手，{{p1_price}}。不过要提醒您，{{p1_notice}}\n\n备选是{{p2_items}}，同样是饼干加海苔的搭配，{{p2_reason_1}}，{{p2_difference}}，{{p2_price}}。两套都{{p2_offer}}\n\n{{follow_up}}"
+      },
+      "seconds": 1.226
+    },
+    {
+      "stage": "compose_reply",
+      "repair": "不能省略或重复临期、预算、运费等提醒或已计入优惠\n上次错误草稿（不是事实）：{\"template\": \"亲～，按{{need_summary}}来帮您搭了两套，一件饼干配一件海苔，分开都能有对应的小份装😊\\n\\n首选是{{p1_items}}，这套里{{p1_reason_1}}，给不同对象分着拿都顺手，{{p1_price}}。不过要提醒您，{{p1_notice}}\\n\\n备选是{{p2_items}}，同样是饼干加海苔的搭配，{{p2_reason_1}}，{{p2_difference}}，{{p2_price}}。两套都{{p2_offer}}\\n\\n{{follow_up}}\"}",
+      "input": {
+        "user_message": "一件饼干一件海苔",
+        "need_summary": "给不同对象分别搭配",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_biscuits",
+              "label": "饼干",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_cat_biscuits",
+                  "field": "category",
+                  "operator": "include",
+                  "value": "biscuits",
+                  "strength": "hard",
+                  "source_text": "一件饼干",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_d9558266b57145b7b2f790b2a220c4d8"
+                },
+                {
+                  "constraint_id": "c_qty_biscuits",
+                  "field": "quantity",
+                  "operator": "equals",
+                  "value": 1,
+                  "strength": "hard",
+                  "source_text": "一件饼干",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_d9558266b57145b7b2f790b2a220c4d8"
+                }
+              ]
+            },
+            {
+              "group_id": "group_seaweed",
+              "label": "海苔",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_cat_seaweed",
+                  "field": "category",
+                  "operator": "include",
+                  "value": "seaweed",
+                  "strength": "hard",
+                  "source_text": "一件海苔",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_d9558266b57145b7b2f790b2a220c4d8"
+                },
+                {
+                  "constraint_id": "c_qty_seaweed",
+                  "field": "quantity",
+                  "operator": "equals",
+                  "value": 1,
+                  "strength": "hard",
+                  "source_text": "一件海苔",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_d9558266b57145b7b2f790b2a220c4d8"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_7f41f967df9415492f69",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 1001,
+                "image_url": null
+              },
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 1691,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_ORDER",
+                  "label": "商品满 100 元减 10 元",
+                  "amount_fen": 1,
+                  "eligibility": "eligible"
+                },
+                {
+                  "kind": "coupon",
+                  "id": "C_WEB",
+                  "label": "网页渠道 2 元券",
+                  "amount_fen": 200,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 1490,
+              "shipping_fen": 600,
+              "total_payable_fen": 2090,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味海苔脆片：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f18",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p1_f19",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p1_f20",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p1_f21",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f22",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f23",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p1_f24",
+                "kind": "expiry",
+                "text": "临期燕麦饼干：标注到期时间 2026-10-20T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f25",
+                "kind": "pricing",
+                "text": "含运费20.90元；商品应付14.90元。"
+              },
+              {
+                "id": "p1_f26",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p1_f27",
+                "kind": "need_match",
+                "text": "对于需求 category include seaweed，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f28",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f29",
+                "kind": "boundary",
+                "text": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              },
+              {
+                "id": "p1_f30",
+                "kind": "boundary",
+                "text": "需求组 1：临期燕麦饼干 × 1"
+              },
+              {
+                "id": "p1_f31",
+                "kind": "boundary",
+                "text": "需求组 2：原味海苔脆片 × 1"
+              },
+              {
+                "id": "p1_f32",
+                "kind": "boundary",
+                "text": "以上对象合并为一个订单计价；优惠券只使用一次。"
+              },
+              {
+                "id": "p1_f33",
+                "kind": "offer",
+                "text": "已计入商品满 100 元减 10 元、网页渠道 2 元券。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_673ca4d5d624f57fff98",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 1001,
+                "image_url": null
+              },
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 1001,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2002,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_ORDER",
+                  "label": "商品满 100 元减 10 元",
+                  "amount_fen": 1,
+                  "eligibility": "eligible"
+                },
+                {
+                  "kind": "coupon",
+                  "id": "C_WEB",
+                  "label": "网页渠道 2 元券",
+                  "amount_fen": 200,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 1801,
+              "shipping_fen": 600,
+              "total_payable_fen": 2401,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "原味燕麦小饼干，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "原味燕麦小饼干：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "原味燕麦小饼干：低糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "原味燕麦小饼干：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "原味燕麦小饼干：ingredients=['oats', 'wheat', 'soy']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "原味燕麦小饼干：declared_allergens=['gluten', 'soy']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味燕麦小饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "原味燕麦小饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "原味燕麦小饼干：scene_tags=['office', 'breakfast']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "原味燕麦小饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p2_f19",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p2_f20",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p2_f21",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f22",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f23",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p2_f24",
+                "kind": "expiry",
+                "text": "原味海苔脆片：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f25",
+                "kind": "pricing",
+                "text": "含运费24.01元；商品应付18.01元。"
+              },
+              {
+                "id": "p2_f26",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p2_f27",
+                "kind": "need_match",
+                "text": "对于需求 category include seaweed，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p2_f28",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f29",
+                "kind": "boundary",
+                "text": "需求组 1：原味燕麦小饼干 × 1"
+              },
+              {
+                "id": "p2_f30",
+                "kind": "boundary",
+                "text": "需求组 2：原味海苔脆片 × 1"
+              },
+              {
+                "id": "p2_f31",
+                "kind": "boundary",
+                "text": "以上对象合并为一个订单计价；优惠券只使用一次。"
+              },
+              {
+                "id": "p2_f32",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              },
+              {
+                "id": "p2_f33",
+                "kind": "offer",
+                "text": "已计入商品满 100 元减 10 元、网页渠道 2 元券。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "给不同对象分别搭配",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味海苔脆片（1件） + 临期燕麦饼干（1件）",
+          "p1_price": "含运费20.90元",
+          "p1_notice": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。 需求组 1：临期燕麦饼干 × 1",
+          "p1_offer": "已计入商品满 100 元减 10 元、网页渠道 2 元券。",
+          "p2_items": "原味燕麦小饼干（1件） + 原味海苔脆片（1件）",
+          "p2_price": "含运费24.01元",
+          "p2_difference": "总价比首选高一些",
+          "p2_offer": "已计入商品满 100 元减 10 元、网页渠道 2 元券。",
+          "p1_reason_1": "海苔脆片独立小包，给对应对象分次取用方便",
+          "p1_reason_2": "饼干是低糖标签，适合偏好低糖的一方",
+          "p2_reason_1": "燕麦小饼干低糖标签，独立小包方便分给对应对象",
+          "p2_reason_2": "海苔脆片不辣且独立内包装，适合另一对象单独取用"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_7f41f967df9415492f69",
+              "reasons": [
+                {
+                  "text": "海苔脆片独立小包，给对应对象分次取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f11"
+                  ]
+                },
+                {
+                  "text": "饼干是低糖标签，适合偏好低糖的一方",
+                  "fact_ids": [
+                    "p1_f15"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_673ca4d5d624f57fff98",
+              "reasons": [
+                {
+                  "text": "燕麦小饼干低糖标签，独立小包方便分给对应对象",
+                  "fact_ids": [
+                    "p2_f3",
+                    "p2_f5"
+                  ]
+                },
+                {
+                  "text": "海苔脆片不辣且独立内包装，适合另一对象单独取用",
+                  "fact_ids": [
+                    "p2_f14",
+                    "p2_f17"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，按{{need_summary}}来帮您搭了两套，一件饼干配一件海苔，分开都能有对应的小份装😊\n\n首选是{{p1_items}}，其中{{p1_reason_1}}，饼干也是低糖标签，给偏好低糖的一方更合适，{{p1_price}}，{{p1_offer}}不过要提醒您，{{p1_notice}}\n\n备选是{{p2_items}}，{{p2_reason_1}}，{{p2_difference}}，{{p2_price}}，{{p2_offer}}\n\n{{follow_up}}"
+      },
+      "seconds": 1.407
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "一件饼干一件海苔",
+        "need_summary": "给不同对象分别搭配",
+        "plans": [
+          {
+            "plan_id": "plan_7f41f967df9415492f69",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 1001,
+                "image_url": null
+              },
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 1691,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_ORDER",
+                  "label": "商品满 100 元减 10 元",
+                  "amount_fen": 1,
+                  "eligibility": "eligible"
+                },
+                {
+                  "kind": "coupon",
+                  "id": "C_WEB",
+                  "label": "网页渠道 2 元券",
+                  "amount_fen": 200,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 1490,
+              "shipping_fen": 600,
+              "total_payable_fen": 2090,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味海苔脆片：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f18",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p1_f19",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p1_f20",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p1_f21",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f22",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f23",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p1_f24",
+                "kind": "expiry",
+                "text": "临期燕麦饼干：标注到期时间 2026-10-20T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f25",
+                "kind": "pricing",
+                "text": "含运费20.90元；商品应付14.90元。"
+              },
+              {
+                "id": "p1_f26",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p1_f27",
+                "kind": "need_match",
+                "text": "对于需求 category include seaweed，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f28",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f29",
+                "kind": "boundary",
+                "text": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              },
+              {
+                "id": "p1_f30",
+                "kind": "boundary",
+                "text": "需求组 1：临期燕麦饼干 × 1"
+              },
+              {
+                "id": "p1_f31",
+                "kind": "boundary",
+                "text": "需求组 2：原味海苔脆片 × 1"
+              },
+              {
+                "id": "p1_f32",
+                "kind": "boundary",
+                "text": "以上对象合并为一个订单计价；优惠券只使用一次。"
+              },
+              {
+                "id": "p1_f33",
+                "kind": "offer",
+                "text": "已计入商品满 100 元减 10 元、网页渠道 2 元券。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_673ca4d5d624f57fff98",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 1001,
+                "image_url": null
+              },
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 1001,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2002,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_ORDER",
+                  "label": "商品满 100 元减 10 元",
+                  "amount_fen": 1,
+                  "eligibility": "eligible"
+                },
+                {
+                  "kind": "coupon",
+                  "id": "C_WEB",
+                  "label": "网页渠道 2 元券",
+                  "amount_fen": 200,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 1801,
+              "shipping_fen": 600,
+              "total_payable_fen": 2401,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "原味燕麦小饼干，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "原味燕麦小饼干：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "原味燕麦小饼干：低糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "原味燕麦小饼干：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "原味燕麦小饼干：ingredients=['oats', 'wheat', 'soy']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "原味燕麦小饼干：declared_allergens=['gluten', 'soy']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味燕麦小饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "原味燕麦小饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "原味燕麦小饼干：scene_tags=['office', 'breakfast']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "原味燕麦小饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p2_f19",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p2_f20",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p2_f21",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f22",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f23",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p2_f24",
+                "kind": "expiry",
+                "text": "原味海苔脆片：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f25",
+                "kind": "pricing",
+                "text": "含运费24.01元；商品应付18.01元。"
+              },
+              {
+                "id": "p2_f26",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p2_f27",
+                "kind": "need_match",
+                "text": "对于需求 category include seaweed，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p2_f28",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f29",
+                "kind": "boundary",
+                "text": "需求组 1：原味燕麦小饼干 × 1"
+              },
+              {
+                "id": "p2_f30",
+                "kind": "boundary",
+                "text": "需求组 2：原味海苔脆片 × 1"
+              },
+              {
+                "id": "p2_f31",
+                "kind": "boundary",
+                "text": "以上对象合并为一个订单计价；优惠券只使用一次。"
+              },
+              {
+                "id": "p2_f32",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              },
+              {
+                "id": "p2_f33",
+                "kind": "offer",
+                "text": "已计入商品满 100 元减 10 元、网页渠道 2 元券。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "给不同对象分别搭配",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味海苔脆片（1件） + 临期燕麦饼干（1件）",
+          "p1_price": "含运费20.90元",
+          "p1_notice": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。 需求组 1：临期燕麦饼干 × 1",
+          "p1_offer": "已计入商品满 100 元减 10 元、网页渠道 2 元券。",
+          "p2_items": "原味燕麦小饼干（1件） + 原味海苔脆片（1件）",
+          "p2_price": "含运费24.01元",
+          "p2_difference": "总价比首选高一些",
+          "p2_offer": "已计入商品满 100 元减 10 元、网页渠道 2 元券。",
+          "p1_reason_1": "海苔脆片独立小包，给对应对象分次取用方便",
+          "p1_reason_2": "饼干是低糖标签，适合偏好低糖的一方",
+          "p2_reason_1": "燕麦小饼干低糖标签，独立小包方便分给对应对象",
+          "p2_reason_2": "海苔脆片不辣且独立内包装，适合另一对象单独取用"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_7f41f967df9415492f69",
+              "reasons": [
+                {
+                  "text": "海苔脆片独立小包，给对应对象分次取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f11"
+                  ]
+                },
+                {
+                  "text": "饼干是低糖标签，适合偏好低糖的一方",
+                  "fact_ids": [
+                    "p1_f15"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_673ca4d5d624f57fff98",
+              "reasons": [
+                {
+                  "text": "燕麦小饼干低糖标签，独立小包方便分给对应对象",
+                  "fact_ids": [
+                    "p2_f3",
+                    "p2_f5"
+                  ]
+                },
+                {
+                  "text": "海苔脆片不辣且独立内包装，适合另一对象单独取用",
+                  "fact_ids": [
+                    "p2_f14",
+                    "p2_f17"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，按{{need_summary}}来帮您搭了两套，一件饼干配一件海苔，分开都能有对应的小份装😊\n\n首选是{{p1_items}}，其中{{p1_reason_1}}，饼干也是低糖标签，给偏好低糖的一方更合适，{{p1_price}}，{{p1_offer}}不过要提醒您，{{p1_notice}}\n\n备选是{{p2_items}}，{{p2_reason_1}}，{{p2_difference}}，{{p2_price}}，{{p2_offer}}\n\n{{follow_up}}",
+        "reply": "亲～，按给不同对象分别搭配来帮您搭了两套，一件饼干配一件海苔，分开都能有对应的小份装😊\n\n首选是原味海苔脆片（1件） + 临期燕麦饼干（1件），其中海苔脆片独立小包，给对应对象分次取用方便，饼干也是低糖标签，给偏好低糖的一方更合适，含运费20.90元，已计入商品满 100 元减 10 元、网页渠道 2 元券。不过要提醒您，临期燕麦饼干为临期商品，标注到期日为2026年10月20日。 需求组 1：临期燕麦饼干 × 1\n\n备选是原味燕麦小饼干（1件） + 原味海苔脆片（1件），燕麦小饼干低糖标签，独立小包方便分给对应对象，总价比首选高一些，含运费24.01元，已计入商品满 100 元减 10 元、网页渠道 2 元券。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 0.774
+    }
+  ],
+  "pricing_goldens": [
+    {
+      "id": "G049",
+      "passed": true,
+      "expected": {
+        "eligible": true,
+        "activity_discount_fen": 1,
+        "coupon_discount_fen": 0,
+        "merchandise_payable_fen": 2001,
+        "shipping_fen": 600,
+        "total_payable_fen": 2601,
+        "pricing_status": "confirmed",
+        "gifts": [],
+        "line_allocations": [
+          {
+            "sku_id": "P001",
+            "activity_discount_fen": 1,
+            "coupon_discount_fen": 0
+          },
+          {
+            "sku_id": "P002",
+            "activity_discount_fen": 0,
+            "coupon_discount_fen": 0
+          }
+        ]
+      },
+      "actual": {
+        "eligible": true,
+        "activity_id": "A_ORDER",
+        "coupon_id": null,
+        "activity_discount_fen": 1,
+        "coupon_discount_fen": 0,
+        "merchandise_payable_fen": 2001,
+        "shipping_fen": 600,
+        "total_payable_fen": 2601,
+        "pricing_status": "confirmed",
+        "coupon_conditional": false,
+        "gifts": [],
+        "line_allocations": [
+          {
+            "sku_id": "P001",
+            "activity_discount_fen": 1,
+            "coupon_discount_fen": 0,
+            "payable_fen": 1000
+          },
+          {
+            "sku_id": "P002",
+            "activity_discount_fen": 0,
+            "coupon_discount_fen": 0,
+            "payable_fen": 1001
+          }
+        ]
+      }
+    }
+  ],
+  "seconds": 6.104,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "completed"
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "关联固定购物方案的独立数值基准",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": true
+}

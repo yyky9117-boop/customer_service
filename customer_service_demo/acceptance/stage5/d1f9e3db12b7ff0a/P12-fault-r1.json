@@ -1,0 +1,1388 @@
+{
+  "case_id": "P12",
+  "title": "用券反而更贵",
+  "repetition": 1,
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "executed_at": "2026-10-08T13:18:50.617944+00:00",
+  "layer": "fault_injection_with_real_model",
+  "intervention": "compare_only_G022_G023",
+  "intervention_applied": true,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_1a2f4e9a799d4b7081c8b8b37b5d9f9d",
+        "request_id": "req_bffe462f5a324593a057200d43ad759c",
+        "expected_revision": 1,
+        "message": "在这两个方案里，含运费算哪个更划算",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_1a2f4e9a799d4b7081c8b8b37b5d9f9d",
+        "request_id": "req_bffe462f5a324593a057200d43ad759c",
+        "turn_id": "turn_e7a5dd6a2c4c4896a3df0ea4c379d796",
+        "base_revision": 1,
+        "revision": 2,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_061d20b4a29a43dd8a977a3116128635",
+          "role": "assistant",
+          "content": "亲～，如果按含运费来对比，这次其实只看到一个可选的方案😊\n\n首选是原味燕麦小饼干（1件），独立内包装，办公室分次取用方便，含运费91.00元，已计入满 100 元减 15 元不可叠加券。这次它也是你口味偏好比较一致的选择。\n\n不过要提醒一下，这个方案其实只有一款商品，没有其他备选可以横向比较，所以“哪个更划算”目前只能看它本身。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_2877a9b56a754b2e86ad",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P001",
+                  "product_name": "原味燕麦小饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 10000,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 10000,
+                "discounts": [
+                  {
+                    "kind": "coupon",
+                    "id": "C_NO_STACK",
+                    "label": "满 100 元减 15 元不可叠加券",
+                    "amount_fen": 1500,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 8500,
+                "shipping_fen": 600,
+                "total_payable_fen": 9100,
+                "conditions": []
+              },
+              "reasons": [
+                "独立内包装，办公室分次取用方便",
+                "低糖低甜度，符合低糖偏好"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_1a2f4e9a799d4b7081c8b8b37b5d9f9d",
+        "revision": 2,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_self",
+                "label": "固定比价",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_seed",
+                    "field": "other",
+                    "operator": "equals",
+                    "value": "sku:P001",
+                    "strength": "hard",
+                    "source_text": "原味燕麦小饼干",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_seed_222d4d71f29f4fd3849526a1115446d4"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_061d20b4a29a43dd8a977a3116128635",
+              "turn_id": "turn_e7a5dd6a2c4c4896a3df0ea4c379d796",
+              "plan_order": [
+                {
+                  "plan_id": "plan_2877a9b56a754b2e86ad",
+                  "sku_ids": [
+                    "P001"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_a515b4d6b9774356b17e6560e938f8bd",
+          "role": "user",
+          "content": "已选择一件原味燕麦小饼干，比较以下两个明确的优惠方案",
+          "turn_id": "turn_0892b572d7214607ac3ab03e9cb542f5"
+        },
+        {
+          "id": "msg_8b02ca77c6ff4800ae86e796b9a6a9e0",
+          "role": "assistant",
+          "content": "这是待比较的两个固定方案，不代表全部优惠中的最优方案。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_31332ff5affc5f3c57f4",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P001",
+                  "product_name": "原味燕麦小饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 10000,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 10000,
+                "discounts": [
+                  {
+                    "kind": "coupon",
+                    "id": "C_WEB",
+                    "label": "网页渠道 2 元券",
+                    "amount_fen": 200,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 9800,
+                "shipping_fen": 600,
+                "total_payable_fen": 10400,
+                "conditions": []
+              },
+              "reasons": [
+                "符合已确认的硬条件和基础购买数量。",
+                "商品应付和运费分别列出，便于比较实际支出。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_dacd83c9fc971c2ab844",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P001",
+                  "product_name": "原味燕麦小饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 10000,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 10000,
+                "discounts": [],
+                "merchandise_payable_fen": 10000,
+                "shipping_fen": 0,
+                "total_payable_fen": 10000,
+                "conditions": []
+              },
+              "reasons": [
+                "符合已确认的硬条件和基础购买数量。",
+                "商品应付和运费分别列出，便于比较实际支出。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_0892b572d7214607ac3ab03e9cb542f5",
+          "status": "completed"
+        },
+        {
+          "id": "msg_db0287e3be7c4961a358903d407ec64b",
+          "role": "user",
+          "content": "在这两个方案里，含运费算哪个更划算",
+          "turn_id": "turn_e7a5dd6a2c4c4896a3df0ea4c379d796"
+        },
+        {
+          "id": "msg_061d20b4a29a43dd8a977a3116128635",
+          "role": "assistant",
+          "content": "亲～，如果按含运费来对比，这次其实只看到一个可选的方案😊\n\n首选是原味燕麦小饼干（1件），独立内包装，办公室分次取用方便，含运费91.00元，已计入满 100 元减 15 元不可叠加券。这次它也是你口味偏好比较一致的选择。\n\n不过要提醒一下，这个方案其实只有一款商品，没有其他备选可以横向比较，所以“哪个更划算”目前只能看它本身。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_2877a9b56a754b2e86ad",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P001",
+                  "product_name": "原味燕麦小饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 10000,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 10000,
+                "discounts": [
+                  {
+                    "kind": "coupon",
+                    "id": "C_NO_STACK",
+                    "label": "满 100 元减 15 元不可叠加券",
+                    "amount_fen": 1500,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 8500,
+                "shipping_fen": 600,
+                "total_payable_fen": 9100,
+                "conditions": []
+              },
+              "reasons": [
+                "独立内包装，办公室分次取用方便",
+                "低糖低甜度，符合低糖偏好"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_e7a5dd6a2c4c4896a3df0ea4c379d796",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_self": {
+            "P002": [
+              "constraint:c_seed"
+            ],
+            "P003": [
+              "constraint:c_seed"
+            ],
+            "P004": [
+              "constraint:c_seed"
+            ],
+            "P005": [
+              "constraint:c_seed"
+            ],
+            "P006": [
+              "constraint:c_seed"
+            ],
+            "P007": [
+              "constraint:c_seed"
+            ],
+            "P008": [
+              "constraint:c_seed"
+            ],
+            "P009": [
+              "constraint:c_seed"
+            ],
+            "P010": [
+              "constraint:c_seed"
+            ],
+            "P011": [
+              "constraint:c_seed"
+            ],
+            "P012": [
+              "constraint:c_seed"
+            ],
+            "P013": [
+              "constraint:c_seed"
+            ],
+            "P014": [
+              "constraint:c_seed"
+            ],
+            "P015": [
+              "constraint:c_seed"
+            ],
+            "P016": [
+              "constraint:c_seed"
+            ],
+            "P017": [
+              "constraint:c_seed"
+            ],
+            "P018": [
+              "constraint:c_seed"
+            ],
+            "P019": [
+              "constraint:c_seed"
+            ],
+            "P020": [
+              "constraint:c_seed"
+            ],
+            "P021": [
+              "constraint:c_seed"
+            ],
+            "P022": [
+              "stock_unknown_or_empty",
+              "constraint:c_seed"
+            ],
+            "P023": [
+              "constraint:c_seed"
+            ],
+            "P024": [
+              "constraint:c_seed"
+            ],
+            "P025": [
+              "expired_or_unknown",
+              "constraint:c_seed"
+            ],
+            "P026": [
+              "price_unknown",
+              "constraint:c_seed"
+            ],
+            "P027": [
+              "constraint:c_seed"
+            ],
+            "P028": [
+              "constraint:c_seed"
+            ],
+            "P029": [
+              "constraint:c_seed"
+            ],
+            "P030": [
+              "constraint:c_seed"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 1,
+        "priced_cart_count": 1,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 1,
+        "reply_review_passed": true
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "在这两个方案里，含运费算哪个更划算",
+        "module_state": {
+          "need_groups": [
+            {
+              "group_id": "group_self",
+              "label": "固定比价",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_seed",
+                  "field": "other",
+                  "operator": "equals",
+                  "value": "sku:P001",
+                  "strength": "hard",
+                  "source_text": "原味燕麦小饼干",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_seed_222d4d71f29f4fd3849526a1115446d4"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": {
+            "message_id": "msg_8b02ca77c6ff4800ae86e796b9a6a9e0",
+            "turn_id": "turn_0892b572d7214607ac3ab03e9cb542f5",
+            "plan_order": [
+              {
+                "plan_id": "plan_31332ff5affc5f3c57f4",
+                "sku_ids": [
+                  "P001"
+                ]
+              },
+              {
+                "plan_id": "plan_dacd83c9fc971c2ab844",
+                "sku_ids": [
+                  "P001"
+                ]
+              }
+            ]
+          },
+          "shared_budget": null
+        },
+        "history": [
+          {
+            "id": "msg_a515b4d6b9774356b17e6560e938f8bd",
+            "role": "user",
+            "content": "已选择一件原味燕麦小饼干，比较以下两个明确的优惠方案",
+            "turn_id": "turn_0892b572d7214607ac3ab03e9cb542f5"
+          },
+          {
+            "id": "msg_8b02ca77c6ff4800ae86e796b9a6a9e0",
+            "role": "assistant",
+            "content": "这是待比较的两个固定方案，不代表全部优惠中的最优方案。",
+            "cards": [
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_31332ff5affc5f3c57f4",
+                "plan_type": "single_product",
+                "title": "首选方案",
+                "rank": 1,
+                "group_id": "group_self",
+                "items": [
+                  {
+                    "sku_id": "P001",
+                    "product_name": "原味燕麦小饼干",
+                    "quantity": 1,
+                    "unit_price_fen": 10000,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 10000,
+                  "discounts": [
+                    {
+                      "kind": "coupon",
+                      "id": "C_WEB",
+                      "label": "网页渠道 2 元券",
+                      "amount_fen": 200,
+                      "eligibility": "eligible"
+                    }
+                  ],
+                  "merchandise_payable_fen": 9800,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 10400,
+                  "conditions": []
+                },
+                "reasons": [
+                  "符合已确认的硬条件和基础购买数量。",
+                  "商品应付和运费分别列出，便于比较实际支出。"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。"
+                ]
+              },
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_dacd83c9fc971c2ab844",
+                "plan_type": "single_product",
+                "title": "备选方案 1",
+                "rank": 2,
+                "group_id": "group_self",
+                "items": [
+                  {
+                    "sku_id": "P001",
+                    "product_name": "原味燕麦小饼干",
+                    "quantity": 1,
+                    "unit_price_fen": 10000,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 10000,
+                  "discounts": [],
+                  "merchandise_payable_fen": 10000,
+                  "shipping_fen": 0,
+                  "total_payable_fen": 10000,
+                  "conditions": []
+                },
+                "reasons": [
+                  "符合已确认的硬条件和基础购买数量。",
+                  "商品应付和运费分别列出，便于比较实际支出。"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。"
+                ]
+              }
+            ],
+            "turn_id": "turn_0892b572d7214607ac3ab03e9cb542f5",
+            "status": "completed"
+          }
+        ],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": [],
+        "reference_action": "recommend_alternatives",
+        "reference_source_text": "在这两个方案里，含运费算哪个更划算"
+      },
+      "seconds": 1.039
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "在这两个方案里，含运费算哪个更划算",
+        "need_summary": "你这次的零食需求",
+        "plans": [
+          {
+            "plan_id": "plan_2877a9b56a754b2e86ad",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 10000,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味燕麦小饼干，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味燕麦小饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味燕麦小饼干：低糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味燕麦小饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味燕麦小饼干：ingredients=['oats', 'wheat', 'soy']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味燕麦小饼干：declared_allergens=['gluten', 'soy']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味燕麦小饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味燕麦小饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味燕麦小饼干：scene_tags=['office', 'breakfast']"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费91.00元；商品应付85.00元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P001，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "offer",
+                "text": "已计入满 100 元减 15 元不可叠加券。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_2877a9b56a754b2e86ad",
+            "reasons": [
+              {
+                "text": "独立内包装，办公室分次取用方便",
+                "fact_ids": [
+                  "p1_f5",
+                  "p1_f11"
+                ]
+              },
+              {
+                "text": "低糖低甜度，符合低糖偏好",
+                "fact_ids": [
+                  "p1_f3",
+                  "p1_f4"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 0.925
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "在这两个方案里，含运费算哪个更划算",
+        "need_summary": "你这次的零食需求",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_self",
+              "label": "固定比价",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_seed",
+                  "field": "other",
+                  "operator": "equals",
+                  "value": "sku:P001",
+                  "strength": "hard",
+                  "source_text": "原味燕麦小饼干",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_seed_222d4d71f29f4fd3849526a1115446d4"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": {
+            "message_id": "msg_8b02ca77c6ff4800ae86e796b9a6a9e0",
+            "turn_id": "turn_0892b572d7214607ac3ab03e9cb542f5",
+            "plan_order": [
+              {
+                "plan_id": "plan_31332ff5affc5f3c57f4",
+                "sku_ids": [
+                  "P001"
+                ]
+              },
+              {
+                "plan_id": "plan_dacd83c9fc971c2ab844",
+                "sku_ids": [
+                  "P001"
+                ]
+              }
+            ]
+          },
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_2877a9b56a754b2e86ad",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 10000,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 10000,
+              "discounts": [
+                {
+                  "kind": "coupon",
+                  "id": "C_NO_STACK",
+                  "label": "满 100 元减 15 元不可叠加券",
+                  "amount_fen": 1500,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 8500,
+              "shipping_fen": 600,
+              "total_payable_fen": 9100,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味燕麦小饼干，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味燕麦小饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味燕麦小饼干：低糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味燕麦小饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味燕麦小饼干：ingredients=['oats', 'wheat', 'soy']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味燕麦小饼干：declared_allergens=['gluten', 'soy']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味燕麦小饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味燕麦小饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味燕麦小饼干：scene_tags=['office', 'breakfast']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味燕麦小饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费91.00元；商品应付85.00元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P001，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "offer",
+                "text": "已计入满 100 元减 15 元不可叠加券。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "你这次的零食需求",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味燕麦小饼干（1件）",
+          "p1_price": "含运费91.00元",
+          "p1_offer": "已计入满 100 元减 15 元不可叠加券。",
+          "p1_reason_1": "独立内包装，办公室分次取用方便",
+          "p1_reason_2": "低糖低甜度，符合低糖偏好"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_2877a9b56a754b2e86ad",
+              "reasons": [
+                {
+                  "text": "独立内包装，办公室分次取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f11"
+                  ]
+                },
+                {
+                  "text": "低糖低甜度，符合低糖偏好",
+                  "fact_ids": [
+                    "p1_f3",
+                    "p1_f4"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，如果按含运费来对比，这次其实只看到一个可选的方案😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}，{{p1_offer}}这次它也是你口味偏好比较一致的选择。\n\n不过要提醒一下，这个方案其实只有一款商品，没有其他备选可以横向比较，所以“哪个更划算”目前只能看它本身。\n\n{{follow_up}}"
+      },
+      "seconds": 1.044
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "在这两个方案里，含运费算哪个更划算",
+        "need_summary": "你这次的零食需求",
+        "plans": [
+          {
+            "plan_id": "plan_2877a9b56a754b2e86ad",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 10000,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 10000,
+              "discounts": [
+                {
+                  "kind": "coupon",
+                  "id": "C_NO_STACK",
+                  "label": "满 100 元减 15 元不可叠加券",
+                  "amount_fen": 1500,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 8500,
+              "shipping_fen": 600,
+              "total_payable_fen": 9100,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味燕麦小饼干，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味燕麦小饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味燕麦小饼干：低糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味燕麦小饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味燕麦小饼干：ingredients=['oats', 'wheat', 'soy']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味燕麦小饼干：declared_allergens=['gluten', 'soy']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味燕麦小饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味燕麦小饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味燕麦小饼干：scene_tags=['office', 'breakfast']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味燕麦小饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费91.00元；商品应付85.00元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P001，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "offer",
+                "text": "已计入满 100 元减 15 元不可叠加券。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "你这次的零食需求",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味燕麦小饼干（1件）",
+          "p1_price": "含运费91.00元",
+          "p1_offer": "已计入满 100 元减 15 元不可叠加券。",
+          "p1_reason_1": "独立内包装，办公室分次取用方便",
+          "p1_reason_2": "低糖低甜度，符合低糖偏好"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_2877a9b56a754b2e86ad",
+              "reasons": [
+                {
+                  "text": "独立内包装，办公室分次取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f11"
+                  ]
+                },
+                {
+                  "text": "低糖低甜度，符合低糖偏好",
+                  "fact_ids": [
+                    "p1_f3",
+                    "p1_f4"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，如果按含运费来对比，这次其实只看到一个可选的方案😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}，{{p1_offer}}这次它也是你口味偏好比较一致的选择。\n\n不过要提醒一下，这个方案其实只有一款商品，没有其他备选可以横向比较，所以“哪个更划算”目前只能看它本身。\n\n{{follow_up}}",
+        "reply": "亲～，如果按含运费来对比，这次其实只看到一个可选的方案😊\n\n首选是原味燕麦小饼干（1件），独立内包装，办公室分次取用方便，含运费91.00元，已计入满 100 元减 15 元不可叠加券。这次它也是你口味偏好比较一致的选择。\n\n不过要提醒一下，这个方案其实只有一款商品，没有其他备选可以横向比较，所以“哪个更划算”目前只能看它本身。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 0.981
+    }
+  ],
+  "concurrency_evidence": null,
+  "preload": {
+    "source": "explicit_structured_fixture_not_model_understanding",
+    "response": {
+      "schema_version": "1.0",
+      "conversation_id": "conv_1a2f4e9a799d4b7081c8b8b37b5d9f9d",
+      "request_id": "req_seed_e02086f39c3d451ba234c6f0c4d82ef0",
+      "turn_id": "turn_0892b572d7214607ac3ab03e9cb542f5",
+      "base_revision": 0,
+      "revision": 1,
+      "module": "product_recommendation",
+      "status": "completed",
+      "message": {
+        "id": "msg_8b02ca77c6ff4800ae86e796b9a6a9e0",
+        "role": "assistant",
+        "content": "这是待比较的两个固定方案，不代表全部优惠中的最优方案。",
+        "cards": [
+          {
+            "type": "recommendation_plan",
+            "plan_id": "plan_31332ff5affc5f3c57f4",
+            "plan_type": "single_product",
+            "title": "首选方案",
+            "rank": 1,
+            "group_id": "group_self",
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 10000,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 10000,
+              "discounts": [
+                {
+                  "kind": "coupon",
+                  "id": "C_WEB",
+                  "label": "网页渠道 2 元券",
+                  "amount_fen": 200,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 9800,
+              "shipping_fen": 600,
+              "total_payable_fen": 10400,
+              "conditions": []
+            },
+            "reasons": [
+              "符合已确认的硬条件和基础购买数量。",
+              "商品应付和运费分别列出，便于比较实际支出。"
+            ],
+            "notes": [
+              "商品、身份与优惠为演示资料。"
+            ]
+          },
+          {
+            "type": "recommendation_plan",
+            "plan_id": "plan_dacd83c9fc971c2ab844",
+            "plan_type": "single_product",
+            "title": "备选方案 1",
+            "rank": 2,
+            "group_id": "group_self",
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 10000,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 10000,
+              "discounts": [],
+              "merchandise_payable_fen": 10000,
+              "shipping_fen": 0,
+              "total_payable_fen": 10000,
+              "conditions": []
+            },
+            "reasons": [
+              "符合已确认的硬条件和基础购买数量。",
+              "商品应付和运费分别列出，便于比较实际支出。"
+            ],
+            "notes": [
+              "商品、身份与优惠为演示资料。"
+            ]
+          }
+        ]
+      },
+      "clarification": null,
+      "error": null
+    }
+  },
+  "pricing_goldens": [
+    {
+      "id": "G022",
+      "passed": true,
+      "expected": {
+        "eligible": true,
+        "activity_discount_fen": 0,
+        "coupon_discount_fen": 200,
+        "merchandise_payable_fen": 9800,
+        "shipping_fen": 600,
+        "total_payable_fen": 10400,
+        "pricing_status": "confirmed",
+        "gifts": []
+      },
+      "actual": {
+        "eligible": true,
+        "activity_id": null,
+        "coupon_id": "C_WEB",
+        "activity_discount_fen": 0,
+        "coupon_discount_fen": 200,
+        "merchandise_payable_fen": 9800,
+        "shipping_fen": 600,
+        "total_payable_fen": 10400,
+        "pricing_status": "confirmed",
+        "coupon_conditional": false,
+        "gifts": [],
+        "line_allocations": [
+          {
+            "sku_id": "P001",
+            "activity_discount_fen": 0,
+            "coupon_discount_fen": 200,
+            "payable_fen": 9800
+          }
+        ]
+      }
+    },
+    {
+      "id": "G023",
+      "passed": true,
+      "expected": {
+        "eligible": true,
+        "activity_discount_fen": 0,
+        "coupon_discount_fen": 0,
+        "merchandise_payable_fen": 10000,
+        "shipping_fen": 0,
+        "total_payable_fen": 10000,
+        "pricing_status": "confirmed",
+        "gifts": []
+      },
+      "actual": {
+        "eligible": true,
+        "activity_id": null,
+        "coupon_id": null,
+        "activity_discount_fen": 0,
+        "coupon_discount_fen": 0,
+        "merchandise_payable_fen": 10000,
+        "shipping_fen": 0,
+        "total_payable_fen": 10000,
+        "pricing_status": "confirmed",
+        "coupon_conditional": false,
+        "gifts": [],
+        "line_allocations": [
+          {
+            "sku_id": "P001",
+            "activity_discount_fen": 0,
+            "coupon_discount_fen": 0,
+            "payable_fen": 10000
+          }
+        ]
+      }
+    }
+  ],
+  "seconds": 4.055,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "completed"
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "关联固定购物方案的独立数值基准",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "指定故障或对抗介入已实际应用",
+      "passed": true,
+      "actual": "compare_only_G022_G023"
+    },
+    {
+      "name": "仅两个固定候选中含运费100元优于104元",
+      "passed": false,
+      "actual": null
+    }
+  ],
+  "passed": false
+}

@@ -1,0 +1,316 @@
+{
+  "case_id": "L04",
+  "title": "双重否定不排除全部坚果",
+  "repetition": 4,
+  "implementation_hash": "2e9c47bbd36d1749",
+  "executed_at": "2026-10-08T12:55:47.634563+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_58e4a263822f47348a9f16499d6c3e42",
+        "expected_revision": 0,
+        "message": "不是不能吃坚果，只是不喜欢花生，预算 50 元以内",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_17f10ba76f514a3aa5cf0f274ed1c550",
+        "request_id": "req_58e4a263822f47348a9f16499d6c3e42",
+        "turn_id": "turn_1e33164177144444b162dc28bbbb2dea",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "needs_clarification",
+        "message": {
+          "id": "msg_3b695a6ea9e141ddbe51176e7b85ae3b",
+          "role": "assistant",
+          "content": "这个预算是每份、商品合计，还是包含运费的整单金额？",
+          "cards": []
+        },
+        "clarification": {
+          "question": "这个预算是每份、商品合计，还是包含运费的整单金额？",
+          "asked_fields": [
+            "budget_scope"
+          ],
+          "group_id": null
+        },
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_17f10ba76f514a3aa5cf0f274ed1c550",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_self",
+                "label": "零食推荐",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": 5000,
+                  "strictness": "strict",
+                  "scope": "unknown",
+                  "source_text": "预算 50 元以内",
+                  "min_is_hard": false,
+                  "source_turn_id": "turn_1e33164177144444b162dc28bbbb2dea"
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_peanut_avoid",
+                    "field": "ingredient",
+                    "operator": "exclude",
+                    "value": "ingredient:peanut",
+                    "strength": "soft",
+                    "source_text": "只是不喜欢花生",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_1e33164177144444b162dc28bbbb2dea"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": {
+              "question": "这个预算是每份、商品合计，还是包含运费的整单金额？",
+              "asked_fields": [
+                "budget_scope"
+              ],
+              "group_id": null
+            },
+            "last_presentation": null,
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_e0e51b61a06e4b45a72442a770b8d47e",
+          "role": "user",
+          "content": "不是不能吃坚果，只是不喜欢花生，预算 50 元以内",
+          "turn_id": "turn_1e33164177144444b162dc28bbbb2dea"
+        },
+        {
+          "id": "msg_3b695a6ea9e141ddbe51176e7b85ae3b",
+          "role": "assistant",
+          "content": "这个预算是每份、商品合计，还是包含运费的整单金额？",
+          "cards": [],
+          "turn_id": "turn_1e33164177144444b162dc28bbbb2dea",
+          "status": "needs_clarification"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {},
+        "quarantined_skus": []
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "不是不能吃坚果，只是不喜欢花生，预算 50 元以内",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "零食推荐",
+            "budget": {
+              "min_fen": null,
+              "max_fen": 5000,
+              "strictness": "strict",
+              "scope": "unknown",
+              "source_text": "预算 50 元以内",
+              "min_is_hard": false
+            },
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_peanut_avoid",
+                "field": "ingredient",
+                "operator": "exclude",
+                "value": "ingredient:peanut",
+                "strength": "soft",
+                "source_text": "只是不喜欢花生",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.807
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 1.842,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": false,
+      "actual": "needs_clarification"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "追问最多两个字段",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "双重否定没有排除所有坚果",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "普通不喜欢花生为软排除",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": false
+}

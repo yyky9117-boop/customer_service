@@ -1,0 +1,724 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:snack-customer-service:contracts:v1:common",
+  "title": "共用对象",
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,80}$"
+    },
+    "clarification": {
+      "type": "object",
+      "properties": {
+        "question": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "asked_fields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 1,
+          "maxItems": 2,
+          "uniqueItems": true
+        },
+        "group_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{1,80}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "question",
+        "asked_fields",
+        "group_id"
+      ],
+      "additionalProperties": false
+    },
+    "recommendation_card": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "recommendation_plan"
+        },
+        "plan_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,80}$"
+        },
+        "plan_type": {
+          "type": "string",
+          "enum": [
+            "single_product",
+            "multi_quantity",
+            "bundle",
+            "add_on",
+            "gift_plan"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "rank": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "group_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,80}$"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "sku_id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]{1,80}$"
+              },
+              "product_name": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "quantity": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 999
+              },
+              "unit_price_fen": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "image_url": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "uri",
+                    "pattern": "^https?://"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "sku_id",
+              "product_name",
+              "quantity",
+              "unit_price_fen",
+              "image_url"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 12
+        },
+        "pricing": {
+          "type": "object",
+          "properties": {
+            "currency": {
+              "const": "CNY"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "confirmed",
+                "conditional",
+                "unknown"
+              ]
+            },
+            "subtotal_fen": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "discounts": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "type": "string",
+                    "enum": [
+                      "activity",
+                      "coupon"
+                    ]
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_-]{1,80}$"
+                  },
+                  "label": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "amount_fen": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "eligibility": {
+                    "type": "string",
+                    "enum": [
+                      "eligible",
+                      "conditional"
+                    ]
+                  }
+                },
+                "required": [
+                  "kind",
+                  "id",
+                  "label",
+                  "amount_fen",
+                  "eligibility"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 0
+            },
+            "merchandise_payable_fen": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "shipping_fen": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "total_payable_fen": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "conditions": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "currency",
+            "status",
+            "subtotal_fen",
+            "discounts",
+            "merchandise_payable_fen",
+            "shipping_fen",
+            "total_payable_fen",
+            "conditions"
+          ],
+          "additionalProperties": false
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 1,
+          "maxItems": 3
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 0
+        },
+        "gifts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "sku_id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]{1,80}$"
+              },
+              "product_name": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "quantity": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 999
+              },
+              "image_url": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "uri",
+                    "pattern": "^https?://"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "sku_id",
+              "product_name",
+              "quantity",
+              "image_url"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "type",
+        "plan_id",
+        "plan_type",
+        "title",
+        "rank",
+        "group_id",
+        "items",
+        "pricing",
+        "reasons",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "recommendation_state": {
+      "type": "object",
+      "properties": {
+        "need_groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "group_id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]{1,80}$"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "budget": {
+                "type": "object",
+                "properties": {
+                  "min_fen": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "max_fen": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "strictness": {
+                    "type": "string",
+                    "enum": [
+                      "strict",
+                      "approximate",
+                      "unknown"
+                    ]
+                  },
+                  "scope": {
+                    "type": "string",
+                    "enum": [
+                      "per_unit",
+                      "per_recipient",
+                      "goods_total",
+                      "order_total",
+                      "unknown"
+                    ]
+                  },
+                  "source_turn_id": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[A-Za-z0-9_-]{1,80}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "source_text": {
+                    "type": "string",
+                    "maxLength": 2000
+                  },
+                  "min_is_hard": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "min_fen",
+                  "max_fen",
+                  "strictness",
+                  "scope",
+                  "source_turn_id",
+                  "source_text"
+                ],
+                "additionalProperties": false
+              },
+              "constraints": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "constraint_id": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z0-9_-]{1,80}$"
+                    },
+                    "field": {
+                      "type": "string",
+                      "enum": [
+                        "category",
+                        "taste",
+                        "package",
+                        "ingredient",
+                        "scene",
+                        "purpose",
+                        "quantity",
+                        "gift_need",
+                        "other"
+                      ]
+                    },
+                    "operator": {
+                      "type": "string",
+                      "enum": [
+                        "include",
+                        "exclude",
+                        "equals",
+                        "at_least",
+                        "at_most"
+                      ]
+                    },
+                    "value": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "minLength": 1,
+                          "pattern": "\\S"
+                        },
+                        {
+                          "type": "boolean"
+                        },
+                        {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "minLength": 1,
+                            "pattern": "\\S"
+                          },
+                          "minItems": 1
+                        }
+                      ]
+                    },
+                    "strength": {
+                      "type": "string",
+                      "enum": [
+                        "hard",
+                        "soft"
+                      ]
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "active",
+                        "pending",
+                        "removed"
+                      ]
+                    },
+                    "source_turn_id": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z0-9_-]{1,80}$"
+                    },
+                    "source_text": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "\\S",
+                      "maxLength": 2000
+                    },
+                    "origin": {
+                      "type": "string",
+                      "enum": [
+                        "explicit",
+                        "inferred"
+                      ]
+                    },
+                    "derived_from": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "pattern": "^[A-Za-z0-9_-]{1,80}$"
+                      },
+                      "minItems": 0,
+                      "uniqueItems": true
+                    }
+                  },
+                  "required": [
+                    "constraint_id",
+                    "field",
+                    "operator",
+                    "value",
+                    "strength",
+                    "status",
+                    "source_turn_id",
+                    "source_text"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "group_id",
+              "label",
+              "budget",
+              "constraints"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "pending_clarification": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "question": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "asked_fields": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "minItems": 1,
+                  "maxItems": 2,
+                  "uniqueItems": true
+                },
+                "group_id": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^[A-Za-z0-9_-]{1,80}$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "question",
+                "asked_fields",
+                "group_id"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "last_presentation": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "message_id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9_-]{1,80}$"
+                },
+                "turn_id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9_-]{1,80}$"
+                },
+                "plan_order": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "plan_id": {
+                        "type": "string",
+                        "pattern": "^[A-Za-z0-9_-]{1,80}$"
+                      },
+                      "sku_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[A-Za-z0-9_-]{1,80}$"
+                        },
+                        "minItems": 1,
+                        "uniqueItems": true
+                      }
+                    },
+                    "required": [
+                      "plan_id",
+                      "sku_ids"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "minItems": 0,
+                  "maxItems": 3
+                }
+              },
+              "required": [
+                "message_id",
+                "turn_id",
+                "plan_order"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "shared_budget": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "min_fen": {
+                  "anyOf": [
+                    {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "max_fen": {
+                  "anyOf": [
+                    {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "strictness": {
+                  "type": "string",
+                  "enum": [
+                    "strict",
+                    "approximate",
+                    "unknown"
+                  ]
+                },
+                "scope": {
+                  "type": "string",
+                  "enum": [
+                    "per_unit",
+                    "per_recipient",
+                    "goods_total",
+                    "order_total",
+                    "unknown"
+                  ]
+                },
+                "source_turn_id": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^[A-Za-z0-9_-]{1,80}$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "source_text": {
+                  "type": "string",
+                  "maxLength": 2000
+                },
+                "min_is_hard": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "min_fen",
+                "max_fen",
+                "strictness",
+                "scope",
+                "source_turn_id",
+                "source_text"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "need_groups",
+        "pending_clarification",
+        "last_presentation"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

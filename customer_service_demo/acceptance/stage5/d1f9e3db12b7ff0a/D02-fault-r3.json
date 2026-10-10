@@ -1,0 +1,948 @@
+{
+  "case_id": "D02",
+  "title": "不得添加销量评价承诺",
+  "repetition": 3,
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "executed_at": "2026-10-08T13:08:35.324339+00:00",
+  "layer": "fault_injection_with_real_model",
+  "intervention": null,
+  "intervention_applied": true,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_7310557aa87f4a03935cb8fd6dd4b554",
+        "expected_revision": 0,
+        "message": "推荐海苔",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_e0dc737326104c95a51cdc2a70fea784",
+        "request_id": "req_7310557aa87f4a03935cb8fd6dd4b554",
+        "turn_id": "turn_37abb4fdc0a04a99bf3972078c33a54f",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_82f714a4df3b4419bbc98e9753b3e373",
+          "role": "assistant",
+          "content": "亲～，看了下你这次的零食需求，先给你挑了一款海苔😊\n\n首选是原味海苔脆片（1件），不辣原味海苔，适合办公室或看剧时当零食，含运费15.90元。\n\n想改数量或搭配可以选中卡片上的商品继续聊，想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_12ba4af7a3746dc22dff",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_seaweed",
+              "items": [
+                {
+                  "sku_id": "P002",
+                  "product_name": "原味海苔脆片",
+                  "quantity": 1,
+                  "unit_price_fen": 990,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 990,
+                "discounts": [],
+                "merchandise_payable_fen": 990,
+                "shipping_fen": 600,
+                "total_payable_fen": 1590,
+                "conditions": []
+              },
+              "reasons": [
+                "不辣原味海苔，适合办公室或看剧时当零食",
+                "独立内包装，每包5克，分次取用方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_e0dc737326104c95a51cdc2a70fea784",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_seaweed",
+                "label": "海苔零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_seafood_category",
+                    "field": "category",
+                    "operator": "include",
+                    "value": [
+                      "seaweed"
+                    ],
+                    "strength": "hard",
+                    "source_text": "海苔",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_37abb4fdc0a04a99bf3972078c33a54f"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_82f714a4df3b4419bbc98e9753b3e373",
+              "turn_id": "turn_37abb4fdc0a04a99bf3972078c33a54f",
+              "plan_order": [
+                {
+                  "plan_id": "plan_12ba4af7a3746dc22dff",
+                  "sku_ids": [
+                    "P002"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_f5bcd7b44ba147b88c209cbc2484066b",
+          "role": "user",
+          "content": "推荐海苔",
+          "turn_id": "turn_37abb4fdc0a04a99bf3972078c33a54f"
+        },
+        {
+          "id": "msg_82f714a4df3b4419bbc98e9753b3e373",
+          "role": "assistant",
+          "content": "亲～，看了下你这次的零食需求，先给你挑了一款海苔😊\n\n首选是原味海苔脆片（1件），不辣原味海苔，适合办公室或看剧时当零食，含运费15.90元。\n\n想改数量或搭配可以选中卡片上的商品继续聊，想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_12ba4af7a3746dc22dff",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_seaweed",
+              "items": [
+                {
+                  "sku_id": "P002",
+                  "product_name": "原味海苔脆片",
+                  "quantity": 1,
+                  "unit_price_fen": 990,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 990,
+                "discounts": [],
+                "merchandise_payable_fen": 990,
+                "shipping_fen": 600,
+                "total_payable_fen": 1590,
+                "conditions": []
+              },
+              "reasons": [
+                "不辣原味海苔，适合办公室或看剧时当零食",
+                "独立内包装，每包5克，分次取用方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_37abb4fdc0a04a99bf3972078c33a54f",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_seaweed": {
+            "P022": [
+              "stock_unknown_or_empty"
+            ],
+            "P026": [
+              "price_unknown"
+            ],
+            "P001": [
+              "constraint:c_seafood_category"
+            ],
+            "P003": [
+              "constraint:c_seafood_category"
+            ],
+            "P004": [
+              "constraint:c_seafood_category"
+            ],
+            "P005": [
+              "constraint:c_seafood_category"
+            ],
+            "P006": [
+              "constraint:c_seafood_category"
+            ],
+            "P007": [
+              "constraint:c_seafood_category"
+            ],
+            "P008": [
+              "constraint:c_seafood_category"
+            ],
+            "P009": [
+              "constraint:c_seafood_category"
+            ],
+            "P010": [
+              "constraint:c_seafood_category"
+            ],
+            "P011": [
+              "constraint:c_seafood_category"
+            ],
+            "P012": [
+              "constraint:c_seafood_category"
+            ],
+            "P013": [
+              "constraint:c_seafood_category"
+            ],
+            "P014": [
+              "constraint:c_seafood_category"
+            ],
+            "P015": [
+              "constraint:c_seafood_category"
+            ],
+            "P016": [
+              "constraint:c_seafood_category"
+            ],
+            "P017": [
+              "constraint:c_seafood_category"
+            ],
+            "P018": [
+              "constraint:c_seafood_category"
+            ],
+            "P019": [
+              "constraint:c_seafood_category"
+            ],
+            "P020": [
+              "constraint:c_seafood_category"
+            ],
+            "P021": [
+              "constraint:c_seafood_category"
+            ],
+            "P023": [
+              "constraint:c_seafood_category"
+            ],
+            "P024": [
+              "constraint:c_seafood_category"
+            ],
+            "P025": [
+              "expired_or_unknown",
+              "constraint:c_seafood_category"
+            ],
+            "P027": [
+              "constraint:c_seafood_category"
+            ],
+            "P028": [
+              "constraint:c_seafood_category"
+            ],
+            "P029": [
+              "constraint:c_seafood_category"
+            ],
+            "P030": [
+              "constraint:c_seafood_category"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 1,
+        "priced_cart_count": 1,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 2,
+        "reply_review_passed": true
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "推荐海苔",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_seaweed",
+            "label": "海苔零食",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_seafood_category",
+                "field": "category",
+                "operator": "include",
+                "value": [
+                  "seaweed"
+                ],
+                "strength": "hard",
+                "source_text": "海苔",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": [
+          "P002",
+          "P022",
+          "P026"
+        ]
+      },
+      "seconds": 1.121
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "推荐海苔",
+        "need_summary": "你这次的零食需求",
+        "plans": [
+          {
+            "plan_id": "plan_12ba4af7a3746dc22dff",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 990,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费15.90元；商品应付9.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include ['seaweed']，符合的商品仅为：原味海苔脆片。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_12ba4af7a3746dc22dff",
+            "reasons": [
+              {
+                "text": "不辣原味海苔，适合办公室或看剧时当零食",
+                "fact_ids": [
+                  "p1_f2",
+                  "p1_f11"
+                ]
+              },
+              {
+                "text": "独立内包装，每包5克，分次取用方便",
+                "fact_ids": [
+                  "p1_f5",
+                  "p1_f6"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 1.005
+    },
+    {
+      "stage": "compose_reply",
+      "source": "fault_injection",
+      "output": {
+        "template": "亲～，按{{need_summary}}选择😊\n{{p1_items}}，{{p1_reason_1}}；{{p1_price}}。\n月销十万、全网最低，而且保证明天到。\n{{follow_up}}"
+      },
+      "repair": null
+    },
+    {
+      "stage": "compose_reply",
+      "repair": "回复包含夸大、无依据功效或内部术语\n上次错误草稿（不是事实）：{\"template\": \"亲～，按{{need_summary}}选择😊\\n{{p1_items}}，{{p1_reason_1}}；{{p1_price}}。\\n月销十万、全网最低，而且保证明天到。\\n{{follow_up}}\"}",
+      "input": {
+        "user_message": "推荐海苔",
+        "need_summary": "你这次的零食需求",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_seaweed",
+              "label": "海苔零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_seafood_category",
+                  "field": "category",
+                  "operator": "include",
+                  "value": [
+                    "seaweed"
+                  ],
+                  "strength": "hard",
+                  "source_text": "海苔",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_37abb4fdc0a04a99bf3972078c33a54f"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_12ba4af7a3746dc22dff",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 990,
+              "discounts": [],
+              "merchandise_payable_fen": 990,
+              "shipping_fen": 600,
+              "total_payable_fen": 1590,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味海苔脆片：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费15.90元；商品应付9.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include ['seaweed']，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "你这次的零食需求",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味海苔脆片（1件）",
+          "p1_price": "含运费15.90元",
+          "p1_reason_1": "不辣原味海苔，适合办公室或看剧时当零食",
+          "p1_reason_2": "独立内包装，每包5克，分次取用方便"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_12ba4af7a3746dc22dff",
+              "reasons": [
+                {
+                  "text": "不辣原味海苔，适合办公室或看剧时当零食",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f11"
+                  ]
+                },
+                {
+                  "text": "独立内包装，每包5克，分次取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f6"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，看了下{{need_summary}}，先给你挑了一款海苔😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}。\n\n想改数量或搭配可以选中卡片上的商品继续聊，{{follow_up}}"
+      },
+      "seconds": 1.023
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "推荐海苔",
+        "need_summary": "你这次的零食需求",
+        "plans": [
+          {
+            "plan_id": "plan_12ba4af7a3746dc22dff",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 990,
+              "discounts": [],
+              "merchandise_payable_fen": 990,
+              "shipping_fen": 600,
+              "total_payable_fen": 1590,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味海苔脆片：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费15.90元；商品应付9.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include ['seaweed']，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "你这次的零食需求",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味海苔脆片（1件）",
+          "p1_price": "含运费15.90元",
+          "p1_reason_1": "不辣原味海苔，适合办公室或看剧时当零食",
+          "p1_reason_2": "独立内包装，每包5克，分次取用方便"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_12ba4af7a3746dc22dff",
+              "reasons": [
+                {
+                  "text": "不辣原味海苔，适合办公室或看剧时当零食",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f11"
+                  ]
+                },
+                {
+                  "text": "独立内包装，每包5克，分次取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f6"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，看了下{{need_summary}}，先给你挑了一款海苔😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}。\n\n想改数量或搭配可以选中卡片上的商品继续聊，{{follow_up}}",
+        "reply": "亲～，看了下你这次的零食需求，先给你挑了一款海苔😊\n\n首选是原味海苔脆片（1件），不辣原味海苔，适合办公室或看剧时当零食，含运费15.90元。\n\n想改数量或搭配可以选中卡片上的商品继续聊，想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 0.895
+    }
+  ],
+  "concurrency_evidence": null,
+  "pricing_goldens": [],
+  "seconds": 4.08,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "completed"
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "无虚构评价销量、排名和送达承诺",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "错误话术被拦截后实际修复并复检",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": true
+}

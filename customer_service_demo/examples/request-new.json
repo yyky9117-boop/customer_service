@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0",
+  "conversation_id": null,
+  "request_id": "req_demo_001",
+  "expected_revision": 0,
+  "message": "100 元以内，办公室吃，独立小包，不要辣。",
+  "selected_reference": null
+}

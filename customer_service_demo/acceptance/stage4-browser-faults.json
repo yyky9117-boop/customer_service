@@ -1,0 +1,60 @@
+{
+  "verified_at": "2026-10-08T07:53:21.176Z",
+  "phase": "faults",
+  "real_model_used": true,
+  "fault_injection_used": true,
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "injected_failure_preserves_draft_and_hides_cards",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "failure_screenshot",
+      "passed": true,
+      "detail": "E:\\aipm\\mianshi\\customer_service_demo\\examples\\screenshots\\desktop-error.png"
+    },
+    {
+      "name": "retry_reuses_request_id_and_has_one_user_turn",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "lost_response_recovered_from_cache_after_refresh",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "cache_recovery_preserves_different_next_draft",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "navigation_during_history_load_keeps_new_chat_ready",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "injected_html_is_rendered_as_text",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "injected_stop_wait_preserves_uncertain_request",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "demo_profile_change_starts_new_conversation",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "browser_has_no_script_or_csp_errors",
+      "passed": true,
+      "detail": true
+    }
+  ],
+  "console_errors": []
+}

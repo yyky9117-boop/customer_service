@@ -1,0 +1,115 @@
+{
+  "verified_at": "2026-10-09T12:00:33.508Z",
+  "phase": "phone",
+  "real_model_used": true,
+  "fault_injection_used": false,
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "phone_starter_and_input_hint_are_visible",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "phone_queries_external_demo_database_and_lists_five_of_nine_orders",
+      "passed": true,
+      "detail": {
+        "content": "亲～，我按你提供的信息查了一下😊\n匹配到多笔订单，请选择需要查询的商城订单号\nSN-DEMO-0009：麻辣牛肉粒\nSN-DEMO-0008：零食组合装\nSN-DEMO-0007：原味腰果\nSN-DEMO-0006：海盐薯片\nSN-DEMO-0005：黄油曲奇饼干\n请点选其中一笔订单，或直接告诉我完整订单号，我再继续帮你看。若需要人工核实，本演示暂不提供人工服务。\n共匹配到9笔订单，当前展示最近5笔；也可以输入完整订单号继续查询。",
+        "buttons": [
+          "查询订单 SN-DEMO-0009",
+          "查询订单 SN-DEMO-0008",
+          "查询订单 SN-DEMO-0007",
+          "查询订单 SN-DEMO-0006",
+          "查询订单 SN-DEMO-0005"
+        ]
+      }
+    },
+    {
+      "name": "phone_candidate_screenshot",
+      "passed": true,
+      "detail": "E:\\aipm\\mianshi\\customer_service_demo\\examples\\screenshots\\phone-order-candidates.png"
+    },
+    {
+      "name": "phone_candidate_button_selects_pending_payment_order",
+      "passed": true,
+      "detail": "亲～，我帮你核对了一下😊\n订单 SN-DEMO-0009目前待付款。\n可以先在订单页面确认付款情况。"
+    },
+    {
+      "name": "select_order_outside_recent_five_and_query_mock_logistics",
+      "passed": true,
+      "detail": "亲～，我帮你查到了最新物流😊\n订单 SN-DEMO-0002目前已发货。包裹运输中，已离开上海分拨中心，发往杭州分拨中心。\n包裹预计2026-10-08 18:00送达，以后续物流更新为准。\n后续进度以快递更新为准，有变化可以再来查。（物流为本机模拟快递接口返回。）"
+    },
+    {
+      "name": "phone_query_selected_order_supports_followup",
+      "passed": true,
+      "detail": "亲～，我帮你确认了一下😊\n订单 SN-DEMO-0002目前已发货。\n如果想看包裹到哪了，也可以继续把订单号发给我，我帮你查最新物流。"
+    },
+    {
+      "name": "invalid_phone_is_explained_without_old_order_fallback",
+      "passed": true,
+      "detail": "这个手机号格式不完整或不正确，请提供11位下单手机号；也可以直接发送商城订单号。"
+    },
+    {
+      "name": "bare_corrected_phone_returns_candidate_orders",
+      "passed": true,
+      "detail": "亲～，我按你提供的信息查了一下😊\n匹配到多笔订单，请选择需要查询的商城订单号\nSN-DEMO-0009：麻辣牛肉粒\nSN-DEMO-0008：零食组合装\nSN-DEMO-0007：原味腰果\nSN-DEMO-0006：海盐薯片\nSN-DEMO-0005：黄油曲奇饼干\n点选你需要的订单，或者把完整订单号发给我，我再继续帮你看；具体问题需要人工核实的，本演示暂不提供人工服务。\n共匹配到9笔订单，当前展示最近5笔；也可以输入完整订单号继续查询。"
+    },
+    {
+      "name": "two_phone_numbers_clarify_before_order_lookup",
+      "passed": true,
+      "detail": "这次提供了多个手机号，请先指定一个下单手机号，我再查询对应订单。"
+    },
+    {
+      "name": "valid_unknown_phone_does_not_reuse_previous_candidates",
+      "passed": true,
+      "detail": "亲～，我按这次提供的信息查过了😊\n没有找到与你的账号及查询条件匹配的订单，不过没查到不代表订单不存在。你可以核对一下订单号或当前演示账号，再发给我看看；具体问题需要人工核实的，本演示暂不提供此服务。"
+    },
+    {
+      "name": "account_b_phone_single_match_returns_order_detail",
+      "passed": true,
+      "detail": "亲～，我帮你核对了这次的物流进度😊 订单 SN-DEMO-0010目前已发货，包裹运输中，已离开上海分拨中心，发往杭州分拨中心。关于到货时间，本轮接口没有给出可靠的预计送达时间，之后是否能查到也要以快递更新为准。本演示不提供人工服务，若具体问题需要人工核实，暂时无法进一步处理。（物流为本机模拟快递接口返回。）"
+    },
+    {
+      "name": "phone_cannot_expand_account_ownership",
+      "passed": true,
+      "detail": "亲～，我按这次提供的信息查过了😊 没有找到与你的账号及查询条件匹配的订单。你可以核对一下订单号或当前演示账号，再把信息发给我，我帮你重新查一次。本演示不提供人工服务，如需人工核实具体问题，暂时无法进一步处理。"
+    },
+    {
+      "name": "phone_order_history_restores_after_reload",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "phone_order_chat_fits_mobile",
+      "passed": true,
+      "detail": "E:\\aipm\\mianshi\\customer_service_demo\\examples\\screenshots\\phone-order-mobile.png"
+    },
+    {
+      "name": "actual_provider_usage",
+      "passed": true,
+      "detail": {
+        "before": {
+          "calls": 0,
+          "reported_total_tokens": 0,
+          "unreported_calls": 0,
+          "reserved_upper_bound": 0,
+          "charged_upper_bound": 0
+        },
+        "after": {
+          "calls": 24,
+          "reported_total_tokens": 24436,
+          "unreported_calls": 0,
+          "reserved_upper_bound": 291988,
+          "charged_upper_bound": 24436
+        },
+        "reported_tokens_delta": 24436
+      }
+    },
+    {
+      "name": "browser_has_no_script_or_csp_errors",
+      "passed": true,
+      "detail": true
+    }
+  ],
+  "console_errors": []
+}

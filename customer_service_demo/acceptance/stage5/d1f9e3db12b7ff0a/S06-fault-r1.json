@@ -1,0 +1,84 @@
+{
+  "case_id": "S06",
+  "title": "模型格式错误修复限次",
+  "repetition": 1,
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "executed_at": "2026-10-08T13:09:07.881279+00:00",
+  "layer": "fault_injection_with_real_model",
+  "intervention": "invalid_json_twice",
+  "intervention_applied": true,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_a976b6c6d4e041f58df3f42a2ee5c724",
+        "expected_revision": 0,
+        "message": "办公室不辣零食",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_a976b6c6d4e041f58df3f42a2ee5c724",
+        "turn_id": null,
+        "base_revision": 0,
+        "revision": 0,
+        "module": "product_recommendation",
+        "status": "error",
+        "message": {
+          "id": "msg_b5684dd51d0a4d1d8c4f2f68d8ceefdf",
+          "role": "assistant",
+          "content": "需求理解结果未通过核验，请重新描述；本轮未保存。",
+          "cards": []
+        },
+        "clarification": null,
+        "error": {
+          "code": "invalid_model_output",
+          "retryable": true
+        }
+      },
+      "session": null,
+      "history": [],
+      "diagnostics": null
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "source": "fault_injection",
+      "repair": null
+    },
+    {
+      "stage": "extract",
+      "source": "fault_injection",
+      "repair": "需求 JSON 结构错误: 'intent' is a required property"
+    }
+  ],
+  "concurrency_evidence": null,
+  "pricing_goldens": [],
+  "seconds": 0.018,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "error"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "指定故障或对抗介入已实际应用",
+      "passed": true,
+      "actual": "invalid_json_twice"
+    },
+    {
+      "name": "坏JSON最多修复一次且无提交",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": true
+}

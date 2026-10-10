@@ -1,0 +1,340 @@
+[
+  {
+    "coupon_id": "C_ALL",
+    "name": "商品满 50 元减 5 元",
+    "type": "amount_off",
+    "scope": {
+      "categories": [],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 5000,
+    "minus_fen": 500,
+    "discount_off_bps": 0,
+    "cap_fen": null,
+    "stack_with_activity": true,
+    "claimable": false,
+    "is_demo": true
+  },
+  {
+    "coupon_id": "C_NEW",
+    "name": "新客满 30 元减 3 元",
+    "type": "amount_off",
+    "scope": {
+      "categories": [],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": [
+        "new"
+      ]
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 3000,
+    "minus_fen": 300,
+    "discount_off_bps": 0,
+    "cap_fen": null,
+    "stack_with_activity": true,
+    "claimable": false,
+    "is_demo": true
+  },
+  {
+    "coupon_id": "C_VIP",
+    "name": "会员满 80 元减 8 元",
+    "type": "amount_off",
+    "scope": {
+      "categories": [],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [
+        "vip"
+      ],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 8000,
+    "minus_fen": 800,
+    "discount_off_bps": 0,
+    "cap_fen": null,
+    "stack_with_activity": true,
+    "claimable": false,
+    "is_demo": true
+  },
+  {
+    "coupon_id": "C_NUTS",
+    "name": "坚果满 60 元减 6 元",
+    "type": "amount_off",
+    "scope": {
+      "categories": [
+        "nuts"
+      ],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 6000,
+    "minus_fen": 600,
+    "discount_off_bps": 0,
+    "cap_fen": null,
+    "stack_with_activity": false,
+    "claimable": false,
+    "is_demo": true
+  },
+  {
+    "coupon_id": "C_BISCUIT",
+    "name": "饼干满 75 元减 5 元",
+    "type": "amount_off",
+    "scope": {
+      "categories": [
+        "biscuits"
+      ],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 7500,
+    "minus_fen": 500,
+    "discount_off_bps": 0,
+    "cap_fen": null,
+    "stack_with_activity": true,
+    "claimable": false,
+    "is_demo": true
+  },
+  {
+    "coupon_id": "C_CLAIM",
+    "name": "可领取的满 30 元减 3 元券",
+    "type": "amount_off",
+    "scope": {
+      "categories": [],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 3000,
+    "minus_fen": 300,
+    "discount_off_bps": 0,
+    "cap_fen": null,
+    "stack_with_activity": true,
+    "claimable": true,
+    "is_demo": true
+  },
+  {
+    "coupon_id": "C_USED",
+    "name": "已使用的 7 元券",
+    "type": "amount_off",
+    "scope": {
+      "categories": [],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 0,
+    "minus_fen": 700,
+    "discount_off_bps": 0,
+    "cap_fen": null,
+    "stack_with_activity": true,
+    "claimable": false,
+    "is_demo": true
+  },
+  {
+    "coupon_id": "C_WEB",
+    "name": "网页渠道 2 元券",
+    "type": "amount_off",
+    "scope": {
+      "categories": [],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 0,
+    "minus_fen": 200,
+    "discount_off_bps": 0,
+    "cap_fen": null,
+    "stack_with_activity": true,
+    "claimable": false,
+    "is_demo": true
+  },
+  {
+    "coupon_id": "C_FUTURE",
+    "name": "明日才生效的券",
+    "type": "amount_off",
+    "scope": {
+      "categories": [],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-08T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 0,
+    "minus_fen": 1000,
+    "discount_off_bps": 0,
+    "cap_fen": null,
+    "stack_with_activity": true,
+    "claimable": false,
+    "is_demo": true
+  },
+  {
+    "coupon_id": "C_EXPIRED",
+    "name": "已过期的券",
+    "type": "amount_off",
+    "scope": {
+      "categories": [],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-10-07T00:00:00+08:00",
+    "threshold_fen": 0,
+    "minus_fen": 1000,
+    "discount_off_bps": 0,
+    "cap_fen": null,
+    "stack_with_activity": true,
+    "claimable": false,
+    "is_demo": true
+  },
+  {
+    "coupon_id": "C_NO_STACK",
+    "name": "满 100 元减 15 元不可叠加券",
+    "type": "amount_off",
+    "scope": {
+      "categories": [],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 10000,
+    "minus_fen": 1500,
+    "discount_off_bps": 0,
+    "cap_fen": null,
+    "stack_with_activity": false,
+    "claimable": false,
+    "is_demo": true
+  },
+  {
+    "coupon_id": "C_GRAIN",
+    "name": "谷物棒满 50 元 8 折最多减 12 元",
+    "type": "percentage",
+    "scope": {
+      "categories": [
+        "grain_bar"
+      ],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 5000,
+    "minus_fen": 0,
+    "discount_off_bps": 2000,
+    "cap_fen": 1200,
+    "stack_with_activity": true,
+    "claimable": false,
+    "is_demo": true
+  },
+  {
+    "coupon_id": "C_SCOPE",
+    "name": "海苔和苏打饼干满 20 元减 2 元",
+    "type": "amount_off",
+    "scope": {
+      "categories": [],
+      "sku_ids": [
+        "P002",
+        "P019"
+      ]
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 2000,
+    "minus_fen": 200,
+    "discount_off_bps": 0,
+    "cap_fen": null,
+    "stack_with_activity": true,
+    "claimable": false,
+    "is_demo": true
+  }
+]

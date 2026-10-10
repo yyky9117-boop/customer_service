@@ -1,0 +1,1136 @@
+{
+  "case_id": "M03",
+  "title": "撤销送礼不撤销明确礼盒",
+  "repetition": 2,
+  "implementation_hash": "2e9c47bbd36d1749",
+  "executed_at": "2026-10-08T12:57:39.111751+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_7e2b86dff7fc4dbda23f7b34f5b579ac",
+        "expected_revision": 0,
+        "message": "我喜欢礼盒包装，送朋友，150 元以内",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_70b9c0d283f74adfac17c04aeb5566fe",
+        "request_id": "req_7e2b86dff7fc4dbda23f7b34f5b579ac",
+        "turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "no_match",
+        "message": {
+          "id": "msg_691123a8c7de4f06bd5ba46903602a9f",
+          "role": "assistant",
+          "content": "现有演示商品中没有能同时满足这组硬要求和购买数量的方案。可以修改其中一项要求后再找。",
+          "cards": []
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_70b9c0d283f74adfac17c04aeb5566fe",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_gift",
+                "label": "送朋友礼盒",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_package",
+                    "field": "package",
+                    "operator": "equals",
+                    "value": "gift_box",
+                    "strength": "hard",
+                    "source_text": "礼盒包装",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805"
+                  },
+                  {
+                    "constraint_id": "c_purpose",
+                    "field": "purpose",
+                    "operator": "equals",
+                    "value": "gift",
+                    "strength": "hard",
+                    "source_text": "送朋友",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": null,
+            "shared_budget": {
+              "min_fen": null,
+              "max_fen": 15000,
+              "strictness": "strict",
+              "scope": "goods_total",
+              "source_text": "150 元以内",
+              "min_is_hard": false,
+              "source_turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805"
+            }
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_fa35285d053b4005abe03c0180ffafa4",
+          "role": "user",
+          "content": "我喜欢礼盒包装，送朋友，150 元以内",
+          "turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805"
+        },
+        {
+          "id": "msg_691123a8c7de4f06bd5ba46903602a9f",
+          "role": "assistant",
+          "content": "现有演示商品中没有能同时满足这组硬要求和购买数量的方案。可以修改其中一项要求后再找。",
+          "cards": [],
+          "turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805",
+          "status": "no_match"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_gift": {
+            "P001": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P002": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P003": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P004": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P005": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P006": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P007": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P008": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P009": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P010": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P011": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P012": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P013": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P014": [
+              "constraint:c_package"
+            ],
+            "P015": [
+              "constraint:c_package"
+            ],
+            "P016": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P017": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P018": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P019": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P020": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P021": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P022": [
+              "stock_unknown_or_empty",
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P023": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P024": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P025": [
+              "expired_or_unknown",
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P026": [
+              "price_unknown",
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P027": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P028": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P029": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ],
+            "P030": [
+              "constraint:c_package",
+              "constraint:c_purpose"
+            ]
+          }
+        },
+        "quarantined_skus": []
+      }
+    },
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_70b9c0d283f74adfac17c04aeb5566fe",
+        "request_id": "req_84270db5de254fa5b054c4734010a73c",
+        "expected_revision": 1,
+        "message": "不送人了，还是要礼盒",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_70b9c0d283f74adfac17c04aeb5566fe",
+        "request_id": "req_84270db5de254fa5b054c4734010a73c",
+        "turn_id": "turn_e7844871094a47a88ccd8c803a8d9897",
+        "base_revision": 1,
+        "revision": 2,
+        "module": "product_recommendation",
+        "status": "no_match",
+        "message": {
+          "id": "msg_0b04ef2e685a4a23946e0741a5b116ab",
+          "role": "assistant",
+          "content": "现有演示商品中没有能同时满足这组硬要求和购买数量的方案。可以修改其中一项要求后再找。",
+          "cards": []
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_70b9c0d283f74adfac17c04aeb5566fe",
+        "revision": 2,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_gift",
+                "label": "礼盒零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_package",
+                    "field": "package",
+                    "operator": "equals",
+                    "value": "gift_box",
+                    "strength": "hard",
+                    "source_text": "礼盒包装",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805"
+                  },
+                  {
+                    "constraint_id": "c_purpose",
+                    "field": "purpose",
+                    "operator": "equals",
+                    "value": "self",
+                    "strength": "hard",
+                    "source_text": "不送人了",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_e7844871094a47a88ccd8c803a8d9897"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": null,
+            "shared_budget": {
+              "min_fen": null,
+              "max_fen": 15000,
+              "strictness": "strict",
+              "scope": "goods_total",
+              "source_text": "150 元以内",
+              "min_is_hard": false,
+              "source_turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805"
+            }
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_fa35285d053b4005abe03c0180ffafa4",
+          "role": "user",
+          "content": "我喜欢礼盒包装，送朋友，150 元以内",
+          "turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805"
+        },
+        {
+          "id": "msg_691123a8c7de4f06bd5ba46903602a9f",
+          "role": "assistant",
+          "content": "现有演示商品中没有能同时满足这组硬要求和购买数量的方案。可以修改其中一项要求后再找。",
+          "cards": [],
+          "turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805",
+          "status": "no_match"
+        },
+        {
+          "id": "msg_032be91c96414675a0d85abe7047f4a7",
+          "role": "user",
+          "content": "不送人了，还是要礼盒",
+          "turn_id": "turn_e7844871094a47a88ccd8c803a8d9897"
+        },
+        {
+          "id": "msg_0b04ef2e685a4a23946e0741a5b116ab",
+          "role": "assistant",
+          "content": "现有演示商品中没有能同时满足这组硬要求和购买数量的方案。可以修改其中一项要求后再找。",
+          "cards": [],
+          "turn_id": "turn_e7844871094a47a88ccd8c803a8d9897",
+          "status": "no_match"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 2,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_gift": {
+            "P001": [
+              "constraint:c_package"
+            ],
+            "P002": [
+              "constraint:c_package"
+            ],
+            "P003": [
+              "constraint:c_package"
+            ],
+            "P004": [
+              "constraint:c_package"
+            ],
+            "P005": [
+              "constraint:c_package"
+            ],
+            "P006": [
+              "constraint:c_package"
+            ],
+            "P007": [
+              "constraint:c_package"
+            ],
+            "P008": [
+              "constraint:c_package"
+            ],
+            "P009": [
+              "constraint:c_package"
+            ],
+            "P010": [
+              "constraint:c_package"
+            ],
+            "P011": [
+              "constraint:c_package"
+            ],
+            "P012": [
+              "constraint:c_package"
+            ],
+            "P013": [
+              "constraint:c_package"
+            ],
+            "P014": [
+              "constraint:c_package"
+            ],
+            "P015": [
+              "constraint:c_package"
+            ],
+            "P016": [
+              "constraint:c_package"
+            ],
+            "P017": [
+              "constraint:c_package"
+            ],
+            "P018": [
+              "constraint:c_package"
+            ],
+            "P019": [
+              "constraint:c_package"
+            ],
+            "P020": [
+              "constraint:c_package"
+            ],
+            "P021": [
+              "constraint:c_package"
+            ],
+            "P022": [
+              "stock_unknown_or_empty",
+              "constraint:c_package"
+            ],
+            "P023": [
+              "constraint:c_package"
+            ],
+            "P024": [
+              "constraint:c_package"
+            ],
+            "P025": [
+              "expired_or_unknown",
+              "constraint:c_package"
+            ],
+            "P026": [
+              "price_unknown",
+              "constraint:c_package"
+            ],
+            "P027": [
+              "constraint:c_package"
+            ],
+            "P028": [
+              "constraint:c_package"
+            ],
+            "P029": [
+              "constraint:c_package"
+            ],
+            "P030": [
+              "constraint:c_package"
+            ]
+          }
+        },
+        "quarantined_skus": []
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "我喜欢礼盒包装，送朋友，150 元以内",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_gift",
+            "label": "送朋友礼盒",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_package",
+                "field": "package",
+                "operator": "equals",
+                "value": "gift_box",
+                "strength": "hard",
+                "source_text": "礼盒包装",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_purpose",
+                "field": "purpose",
+                "operator": "equals",
+                "value": "gift",
+                "strength": "hard",
+                "source_text": "送朋友",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "shared_budget": {
+          "min_fen": null,
+          "max_fen": 15000,
+          "strictness": "strict",
+          "scope": "goods_total",
+          "source_text": "150 元以内",
+          "min_is_hard": false
+        },
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.44
+    },
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "不送人了，还是要礼盒",
+        "module_state": {
+          "need_groups": [
+            {
+              "group_id": "group_gift",
+              "label": "送朋友礼盒",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_package",
+                  "field": "package",
+                  "operator": "equals",
+                  "value": "gift_box",
+                  "strength": "hard",
+                  "source_text": "礼盒包装",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805"
+                },
+                {
+                  "constraint_id": "c_purpose",
+                  "field": "purpose",
+                  "operator": "equals",
+                  "value": "gift",
+                  "strength": "hard",
+                  "source_text": "送朋友",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": {
+            "min_fen": null,
+            "max_fen": 15000,
+            "strictness": "strict",
+            "scope": "goods_total",
+            "source_text": "150 元以内",
+            "min_is_hard": false,
+            "source_turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805"
+          }
+        },
+        "history": [
+          {
+            "id": "msg_fa35285d053b4005abe03c0180ffafa4",
+            "role": "user",
+            "content": "我喜欢礼盒包装，送朋友，150 元以内",
+            "turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805"
+          },
+          {
+            "id": "msg_691123a8c7de4f06bd5ba46903602a9f",
+            "role": "assistant",
+            "content": "现有演示商品中没有能同时满足这组硬要求和购买数量的方案。可以修改其中一项要求后再找。",
+            "cards": [],
+            "turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805",
+            "status": "no_match"
+          }
+        ],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_gift",
+            "label": "礼盒（自己用，不再送人）",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_package",
+                "field": "package",
+                "operator": "equals",
+                "value": "gift_box",
+                "strength": "hard",
+                "source_text": "还是要礼盒",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": [
+              "c_purpose"
+            ]
+          }
+        ],
+        "remove_group_ids": [],
+        "shared_budget": {
+          "min_fen": null,
+          "max_fen": 15000,
+          "strictness": "strict",
+          "scope": "goods_total",
+          "source_text": "150 元以内",
+          "min_is_hard": false
+        },
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.195
+    },
+    {
+      "stage": "extract",
+      "repair": "预算没有当前用户原话依据",
+      "input": {
+        "message": "不送人了，还是要礼盒",
+        "module_state": {
+          "need_groups": [
+            {
+              "group_id": "group_gift",
+              "label": "送朋友礼盒",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_package",
+                  "field": "package",
+                  "operator": "equals",
+                  "value": "gift_box",
+                  "strength": "hard",
+                  "source_text": "礼盒包装",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805"
+                },
+                {
+                  "constraint_id": "c_purpose",
+                  "field": "purpose",
+                  "operator": "equals",
+                  "value": "gift",
+                  "strength": "hard",
+                  "source_text": "送朋友",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": {
+            "min_fen": null,
+            "max_fen": 15000,
+            "strictness": "strict",
+            "scope": "goods_total",
+            "source_text": "150 元以内",
+            "min_is_hard": false,
+            "source_turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805"
+          }
+        },
+        "history": [
+          {
+            "id": "msg_fa35285d053b4005abe03c0180ffafa4",
+            "role": "user",
+            "content": "我喜欢礼盒包装，送朋友，150 元以内",
+            "turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805"
+          },
+          {
+            "id": "msg_691123a8c7de4f06bd5ba46903602a9f",
+            "role": "assistant",
+            "content": "现有演示商品中没有能同时满足这组硬要求和购买数量的方案。可以修改其中一项要求后再找。",
+            "cards": [],
+            "turn_id": "turn_e050692ae5e34f05bdf5cae9833d9805",
+            "status": "no_match"
+          }
+        ],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_gift",
+            "label": "礼盒零食",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_purpose",
+                "field": "purpose",
+                "operator": "equals",
+                "value": "self",
+                "strength": "hard",
+                "source_text": "不送人了",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.085
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 3.766,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": false,
+      "actual": "no_match"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "独立明确礼盒要求保留",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": false
+}

@@ -1,0 +1,67 @@
+{
+  "case_id": "S08",
+  "title": "空白和过长输入",
+  "repetition": 1,
+  "implementation_hash": "03c8fc87a9d9e031",
+  "executed_at": "2026-10-08T12:52:20.777893+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": "also_send_2001_characters",
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_d3a52738f7c4463794902dcf260c1ad7",
+        "expected_revision": 0,
+        "message": "   \n\t",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_d3a52738f7c4463794902dcf260c1ad7",
+        "turn_id": null,
+        "base_revision": 0,
+        "revision": 0,
+        "module": "product_recommendation",
+        "status": "error",
+        "message": {
+          "id": "msg_11b04a43431944e5a27d36bced8b3a0f",
+          "role": "assistant",
+          "content": "输入格式未通过核验，请检查请求内容。",
+          "cards": []
+        },
+        "clarification": null,
+        "error": {
+          "code": "invalid_request",
+          "retryable": false
+        }
+      },
+      "session": null,
+      "history": [],
+      "diagnostics": null
+    }
+  ],
+  "model_calls": [],
+  "pricing_goldens": [],
+  "seconds": 0.02,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "error"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "指定故障或对抗介入已实际应用",
+      "passed": false,
+      "actual": "also_send_2001_characters"
+    }
+  ],
+  "passed": false
+}

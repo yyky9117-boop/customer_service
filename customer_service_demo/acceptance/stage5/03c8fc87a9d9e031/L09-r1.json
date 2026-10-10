@@ -1,0 +1,280 @@
+{
+  "case_id": "L09",
+  "title": "严格预算解析",
+  "repetition": 1,
+  "implementation_hash": "03c8fc87a9d9e031",
+  "executed_at": "2026-10-08T12:50:01.385536+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_d6cef94c7ada44c6ae3706ad823ed8fe",
+        "expected_revision": 0,
+        "message": "商品合计最多一百五十元",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_3b010d6104e04c22972a4e00cde800ab",
+        "request_id": "req_d6cef94c7ada44c6ae3706ad823ed8fe",
+        "turn_id": "turn_2a38fc28fa564e118921709ff8b2d84e",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "needs_clarification",
+        "message": {
+          "id": "msg_ffab2ab03e904ec598a8249724b842af",
+          "role": "assistant",
+          "content": "准备自己吃还是送人？有没有必须避开的口味或原料？",
+          "cards": []
+        },
+        "clarification": {
+          "question": "准备自己吃还是送人？有没有必须避开的口味或原料？",
+          "asked_fields": [
+            "purpose",
+            "taste"
+          ],
+          "group_id": null
+        },
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_3b010d6104e04c22972a4e00cde800ab",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [],
+            "pending_clarification": {
+              "question": "准备自己吃还是送人？有没有必须避开的口味或原料？",
+              "asked_fields": [
+                "purpose",
+                "taste"
+              ],
+              "group_id": null
+            },
+            "last_presentation": null,
+            "shared_budget": {
+              "min_fen": null,
+              "max_fen": 15000,
+              "strictness": "strict",
+              "scope": "goods_total",
+              "source_text": "商品合计最多一百五十元",
+              "min_is_hard": false,
+              "source_turn_id": "turn_2a38fc28fa564e118921709ff8b2d84e"
+            }
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_dfffb4ca0bcb4302be0505830d5fcf9e",
+          "role": "user",
+          "content": "商品合计最多一百五十元",
+          "turn_id": "turn_2a38fc28fa564e118921709ff8b2d84e"
+        },
+        {
+          "id": "msg_ffab2ab03e904ec598a8249724b842af",
+          "role": "assistant",
+          "content": "准备自己吃还是送人？有没有必须避开的口味或原料？",
+          "cards": [],
+          "turn_id": "turn_2a38fc28fa564e118921709ff8b2d84e",
+          "status": "needs_clarification"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {},
+        "quarantined_skus": []
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "商品合计最多一百五十元",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [],
+        "remove_group_ids": [],
+        "shared_budget": {
+          "min_fen": null,
+          "max_fen": 15000,
+          "strictness": "strict",
+          "scope": "goods_total",
+          "source_text": "商品合计最多一百五十元",
+          "min_is_hard": false
+        },
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.01
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 1.043,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": false,
+      "actual": "needs_clarification"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "追问最多两个字段",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "预算金额未猜测或偷偷放宽",
+      "passed": false,
+      "actual": []
+    },
+    {
+      "name": "严格商品总额口径",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": false
+}

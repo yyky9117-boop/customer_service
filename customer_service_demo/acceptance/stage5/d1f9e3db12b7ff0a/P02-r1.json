@@ -1,0 +1,372 @@
+{
+  "case_id": "P02",
+  "title": "活动门槛边界",
+  "repetition": 1,
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "executed_at": "2026-10-08T13:11:16.393052+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_8d2c7cae5a094b65b237b4082f94af73",
+        "expected_revision": 0,
+        "message": "核对 99.99、100、100.01 元的满减",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_896d4f2baa5843e3bb7df40c2b7c7e59",
+        "request_id": "req_8d2c7cae5a094b65b237b4082f94af73",
+        "turn_id": "turn_c81ea6de30194d258ff8a1a0ad25ac00",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "needs_clarification",
+        "message": {
+          "id": "msg_16491c3dce3f42b7aa73c5e474ae4fe9",
+          "role": "assistant",
+          "content": "请明确选中哪一个方案或商品。预算是每份、商品合计，还是含运费的整单金额？",
+          "cards": []
+        },
+        "clarification": {
+          "question": "请明确选中哪一个方案或商品。预算是每份、商品合计，还是含运费的整单金额？",
+          "asked_fields": [
+            "reference",
+            "budget_scope"
+          ],
+          "group_id": "group_self"
+        },
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_896d4f2baa5843e3bb7df40c2b7c7e59",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_self",
+                "label": "满减金额核对",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": []
+              }
+            ],
+            "pending_clarification": {
+              "question": "请明确选中哪一个方案或商品。预算是每份、商品合计，还是含运费的整单金额？",
+              "asked_fields": [
+                "reference",
+                "budget_scope"
+              ],
+              "group_id": "group_self"
+            },
+            "last_presentation": null,
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_9de4bfde60ae48879c6e06cd723987c2",
+          "role": "user",
+          "content": "核对 99.99、100、100.01 元的满减",
+          "turn_id": "turn_c81ea6de30194d258ff8a1a0ad25ac00"
+        },
+        {
+          "id": "msg_16491c3dce3f42b7aa73c5e474ae4fe9",
+          "role": "assistant",
+          "content": "请明确选中哪一个方案或商品。预算是每份、商品合计，还是含运费的整单金额？",
+          "cards": [],
+          "turn_id": "turn_c81ea6de30194d258ff8a1a0ad25ac00",
+          "status": "needs_clarification"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {},
+        "quarantined_skus": []
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "核对 99.99、100、100.01 元的满减",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "满减金额核对",
+            "upsert_constraints": [],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": {
+          "question": "你想核对的满减门槛具体是哪些金额？另外是指哪个商品或哪次活动？",
+          "asked_fields": [
+            "reference",
+            "budget_scope"
+          ],
+          "group_id": "group_self"
+        },
+        "retrieval_hints": []
+      },
+      "seconds": 1.308
+    }
+  ],
+  "pricing_goldens": [
+    {
+      "id": "G005",
+      "passed": true,
+      "expected": {
+        "eligible": false,
+        "rejection_code": "activity_threshold",
+        "eligible_basis_fen": 9999
+      },
+      "actual": {
+        "eligible": false,
+        "rejection_code": "activity_threshold",
+        "eligible_basis_fen": 9999
+      }
+    },
+    {
+      "id": "G006",
+      "passed": true,
+      "expected": {
+        "eligible": true,
+        "activity_discount_fen": 1000,
+        "coupon_discount_fen": 0,
+        "merchandise_payable_fen": 9000,
+        "shipping_fen": 600,
+        "total_payable_fen": 9600,
+        "pricing_status": "confirmed",
+        "gifts": []
+      },
+      "actual": {
+        "eligible": true,
+        "activity_id": "A_ORDER",
+        "coupon_id": null,
+        "activity_discount_fen": 1000,
+        "coupon_discount_fen": 0,
+        "merchandise_payable_fen": 9000,
+        "shipping_fen": 600,
+        "total_payable_fen": 9600,
+        "pricing_status": "confirmed",
+        "coupon_conditional": false,
+        "gifts": [],
+        "line_allocations": [
+          {
+            "sku_id": "P001",
+            "activity_discount_fen": 1000,
+            "coupon_discount_fen": 0,
+            "payable_fen": 9000
+          }
+        ]
+      }
+    },
+    {
+      "id": "G007",
+      "passed": true,
+      "expected": {
+        "eligible": true,
+        "activity_discount_fen": 1000,
+        "coupon_discount_fen": 0,
+        "merchandise_payable_fen": 9001,
+        "shipping_fen": 600,
+        "total_payable_fen": 9601,
+        "pricing_status": "confirmed",
+        "gifts": []
+      },
+      "actual": {
+        "eligible": true,
+        "activity_id": "A_ORDER",
+        "coupon_id": null,
+        "activity_discount_fen": 1000,
+        "coupon_discount_fen": 0,
+        "merchandise_payable_fen": 9001,
+        "shipping_fen": 600,
+        "total_payable_fen": 9601,
+        "pricing_status": "confirmed",
+        "coupon_conditional": false,
+        "gifts": [],
+        "line_allocations": [
+          {
+            "sku_id": "P001",
+            "activity_discount_fen": 1000,
+            "coupon_discount_fen": 0,
+            "payable_fen": 9001
+          }
+        ]
+      }
+    }
+  ],
+  "seconds": 1.355,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": false,
+      "actual": "needs_clarification"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "追问最多两个字段",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "关联固定购物方案的独立数值基准",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": false
+}

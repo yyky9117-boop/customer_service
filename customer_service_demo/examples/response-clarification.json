@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "conversation_id": "conv_demo_001",
+  "request_id": "req_demo_001",
+  "turn_id": "turn_demo_001",
+  "base_revision": 0,
+  "revision": 1,
+  "module": "product_recommendation",
+  "status": "needs_clarification",
+  "message": {
+    "id": "msg_demo_001",
+    "role": "assistant",
+    "content": "主要是自己吃还是送人？预算大概多少？",
+    "cards": []
+  },
+  "clarification": {
+    "question": "主要是自己吃还是送人？预算大概多少？",
+    "asked_fields": [
+      "purpose",
+      "budget"
+    ],
+    "group_id": null
+  },
+  "error": null
+}

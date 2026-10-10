@@ -1,0 +1,263 @@
+{
+  "case_id": "S12",
+  "title": "无匹配与技术失败区分",
+  "repetition": 1,
+  "implementation_hash": "03c8fc87a9d9e031",
+  "executed_at": "2026-10-08T12:52:25.966314+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_c0ab779cdadf457994ff738a5b5a9472",
+        "expected_revision": 0,
+        "message": "必须完全不辣的牛肉零食",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_e7a01b6c3fac4eb59863869e99f0553e",
+        "request_id": "req_c0ab779cdadf457994ff738a5b5a9472",
+        "turn_id": "turn_5d5982f6d43144e497084d215c2cb137",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "no_match",
+        "message": {
+          "id": "msg_1e33ae8684b64a3bb41341e8ae44d3e8",
+          "role": "assistant",
+          "content": "现有演示商品中没有能同时满足这组硬要求和购买数量的方案。可以修改其中一项要求后再找。",
+          "cards": []
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_e7a01b6c3fac4eb59863869e99f0553e",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_self",
+                "label": "不辣牛肉零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_category_meat",
+                    "field": "category",
+                    "operator": "include",
+                    "value": "meat",
+                    "strength": "hard",
+                    "source_text": "牛肉零食",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_5d5982f6d43144e497084d215c2cb137"
+                  },
+                  {
+                    "constraint_id": "c_spice_none",
+                    "field": "taste",
+                    "operator": "equals",
+                    "value": "spice:none",
+                    "strength": "hard",
+                    "source_text": "必须完全不辣",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_5d5982f6d43144e497084d215c2cb137"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": null,
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_7a1ec3009ea54d93b5c7ecfc33cedf70",
+          "role": "user",
+          "content": "必须完全不辣的牛肉零食",
+          "turn_id": "turn_5d5982f6d43144e497084d215c2cb137"
+        },
+        {
+          "id": "msg_1e33ae8684b64a3bb41341e8ae44d3e8",
+          "role": "assistant",
+          "content": "现有演示商品中没有能同时满足这组硬要求和购买数量的方案。可以修改其中一项要求后再找。",
+          "cards": [],
+          "turn_id": "turn_5d5982f6d43144e497084d215c2cb137",
+          "status": "no_match"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 2,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_self": {
+            "P004": [
+              "constraint:c_spice_none"
+            ],
+            "P005": [
+              "constraint:c_spice_none"
+            ]
+          }
+        },
+        "quarantined_skus": []
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "必须完全不辣的牛肉零食",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "牛肉零食",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_taste_spice",
+                "field": "taste",
+                "operator": "equals",
+                "value": "spice:none",
+                "strength": "hard",
+                "source_text": "必须完全不辣",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_ingredient_beef",
+                "field": "ingredient",
+                "operator": "include",
+                "value": "beef",
+                "strength": "hard",
+                "source_text": "牛肉",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": [],
+        "reference_action": null,
+        "reference_source_text": null
+      },
+      "seconds": 1.029
+    },
+    {
+      "stage": "extract",
+      "repair": "需求 JSON 结构错误: None is not one of ['retain_selected', 'replace_selected', 'recommend_alternatives']",
+      "input": {
+        "message": "必须完全不辣的牛肉零食",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "不辣牛肉零食",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_category_meat",
+                "field": "category",
+                "operator": "include",
+                "value": "meat",
+                "strength": "hard",
+                "source_text": "牛肉零食",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_spice_none",
+                "field": "taste",
+                "operator": "equals",
+                "value": "spice:none",
+                "strength": "hard",
+                "source_text": "必须完全不辣",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.111
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 2.172,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "no_match"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "无匹配不放宽已知要求",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": true
+}

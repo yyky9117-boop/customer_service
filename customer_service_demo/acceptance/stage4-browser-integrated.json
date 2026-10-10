@@ -1,0 +1,8 @@
+{
+  "verified_at": "2026-10-08T14:37:16.126Z",
+  "phase": "integrated",
+  "all_passed": false,
+  "checks": [],
+  "error": "Error: 客服回复未通过事实与表达核验，本轮未保存，请重试。",
+  "console_errors": []
+}

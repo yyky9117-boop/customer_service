@@ -1,0 +1,656 @@
+{
+  "case_id": "S03",
+  "title": "慢旧请求不能覆盖新状态",
+  "repetition": 1,
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "executed_at": "2026-10-08T13:12:54.285705+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": "overlap_requests_reverse_completion",
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_0bdbd22d4eb342f9903f1684ea334145",
+        "expected_revision": 0,
+        "message": "预算 100，不辣",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_92360265c69c4ce5a121998c67218939",
+        "request_id": "req_0bdbd22d4eb342f9903f1684ea334145",
+        "turn_id": "turn_81a1705e0f0b43358a2465b7f2701291",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "needs_clarification",
+        "message": {
+          "id": "msg_226bee78e0f5454b874c5bd371e69091",
+          "role": "assistant",
+          "content": "预算是每份、商品合计，还是含运费的整单金额？",
+          "cards": []
+        },
+        "clarification": {
+          "question": "预算是每份、商品合计，还是含运费的整单金额？",
+          "asked_fields": [
+            "budget_scope"
+          ],
+          "group_id": "group_1"
+        },
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_92360265c69c4ce5a121998c67218939",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_1",
+                "label": "零食推荐",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": 10000,
+                  "strictness": "strict",
+                  "scope": "unknown",
+                  "source_text": "预算 100",
+                  "min_is_hard": false,
+                  "source_turn_id": "turn_81a1705e0f0b43358a2465b7f2701291"
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_spice",
+                    "field": "taste",
+                    "operator": "equals",
+                    "value": "spice:none",
+                    "strength": "hard",
+                    "source_text": "不辣",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_81a1705e0f0b43358a2465b7f2701291"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": {
+              "question": "预算是每份、商品合计，还是含运费的整单金额？",
+              "asked_fields": [
+                "budget_scope"
+              ],
+              "group_id": "group_1"
+            },
+            "last_presentation": null,
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_53ec7bb251e34f668a05775768e6bcc1",
+          "role": "user",
+          "content": "预算 100，不辣",
+          "turn_id": "turn_81a1705e0f0b43358a2465b7f2701291"
+        },
+        {
+          "id": "msg_226bee78e0f5454b874c5bd371e69091",
+          "role": "assistant",
+          "content": "预算是每份、商品合计，还是含运费的整单金额？",
+          "cards": [],
+          "turn_id": "turn_81a1705e0f0b43358a2465b7f2701291",
+          "status": "needs_clarification"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {},
+        "quarantined_skus": []
+      }
+    },
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_92360265c69c4ce5a121998c67218939",
+        "request_id": "req_c0eab96d1e9842fda1d7473e7bfa1a16",
+        "expected_revision": 1,
+        "message": "预算改成 60",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_92360265c69c4ce5a121998c67218939",
+        "request_id": "req_c0eab96d1e9842fda1d7473e7bfa1a16",
+        "turn_id": "turn_c3914a0fa04c4f57826ec27d2eda3bc9",
+        "base_revision": 1,
+        "revision": 2,
+        "module": "product_recommendation",
+        "status": "needs_clarification",
+        "message": {
+          "id": "msg_ce38290dc59448999767f28dd7ebba2f",
+          "role": "assistant",
+          "content": "这个预算是每份、商品合计，还是包含运费的整单金额？",
+          "cards": []
+        },
+        "clarification": {
+          "question": "这个预算是每份、商品合计，还是包含运费的整单金额？",
+          "asked_fields": [
+            "budget_scope"
+          ],
+          "group_id": null
+        },
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_92360265c69c4ce5a121998c67218939",
+        "revision": 2,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_1",
+                "label": "零食推荐",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": 6000,
+                  "strictness": "strict",
+                  "scope": "unknown",
+                  "source_text": "预算改成 60",
+                  "min_is_hard": false,
+                  "source_turn_id": "turn_c3914a0fa04c4f57826ec27d2eda3bc9"
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_spice",
+                    "field": "taste",
+                    "operator": "equals",
+                    "value": "spice:none",
+                    "strength": "hard",
+                    "source_text": "不辣",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_81a1705e0f0b43358a2465b7f2701291"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": {
+              "question": "这个预算是每份、商品合计，还是包含运费的整单金额？",
+              "asked_fields": [
+                "budget_scope"
+              ],
+              "group_id": null
+            },
+            "last_presentation": null,
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_53ec7bb251e34f668a05775768e6bcc1",
+          "role": "user",
+          "content": "预算 100，不辣",
+          "turn_id": "turn_81a1705e0f0b43358a2465b7f2701291"
+        },
+        {
+          "id": "msg_226bee78e0f5454b874c5bd371e69091",
+          "role": "assistant",
+          "content": "预算是每份、商品合计，还是含运费的整单金额？",
+          "cards": [],
+          "turn_id": "turn_81a1705e0f0b43358a2465b7f2701291",
+          "status": "needs_clarification"
+        },
+        {
+          "id": "msg_f7aaf5ea36d04b13ba1eb26dd2c7984b",
+          "role": "user",
+          "content": "预算改成 60",
+          "turn_id": "turn_c3914a0fa04c4f57826ec27d2eda3bc9"
+        },
+        {
+          "id": "msg_ce38290dc59448999767f28dd7ebba2f",
+          "role": "assistant",
+          "content": "这个预算是每份、商品合计，还是包含运费的整单金额？",
+          "cards": [],
+          "turn_id": "turn_c3914a0fa04c4f57826ec27d2eda3bc9",
+          "status": "needs_clarification"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {},
+        "quarantined_skus": []
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "预算 100，不辣",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_1",
+            "label": "零食推荐",
+            "budget": {
+              "min_fen": null,
+              "max_fen": 10000,
+              "strictness": "strict",
+              "scope": "unknown",
+              "source_text": "预算 100",
+              "min_is_hard": false
+            },
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_spice",
+                "field": "taste",
+                "operator": "equals",
+                "value": "spice:none",
+                "strength": "hard",
+                "source_text": "不辣",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": {
+          "question": "预算100元是单件价格、每人预算，还是商品总价/含运费总价？",
+          "asked_fields": [
+            "budget_scope"
+          ],
+          "group_id": "group_1"
+        },
+        "retrieval_hints": []
+      },
+      "seconds": 1.513
+    },
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "预算改成 60",
+        "module_state": {
+          "need_groups": [
+            {
+              "group_id": "group_1",
+              "label": "零食推荐",
+              "budget": {
+                "min_fen": null,
+                "max_fen": 10000,
+                "strictness": "strict",
+                "scope": "unknown",
+                "source_text": "预算 100",
+                "min_is_hard": false,
+                "source_turn_id": "turn_81a1705e0f0b43358a2465b7f2701291"
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_spice",
+                  "field": "taste",
+                  "operator": "equals",
+                  "value": "spice:none",
+                  "strength": "hard",
+                  "source_text": "不辣",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_81a1705e0f0b43358a2465b7f2701291"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": {
+            "question": "预算是每份、商品合计，还是含运费的整单金额？",
+            "asked_fields": [
+              "budget_scope"
+            ],
+            "group_id": "group_1"
+          },
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "history": [
+          {
+            "id": "msg_53ec7bb251e34f668a05775768e6bcc1",
+            "role": "user",
+            "content": "预算 100，不辣",
+            "turn_id": "turn_81a1705e0f0b43358a2465b7f2701291"
+          },
+          {
+            "id": "msg_226bee78e0f5454b874c5bd371e69091",
+            "role": "assistant",
+            "content": "预算是每份、商品合计，还是含运费的整单金额？",
+            "cards": [],
+            "turn_id": "turn_81a1705e0f0b43358a2465b7f2701291",
+            "status": "needs_clarification"
+          }
+        ],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_1",
+            "label": "零食推荐",
+            "budget": {
+              "min_fen": null,
+              "max_fen": 6000,
+              "strictness": "strict",
+              "scope": "unknown",
+              "source_text": "预算改成 60",
+              "min_is_hard": false
+            },
+            "upsert_constraints": [],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.153
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 2.713,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": false,
+      "actual": "needs_clarification"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "追问最多两个字段",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "追问最多两个字段",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "指定故障或对抗介入已实际应用",
+      "passed": false,
+      "actual": "overlap_requests_reverse_completion"
+    }
+  ],
+  "passed": false
+}

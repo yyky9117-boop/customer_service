@@ -1,0 +1,2928 @@
+{
+  "case_id": "F11",
+  "title": "海藻与鱼虾不能混淆",
+  "repetition": 1,
+  "implementation_hash": "03c8fc87a9d9e031",
+  "executed_at": "2026-10-08T12:51:36.974152+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_f1264b0f86f1447eaf3262c0f80d28a7",
+        "expected_revision": 0,
+        "message": "不能含鱼虾，海苔可以，推荐办公室零食",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_862d05681cdb461989333a4168ec2040",
+        "request_id": "req_f1264b0f86f1447eaf3262c0f80d28a7",
+        "turn_id": "turn_60b0ef71180049869e2c7c998af47f78",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_0338e7524b2141eb8ef8841316d5c7c1",
+          "role": "assistant",
+          "content": "亲～，按办公室吃帮您避开了含鱼虾的，海苔这条线也保留下来了😊\n\n首选是原味海苔脆片（1件），原味海苔脆片，符合您办公吃海苔的需求，含运费15.90元。\n\n备选可以看看无糖气泡水（1件），无糖气泡水，无糖标签且无甜味标签，含运费11.90元；总价比首选更低，这套未完全匹配口味、包装等偏好。\n\n再看无糖薄荷糖（1件），无糖薄荷糖，无糖标签，独立内包装，含运费13.90元；总价比首选更低，这套未完全匹配口味、包装等偏好。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_01a6737ebc7ec3fed036",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_office",
+              "items": [
+                {
+                  "sku_id": "P002",
+                  "product_name": "原味海苔脆片",
+                  "quantity": 1,
+                  "unit_price_fen": 990,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 990,
+                "discounts": [],
+                "merchandise_payable_fen": 990,
+                "shipping_fen": 600,
+                "total_payable_fen": 1590,
+                "conditions": []
+              },
+              "reasons": [
+                "原味海苔脆片，符合您办公吃海苔的需求",
+                "独立内包装，办公室分次取用较方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_86361ca2f0f82dab7683",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_office",
+              "items": [
+                {
+                  "sku_id": "P027",
+                  "product_name": "无糖气泡水",
+                  "quantity": 1,
+                  "unit_price_fen": 590,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 590,
+                "discounts": [],
+                "merchandise_payable_fen": 590,
+                "shipping_fen": 600,
+                "total_payable_fen": 1190,
+                "conditions": []
+              },
+              "reasons": [
+                "无糖气泡水，无糖标签且无甜味标签",
+                "独立内包装，适合办公室饮用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "这套未完全匹配口味、包装等偏好。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_97cad12e0cfe1ca31b33",
+              "plan_type": "single_product",
+              "title": "备选方案 2",
+              "rank": 3,
+              "group_id": "group_office",
+              "items": [
+                {
+                  "sku_id": "P009",
+                  "product_name": "无糖薄荷糖",
+                  "quantity": 1,
+                  "unit_price_fen": 790,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 790,
+                "discounts": [],
+                "merchandise_payable_fen": 790,
+                "shipping_fen": 600,
+                "total_payable_fen": 1390,
+                "conditions": []
+              },
+              "reasons": [
+                "无糖薄荷糖，无糖标签，独立内包装",
+                "单个内包3克，办公室分次取用方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "这套未完全匹配口味、包装等偏好。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_862d05681cdb461989333a4168ec2040",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_office",
+                "label": "办公室零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_allergen_fish",
+                    "field": "ingredient",
+                    "operator": "exclude",
+                    "value": "allergen:fish",
+                    "strength": "hard",
+                    "source_text": "不能含鱼虾",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_60b0ef71180049869e2c7c998af47f78"
+                  },
+                  {
+                    "constraint_id": "c_allergen_shellfish",
+                    "field": "ingredient",
+                    "operator": "exclude",
+                    "value": "allergen:shellfish",
+                    "strength": "hard",
+                    "source_text": "不能含鱼虾",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_60b0ef71180049869e2c7c998af47f78"
+                  },
+                  {
+                    "constraint_id": "c_category_seaweed",
+                    "field": "category",
+                    "operator": "include",
+                    "value": "seaweed",
+                    "strength": "soft",
+                    "source_text": "海苔可以",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_60b0ef71180049869e2c7c998af47f78"
+                  },
+                  {
+                    "constraint_id": "c_scene_office",
+                    "field": "scene",
+                    "operator": "include",
+                    "value": "office",
+                    "strength": "soft",
+                    "source_text": "办公室零食",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_60b0ef71180049869e2c7c998af47f78"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_0338e7524b2141eb8ef8841316d5c7c1",
+              "turn_id": "turn_60b0ef71180049869e2c7c998af47f78",
+              "plan_order": [
+                {
+                  "plan_id": "plan_01a6737ebc7ec3fed036",
+                  "sku_ids": [
+                    "P002"
+                  ]
+                },
+                {
+                  "plan_id": "plan_86361ca2f0f82dab7683",
+                  "sku_ids": [
+                    "P027"
+                  ]
+                },
+                {
+                  "plan_id": "plan_97cad12e0cfe1ca31b33",
+                  "sku_ids": [
+                    "P009"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_f1a1827024ba441284d48a29f525a9b0",
+          "role": "user",
+          "content": "不能含鱼虾，海苔可以，推荐办公室零食",
+          "turn_id": "turn_60b0ef71180049869e2c7c998af47f78"
+        },
+        {
+          "id": "msg_0338e7524b2141eb8ef8841316d5c7c1",
+          "role": "assistant",
+          "content": "亲～，按办公室吃帮您避开了含鱼虾的，海苔这条线也保留下来了😊\n\n首选是原味海苔脆片（1件），原味海苔脆片，符合您办公吃海苔的需求，含运费15.90元。\n\n备选可以看看无糖气泡水（1件），无糖气泡水，无糖标签且无甜味标签，含运费11.90元；总价比首选更低，这套未完全匹配口味、包装等偏好。\n\n再看无糖薄荷糖（1件），无糖薄荷糖，无糖标签，独立内包装，含运费13.90元；总价比首选更低，这套未完全匹配口味、包装等偏好。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_01a6737ebc7ec3fed036",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_office",
+              "items": [
+                {
+                  "sku_id": "P002",
+                  "product_name": "原味海苔脆片",
+                  "quantity": 1,
+                  "unit_price_fen": 990,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 990,
+                "discounts": [],
+                "merchandise_payable_fen": 990,
+                "shipping_fen": 600,
+                "total_payable_fen": 1590,
+                "conditions": []
+              },
+              "reasons": [
+                "原味海苔脆片，符合您办公吃海苔的需求",
+                "独立内包装，办公室分次取用较方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_86361ca2f0f82dab7683",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_office",
+              "items": [
+                {
+                  "sku_id": "P027",
+                  "product_name": "无糖气泡水",
+                  "quantity": 1,
+                  "unit_price_fen": 590,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 590,
+                "discounts": [],
+                "merchandise_payable_fen": 590,
+                "shipping_fen": 600,
+                "total_payable_fen": 1190,
+                "conditions": []
+              },
+              "reasons": [
+                "无糖气泡水，无糖标签且无甜味标签",
+                "独立内包装，适合办公室饮用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "这套未完全匹配口味、包装等偏好。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_97cad12e0cfe1ca31b33",
+              "plan_type": "single_product",
+              "title": "备选方案 2",
+              "rank": 3,
+              "group_id": "group_office",
+              "items": [
+                {
+                  "sku_id": "P009",
+                  "product_name": "无糖薄荷糖",
+                  "quantity": 1,
+                  "unit_price_fen": 790,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 790,
+                "discounts": [],
+                "merchandise_payable_fen": 790,
+                "shipping_fen": 600,
+                "total_payable_fen": 1390,
+                "conditions": []
+              },
+              "reasons": [
+                "无糖薄荷糖，无糖标签，独立内包装",
+                "单个内包3克，办公室分次取用方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "这套未完全匹配口味、包装等偏好。"
+              ]
+            }
+          ],
+          "turn_id": "turn_60b0ef71180049869e2c7c998af47f78",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_office": {
+            "P022": [
+              "stock_unknown_or_empty"
+            ],
+            "P023": [
+              "constraint:c_allergen_fish",
+              "constraint:c_allergen_shellfish"
+            ],
+            "P025": [
+              "expired_or_unknown"
+            ],
+            "P026": [
+              "price_unknown"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 26,
+        "priced_cart_count": 26,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 2,
+        "reply_review_passed": true
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "不能含鱼虾，海苔可以，推荐办公室零食",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_office",
+            "label": "办公室零食",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_allergen_fish",
+                "field": "ingredient",
+                "operator": "exclude",
+                "value": "allergen:fish",
+                "strength": "hard",
+                "source_text": "不能含鱼虾",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_allergen_shellfish",
+                "field": "ingredient",
+                "operator": "exclude",
+                "value": "allergen:shellfish",
+                "strength": "hard",
+                "source_text": "不能含鱼虾",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_category_seaweed",
+                "field": "category",
+                "operator": "include",
+                "value": "seaweed",
+                "strength": "soft",
+                "source_text": "海苔可以",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_scene_office",
+                "field": "scene",
+                "operator": "include",
+                "value": "office",
+                "strength": "soft",
+                "source_text": "办公室零食",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.595
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "不能含鱼虾，海苔可以，推荐办公室零食",
+        "need_summary": "办公室吃",
+        "plans": [
+          {
+            "plan_id": "plan_01a6737ebc7ec3fed036",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 990,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费15.90元；商品应付9.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:fish，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:shellfish，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "need_match",
+                "text": "对于需求 category include seaweed，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：原味海苔脆片。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_86361ca2f0f82dab7683",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P027",
+                "product_name": "无糖气泡水",
+                "quantity": 1,
+                "unit_price_fen": 590,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "无糖气泡水，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "无糖气泡水：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "无糖气泡水：无糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "无糖气泡水：无甜味标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "无糖气泡水：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "ingredients",
+                "text": "无糖气泡水：ingredients=['water', 'carbon_dioxide']"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "declared_allergens",
+                "text": "无糖气泡水：declared_allergens=[]"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "may_contain_allergens",
+                "text": "无糖气泡水：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "selling_points",
+                "text": "无糖气泡水：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "scene_tags",
+                "text": "无糖气泡水：scene_tags=['office']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "pricing",
+                "text": "含运费11.90元；商品应付5.90元。"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:fish，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:shellfish，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "comparison",
+                "text": "总价比首选更低。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_97cad12e0cfe1ca31b33",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P009",
+                "product_name": "无糖薄荷糖",
+                "quantity": 1,
+                "unit_price_fen": 790,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "无糖薄荷糖，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "无糖薄荷糖：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "无糖薄荷糖：无糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "无糖薄荷糖：中甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：已知单个内包3克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "无糖薄荷糖：ingredients=['mint', 'sweetener']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "无糖薄荷糖：declared_allergens=[]"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "无糖薄荷糖：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "无糖薄荷糖：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "无糖薄荷糖：scene_tags=['office']"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "pricing",
+                "text": "含运费13.90元；商品应付7.90元。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:fish，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:shellfish，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f19",
+                "kind": "comparison",
+                "text": "总价比首选更低。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_01a6737ebc7ec3fed036",
+            "reasons": [
+              {
+                "text": "原味海苔脆片，符合您办公吃海苔的需求",
+                "fact_ids": [
+                  "p1_f16",
+                  "p1_f17"
+                ]
+              },
+              {
+                "text": "独立内包装，办公室分次取用较方便",
+                "fact_ids": [
+                  "p1_f5"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_86361ca2f0f82dab7683",
+            "reasons": [
+              {
+                "text": "无糖气泡水，无糖标签且无甜味标签",
+                "fact_ids": [
+                  "p2_f3",
+                  "p2_f4"
+                ]
+              },
+              {
+                "text": "独立内包装，适合办公室饮用",
+                "fact_ids": [
+                  "p2_f5",
+                  "p2_f10"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_97cad12e0cfe1ca31b33",
+            "reasons": [
+              {
+                "text": "无糖薄荷糖，无糖标签，独立内包装",
+                "fact_ids": [
+                  "p3_f3",
+                  "p3_f5"
+                ]
+              },
+              {
+                "text": "单个内包3克，办公室分次取用方便",
+                "fact_ids": [
+                  "p3_f6"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 1.651
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "不能含鱼虾，海苔可以，推荐办公室零食",
+        "need_summary": "办公室吃",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_office",
+              "label": "办公室零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_allergen_fish",
+                  "field": "ingredient",
+                  "operator": "exclude",
+                  "value": "allergen:fish",
+                  "strength": "hard",
+                  "source_text": "不能含鱼虾",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_60b0ef71180049869e2c7c998af47f78"
+                },
+                {
+                  "constraint_id": "c_allergen_shellfish",
+                  "field": "ingredient",
+                  "operator": "exclude",
+                  "value": "allergen:shellfish",
+                  "strength": "hard",
+                  "source_text": "不能含鱼虾",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_60b0ef71180049869e2c7c998af47f78"
+                },
+                {
+                  "constraint_id": "c_category_seaweed",
+                  "field": "category",
+                  "operator": "include",
+                  "value": "seaweed",
+                  "strength": "soft",
+                  "source_text": "海苔可以",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_60b0ef71180049869e2c7c998af47f78"
+                },
+                {
+                  "constraint_id": "c_scene_office",
+                  "field": "scene",
+                  "operator": "include",
+                  "value": "office",
+                  "strength": "soft",
+                  "source_text": "办公室零食",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_60b0ef71180049869e2c7c998af47f78"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_01a6737ebc7ec3fed036",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 990,
+              "discounts": [],
+              "merchandise_payable_fen": 990,
+              "shipping_fen": 600,
+              "total_payable_fen": 1590,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味海苔脆片：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费15.90元；商品应付9.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:fish，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:shellfish，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "need_match",
+                "text": "对于需求 category include seaweed，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f18",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_86361ca2f0f82dab7683",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P027",
+                "product_name": "无糖气泡水",
+                "quantity": 1,
+                "unit_price_fen": 590,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 590,
+              "discounts": [],
+              "merchandise_payable_fen": 590,
+              "shipping_fen": 600,
+              "total_payable_fen": 1190,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "无糖气泡水，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "无糖气泡水：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "无糖气泡水：无糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "无糖气泡水：无甜味标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "无糖气泡水：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "ingredients",
+                "text": "无糖气泡水：ingredients=['water', 'carbon_dioxide']"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "declared_allergens",
+                "text": "无糖气泡水：declared_allergens=[]"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "may_contain_allergens",
+                "text": "无糖气泡水：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "selling_points",
+                "text": "无糖气泡水：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "scene_tags",
+                "text": "无糖气泡水：scene_tags=['office']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "expiry",
+                "text": "无糖气泡水：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "pricing",
+                "text": "含运费11.90元；商品应付5.90元。"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:fish，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:shellfish，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "boundary",
+                "text": "这套未完全匹配口味、包装等偏好。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "comparison",
+                "text": "总价比首选更低。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_97cad12e0cfe1ca31b33",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P009",
+                "product_name": "无糖薄荷糖",
+                "quantity": 1,
+                "unit_price_fen": 790,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 790,
+              "discounts": [],
+              "merchandise_payable_fen": 790,
+              "shipping_fen": 600,
+              "total_payable_fen": 1390,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "无糖薄荷糖，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "无糖薄荷糖：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "无糖薄荷糖：无糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "无糖薄荷糖：中甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：已知单个内包3克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "无糖薄荷糖：ingredients=['mint', 'sweetener']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "无糖薄荷糖：declared_allergens=[]"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "无糖薄荷糖：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "无糖薄荷糖：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "无糖薄荷糖：scene_tags=['office']"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "expiry",
+                "text": "无糖薄荷糖：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "pricing",
+                "text": "含运费13.90元；商品应付7.90元。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:fish，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:shellfish，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f17",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f18",
+                "kind": "boundary",
+                "text": "这套未完全匹配口味、包装等偏好。"
+              },
+              {
+                "id": "p3_f19",
+                "kind": "comparison",
+                "text": "总价比首选更低。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "办公室吃",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味海苔脆片（1件）",
+          "p1_price": "含运费15.90元",
+          "p2_items": "无糖气泡水（1件）",
+          "p2_price": "含运费11.90元",
+          "p2_difference": "总价比首选更低",
+          "p2_notice": "这套未完全匹配口味、包装等偏好。",
+          "p3_items": "无糖薄荷糖（1件）",
+          "p3_price": "含运费13.90元",
+          "p3_difference": "总价比首选更低",
+          "p3_notice": "这套未完全匹配口味、包装等偏好。",
+          "p1_reason_1": "原味海苔脆片，符合您办公吃海苔的需求",
+          "p1_reason_2": "独立内包装，办公室分次取用较方便",
+          "p2_reason_1": "无糖气泡水，无糖标签且无甜味标签",
+          "p2_reason_2": "独立内包装，适合办公室饮用",
+          "p3_reason_1": "无糖薄荷糖，无糖标签，独立内包装",
+          "p3_reason_2": "单个内包3克，办公室分次取用方便"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_01a6737ebc7ec3fed036",
+              "reasons": [
+                {
+                  "text": "原味海苔脆片，符合您办公吃海苔的需求",
+                  "fact_ids": [
+                    "p1_f16",
+                    "p1_f17"
+                  ]
+                },
+                {
+                  "text": "独立内包装，办公室分次取用较方便",
+                  "fact_ids": [
+                    "p1_f5"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_86361ca2f0f82dab7683",
+              "reasons": [
+                {
+                  "text": "无糖气泡水，无糖标签且无甜味标签",
+                  "fact_ids": [
+                    "p2_f3",
+                    "p2_f4"
+                  ]
+                },
+                {
+                  "text": "独立内包装，适合办公室饮用",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f10"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_97cad12e0cfe1ca31b33",
+              "reasons": [
+                {
+                  "text": "无糖薄荷糖，无糖标签，独立内包装",
+                  "fact_ids": [
+                    "p3_f3",
+                    "p3_f5"
+                  ]
+                },
+                {
+                  "text": "单个内包3克，办公室分次取用方便",
+                  "fact_ids": [
+                    "p3_f6"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，按{{need_summary}}帮您排除了含鱼虾的，海苔这条线保留下来了😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}。这款在零食里比较贴合您的要求，办公室里放着也顺手。\n\n备选可以看看{{p2_items}}，{{p2_reason_1}}，{{p2_price}}；{{p2_difference}}，不过{{p2_notice}}\n\n再看{{p3_items}}，{{p3_reason_1}}，{{p3_price}}；{{p3_difference}}，不过{{p3_notice}}\n\n{{follow_up}}"
+      },
+      "seconds": 1.279
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "不能含鱼虾，海苔可以，推荐办公室零食",
+        "need_summary": "办公室吃",
+        "plans": [
+          {
+            "plan_id": "plan_01a6737ebc7ec3fed036",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 990,
+              "discounts": [],
+              "merchandise_payable_fen": 990,
+              "shipping_fen": 600,
+              "total_payable_fen": 1590,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味海苔脆片：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费15.90元；商品应付9.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:fish，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:shellfish，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "need_match",
+                "text": "对于需求 category include seaweed，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f18",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_86361ca2f0f82dab7683",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P027",
+                "product_name": "无糖气泡水",
+                "quantity": 1,
+                "unit_price_fen": 590,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 590,
+              "discounts": [],
+              "merchandise_payable_fen": 590,
+              "shipping_fen": 600,
+              "total_payable_fen": 1190,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "无糖气泡水，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "无糖气泡水：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "无糖气泡水：无糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "无糖气泡水：无甜味标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "无糖气泡水：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "ingredients",
+                "text": "无糖气泡水：ingredients=['water', 'carbon_dioxide']"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "declared_allergens",
+                "text": "无糖气泡水：declared_allergens=[]"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "may_contain_allergens",
+                "text": "无糖气泡水：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "selling_points",
+                "text": "无糖气泡水：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "scene_tags",
+                "text": "无糖气泡水：scene_tags=['office']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "expiry",
+                "text": "无糖气泡水：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "pricing",
+                "text": "含运费11.90元；商品应付5.90元。"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:fish，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:shellfish，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "boundary",
+                "text": "这套未完全匹配口味、包装等偏好。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "comparison",
+                "text": "总价比首选更低。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_97cad12e0cfe1ca31b33",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P009",
+                "product_name": "无糖薄荷糖",
+                "quantity": 1,
+                "unit_price_fen": 790,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 790,
+              "discounts": [],
+              "merchandise_payable_fen": 790,
+              "shipping_fen": 600,
+              "total_payable_fen": 1390,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "无糖薄荷糖，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "无糖薄荷糖：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "无糖薄荷糖：无糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "无糖薄荷糖：中甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：已知单个内包3克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "无糖薄荷糖：ingredients=['mint', 'sweetener']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "无糖薄荷糖：declared_allergens=[]"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "无糖薄荷糖：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "无糖薄荷糖：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "无糖薄荷糖：scene_tags=['office']"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "expiry",
+                "text": "无糖薄荷糖：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "pricing",
+                "text": "含运费13.90元；商品应付7.90元。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:fish，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:shellfish，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f17",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f18",
+                "kind": "boundary",
+                "text": "这套未完全匹配口味、包装等偏好。"
+              },
+              {
+                "id": "p3_f19",
+                "kind": "comparison",
+                "text": "总价比首选更低。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "办公室吃",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味海苔脆片（1件）",
+          "p1_price": "含运费15.90元",
+          "p2_items": "无糖气泡水（1件）",
+          "p2_price": "含运费11.90元",
+          "p2_difference": "总价比首选更低",
+          "p2_notice": "这套未完全匹配口味、包装等偏好。",
+          "p3_items": "无糖薄荷糖（1件）",
+          "p3_price": "含运费13.90元",
+          "p3_difference": "总价比首选更低",
+          "p3_notice": "这套未完全匹配口味、包装等偏好。",
+          "p1_reason_1": "原味海苔脆片，符合您办公吃海苔的需求",
+          "p1_reason_2": "独立内包装，办公室分次取用较方便",
+          "p2_reason_1": "无糖气泡水，无糖标签且无甜味标签",
+          "p2_reason_2": "独立内包装，适合办公室饮用",
+          "p3_reason_1": "无糖薄荷糖，无糖标签，独立内包装",
+          "p3_reason_2": "单个内包3克，办公室分次取用方便"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_01a6737ebc7ec3fed036",
+              "reasons": [
+                {
+                  "text": "原味海苔脆片，符合您办公吃海苔的需求",
+                  "fact_ids": [
+                    "p1_f16",
+                    "p1_f17"
+                  ]
+                },
+                {
+                  "text": "独立内包装，办公室分次取用较方便",
+                  "fact_ids": [
+                    "p1_f5"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_86361ca2f0f82dab7683",
+              "reasons": [
+                {
+                  "text": "无糖气泡水，无糖标签且无甜味标签",
+                  "fact_ids": [
+                    "p2_f3",
+                    "p2_f4"
+                  ]
+                },
+                {
+                  "text": "独立内包装，适合办公室饮用",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f10"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_97cad12e0cfe1ca31b33",
+              "reasons": [
+                {
+                  "text": "无糖薄荷糖，无糖标签，独立内包装",
+                  "fact_ids": [
+                    "p3_f3",
+                    "p3_f5"
+                  ]
+                },
+                {
+                  "text": "单个内包3克，办公室分次取用方便",
+                  "fact_ids": [
+                    "p3_f6"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，按{{need_summary}}帮您排除了含鱼虾的，海苔这条线保留下来了😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}。这款在零食里比较贴合您的要求，办公室里放着也顺手。\n\n备选可以看看{{p2_items}}，{{p2_reason_1}}，{{p2_price}}；{{p2_difference}}，不过{{p2_notice}}\n\n再看{{p3_items}}，{{p3_reason_1}}，{{p3_price}}；{{p3_difference}}，不过{{p3_notice}}\n\n{{follow_up}}",
+        "reply": "亲～，按办公室吃帮您排除了含鱼虾的，海苔这条线保留下来了😊\n\n首选是原味海苔脆片（1件），原味海苔脆片，符合您办公吃海苔的需求，含运费15.90元。这款在零食里比较贴合您的要求，办公室里放着也顺手。\n\n备选可以看看无糖气泡水（1件），无糖气泡水，无糖标签且无甜味标签，含运费11.90元；总价比首选更低，不过这套未完全匹配口味、包装等偏好。\n\n再看无糖薄荷糖（1件），无糖薄荷糖，无糖标签，独立内包装，含运费13.90元；总价比首选更低，不过这套未完全匹配口味、包装等偏好。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": false,
+        "issues": [
+          "“这款在零食里比较贴合您的要求，办公室里放着也顺手。”中“办公室里放着也顺手”是自由文字，资料中无任何依据支持。",
+          "“备选可以看看…不过这套未完全匹配口味、包装等偏好。”中“这套”指无糖气泡水，但该商品有独立内包装且无甜味/无糖标签，模板固定表述“未完全匹配口味、包装等偏好”与事实不符（口味、包装等偏好未声明却称未完全匹配）。",
+          "“再看…不过这套未完全匹配口味、包装等偏好。”中“这套”指无糖薄荷糖，但该商品有独立内包装且为无糖标签，模板固定表述“未完全匹配口味、包装等偏好”与事实不符。"
+        ],
+        "rewrite_instruction": "删除“办公室里放着也顺手。”这句自由文字；将两处“不过这套未完全匹配口味、包装等偏好。”删除或替换为不涉及口味、包装、偏好匹配结论的中性表述。"
+      },
+      "seconds": 1.566
+    },
+    {
+      "stage": "compose_reply",
+      "repair": "独立质检未通过：“这款在零食里比较贴合您的要求，办公室里放着也顺手。”中“办公室里放着也顺手”是自由文字，资料中无任何依据支持。；“备选可以看看…不过这套未完全匹配口味、包装等偏好。”中“这套”指无糖气泡水，但该商品有独立内包装且无甜味/无糖标签，模板固定表述“未完全匹配口味、包装等偏好”与事实不符（口味、包装等偏好未声明却称未完全匹配）。；“再看…不过这套未完全匹配口味、包装等偏好。”中“这套”指无糖薄荷糖，但该商品有独立内包装且为无糖标签，模板固定表述“未完全匹配口味、包装等偏好”与事实不符。；删除“办公室里放着也顺手。”这句自由文字；将两处“不过这套未完全匹配口味、包装等偏好。”删除或替换为不涉及口味、包装、偏好匹配结论的中性表述。\n上次错误草稿（不是事实）：{\"template\": \"亲～，按{{need_summary}}帮您排除了含鱼虾的，海苔这条线保留下来了😊\\n\\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}。这款在零食里比较贴合您的要求，办公室里放着也顺手。\\n\\n备选可以看看{{p2_items}}，{{p2_reason_1}}，{{p2_price}}；{{p2_difference}}，不过{{p2_notice}}\\n\\n再看{{p3_items}}，{{p3_reason_1}}，{{p3_price}}；{{p3_difference}}，不过{{p3_notice}}\\n\\n{{follow_up}}\"}",
+      "input": {
+        "user_message": "不能含鱼虾，海苔可以，推荐办公室零食",
+        "need_summary": "办公室吃",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_office",
+              "label": "办公室零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_allergen_fish",
+                  "field": "ingredient",
+                  "operator": "exclude",
+                  "value": "allergen:fish",
+                  "strength": "hard",
+                  "source_text": "不能含鱼虾",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_60b0ef71180049869e2c7c998af47f78"
+                },
+                {
+                  "constraint_id": "c_allergen_shellfish",
+                  "field": "ingredient",
+                  "operator": "exclude",
+                  "value": "allergen:shellfish",
+                  "strength": "hard",
+                  "source_text": "不能含鱼虾",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_60b0ef71180049869e2c7c998af47f78"
+                },
+                {
+                  "constraint_id": "c_category_seaweed",
+                  "field": "category",
+                  "operator": "include",
+                  "value": "seaweed",
+                  "strength": "soft",
+                  "source_text": "海苔可以",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_60b0ef71180049869e2c7c998af47f78"
+                },
+                {
+                  "constraint_id": "c_scene_office",
+                  "field": "scene",
+                  "operator": "include",
+                  "value": "office",
+                  "strength": "soft",
+                  "source_text": "办公室零食",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_60b0ef71180049869e2c7c998af47f78"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_01a6737ebc7ec3fed036",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 990,
+              "discounts": [],
+              "merchandise_payable_fen": 990,
+              "shipping_fen": 600,
+              "total_payable_fen": 1590,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味海苔脆片：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费15.90元；商品应付9.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:fish，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:shellfish，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "need_match",
+                "text": "对于需求 category include seaweed，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f18",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_86361ca2f0f82dab7683",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P027",
+                "product_name": "无糖气泡水",
+                "quantity": 1,
+                "unit_price_fen": 590,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 590,
+              "discounts": [],
+              "merchandise_payable_fen": 590,
+              "shipping_fen": 600,
+              "total_payable_fen": 1190,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "无糖气泡水，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "无糖气泡水：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "无糖气泡水：无糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "无糖气泡水：无甜味标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "无糖气泡水：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "ingredients",
+                "text": "无糖气泡水：ingredients=['water', 'carbon_dioxide']"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "declared_allergens",
+                "text": "无糖气泡水：declared_allergens=[]"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "may_contain_allergens",
+                "text": "无糖气泡水：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "selling_points",
+                "text": "无糖气泡水：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "scene_tags",
+                "text": "无糖气泡水：scene_tags=['office']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "expiry",
+                "text": "无糖气泡水：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "pricing",
+                "text": "含运费11.90元；商品应付5.90元。"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:fish，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:shellfish，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "boundary",
+                "text": "这套未完全匹配口味、包装等偏好。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "comparison",
+                "text": "总价比首选更低。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_97cad12e0cfe1ca31b33",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P009",
+                "product_name": "无糖薄荷糖",
+                "quantity": 1,
+                "unit_price_fen": 790,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 790,
+              "discounts": [],
+              "merchandise_payable_fen": 790,
+              "shipping_fen": 600,
+              "total_payable_fen": 1390,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "无糖薄荷糖，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "无糖薄荷糖：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "无糖薄荷糖：无糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "无糖薄荷糖：中甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：已知单个内包3克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "无糖薄荷糖：ingredients=['mint', 'sweetener']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "无糖薄荷糖：declared_allergens=[]"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "无糖薄荷糖：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "无糖薄荷糖：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "无糖薄荷糖：scene_tags=['office']"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "expiry",
+                "text": "无糖薄荷糖：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "pricing",
+                "text": "含运费13.90元；商品应付7.90元。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:fish，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:shellfish，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f17",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f18",
+                "kind": "boundary",
+                "text": "这套未完全匹配口味、包装等偏好。"
+              },
+              {
+                "id": "p3_f19",
+                "kind": "comparison",
+                "text": "总价比首选更低。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "办公室吃",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味海苔脆片（1件）",
+          "p1_price": "含运费15.90元",
+          "p2_items": "无糖气泡水（1件）",
+          "p2_price": "含运费11.90元",
+          "p2_difference": "总价比首选更低",
+          "p2_notice": "这套未完全匹配口味、包装等偏好。",
+          "p3_items": "无糖薄荷糖（1件）",
+          "p3_price": "含运费13.90元",
+          "p3_difference": "总价比首选更低",
+          "p3_notice": "这套未完全匹配口味、包装等偏好。",
+          "p1_reason_1": "原味海苔脆片，符合您办公吃海苔的需求",
+          "p1_reason_2": "独立内包装，办公室分次取用较方便",
+          "p2_reason_1": "无糖气泡水，无糖标签且无甜味标签",
+          "p2_reason_2": "独立内包装，适合办公室饮用",
+          "p3_reason_1": "无糖薄荷糖，无糖标签，独立内包装",
+          "p3_reason_2": "单个内包3克，办公室分次取用方便"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_01a6737ebc7ec3fed036",
+              "reasons": [
+                {
+                  "text": "原味海苔脆片，符合您办公吃海苔的需求",
+                  "fact_ids": [
+                    "p1_f16",
+                    "p1_f17"
+                  ]
+                },
+                {
+                  "text": "独立内包装，办公室分次取用较方便",
+                  "fact_ids": [
+                    "p1_f5"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_86361ca2f0f82dab7683",
+              "reasons": [
+                {
+                  "text": "无糖气泡水，无糖标签且无甜味标签",
+                  "fact_ids": [
+                    "p2_f3",
+                    "p2_f4"
+                  ]
+                },
+                {
+                  "text": "独立内包装，适合办公室饮用",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f10"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_97cad12e0cfe1ca31b33",
+              "reasons": [
+                {
+                  "text": "无糖薄荷糖，无糖标签，独立内包装",
+                  "fact_ids": [
+                    "p3_f3",
+                    "p3_f5"
+                  ]
+                },
+                {
+                  "text": "单个内包3克，办公室分次取用方便",
+                  "fact_ids": [
+                    "p3_f6"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，按{{need_summary}}帮您避开了含鱼虾的，海苔这条线也保留下来了😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}。\n\n备选可以看看{{p2_items}}，{{p2_reason_1}}，{{p2_price}}；{{p2_difference}}，{{p2_notice}}\n\n再看{{p3_items}}，{{p3_reason_1}}，{{p3_price}}；{{p3_difference}}，{{p3_notice}}\n\n{{follow_up}}"
+      },
+      "seconds": 1.201
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "不能含鱼虾，海苔可以，推荐办公室零食",
+        "need_summary": "办公室吃",
+        "plans": [
+          {
+            "plan_id": "plan_01a6737ebc7ec3fed036",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 990,
+              "discounts": [],
+              "merchandise_payable_fen": 990,
+              "shipping_fen": 600,
+              "total_payable_fen": 1590,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味海苔脆片：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费15.90元；商品应付9.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:fish，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:shellfish，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "need_match",
+                "text": "对于需求 category include seaweed，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p1_f18",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_86361ca2f0f82dab7683",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P027",
+                "product_name": "无糖气泡水",
+                "quantity": 1,
+                "unit_price_fen": 590,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 590,
+              "discounts": [],
+              "merchandise_payable_fen": 590,
+              "shipping_fen": 600,
+              "total_payable_fen": 1190,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "无糖气泡水，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "无糖气泡水：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "无糖气泡水：无糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "无糖气泡水：无甜味标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "无糖气泡水：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "ingredients",
+                "text": "无糖气泡水：ingredients=['water', 'carbon_dioxide']"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "declared_allergens",
+                "text": "无糖气泡水：declared_allergens=[]"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "may_contain_allergens",
+                "text": "无糖气泡水：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "selling_points",
+                "text": "无糖气泡水：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "scene_tags",
+                "text": "无糖气泡水：scene_tags=['office']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "expiry",
+                "text": "无糖气泡水：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "pricing",
+                "text": "含运费11.90元；商品应付5.90元。"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:fish，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:shellfish，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "boundary",
+                "text": "这套未完全匹配口味、包装等偏好。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "comparison",
+                "text": "总价比首选更低。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_97cad12e0cfe1ca31b33",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P009",
+                "product_name": "无糖薄荷糖",
+                "quantity": 1,
+                "unit_price_fen": 790,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 790,
+              "discounts": [],
+              "merchandise_payable_fen": 790,
+              "shipping_fen": 600,
+              "total_payable_fen": 1390,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "无糖薄荷糖，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "无糖薄荷糖：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "无糖薄荷糖：无糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "无糖薄荷糖：中甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：已知单个内包3克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "无糖薄荷糖：ingredients=['mint', 'sweetener']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "无糖薄荷糖：declared_allergens=[]"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "无糖薄荷糖：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "无糖薄荷糖：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "无糖薄荷糖：scene_tags=['office']"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "expiry",
+                "text": "无糖薄荷糖：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "pricing",
+                "text": "含运费13.90元；商品应付7.90元。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:fish，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "need_match",
+                "text": "对于需求 ingredient exclude allergen:shellfish，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "need_match",
+                "text": "对于需求 scene include office，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f17",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f18",
+                "kind": "boundary",
+                "text": "这套未完全匹配口味、包装等偏好。"
+              },
+              {
+                "id": "p3_f19",
+                "kind": "comparison",
+                "text": "总价比首选更低。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "办公室吃",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味海苔脆片（1件）",
+          "p1_price": "含运费15.90元",
+          "p2_items": "无糖气泡水（1件）",
+          "p2_price": "含运费11.90元",
+          "p2_difference": "总价比首选更低",
+          "p2_notice": "这套未完全匹配口味、包装等偏好。",
+          "p3_items": "无糖薄荷糖（1件）",
+          "p3_price": "含运费13.90元",
+          "p3_difference": "总价比首选更低",
+          "p3_notice": "这套未完全匹配口味、包装等偏好。",
+          "p1_reason_1": "原味海苔脆片，符合您办公吃海苔的需求",
+          "p1_reason_2": "独立内包装，办公室分次取用较方便",
+          "p2_reason_1": "无糖气泡水，无糖标签且无甜味标签",
+          "p2_reason_2": "独立内包装，适合办公室饮用",
+          "p3_reason_1": "无糖薄荷糖，无糖标签，独立内包装",
+          "p3_reason_2": "单个内包3克，办公室分次取用方便"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_01a6737ebc7ec3fed036",
+              "reasons": [
+                {
+                  "text": "原味海苔脆片，符合您办公吃海苔的需求",
+                  "fact_ids": [
+                    "p1_f16",
+                    "p1_f17"
+                  ]
+                },
+                {
+                  "text": "独立内包装，办公室分次取用较方便",
+                  "fact_ids": [
+                    "p1_f5"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_86361ca2f0f82dab7683",
+              "reasons": [
+                {
+                  "text": "无糖气泡水，无糖标签且无甜味标签",
+                  "fact_ids": [
+                    "p2_f3",
+                    "p2_f4"
+                  ]
+                },
+                {
+                  "text": "独立内包装，适合办公室饮用",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f10"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_97cad12e0cfe1ca31b33",
+              "reasons": [
+                {
+                  "text": "无糖薄荷糖，无糖标签，独立内包装",
+                  "fact_ids": [
+                    "p3_f3",
+                    "p3_f5"
+                  ]
+                },
+                {
+                  "text": "单个内包3克，办公室分次取用方便",
+                  "fact_ids": [
+                    "p3_f6"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，按{{need_summary}}帮您避开了含鱼虾的，海苔这条线也保留下来了😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}。\n\n备选可以看看{{p2_items}}，{{p2_reason_1}}，{{p2_price}}；{{p2_difference}}，{{p2_notice}}\n\n再看{{p3_items}}，{{p3_reason_1}}，{{p3_price}}；{{p3_difference}}，{{p3_notice}}\n\n{{follow_up}}",
+        "reply": "亲～，按办公室吃帮您避开了含鱼虾的，海苔这条线也保留下来了😊\n\n首选是原味海苔脆片（1件），原味海苔脆片，符合您办公吃海苔的需求，含运费15.90元。\n\n备选可以看看无糖气泡水（1件），无糖气泡水，无糖标签且无甜味标签，含运费11.90元；总价比首选更低，这套未完全匹配口味、包装等偏好。\n\n再看无糖薄荷糖（1件），无糖薄荷糖，无糖标签，独立内包装，含运费13.90元；总价比首选更低，这套未完全匹配口味、包装等偏好。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 0.879
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 8.22,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "completed"
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "海藻不自动视为鱼虾",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": true
+}

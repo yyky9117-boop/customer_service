@@ -1,0 +1,105 @@
+{
+  "verified_at": "2026-10-08T14:41:11.066Z",
+  "phase": "orders",
+  "real_model_used": true,
+  "fault_injection_used": false,
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "guest_order_access_is_rejected_without_fabricated_result",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "order_shipping_reply_respects_current_ui_capabilities",
+      "passed": true,
+      "detail": {
+        "request_id": "req_06e538738c294e7ba8db82165e80f57e",
+        "content": "亲～，我帮你看了一下这笔订单😊订单 SN-DEMO-0001目前尚未发货，也就是还没有发出。目前没有确认的发出时间，后续发货情况可以再来查。具体问题如需进一步核实，本演示暂时不提供人工服务，请留意订单状态更新哦～"
+      }
+    },
+    {
+      "name": "order_followup_keeps_selected_order",
+      "passed": true,
+      "detail": "亲～，我帮你看了一下，订单 SN-DEMO-0001目前尚未发货😊还没有确认的发出时间，后续发货情况可以再来查。如需进一步核实，本演示不提供人工服务，请留意订单状态更新哦～"
+    },
+    {
+      "name": "logistics_reply_uses_actual_mock_http_call",
+      "passed": true,
+      "detail": {
+        "request_id": "req_7849207cbbe84b1c858786dc895a9b57",
+        "content": "亲～，我帮你查了最新的物流情况😊订单 SN-DEMO-0002目前已发货。包裹运输中，已离开上海分拨中心，发往杭州分拨中心。包裹预计2026-10-08 18:00送达，以后续物流更新为准。后续进度可以再回来查，有变化以更新为准哦～（物流为本机模拟快递接口返回。）"
+      }
+    },
+    {
+      "name": "order_chat_desktop_screenshot",
+      "passed": true,
+      "detail": "E:\\aipm\\mianshi\\customer_service_demo\\examples\\screenshots\\order-integration-desktop.png"
+    },
+    {
+      "name": "candidate_orders_have_selection_buttons",
+      "passed": true,
+      "detail": [
+        "查询订单 SN-DEMO-0006",
+        "查询订单 SN-DEMO-0001"
+      ]
+    },
+    {
+      "name": "ordinal_selects_from_current_order_candidates",
+      "passed": true,
+      "detail": "亲～，你说的第二笔是薯片订单订单 SN-DEMO-0001，目前尚未发货😊。这笔还没有确认的发出时间，可以之后再查它的最新情况。这个演示暂不提供人工服务，如有其他需要核实的细节，随时告诉我。"
+    },
+    {
+      "name": "order_history_restored_after_refresh",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "mixed_request_does_not_silently_drop_one_module",
+      "passed": true,
+      "detail": "你是想先查询订单，还是继续商品推荐？我会分别处理，保留两边的咨询进度。"
+    },
+    {
+      "name": "account_b_cannot_query_account_a_order",
+      "passed": true,
+      "detail": "亲～，我按这次提供的信息查过了😊 没有找到与你的账号及查询条件匹配的订单。您可以核对一下订单号和当前演示账号，再把准确信息发给我看看，我帮您重新查一次。"
+    },
+    {
+      "name": "account_b_can_query_its_own_order",
+      "passed": true,
+      "detail": "亲～，帮你确认了一下😊 订单 SN-DEMO-0010目前已发货。如果想看包裹到哪了，也可以继续问我。本演示暂不提供人工入口，具体问题需要人工核实的，这边帮不上忙～"
+    },
+    {
+      "name": "order_chat_mobile_screenshot",
+      "passed": true,
+      "detail": "E:\\aipm\\mianshi\\customer_service_demo\\examples\\screenshots\\order-integration-mobile.png"
+    },
+    {
+      "name": "model_usage_for_order_browser_checks",
+      "passed": true,
+      "detail": {
+        "before": {
+          "calls": 5,
+          "reported_total_tokens": 23527,
+          "unreported_calls": 0,
+          "reserved_upper_bound": 209002,
+          "charged_upper_bound": 23527
+        },
+        "after": {
+          "calls": 22,
+          "reported_total_tokens": 38504,
+          "unreported_calls": 0,
+          "reserved_upper_bound": 400756,
+          "charged_upper_bound": 38504
+        },
+        "requests": []
+      }
+    },
+    {
+      "name": "browser_has_no_script_or_csp_errors",
+      "passed": true,
+      "detail": true
+    }
+  ],
+  "console_errors": []
+}

@@ -1,0 +1,78 @@
+{
+  "case_id": "S05",
+  "title": "模型超时保留消息可重试",
+  "repetition": 1,
+  "implementation_hash": "2e9c47bbd36d1749",
+  "executed_at": "2026-10-08T12:59:49.457585+00:00",
+  "layer": "fault_injection_with_real_model",
+  "intervention": "model_timeout",
+  "intervention_applied": true,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_6167d5195c584aa1ad12e28c56033b63",
+        "expected_revision": 0,
+        "message": "办公室不辣零食",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_6167d5195c584aa1ad12e28c56033b63",
+        "turn_id": null,
+        "base_revision": 0,
+        "revision": 0,
+        "module": "product_recommendation",
+        "status": "error",
+        "message": {
+          "id": "msg_a59fb4d6d70b4a86bfa307de92dae7a8",
+          "role": "assistant",
+          "content": "测试注入：模型超时，本轮未保存。",
+          "cards": []
+        },
+        "clarification": null,
+        "error": {
+          "code": "model_timeout",
+          "retryable": true
+        }
+      },
+      "session": null,
+      "history": [],
+      "diagnostics": null
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "source": "fault_injection",
+      "repair": null
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 0.021,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "error"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "指定故障或对抗介入已实际应用",
+      "passed": true,
+      "actual": "model_timeout"
+    },
+    {
+      "name": "注入超时无状态提交",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": true
+}

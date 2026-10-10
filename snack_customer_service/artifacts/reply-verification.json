@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "auto_checks": 107,
+  "browser_checks": 34,
+  "browser_breakdown": {
+    "order": 15,
+    "human": 10,
+    "reply": 9
+  },
+  "live_model_verified": true,
+  "live_model_cases": 3,
+  "db_version": 6,
+  "knowledge_entries": 20,
+  "knowledge_source": "reconstructed_demo",
+  "module": "order_query",
+  "recommendation_module_modified": false,
+  "courier_is_simulated": true,
+  "human_is_simulated": true,
+  "scope": "Verified demo scenarios; not an evaluation of every possible model reply."
+}

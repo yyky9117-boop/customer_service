@@ -1,0 +1,415 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:snack-customer-service:contracts:v1:chat-response",
+  "title": "客服统一回复",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "conversation_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,80}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "request_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,80}$"
+    },
+    "turn_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,80}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "base_revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "module": {
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "product_recommendation",
+            "order_query",
+            "conversation_router"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "completed",
+        "needs_clarification",
+        "no_match",
+        "unsupported",
+        "error"
+      ]
+    },
+    "message": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,80}$"
+        },
+        "role": {
+          "const": "assistant"
+        },
+        "content": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "cards": {
+          "type": "array",
+          "items": {
+            "$ref": "urn:snack-customer-service:contracts:v1:common#/$defs/recommendation_card"
+          },
+          "minItems": 0,
+          "maxItems": 3
+        }
+      },
+      "required": [
+        "id",
+        "role",
+        "content",
+        "cards"
+      ],
+      "additionalProperties": false
+    },
+    "clarification": {
+      "anyOf": [
+        {
+          "$ref": "urn:snack-customer-service:contracts:v1:common#/$defs/clarification"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "error": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "invalid_request",
+                "revision_conflict",
+                "request_id_conflict",
+                "model_timeout",
+                "invalid_model_output",
+                "data_unavailable",
+                "internal_error"
+              ]
+            },
+            "retryable": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "code",
+            "retryable"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "conversation_id",
+    "request_id",
+    "turn_id",
+    "base_revision",
+    "revision",
+    "module",
+    "status",
+    "message",
+    "clarification",
+    "error"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "completed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "message": {
+            "properties": {
+              "cards": {
+                "minItems": 0
+              }
+            }
+          },
+          "clarification": {
+            "type": "null"
+          },
+          "error": {
+            "type": "null"
+          },
+          "turn_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,80}$"
+          },
+          "conversation_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,80}$"
+          },
+          "module": {
+            "enum": [
+              "product_recommendation",
+              "order_query",
+              "conversation_router"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "needs_clarification"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "message": {
+            "properties": {
+              "cards": {
+                "maxItems": 0
+              }
+            }
+          },
+          "clarification": {
+            "$ref": "urn:snack-customer-service:contracts:v1:common#/$defs/clarification"
+          },
+          "error": {
+            "type": "null"
+          },
+          "turn_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,80}$"
+          },
+          "conversation_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,80}$"
+          },
+          "module": {
+            "enum": [
+              "product_recommendation",
+              "order_query",
+              "conversation_router"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "no_match"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "message": {
+            "properties": {
+              "cards": {
+                "maxItems": 0
+              }
+            }
+          },
+          "clarification": {
+            "type": "null"
+          },
+          "error": {
+            "type": "null"
+          },
+          "turn_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,80}$"
+          },
+          "conversation_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,80}$"
+          },
+          "module": {
+            "enum": [
+              "product_recommendation",
+              "order_query",
+              "conversation_router"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "unsupported"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "message": {
+            "properties": {
+              "cards": {
+                "maxItems": 0
+              }
+            }
+          },
+          "clarification": {
+            "type": "null"
+          },
+          "error": {
+            "type": "null"
+          },
+          "turn_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,80}$"
+          },
+          "conversation_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,80}$"
+          },
+          "module": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "error"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "message": {
+            "properties": {
+              "cards": {
+                "maxItems": 0
+              }
+            }
+          },
+          "clarification": {
+            "type": "null"
+          },
+          "error": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "module": {
+            "const": "conversation_router"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "status": {
+            "enum": [
+              "needs_clarification",
+              "error"
+            ]
+          },
+          "message": {
+            "properties": {
+              "cards": {
+                "maxItems": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "module": {
+            "const": "product_recommendation"
+          },
+          "status": {
+            "const": "completed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "message": {
+            "properties": {
+              "cards": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "module": {
+            "const": "order_query"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "message": {
+            "properties": {
+              "cards": {
+                "maxItems": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

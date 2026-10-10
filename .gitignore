@@ -1,0 +1,25 @@
+# Local credentials and runtime state
+**/.env
+**/.env.*
+!**/.env.example
+**/.local/
+
+# Python and browser-generated files
+**/__pycache__/
+*.py[cod]
+**/artifacts/*profile/
+
+# Generated packages and copied portable checkouts
+**/deliverables/
+**/portable_check*/
+*.zip
+
+# Runtime/test databases; retain the source demo order database below.
+*.sqlite
+*.sqlite3
+!snack_customer_service/database/snack_orders_demo.sqlite
+
+# Logs and transient output
+*.log
+*.pid
+*.tmp

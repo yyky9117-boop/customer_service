@@ -1,0 +1,91 @@
+{
+  "verified_at": "2026-10-08T07:52:18.155Z",
+  "phase": "live",
+  "real_model_used": true,
+  "fault_injection_used": false,
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "real_deepseek_to_inline_recommendation_cards",
+      "passed": true,
+      "detail": {
+        "revision": 1,
+        "cards": [
+          {
+            "title": "首选方案优先推荐",
+            "total": "¥44.70",
+            "skus": [
+              "P001"
+            ]
+          },
+          {
+            "title": "备选方案 1",
+            "total": "¥59.70",
+            "skus": [
+              "P009",
+              "P013"
+            ]
+          },
+          {
+            "title": "备选方案 2",
+            "total": "¥34.70",
+            "skus": [
+              "P001",
+              "P009"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "recommendation_screenshot",
+      "passed": true,
+      "detail": "E:\\aipm\\mianshi\\customer_service_demo\\examples\\screenshots\\desktop-recommendation.png"
+    },
+    {
+      "name": "real_multi_turn_budget_and_quantity_preserved",
+      "passed": true,
+      "detail": [
+        3970,
+        3470,
+        3670
+      ]
+    },
+    {
+      "name": "refresh_restores_committed_conversation",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "real_card_reference_and_repricing",
+      "passed": true,
+      "detail": {
+        "sku": "P001",
+        "totals": [
+          3180
+        ]
+      }
+    },
+    {
+      "name": "mobile_recommendation_screenshot",
+      "passed": true,
+      "detail": "E:\\aipm\\mianshi\\customer_service_demo\\examples\\screenshots\\mobile-recommendation.png"
+    },
+    {
+      "name": "real_necessary_clarification_without_cards",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "real_no_match_without_invented_cards",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "browser_has_no_script_or_csp_errors",
+      "passed": true,
+      "detail": true
+    }
+  ],
+  "console_errors": []
+}

@@ -1,0 +1,1116 @@
+[
+  {
+    "sku_id": "P001",
+    "product_name": "原味燕麦小饼干",
+    "category": "biscuits",
+    "price_fen": 1290,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "low",
+    "sugar_label": "low_sugar",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 18
+    },
+    "ingredients": [
+      "oats",
+      "wheat",
+      "soy"
+    ],
+    "declared_allergens": [
+      "gluten",
+      "soy"
+    ],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "office",
+      "breakfast"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P001",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P002",
+    "product_name": "原味海苔脆片",
+    "category": "seaweed",
+    "price_fen": 990,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "low",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 5
+    },
+    "ingredients": [
+      "seaweed",
+      "vegetable_oil",
+      "salt"
+    ],
+    "declared_allergens": [],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "office",
+      "watching_tv"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P002",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P003",
+    "product_name": "蒜香青豆",
+    "category": "beans",
+    "price_fen": 1590,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "low",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 20
+    },
+    "ingredients": [
+      "peas",
+      "soy_sauce",
+      "garlic"
+    ],
+    "declared_allergens": [
+      "soy",
+      "gluten"
+    ],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "office",
+      "sharing"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P003",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P004",
+    "product_name": "微辣牛肉粒",
+    "category": "meat",
+    "price_fen": 2590,
+    "currency": "CNY",
+    "spice_level": "mild",
+    "sweetness": "low",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 20
+    },
+    "ingredients": [
+      "beef",
+      "chili",
+      "soy_sauce"
+    ],
+    "declared_allergens": [
+      "soy",
+      "gluten"
+    ],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "watching_tv"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P004",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P005",
+    "product_name": "香辣牛肉干",
+    "category": "meat",
+    "price_fen": 2990,
+    "currency": "CNY",
+    "spice_level": "hot",
+    "sweetness": "low",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 20
+    },
+    "ingredients": [
+      "beef",
+      "chili",
+      "soy_sauce"
+    ],
+    "declared_allergens": [
+      "soy",
+      "gluten"
+    ],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "watching_tv"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P005",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P006",
+    "product_name": "原味腰果",
+    "category": "nuts",
+    "price_fen": 2490,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "low",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 20
+    },
+    "ingredients": [
+      "cashew"
+    ],
+    "declared_allergens": [
+      "tree_nuts"
+    ],
+    "may_contain_allergens": [
+      "peanut"
+    ],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "office"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P006",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P007",
+    "product_name": "蜜汁花生米",
+    "category": "nuts",
+    "price_fen": 890,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "high",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 20
+    },
+    "ingredients": [
+      "peanut",
+      "sugar"
+    ],
+    "declared_allergens": [
+      "peanut"
+    ],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "sharing"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P007",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P008",
+    "product_name": "黑巧克力",
+    "category": "chocolate",
+    "price_fen": 1990,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "low",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 20
+    },
+    "ingredients": [
+      "cocoa",
+      "sugar",
+      "milk"
+    ],
+    "declared_allergens": [
+      "milk"
+    ],
+    "may_contain_allergens": [
+      "tree_nuts"
+    ],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "office"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P008",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P009",
+    "product_name": "无糖薄荷糖",
+    "category": "candy",
+    "price_fen": 790,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "medium",
+    "sugar_label": "sugar_free",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 3
+    },
+    "ingredients": [
+      "mint",
+      "sweetener"
+    ],
+    "declared_allergens": [],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "office"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P009",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P010",
+    "product_name": "果汁软糖",
+    "category": "candy",
+    "price_fen": 1190,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "high",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 20
+    },
+    "ingredients": [
+      "sugar",
+      "fruit_juice",
+      "gelatin"
+    ],
+    "declared_allergens": [],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "sharing"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P010",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P011",
+    "product_name": "果干分享袋",
+    "category": "dried_fruit",
+    "price_fen": 1690,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "medium",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": false,
+      "inner_weight_g": null
+    },
+    "ingredients": [
+      "mango",
+      "sugar"
+    ],
+    "declared_allergens": [],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "sharing"
+    ],
+    "selling_points": [
+      "分享包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P011",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P012",
+    "product_name": "原味爆米花",
+    "category": "popcorn",
+    "price_fen": 1890,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "low",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": false,
+      "inner_weight_g": null
+    },
+    "ingredients": [
+      "corn",
+      "vegetable_oil",
+      "salt"
+    ],
+    "declared_allergens": [],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "watching_tv"
+    ],
+    "selling_points": [
+      "分享包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P012",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P013",
+    "product_name": "低糖谷物棒",
+    "category": "grain_bar",
+    "price_fen": 2290,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "low",
+    "sugar_label": "low_sugar",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 30
+    },
+    "ingredients": [
+      "oats",
+      "sesame",
+      "milk"
+    ],
+    "declared_allergens": [
+      "gluten",
+      "sesame",
+      "milk"
+    ],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "office",
+      "outdoor"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P013",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P014",
+    "product_name": "混合坚果礼盒",
+    "category": "gift_box",
+    "price_fen": 9900,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "low",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "box",
+      "individually_wrapped": true,
+      "inner_weight_g": 25
+    },
+    "ingredients": [
+      "peanut",
+      "cashew",
+      "almond"
+    ],
+    "declared_allergens": [
+      "peanut",
+      "tree_nuts"
+    ],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": true,
+    "scene_tags": [
+      "gift"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P014",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P015",
+    "product_name": "饼干礼盒",
+    "category": "gift_box",
+    "price_fen": 12900,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "low",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "box",
+      "individually_wrapped": true,
+      "inner_weight_g": 20
+    },
+    "ingredients": [
+      "wheat",
+      "milk",
+      "egg",
+      "sugar"
+    ],
+    "declared_allergens": [
+      "gluten",
+      "milk",
+      "egg"
+    ],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": true,
+    "scene_tags": [
+      "gift"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P015",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P016",
+    "product_name": "每日坚果混合包",
+    "category": "nuts",
+    "price_fen": 1990,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "low",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 25
+    },
+    "ingredients": [
+      "almond",
+      "cashew",
+      "walnut"
+    ],
+    "declared_allergens": [
+      "tree_nuts"
+    ],
+    "may_contain_allergens": [
+      "peanut"
+    ],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "office"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P016",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P017",
+    "product_name": "芝士夹心饼干",
+    "category": "biscuits",
+    "price_fen": 1490,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "medium",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": false,
+      "inner_weight_g": null
+    },
+    "ingredients": [
+      "wheat",
+      "milk",
+      "cheese"
+    ],
+    "declared_allergens": [
+      "gluten",
+      "milk"
+    ],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "sharing"
+    ],
+    "selling_points": [
+      "分享包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P017",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P018",
+    "product_name": "陈皮梅",
+    "category": "dried_fruit",
+    "price_fen": 990,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "high",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 10
+    },
+    "ingredients": [
+      "plum",
+      "sugar",
+      "orange_peel"
+    ],
+    "declared_allergens": [],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "watching_tv"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P018",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P019",
+    "product_name": "原味苏打饼干",
+    "category": "biscuits",
+    "price_fen": 1090,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "low",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 15
+    },
+    "ingredients": [
+      "wheat",
+      "vegetable_oil",
+      "salt"
+    ],
+    "declared_allergens": [
+      "gluten"
+    ],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "office"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P019",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P020",
+    "product_name": "牛肉粒家庭装",
+    "category": "meat",
+    "price_fen": 3990,
+    "currency": "CNY",
+    "spice_level": "mild",
+    "sweetness": "low",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": false,
+      "inner_weight_g": null
+    },
+    "ingredients": [
+      "beef",
+      "chili",
+      "soy_sauce"
+    ],
+    "declared_allergens": [
+      "soy",
+      "gluten"
+    ],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "sharing"
+    ],
+    "selling_points": [
+      "分享包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P020",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P021",
+    "product_name": "糖渍山楂条",
+    "category": "dried_fruit",
+    "price_fen": 1390,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "high",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 20
+    },
+    "ingredients": [
+      "hawthorn",
+      "sugar"
+    ],
+    "declared_allergens": [],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "watching_tv"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P021",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P022",
+    "product_name": "原味海苔片（无库存）",
+    "category": "seaweed",
+    "price_fen": 890,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "low",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 5
+    },
+    "ingredients": [
+      "seaweed",
+      "salt"
+    ],
+    "declared_allergens": [],
+    "may_contain_allergens": [],
+    "stock_quantity": 0,
+    "stock_status": "out_of_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P022",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P023",
+    "product_name": "资料待补充的混合零食",
+    "category": "mixed",
+    "price_fen": 2390,
+    "currency": "CNY",
+    "spice_level": "unknown",
+    "sweetness": "unknown",
+    "sugar_label": "unknown",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": null,
+      "inner_weight_g": null
+    },
+    "ingredients": null,
+    "declared_allergens": null,
+    "may_contain_allergens": null,
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [],
+    "selling_points": [],
+    "image_url": null,
+    "source_id": "catalog:P023",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P024",
+    "product_name": "临期燕麦饼干",
+    "category": "biscuits",
+    "price_fen": 690,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "low",
+    "sugar_label": "low_sugar",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 18
+    },
+    "ingredients": [
+      "oats",
+      "wheat"
+    ],
+    "declared_allergens": [
+      "gluten"
+    ],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2026-10-20T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P024",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P025",
+    "product_name": "已过期曲奇",
+    "category": "biscuits",
+    "price_fen": 590,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "low",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 20
+    },
+    "ingredients": [
+      "wheat",
+      "milk",
+      "egg"
+    ],
+    "declared_allergens": [
+      "gluten",
+      "milk",
+      "egg"
+    ],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2026-10-06T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P025",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P026",
+    "product_name": "价格待确认的海苔",
+    "category": "seaweed",
+    "price_fen": null,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "low",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 5
+    },
+    "ingredients": [
+      "seaweed",
+      "salt"
+    ],
+    "declared_allergens": [],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P026",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P027",
+    "product_name": "无糖气泡水",
+    "category": "drinks",
+    "price_fen": 590,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "none",
+    "sugar_label": "sugar_free",
+    "packaging": {
+      "outer_type": "bottle",
+      "individually_wrapped": true,
+      "inner_weight_g": null
+    },
+    "ingredients": [
+      "water",
+      "carbon_dioxide"
+    ],
+    "declared_allergens": [],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "office"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P027",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P028",
+    "product_name": "烘焙南瓜子",
+    "category": "seeds",
+    "price_fen": 1290,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "low",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 20
+    },
+    "ingredients": [
+      "pumpkin_seed",
+      "salt"
+    ],
+    "declared_allergens": [],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "sharing"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P028",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P029",
+    "product_name": "户外谷物棒",
+    "category": "grain_bar",
+    "price_fen": 3290,
+    "currency": "CNY",
+    "spice_level": "none",
+    "sweetness": "medium",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 35
+    },
+    "ingredients": [
+      "oats",
+      "wheat",
+      "sugar"
+    ],
+    "declared_allergens": [
+      "gluten"
+    ],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "outdoor"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P029",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  },
+  {
+    "sku_id": "P030",
+    "product_name": "黑椒猪肉脯",
+    "category": "meat",
+    "price_fen": 2190,
+    "currency": "CNY",
+    "spice_level": "mild",
+    "sweetness": "low",
+    "sugar_label": "regular",
+    "packaging": {
+      "outer_type": "bag",
+      "individually_wrapped": true,
+      "inner_weight_g": 20
+    },
+    "ingredients": [
+      "pork",
+      "black_pepper",
+      "soy_sauce"
+    ],
+    "declared_allergens": [
+      "soy",
+      "gluten"
+    ],
+    "may_contain_allergens": [],
+    "stock_quantity": 40,
+    "stock_status": "in_stock",
+    "expires_at": "2027-03-31T23:59:59+08:00",
+    "gift_suitable": false,
+    "scene_tags": [
+      "watching_tv"
+    ],
+    "selling_points": [
+      "独立包装"
+    ],
+    "image_url": null,
+    "source_id": "catalog:P030",
+    "source_updated_at": "2026-10-07T12:00:00+08:00",
+    "is_demo": true
+  }
+]

@@ -1,0 +1,160 @@
+{
+  "rule_version": "demo-rules-v1",
+  "rules": [
+    {
+      "id": "N01",
+      "title": "明确要求、偏好与推测来源",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "N02",
+      "title": "否定、程度与纠正",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "N03",
+      "title": "歧义与冲突追问",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "N04",
+      "title": "预算语义与口径",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "N05",
+      "title": "分组与共同预算",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "N06",
+      "title": "多轮更新与依赖撤销",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "F01",
+      "title": "价格、库存与过期准入",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "F02",
+      "title": "未知字段不证明满足硬要求",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "F03",
+      "title": "内包装与小包定义",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "F04",
+      "title": "品类、原料与接触信息",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "F05",
+      "title": "临期与过期",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "RET01",
+      "title": "检索补召回、去重与权威事实",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "P01",
+      "title": "有效期半开区间",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "P02",
+      "title": "资格、持券、渠道与范围",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "P03",
+      "title": "单活动单券与双向叠加",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "P04",
+      "title": "参与金额与门槛",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "P05",
+      "title": "活动、分摊、券与运费顺序",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "P06",
+      "title": "整数取整与最大余数分摊",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "P07",
+      "title": "赠品、硬条件与联合库存",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "P08",
+      "title": "优惠后运费门槛",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "P09",
+      "title": "规则缺失与异常",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "R01",
+      "title": "有依据的排序",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "R02",
+      "title": "严格预算与数量准入",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "R03",
+      "title": "凑单基线与总支出",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "D01",
+      "title": "事实和话术一致",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "D02",
+      "title": "伪指令与不可信内容",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "D03",
+      "title": "修复限次与失败状态",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "S01",
+      "title": "幂等与版本",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "S02",
+      "title": "新会话与模块隔离",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "S03",
+      "title": "输入及界面边界",
+      "document": "docs/02-业务规则与验收基准.md"
+    },
+    {
+      "id": "S04",
+      "title": "可信身份",
+      "document": "docs/02-业务规则与验收基准.md"
+    }
+  ]
+}

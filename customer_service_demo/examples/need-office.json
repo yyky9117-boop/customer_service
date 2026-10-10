@@ -1,0 +1,21 @@
+{
+  "message": "办公室吃，必须独立小包，不辣，不要坚果，不要临期，最好低糖，买三件，含运费最多60元",
+  "patch": {
+    "intent": "recommend", "reset": false,
+    "groups": [{
+      "group_id": "group_office", "label": "办公室零食",
+      "budget": {"min_fen": null, "max_fen": 6000, "strictness": "strict", "scope": "order_total", "source_text": "含运费最多60元", "min_is_hard": false},
+      "upsert_constraints": [
+        {"constraint_id": "c_scene", "field": "scene", "operator": "include", "value": "office", "strength": "soft", "source_text": "办公室吃", "origin": "explicit", "derived_from": []},
+        {"constraint_id": "c_small", "field": "package", "operator": "equals", "value": "small", "strength": "hard", "source_text": "必须独立小包", "origin": "explicit", "derived_from": []},
+        {"constraint_id": "c_spice", "field": "taste", "operator": "equals", "value": "spice:none", "strength": "hard", "source_text": "不辣", "origin": "explicit", "derived_from": []},
+        {"constraint_id": "c_nuts", "field": "category", "operator": "exclude", "value": "nuts", "strength": "hard", "source_text": "不要坚果", "origin": "explicit", "derived_from": []},
+        {"constraint_id": "c_near", "field": "other", "operator": "equals", "value": "not_near_expiry", "strength": "hard", "source_text": "不要临期", "origin": "explicit", "derived_from": []},
+        {"constraint_id": "c_sugar", "field": "taste", "operator": "equals", "value": "sugar:low_sugar", "strength": "soft", "source_text": "最好低糖", "origin": "explicit", "derived_from": []},
+        {"constraint_id": "c_qty", "field": "quantity", "operator": "equals", "value": 3, "strength": "hard", "source_text": "买三件", "origin": "explicit", "derived_from": []}
+      ],
+      "remove_constraint_ids": []
+    }],
+    "remove_group_ids": [], "clarification": null, "retrieval_hints": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "conversation_id": "conv_demo_001",
+  "request_id": "req_demo_001",
+  "turn_id": "turn_demo_001",
+  "base_revision": 0,
+  "revision": 1,
+  "module": null,
+  "status": "unsupported",
+  "message": {
+    "id": "msg_demo_001",
+    "role": "assistant",
+    "content": "订单查询模块尚未接入这个客服界面。",
+    "cards": []
+  },
+  "clarification": null,
+  "error": null
+}

@@ -1,0 +1,45 @@
+{
+  "verified_at": "2026-10-08T07:40:28.116Z",
+  "phase": "welcome",
+  "real_model_used": false,
+  "fault_injection_used": false,
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "desktop_welcome_and_empty_input",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "welcome": true,
+        "sendDisabled": true
+      }
+    },
+    {
+      "name": "desktop_screenshot",
+      "passed": true,
+      "detail": "E:\\aipm\\mianshi\\customer_service_demo\\examples\\screenshots\\desktop-welcome.png"
+    },
+    {
+      "name": "starter_fills_editable_draft_without_sending",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "mobile_layout_and_sidebar",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "mobile_screenshot",
+      "passed": true,
+      "detail": "E:\\aipm\\mianshi\\customer_service_demo\\examples\\screenshots\\mobile-welcome.png"
+    },
+    {
+      "name": "browser_has_no_script_or_csp_errors",
+      "passed": true,
+      "detail": true
+    }
+  ],
+  "console_errors": []
+}

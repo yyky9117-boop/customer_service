@@ -1,0 +1,233 @@
+{
+  "case_id": "F08",
+  "title": "库存不够不能生成多件",
+  "repetition": 1,
+  "implementation_hash": "03c8fc87a9d9e031",
+  "executed_at": "2026-10-08T12:50:06.204744+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_3985cebb182d40f980ca00495ea25a41",
+        "expected_revision": 0,
+        "message": "买 41 件原味海苔脆片",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_2433ecb78f074e5a836e91f9af1b554b",
+        "request_id": "req_3985cebb182d40f980ca00495ea25a41",
+        "turn_id": "turn_293650a10e9b441fae7b8cee2855417a",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "no_match",
+        "message": {
+          "id": "msg_f40afa8ae316485ab013d13c5ac563e6",
+          "role": "assistant",
+          "content": "现有演示商品中没有能同时满足这组硬要求和购买数量的方案。可以修改其中一项要求后再找。",
+          "cards": []
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_2433ecb78f074e5a836e91f9af1b554b",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_self",
+                "label": "原味海苔脆片",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_category",
+                    "field": "category",
+                    "operator": "include",
+                    "value": "seaweed",
+                    "strength": "hard",
+                    "source_text": "海苔脆片",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_293650a10e9b441fae7b8cee2855417a"
+                  },
+                  {
+                    "constraint_id": "c_taste",
+                    "field": "taste",
+                    "operator": "include",
+                    "value": "spice:none",
+                    "strength": "hard",
+                    "source_text": "原味",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_293650a10e9b441fae7b8cee2855417a"
+                  },
+                  {
+                    "constraint_id": "c_quantity",
+                    "field": "quantity",
+                    "operator": "equals",
+                    "value": 41,
+                    "strength": "hard",
+                    "source_text": "41 件",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_293650a10e9b441fae7b8cee2855417a"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": null,
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_331f106a537a4fee893e233033543425",
+          "role": "user",
+          "content": "买 41 件原味海苔脆片",
+          "turn_id": "turn_293650a10e9b441fae7b8cee2855417a"
+        },
+        {
+          "id": "msg_f40afa8ae316485ab013d13c5ac563e6",
+          "role": "assistant",
+          "content": "现有演示商品中没有能同时满足这组硬要求和购买数量的方案。可以修改其中一项要求后再找。",
+          "cards": [],
+          "turn_id": "turn_293650a10e9b441fae7b8cee2855417a",
+          "status": "no_match"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {},
+        "quarantined_skus": []
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "买 41 件原味海苔脆片",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "原味海苔脆片",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_category",
+                "field": "category",
+                "operator": "include",
+                "value": "seaweed",
+                "strength": "hard",
+                "source_text": "海苔脆片",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_taste",
+                "field": "taste",
+                "operator": "include",
+                "value": "spice:none",
+                "strength": "hard",
+                "source_text": "原味",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_quantity",
+                "field": "quantity",
+                "operator": "equals",
+                "value": 41,
+                "strength": "hard",
+                "source_text": "41 件",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": [
+          "P002"
+        ]
+      },
+      "seconds": 1.395
+    }
+  ],
+  "pricing_goldens": [
+    {
+      "id": "G043",
+      "passed": true,
+      "expected": {
+        "eligible": false,
+        "rejection_code": "product_stock_insufficient"
+      },
+      "actual": {
+        "eligible": false,
+        "rejection_code": "product_stock_insufficient"
+      }
+    }
+  ],
+  "seconds": 1.434,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "no_match"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "关联固定购物方案的独立数值基准",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存不足不偷偷降量",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": true
+}

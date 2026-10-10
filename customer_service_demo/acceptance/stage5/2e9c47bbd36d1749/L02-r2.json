@@ -1,0 +1,2176 @@
+{
+  "case_id": "L02",
+  "title": "不太辣保留微辣",
+  "repetition": 2,
+  "implementation_hash": "2e9c47bbd36d1749",
+  "executed_at": "2026-10-08T12:55:33.059196+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_2d649e2dfc77496da5677c77a77a0f70",
+        "expected_revision": 0,
+        "message": "不要太辣，微辣可以，买肉类零食",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_d4920034912b4352a8dea6c00be4d203",
+        "request_id": "req_2d649e2dfc77496da5677c77a77a0f70",
+        "turn_id": "turn_43d19570fb074e9990f8ae28ceaadee0",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_4782ea03ec144e2ab95e49a72b94341a",
+          "role": "assistant",
+          "content": "亲～，按你这次的零食需求，帮你挑了几款微辣的肉类零食，都不担心太辣😊\n\n首选是黑椒猪肉脯（1件），微辣口味，贴合你怕太辣、能接受微辣的需求，含运费27.90元，日常解馋选它比较合适。\n\n备选可以看微辣牛肉粒（1件），微辣口味，也符合你能接受微辣的偏好，总价比首选高一些，含运费31.90元。\n\n如果偏好多一点人或想一起吃，牛肉粒家庭装（1件）也合适，微辣口味，满足你的微辣偏好，总价比首选高一些，含运费45.90元。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_2ff7da64abd0000d39a9",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P030",
+                  "product_name": "黑椒猪肉脯",
+                  "quantity": 1,
+                  "unit_price_fen": 2190,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 2190,
+                "discounts": [],
+                "merchandise_payable_fen": 2190,
+                "shipping_fen": 600,
+                "total_payable_fen": 2790,
+                "conditions": []
+              },
+              "reasons": [
+                "微辣口味，贴合你怕太辣、能接受微辣的需求。",
+                "独立内包装，办公室可分次取用。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_1886ca730c65c55b70a3",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P004",
+                  "product_name": "微辣牛肉粒",
+                  "quantity": 1,
+                  "unit_price_fen": 2590,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 2590,
+                "discounts": [],
+                "merchandise_payable_fen": 2590,
+                "shipping_fen": 600,
+                "total_payable_fen": 3190,
+                "conditions": []
+              },
+              "reasons": [
+                "微辣口味，也符合你能接受微辣的偏好。",
+                "独立内包装，方便分次取用；总价比首选高一些。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_511d3b02eda6acc98517",
+              "plan_type": "single_product",
+              "title": "备选方案 2",
+              "rank": 3,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P020",
+                  "product_name": "牛肉粒家庭装",
+                  "quantity": 1,
+                  "unit_price_fen": 3990,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 3990,
+                "discounts": [],
+                "merchandise_payable_fen": 3990,
+                "shipping_fen": 600,
+                "total_payable_fen": 4590,
+                "conditions": []
+              },
+              "reasons": [
+                "微辣口味，满足你的微辣偏好。",
+                "家庭分享包装，非独立内包，适合多人一起吃；总价比首选高一些。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_d4920034912b4352a8dea6c00be4d203",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_self",
+                "label": "肉类零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_spice",
+                    "field": "taste",
+                    "operator": "include",
+                    "value": [
+                      "spice:none",
+                      "spice:mild"
+                    ],
+                    "strength": "hard",
+                    "source_text": "不要太辣，微辣可以",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_43d19570fb074e9990f8ae28ceaadee0"
+                  },
+                  {
+                    "constraint_id": "c_category",
+                    "field": "category",
+                    "operator": "include",
+                    "value": [
+                      "meat"
+                    ],
+                    "strength": "hard",
+                    "source_text": "买肉类零食",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_43d19570fb074e9990f8ae28ceaadee0"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_4782ea03ec144e2ab95e49a72b94341a",
+              "turn_id": "turn_43d19570fb074e9990f8ae28ceaadee0",
+              "plan_order": [
+                {
+                  "plan_id": "plan_2ff7da64abd0000d39a9",
+                  "sku_ids": [
+                    "P030"
+                  ]
+                },
+                {
+                  "plan_id": "plan_1886ca730c65c55b70a3",
+                  "sku_ids": [
+                    "P004"
+                  ]
+                },
+                {
+                  "plan_id": "plan_511d3b02eda6acc98517",
+                  "sku_ids": [
+                    "P020"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_1ba67b52311547e2b05f168b3ffacee4",
+          "role": "user",
+          "content": "不要太辣，微辣可以，买肉类零食",
+          "turn_id": "turn_43d19570fb074e9990f8ae28ceaadee0"
+        },
+        {
+          "id": "msg_4782ea03ec144e2ab95e49a72b94341a",
+          "role": "assistant",
+          "content": "亲～，按你这次的零食需求，帮你挑了几款微辣的肉类零食，都不担心太辣😊\n\n首选是黑椒猪肉脯（1件），微辣口味，贴合你怕太辣、能接受微辣的需求，含运费27.90元，日常解馋选它比较合适。\n\n备选可以看微辣牛肉粒（1件），微辣口味，也符合你能接受微辣的偏好，总价比首选高一些，含运费31.90元。\n\n如果偏好多一点人或想一起吃，牛肉粒家庭装（1件）也合适，微辣口味，满足你的微辣偏好，总价比首选高一些，含运费45.90元。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_2ff7da64abd0000d39a9",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P030",
+                  "product_name": "黑椒猪肉脯",
+                  "quantity": 1,
+                  "unit_price_fen": 2190,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 2190,
+                "discounts": [],
+                "merchandise_payable_fen": 2190,
+                "shipping_fen": 600,
+                "total_payable_fen": 2790,
+                "conditions": []
+              },
+              "reasons": [
+                "微辣口味，贴合你怕太辣、能接受微辣的需求。",
+                "独立内包装，办公室可分次取用。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_1886ca730c65c55b70a3",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P004",
+                  "product_name": "微辣牛肉粒",
+                  "quantity": 1,
+                  "unit_price_fen": 2590,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 2590,
+                "discounts": [],
+                "merchandise_payable_fen": 2590,
+                "shipping_fen": 600,
+                "total_payable_fen": 3190,
+                "conditions": []
+              },
+              "reasons": [
+                "微辣口味，也符合你能接受微辣的偏好。",
+                "独立内包装，方便分次取用；总价比首选高一些。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_511d3b02eda6acc98517",
+              "plan_type": "single_product",
+              "title": "备选方案 2",
+              "rank": 3,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P020",
+                  "product_name": "牛肉粒家庭装",
+                  "quantity": 1,
+                  "unit_price_fen": 3990,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 3990,
+                "discounts": [],
+                "merchandise_payable_fen": 3990,
+                "shipping_fen": 600,
+                "total_payable_fen": 4590,
+                "conditions": []
+              },
+              "reasons": [
+                "微辣口味，满足你的微辣偏好。",
+                "家庭分享包装，非独立内包，适合多人一起吃；总价比首选高一些。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_43d19570fb074e9990f8ae28ceaadee0",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_self": {
+            "P005": [
+              "constraint:c_spice"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 3,
+        "priced_cart_count": 3,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 2,
+        "reply_review_passed": true
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "不要太辣，微辣可以，买肉类零食",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "肉类零食",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_spice",
+                "field": "taste",
+                "operator": "include",
+                "value": [
+                  "spice:none",
+                  "spice:mild"
+                ],
+                "strength": "hard",
+                "source_text": "不要太辣，微辣可以",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_category",
+                "field": "category",
+                "operator": "include",
+                "value": [
+                  "meat"
+                ],
+                "strength": "hard",
+                "source_text": "买肉类零食",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 0.992
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "不要太辣，微辣可以，买肉类零食",
+        "need_summary": "你这次的零食需求",
+        "plans": [
+          {
+            "plan_id": "plan_2ff7da64abd0000d39a9",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P030",
+                "product_name": "黑椒猪肉脯",
+                "quantity": 1,
+                "unit_price_fen": 2190,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "黑椒猪肉脯，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "黑椒猪肉脯：微辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "黑椒猪肉脯：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "黑椒猪肉脯：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "黑椒猪肉脯：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "黑椒猪肉脯：已知单个内包20克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "黑椒猪肉脯：ingredients=['pork', 'black_pepper', 'soy_sauce']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "黑椒猪肉脯：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "黑椒猪肉脯：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "黑椒猪肉脯：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "黑椒猪肉脯：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费27.90元；商品应付21.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 taste include ['spice:none', 'spice:mild']，符合的商品仅为：黑椒猪肉脯。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 category include ['meat']，符合的商品仅为：黑椒猪肉脯。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_1886ca730c65c55b70a3",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P004",
+                "product_name": "微辣牛肉粒",
+                "quantity": 1,
+                "unit_price_fen": 2590,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "微辣牛肉粒，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "微辣牛肉粒：微辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "微辣牛肉粒：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "微辣牛肉粒：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "微辣牛肉粒：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "微辣牛肉粒：已知单个内包20克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "微辣牛肉粒：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "微辣牛肉粒：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "微辣牛肉粒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "微辣牛肉粒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "微辣牛肉粒：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费31.90元；商品应付25.90元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 taste include ['spice:none', 'spice:mild']，符合的商品仅为：微辣牛肉粒。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "need_match",
+                "text": "对于需求 category include ['meat']，符合的商品仅为：微辣牛肉粒。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_511d3b02eda6acc98517",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P020",
+                "product_name": "牛肉粒家庭装",
+                "quantity": 1,
+                "unit_price_fen": 3990,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "牛肉粒家庭装，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "牛肉粒家庭装：微辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "牛肉粒家庭装：普通糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "牛肉粒家庭装：低甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "牛肉粒家庭装：不是独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "ingredients",
+                "text": "牛肉粒家庭装：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "declared_allergens",
+                "text": "牛肉粒家庭装：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "may_contain_allergens",
+                "text": "牛肉粒家庭装：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "selling_points",
+                "text": "牛肉粒家庭装：selling_points=['分享包装']"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "scene_tags",
+                "text": "牛肉粒家庭装：scene_tags=['sharing']"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "pricing",
+                "text": "含运费45.90元；商品应付39.90元。"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "need_match",
+                "text": "对于需求 taste include ['spice:none', 'spice:mild']，符合的商品仅为：牛肉粒家庭装。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include ['meat']，符合的商品仅为：牛肉粒家庭装。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_2ff7da64abd0000d39a9",
+            "reasons": [
+              {
+                "text": "微辣口味，贴合你怕太辣、能接受微辣的需求。",
+                "fact_ids": [
+                  "p1_f2"
+                ]
+              },
+              {
+                "text": "独立内包装，办公室可分次取用。",
+                "fact_ids": [
+                  "p1_f5",
+                  "p1_f6"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_1886ca730c65c55b70a3",
+            "reasons": [
+              {
+                "text": "微辣口味，也符合你能接受微辣的偏好。",
+                "fact_ids": [
+                  "p2_f2"
+                ]
+              },
+              {
+                "text": "独立内包装，方便分次取用；总价比首选高一些。",
+                "fact_ids": [
+                  "p2_f5",
+                  "p2_f17"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_511d3b02eda6acc98517",
+            "reasons": [
+              {
+                "text": "微辣口味，满足你的微辣偏好。",
+                "fact_ids": [
+                  "p3_f2"
+                ]
+              },
+              {
+                "text": "家庭分享包装，非独立内包，适合多人一起吃；总价比首选高一些。",
+                "fact_ids": [
+                  "p3_f5",
+                  "p3_f16"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 1.955
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "不要太辣，微辣可以，买肉类零食",
+        "need_summary": "你这次的零食需求",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_self",
+              "label": "肉类零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_spice",
+                  "field": "taste",
+                  "operator": "include",
+                  "value": [
+                    "spice:none",
+                    "spice:mild"
+                  ],
+                  "strength": "hard",
+                  "source_text": "不要太辣，微辣可以",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_43d19570fb074e9990f8ae28ceaadee0"
+                },
+                {
+                  "constraint_id": "c_category",
+                  "field": "category",
+                  "operator": "include",
+                  "value": [
+                    "meat"
+                  ],
+                  "strength": "hard",
+                  "source_text": "买肉类零食",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_43d19570fb074e9990f8ae28ceaadee0"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_2ff7da64abd0000d39a9",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P030",
+                "product_name": "黑椒猪肉脯",
+                "quantity": 1,
+                "unit_price_fen": 2190,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2190,
+              "discounts": [],
+              "merchandise_payable_fen": 2190,
+              "shipping_fen": 600,
+              "total_payable_fen": 2790,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "黑椒猪肉脯，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "黑椒猪肉脯：微辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "黑椒猪肉脯：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "黑椒猪肉脯：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "黑椒猪肉脯：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "黑椒猪肉脯：已知单个内包20克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "黑椒猪肉脯：ingredients=['pork', 'black_pepper', 'soy_sauce']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "黑椒猪肉脯：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "黑椒猪肉脯：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "黑椒猪肉脯：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "黑椒猪肉脯：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "黑椒猪肉脯：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费27.90元；商品应付21.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 taste include ['spice:none', 'spice:mild']，符合的商品仅为：黑椒猪肉脯。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 category include ['meat']，符合的商品仅为：黑椒猪肉脯。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_1886ca730c65c55b70a3",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P004",
+                "product_name": "微辣牛肉粒",
+                "quantity": 1,
+                "unit_price_fen": 2590,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2590,
+              "discounts": [],
+              "merchandise_payable_fen": 2590,
+              "shipping_fen": 600,
+              "total_payable_fen": 3190,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "微辣牛肉粒，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "微辣牛肉粒：微辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "微辣牛肉粒：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "微辣牛肉粒：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "微辣牛肉粒：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "微辣牛肉粒：已知单个内包20克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "微辣牛肉粒：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "微辣牛肉粒：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "微辣牛肉粒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "微辣牛肉粒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "微辣牛肉粒：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "微辣牛肉粒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费31.90元；商品应付25.90元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 taste include ['spice:none', 'spice:mild']，符合的商品仅为：微辣牛肉粒。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "need_match",
+                "text": "对于需求 category include ['meat']，符合的商品仅为：微辣牛肉粒。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_511d3b02eda6acc98517",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P020",
+                "product_name": "牛肉粒家庭装",
+                "quantity": 1,
+                "unit_price_fen": 3990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 3990,
+              "discounts": [],
+              "merchandise_payable_fen": 3990,
+              "shipping_fen": 600,
+              "total_payable_fen": 4590,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "牛肉粒家庭装，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "牛肉粒家庭装：微辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "牛肉粒家庭装：普通糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "牛肉粒家庭装：低甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "牛肉粒家庭装：不是独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "ingredients",
+                "text": "牛肉粒家庭装：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "declared_allergens",
+                "text": "牛肉粒家庭装：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "may_contain_allergens",
+                "text": "牛肉粒家庭装：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "selling_points",
+                "text": "牛肉粒家庭装：selling_points=['分享包装']"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "scene_tags",
+                "text": "牛肉粒家庭装：scene_tags=['sharing']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "expiry",
+                "text": "牛肉粒家庭装：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "pricing",
+                "text": "含运费45.90元；商品应付39.90元。"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "need_match",
+                "text": "对于需求 taste include ['spice:none', 'spice:mild']，符合的商品仅为：牛肉粒家庭装。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include ['meat']，符合的商品仅为：牛肉粒家庭装。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "你这次的零食需求",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "黑椒猪肉脯（1件）",
+          "p1_price": "含运费27.90元",
+          "p2_items": "微辣牛肉粒（1件）",
+          "p2_price": "含运费31.90元",
+          "p2_difference": "总价比首选高一些",
+          "p3_items": "牛肉粒家庭装（1件）",
+          "p3_price": "含运费45.90元",
+          "p3_difference": "总价比首选高一些",
+          "p1_reason_1": "微辣口味，贴合你怕太辣、能接受微辣的需求",
+          "p1_reason_2": "独立内包装，办公室可分次取用",
+          "p2_reason_1": "微辣口味，也符合你能接受微辣的偏好",
+          "p2_reason_2": "独立内包装，方便分次取用；总价比首选高一些",
+          "p3_reason_1": "微辣口味，满足你的微辣偏好",
+          "p3_reason_2": "家庭分享包装，非独立内包，适合多人一起吃；总价比首选高一些"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_2ff7da64abd0000d39a9",
+              "reasons": [
+                {
+                  "text": "微辣口味，贴合你怕太辣、能接受微辣的需求。",
+                  "fact_ids": [
+                    "p1_f2"
+                  ]
+                },
+                {
+                  "text": "独立内包装，办公室可分次取用。",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f6"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_1886ca730c65c55b70a3",
+              "reasons": [
+                {
+                  "text": "微辣口味，也符合你能接受微辣的偏好。",
+                  "fact_ids": [
+                    "p2_f2"
+                  ]
+                },
+                {
+                  "text": "独立内包装，方便分次取用；总价比首选高一些。",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f17"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_511d3b02eda6acc98517",
+              "reasons": [
+                {
+                  "text": "微辣口味，满足你的微辣偏好。",
+                  "fact_ids": [
+                    "p3_f2"
+                  ]
+                },
+                {
+                  "text": "家庭分享包装，非独立内包，适合多人一起吃；总价比首选高一些。",
+                  "fact_ids": [
+                    "p3_f5",
+                    "p3_f16"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，按{{need_summary}}，帮你挑了几款肉类零食，都是微辣口味，不怕太辣😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}，日常解馋比较稳妥。\n\n备选可以看{{p2_items}}，{{p2_reason_1}}，{{p2_difference}}，{{p2_price}}；如果想吃得更省事，{{p3_items}}也合适，{{p3_reason_1}}，不过它不是独立内包，{{p3_price}}。\n\n价格和包装区别我都帮你列在卡片上了，想改数量、预算或搭配，可以选中卡片上的商品继续聊。{{follow_up}}"
+      },
+      "seconds": 1.332
+    },
+    {
+      "stage": "compose_reply",
+      "repair": "不能省略或重复临期、预算、运费等提醒或已计入优惠\n上次错误草稿（不是事实）：{\"template\": \"亲～，按{{need_summary}}，帮你挑了几款肉类零食，都是微辣口味，不怕太辣😊\\n\\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}，日常解馋比较稳妥。\\n\\n备选可以看{{p2_items}}，{{p2_reason_1}}，{{p2_difference}}，{{p2_price}}；如果想吃得更省事，{{p3_items}}也合适，{{p3_reason_1}}，不过它不是独立内包，{{p3_price}}。\\n\\n价格和包装区别我都帮你列在卡片上了，想改数量、预算或搭配，可以选中卡片上的商品继续聊。{{follow_up}}\"}",
+      "input": {
+        "user_message": "不要太辣，微辣可以，买肉类零食",
+        "need_summary": "你这次的零食需求",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_self",
+              "label": "肉类零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_spice",
+                  "field": "taste",
+                  "operator": "include",
+                  "value": [
+                    "spice:none",
+                    "spice:mild"
+                  ],
+                  "strength": "hard",
+                  "source_text": "不要太辣，微辣可以",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_43d19570fb074e9990f8ae28ceaadee0"
+                },
+                {
+                  "constraint_id": "c_category",
+                  "field": "category",
+                  "operator": "include",
+                  "value": [
+                    "meat"
+                  ],
+                  "strength": "hard",
+                  "source_text": "买肉类零食",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_43d19570fb074e9990f8ae28ceaadee0"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_2ff7da64abd0000d39a9",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P030",
+                "product_name": "黑椒猪肉脯",
+                "quantity": 1,
+                "unit_price_fen": 2190,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2190,
+              "discounts": [],
+              "merchandise_payable_fen": 2190,
+              "shipping_fen": 600,
+              "total_payable_fen": 2790,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "黑椒猪肉脯，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "黑椒猪肉脯：微辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "黑椒猪肉脯：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "黑椒猪肉脯：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "黑椒猪肉脯：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "黑椒猪肉脯：已知单个内包20克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "黑椒猪肉脯：ingredients=['pork', 'black_pepper', 'soy_sauce']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "黑椒猪肉脯：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "黑椒猪肉脯：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "黑椒猪肉脯：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "黑椒猪肉脯：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "黑椒猪肉脯：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费27.90元；商品应付21.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 taste include ['spice:none', 'spice:mild']，符合的商品仅为：黑椒猪肉脯。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 category include ['meat']，符合的商品仅为：黑椒猪肉脯。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_1886ca730c65c55b70a3",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P004",
+                "product_name": "微辣牛肉粒",
+                "quantity": 1,
+                "unit_price_fen": 2590,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2590,
+              "discounts": [],
+              "merchandise_payable_fen": 2590,
+              "shipping_fen": 600,
+              "total_payable_fen": 3190,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "微辣牛肉粒，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "微辣牛肉粒：微辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "微辣牛肉粒：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "微辣牛肉粒：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "微辣牛肉粒：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "微辣牛肉粒：已知单个内包20克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "微辣牛肉粒：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "微辣牛肉粒：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "微辣牛肉粒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "微辣牛肉粒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "微辣牛肉粒：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "微辣牛肉粒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费31.90元；商品应付25.90元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 taste include ['spice:none', 'spice:mild']，符合的商品仅为：微辣牛肉粒。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "need_match",
+                "text": "对于需求 category include ['meat']，符合的商品仅为：微辣牛肉粒。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_511d3b02eda6acc98517",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P020",
+                "product_name": "牛肉粒家庭装",
+                "quantity": 1,
+                "unit_price_fen": 3990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 3990,
+              "discounts": [],
+              "merchandise_payable_fen": 3990,
+              "shipping_fen": 600,
+              "total_payable_fen": 4590,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "牛肉粒家庭装，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "牛肉粒家庭装：微辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "牛肉粒家庭装：普通糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "牛肉粒家庭装：低甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "牛肉粒家庭装：不是独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "ingredients",
+                "text": "牛肉粒家庭装：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "declared_allergens",
+                "text": "牛肉粒家庭装：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "may_contain_allergens",
+                "text": "牛肉粒家庭装：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "selling_points",
+                "text": "牛肉粒家庭装：selling_points=['分享包装']"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "scene_tags",
+                "text": "牛肉粒家庭装：scene_tags=['sharing']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "expiry",
+                "text": "牛肉粒家庭装：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "pricing",
+                "text": "含运费45.90元；商品应付39.90元。"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "need_match",
+                "text": "对于需求 taste include ['spice:none', 'spice:mild']，符合的商品仅为：牛肉粒家庭装。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include ['meat']，符合的商品仅为：牛肉粒家庭装。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "你这次的零食需求",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "黑椒猪肉脯（1件）",
+          "p1_price": "含运费27.90元",
+          "p2_items": "微辣牛肉粒（1件）",
+          "p2_price": "含运费31.90元",
+          "p2_difference": "总价比首选高一些",
+          "p3_items": "牛肉粒家庭装（1件）",
+          "p3_price": "含运费45.90元",
+          "p3_difference": "总价比首选高一些",
+          "p1_reason_1": "微辣口味，贴合你怕太辣、能接受微辣的需求",
+          "p1_reason_2": "独立内包装，办公室可分次取用",
+          "p2_reason_1": "微辣口味，也符合你能接受微辣的偏好",
+          "p2_reason_2": "独立内包装，方便分次取用；总价比首选高一些",
+          "p3_reason_1": "微辣口味，满足你的微辣偏好",
+          "p3_reason_2": "家庭分享包装，非独立内包，适合多人一起吃；总价比首选高一些"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_2ff7da64abd0000d39a9",
+              "reasons": [
+                {
+                  "text": "微辣口味，贴合你怕太辣、能接受微辣的需求。",
+                  "fact_ids": [
+                    "p1_f2"
+                  ]
+                },
+                {
+                  "text": "独立内包装，办公室可分次取用。",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f6"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_1886ca730c65c55b70a3",
+              "reasons": [
+                {
+                  "text": "微辣口味，也符合你能接受微辣的偏好。",
+                  "fact_ids": [
+                    "p2_f2"
+                  ]
+                },
+                {
+                  "text": "独立内包装，方便分次取用；总价比首选高一些。",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f17"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_511d3b02eda6acc98517",
+              "reasons": [
+                {
+                  "text": "微辣口味，满足你的微辣偏好。",
+                  "fact_ids": [
+                    "p3_f2"
+                  ]
+                },
+                {
+                  "text": "家庭分享包装，非独立内包，适合多人一起吃；总价比首选高一些。",
+                  "fact_ids": [
+                    "p3_f5",
+                    "p3_f16"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，按{{need_summary}}，帮你挑了几款微辣的肉类零食，都不担心太辣😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}，日常解馋选它比较合适。\n\n备选可以看{{p2_items}}，{{p2_reason_1}}，{{p2_difference}}，{{p2_price}}。\n\n如果偏好多一点人或想一起吃，{{p3_items}}也合适，{{p3_reason_1}}，{{p3_difference}}，{{p3_price}}。\n\n{{follow_up}}"
+      },
+      "seconds": 1.341
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "不要太辣，微辣可以，买肉类零食",
+        "need_summary": "你这次的零食需求",
+        "plans": [
+          {
+            "plan_id": "plan_2ff7da64abd0000d39a9",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P030",
+                "product_name": "黑椒猪肉脯",
+                "quantity": 1,
+                "unit_price_fen": 2190,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2190,
+              "discounts": [],
+              "merchandise_payable_fen": 2190,
+              "shipping_fen": 600,
+              "total_payable_fen": 2790,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "黑椒猪肉脯，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "黑椒猪肉脯：微辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "黑椒猪肉脯：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "黑椒猪肉脯：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "黑椒猪肉脯：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "黑椒猪肉脯：已知单个内包20克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "黑椒猪肉脯：ingredients=['pork', 'black_pepper', 'soy_sauce']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "黑椒猪肉脯：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "黑椒猪肉脯：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "黑椒猪肉脯：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "黑椒猪肉脯：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "黑椒猪肉脯：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费27.90元；商品应付21.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 taste include ['spice:none', 'spice:mild']，符合的商品仅为：黑椒猪肉脯。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 category include ['meat']，符合的商品仅为：黑椒猪肉脯。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_1886ca730c65c55b70a3",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P004",
+                "product_name": "微辣牛肉粒",
+                "quantity": 1,
+                "unit_price_fen": 2590,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2590,
+              "discounts": [],
+              "merchandise_payable_fen": 2590,
+              "shipping_fen": 600,
+              "total_payable_fen": 3190,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "微辣牛肉粒，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "微辣牛肉粒：微辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "微辣牛肉粒：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "微辣牛肉粒：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "微辣牛肉粒：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "微辣牛肉粒：已知单个内包20克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "微辣牛肉粒：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "微辣牛肉粒：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "微辣牛肉粒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "微辣牛肉粒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "微辣牛肉粒：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "微辣牛肉粒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费31.90元；商品应付25.90元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 taste include ['spice:none', 'spice:mild']，符合的商品仅为：微辣牛肉粒。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "need_match",
+                "text": "对于需求 category include ['meat']，符合的商品仅为：微辣牛肉粒。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_511d3b02eda6acc98517",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P020",
+                "product_name": "牛肉粒家庭装",
+                "quantity": 1,
+                "unit_price_fen": 3990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 3990,
+              "discounts": [],
+              "merchandise_payable_fen": 3990,
+              "shipping_fen": 600,
+              "total_payable_fen": 4590,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "牛肉粒家庭装，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "牛肉粒家庭装：微辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "牛肉粒家庭装：普通糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "牛肉粒家庭装：低甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "牛肉粒家庭装：不是独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "ingredients",
+                "text": "牛肉粒家庭装：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "declared_allergens",
+                "text": "牛肉粒家庭装：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "may_contain_allergens",
+                "text": "牛肉粒家庭装：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "selling_points",
+                "text": "牛肉粒家庭装：selling_points=['分享包装']"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "scene_tags",
+                "text": "牛肉粒家庭装：scene_tags=['sharing']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "expiry",
+                "text": "牛肉粒家庭装：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "pricing",
+                "text": "含运费45.90元；商品应付39.90元。"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "need_match",
+                "text": "对于需求 taste include ['spice:none', 'spice:mild']，符合的商品仅为：牛肉粒家庭装。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include ['meat']，符合的商品仅为：牛肉粒家庭装。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "你这次的零食需求",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "黑椒猪肉脯（1件）",
+          "p1_price": "含运费27.90元",
+          "p2_items": "微辣牛肉粒（1件）",
+          "p2_price": "含运费31.90元",
+          "p2_difference": "总价比首选高一些",
+          "p3_items": "牛肉粒家庭装（1件）",
+          "p3_price": "含运费45.90元",
+          "p3_difference": "总价比首选高一些",
+          "p1_reason_1": "微辣口味，贴合你怕太辣、能接受微辣的需求",
+          "p1_reason_2": "独立内包装，办公室可分次取用",
+          "p2_reason_1": "微辣口味，也符合你能接受微辣的偏好",
+          "p2_reason_2": "独立内包装，方便分次取用；总价比首选高一些",
+          "p3_reason_1": "微辣口味，满足你的微辣偏好",
+          "p3_reason_2": "家庭分享包装，非独立内包，适合多人一起吃；总价比首选高一些"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_2ff7da64abd0000d39a9",
+              "reasons": [
+                {
+                  "text": "微辣口味，贴合你怕太辣、能接受微辣的需求。",
+                  "fact_ids": [
+                    "p1_f2"
+                  ]
+                },
+                {
+                  "text": "独立内包装，办公室可分次取用。",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f6"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_1886ca730c65c55b70a3",
+              "reasons": [
+                {
+                  "text": "微辣口味，也符合你能接受微辣的偏好。",
+                  "fact_ids": [
+                    "p2_f2"
+                  ]
+                },
+                {
+                  "text": "独立内包装，方便分次取用；总价比首选高一些。",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f17"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_511d3b02eda6acc98517",
+              "reasons": [
+                {
+                  "text": "微辣口味，满足你的微辣偏好。",
+                  "fact_ids": [
+                    "p3_f2"
+                  ]
+                },
+                {
+                  "text": "家庭分享包装，非独立内包，适合多人一起吃；总价比首选高一些。",
+                  "fact_ids": [
+                    "p3_f5",
+                    "p3_f16"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，按{{need_summary}}，帮你挑了几款微辣的肉类零食，都不担心太辣😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，{{p1_price}}，日常解馋选它比较合适。\n\n备选可以看{{p2_items}}，{{p2_reason_1}}，{{p2_difference}}，{{p2_price}}。\n\n如果偏好多一点人或想一起吃，{{p3_items}}也合适，{{p3_reason_1}}，{{p3_difference}}，{{p3_price}}。\n\n{{follow_up}}",
+        "reply": "亲～，按你这次的零食需求，帮你挑了几款微辣的肉类零食，都不担心太辣😊\n\n首选是黑椒猪肉脯（1件），微辣口味，贴合你怕太辣、能接受微辣的需求，含运费27.90元，日常解馋选它比较合适。\n\n备选可以看微辣牛肉粒（1件），微辣口味，也符合你能接受微辣的偏好，总价比首选高一些，含运费31.90元。\n\n如果偏好多一点人或想一起吃，牛肉粒家庭装（1件）也合适，微辣口味，满足你的微辣偏好，总价比首选高一些，含运费45.90元。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 0.69
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 6.345,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "completed"
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "明确排除及未知资料边界",
+      "passed": true,
+      "actual": [
+        "P004",
+        "P020",
+        "P030"
+      ]
+    },
+    {
+      "name": "微辣可用，未扩大成重辣",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": true
+}

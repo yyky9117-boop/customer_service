@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "live_model_used": true,
+  "cases": [
+    {
+      "question": "SN-DEMO-0001怎么还没有发货，我有点着急",
+      "reply": "亲～，知道你想尽快收到，我帮你核对了当前状态😊\n订单 SN-DEMO-0001目前尚未发货。\n目前还没有确认的发出时间，后续发货情况可以再来查。如果需要进一步核实发货安排，可以点击联系人工。",
+      "result_type": "success",
+      "reply_mode": "deepseek_grounded_reply",
+      "scene": "unshipped",
+      "knowledge_ids": [
+        "waiting_shipment_urgent",
+        "waiting_shipment"
+      ],
+      "review_passed": true,
+      "attempts": 1,
+      "seconds": 2.55
+    },
+    {
+      "question": "SN-DEMO-0002物流到哪，预计什么时候能到",
+      "reply": "亲～，我帮你核对了这次的物流结果😊 订单 SN-DEMO-0002目前已发货。包裹运输中，已离开上海分拨中心，发往杭州分拨中心，包裹预计2026-10-08 18:00送达，以后续物流更新为准。预计时间可能随配送更新变化，你可以继续关注后续轨迹，有变化可以再来查。",
+      "result_type": "success",
+      "reply_mode": "deepseek_grounded_reply",
+      "scene": "in_transit",
+      "knowledge_ids": [
+        "parcel_transport",
+        "arrival_time"
+      ],
+      "review_passed": true,
+      "attempts": 1,
+      "seconds": 3.36
+    },
+    {
+      "question": "我买的牛肉干物流到哪了",
+      "reply": "亲～，我按你提供的信息查了一下😊，匹配到多笔订单，请选择需要查询的商城订单号：\nSN-DEMO-0009：麻辣牛肉粒\nSN-DEMO-0002：五香牛肉干\n点选下面的订单，或者告诉我完整订单号，我再继续帮你看物流到哪了。",
+      "result_type": "multiple_orders",
+      "reply_mode": "deepseek_grounded_reply",
+      "scene": "multiple_orders",
+      "knowledge_ids": [
+        "choose_order"
+      ],
+      "review_passed": true,
+      "attempts": 1,
+      "seconds": 2.6
+    }
+  ],
+  "reply_records_verified": true,
+  "module": "order_query",
+  "knowledge_source": "reconstructed_demo"
+}

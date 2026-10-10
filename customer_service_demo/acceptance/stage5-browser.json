@@ -1,0 +1,384 @@
+{
+  "verified_at": "2026-10-08T13:20:29.816Z",
+  "phase": "acceptance",
+  "real_model_used": true,
+  "fault_injection_used": true,
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "stage5_real_browser_api_model_data_reply",
+      "passed": true,
+      "detail": {
+        "content": "亲～，按办公室吃、独立小包、不辣、含运费最多60.00元帮您挑了三件组合😊\n\n首选是无糖薄荷糖（3件），独立内包装，办公室可分次取用，含运费29.70元。\n\n如果不想只吃一种，可以看看无糖薄荷糖（1件） + 原味苏打饼干（2件），苏打饼干独立小包，办公室分次可吃；换成不同商品的组合，总价比首选高一些，含运费31.70元，已计入苏打饼干限两件秒杀价。\n\n想再丰富一点可选原味海苔脆片（1件） + 无糖薄荷糖（1件） + 原味苏打饼干（1件），三种零食都独立包装且不辣，适合办公室；换成不同商品的组合，总价比首选高一些，含运费32.70元，已计入苏打饼干限两件秒杀价。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+        "cards": [
+          {
+            "type": "recommendation_plan",
+            "plan_id": "plan_bf31729a42560e351545",
+            "plan_type": "multi_quantity",
+            "title": "首选方案",
+            "rank": 1,
+            "group_id": "group_self",
+            "items": [
+              {
+                "sku_id": "P009",
+                "product_name": "无糖薄荷糖",
+                "quantity": 3,
+                "unit_price_fen": 790,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2370,
+              "discounts": [],
+              "merchandise_payable_fen": 2370,
+              "shipping_fen": 600,
+              "total_payable_fen": 2970,
+              "conditions": []
+            },
+            "reasons": [
+              "独立内包装，办公室可分次取用",
+              "不辣且无糖标签，适合办公零食"
+            ],
+            "notes": [
+              "商品、身份与优惠为演示资料。"
+            ]
+          },
+          {
+            "type": "recommendation_plan",
+            "plan_id": "plan_14e93424c76c50c9b9d7",
+            "plan_type": "bundle",
+            "title": "备选方案 1",
+            "rank": 2,
+            "group_id": "group_self",
+            "items": [
+              {
+                "sku_id": "P009",
+                "product_name": "无糖薄荷糖",
+                "quantity": 1,
+                "unit_price_fen": 790,
+                "image_url": null
+              },
+              {
+                "sku_id": "P019",
+                "product_name": "原味苏打饼干",
+                "quantity": 2,
+                "unit_price_fen": 1090,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2970,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_FIXED",
+                  "label": "苏打饼干限两件秒杀价",
+                  "amount_fen": 400,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 2570,
+              "shipping_fen": 600,
+              "total_payable_fen": 3170,
+              "conditions": []
+            },
+            "reasons": [
+              "苏打饼干独立小包，办公室分次可吃",
+              "两种都独立包装且不辣，搭配不同口味"
+            ],
+            "notes": [
+              "商品、身份与优惠为演示资料。"
+            ]
+          },
+          {
+            "type": "recommendation_plan",
+            "plan_id": "plan_1b2e62daad743da6e99c",
+            "plan_type": "bundle",
+            "title": "备选方案 2",
+            "rank": 3,
+            "group_id": "group_self",
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 990,
+                "image_url": null
+              },
+              {
+                "sku_id": "P009",
+                "product_name": "无糖薄荷糖",
+                "quantity": 1,
+                "unit_price_fen": 790,
+                "image_url": null
+              },
+              {
+                "sku_id": "P019",
+                "product_name": "原味苏打饼干",
+                "quantity": 1,
+                "unit_price_fen": 1090,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 2870,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_FIXED",
+                  "label": "苏打饼干限两件秒杀价",
+                  "amount_fen": 200,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 2670,
+              "shipping_fen": 600,
+              "total_payable_fen": 3270,
+              "conditions": []
+            },
+            "reasons": [
+              "三种零食都独立包装且不辣，适合办公室",
+              "含无糖薄荷糖，有独立小包三种口味"
+            ],
+            "notes": [
+              "商品、身份与优惠为演示资料。"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "stage5_320px_200percent_text_screenshot",
+      "passed": true,
+      "detail": "E:\\aipm\\mianshi\\customer_service_demo\\examples\\screenshots\\stage5-320px-text200.png"
+    },
+    {
+      "name": "S11_enlarged_header_does_not_cover_messages",
+      "passed": true,
+      "detail": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 144,
+          "top": 0,
+          "right": 320,
+          "bottom": 144,
+          "left": 0
+        },
+        "title": {
+          "x": 50,
+          "y": 14,
+          "width": 258,
+          "height": 68,
+          "top": 14,
+          "right": 308,
+          "bottom": 82,
+          "left": 50
+        }
+      }
+    },
+    {
+      "name": "S11_price_can_scroll_into_visible_chat_0",
+      "passed": true,
+      "detail": {
+        "price": {
+          "x": 64,
+          "y": 364.84375,
+          "width": 136.921875,
+          "height": 52.796875,
+          "top": 364.84375,
+          "right": 200.921875,
+          "bottom": 417.640625,
+          "left": 64
+        },
+        "composer": {
+          "x": 13,
+          "y": 639,
+          "width": 294,
+          "height": 205,
+          "top": 639,
+          "right": 307,
+          "bottom": 844,
+          "left": 13
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 144,
+          "top": 0,
+          "right": 320,
+          "bottom": 144,
+          "left": 0
+        }
+      }
+    },
+    {
+      "name": "S11_price_can_scroll_into_visible_chat_1",
+      "passed": true,
+      "detail": {
+        "price": {
+          "x": 64,
+          "y": 364.78125,
+          "width": 136.921875,
+          "height": 52.796875,
+          "top": 364.78125,
+          "right": 200.921875,
+          "bottom": 417.578125,
+          "left": 64
+        },
+        "composer": {
+          "x": 13,
+          "y": 639,
+          "width": 294,
+          "height": 205,
+          "top": 639,
+          "right": 307,
+          "bottom": 844,
+          "left": 13
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 144,
+          "top": 0,
+          "right": 320,
+          "bottom": 144,
+          "left": 0
+        }
+      }
+    },
+    {
+      "name": "S11_price_can_scroll_into_visible_chat_2",
+      "passed": true,
+      "detail": {
+        "price": {
+          "x": 64,
+          "y": 365.5,
+          "width": 136.921875,
+          "height": 52.796875,
+          "top": 365.5,
+          "right": 200.921875,
+          "bottom": 418.296875,
+          "left": 64
+        },
+        "composer": {
+          "x": 13,
+          "y": 639,
+          "width": 294,
+          "height": 205,
+          "top": 639,
+          "right": 307,
+          "bottom": 844,
+          "left": 13
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 144,
+          "top": 0,
+          "right": 320,
+          "bottom": 144,
+          "left": 0
+        }
+      }
+    },
+    {
+      "name": "stage5_320px_enlarged_price_screenshot",
+      "passed": true,
+      "detail": "E:\\aipm\\mianshi\\customer_service_demo\\examples\\screenshots\\stage5-320px-price200.png"
+    },
+    {
+      "name": "S11_320px_200percent_text_no_overflow",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scrollWidth": 320,
+        "composer": {
+          "x": 13,
+          "y": 648,
+          "width": 294,
+          "height": 131,
+          "top": 648,
+          "right": 307,
+          "bottom": 779,
+          "left": 13
+        },
+        "prices": [
+          {
+            "text": "¥29.70",
+            "box": {
+              "x": 64,
+              "y": 2239.84375,
+              "width": 136.921875,
+              "height": 52.796875,
+              "top": 2239.84375,
+              "right": 200.921875,
+              "bottom": 2292.640625,
+              "left": 64
+            },
+            "font": "48px"
+          },
+          {
+            "text": "¥31.70",
+            "box": {
+              "x": 64,
+              "y": 3218.78125,
+              "width": 136.921875,
+              "height": 52.796875,
+              "top": 3218.78125,
+              "right": 200.921875,
+              "bottom": 3271.578125,
+              "left": 64
+            },
+            "font": "48px"
+          },
+          {
+            "text": "¥32.70",
+            "box": {
+              "x": 64,
+              "y": 4453.5,
+              "width": 136.921875,
+              "height": 52.796875,
+              "top": 4453.5,
+              "right": 200.921875,
+              "bottom": 4506.296875,
+              "left": 64
+            },
+            "font": "48px"
+          }
+        ],
+        "input": {
+          "x": 27,
+          "y": 662,
+          "width": 266,
+          "height": 37,
+          "top": 662,
+          "right": 293,
+          "bottom": 699,
+          "left": 27
+        }
+      }
+    },
+    {
+      "name": "S04_late_real_response_does_not_enter_new_chat",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "browser_has_no_script_or_csp_errors",
+      "passed": true,
+      "detail": true
+    }
+  ],
+  "console_errors": []
+}

@@ -1,0 +1,189 @@
+{
+  "case_id": "F14",
+  "title": "临期自然日边界 30 天",
+  "repetition": 1,
+  "implementation_hash": "03c8fc87a9d9e031",
+  "executed_at": "2026-10-08T12:51:35.516942+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_c28b0bbcf84641b1b4b1182fb76025ee",
+        "expected_revision": 0,
+        "message": "买燕麦饼干，不要临期",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_c28b0bbcf84641b1b4b1182fb76025ee",
+        "turn_id": null,
+        "base_revision": 0,
+        "revision": 0,
+        "module": "product_recommendation",
+        "status": "error",
+        "message": {
+          "id": "msg_3599a4b7741843afb8a536fb9a4422e4",
+          "role": "assistant",
+          "content": "需求理解结果未通过核验，请重新描述；本轮未保存。",
+          "cards": []
+        },
+        "clarification": null,
+        "error": {
+          "code": "invalid_model_output",
+          "retryable": true
+        }
+      },
+      "session": null,
+      "history": [],
+      "diagnostics": null
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "买燕麦饼干，不要临期",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "燕麦饼干",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_category_biscuits",
+                "field": "category",
+                "operator": "include",
+                "value": "biscuits",
+                "strength": "hard",
+                "source_text": "买燕麦饼干",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_ingredient_oats",
+                "field": "ingredient",
+                "operator": "include",
+                "value": "oats",
+                "strength": "hard",
+                "source_text": "买燕麦饼干",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_other_not_near_expiry",
+                "field": "other",
+                "operator": "equals",
+                "value": "not_near_expiry",
+                "strength": "hard",
+                "source_text": "不要临期",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": [
+          "P001"
+        ]
+      },
+      "seconds": 1.646
+    },
+    {
+      "stage": "extract",
+      "repair": "不支持的约束值/操作: ingredient include oats",
+      "input": {
+        "message": "买燕麦饼干，不要临期",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "燕麦饼干",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_ingredient_oats",
+                "field": "ingredient",
+                "operator": "include",
+                "value": "oats",
+                "strength": "hard",
+                "source_text": "燕麦饼干",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_not_near_expiry",
+                "field": "other",
+                "operator": "equals",
+                "value": "not_near_expiry",
+                "strength": "hard",
+                "source_text": "不要临期",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "shared_budget": null,
+        "clarification": null,
+        "retrieval_hints": [
+          "P001"
+        ]
+      },
+      "seconds": 1.363
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 3.033,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": false,
+      "actual": "error"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "无匹配不放宽已知要求",
+      "passed": false,
+      "actual": null
+    }
+  ],
+  "passed": false
+}

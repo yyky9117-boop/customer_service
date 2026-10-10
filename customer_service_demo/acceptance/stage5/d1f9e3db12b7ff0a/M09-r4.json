@@ -1,0 +1,2914 @@
+{
+  "case_id": "M09",
+  "title": "对象分组不混口味",
+  "repetition": 4,
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "executed_at": "2026-10-08T13:10:21.395757+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_ada1f24547454ae79663a2a0f60cf08a",
+        "expected_revision": 0,
+        "message": "给同事买不辣的，我自己想要辣的，每份 40 元以内",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_b723b8a62c67499586495be7f17efe7e",
+        "request_id": "req_ada1f24547454ae79663a2a0f60cf08a",
+        "turn_id": "turn_118ddfc9c1c04fcdad48c7e02f544bf6",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_367b74b7081c49b39d8fa1fa9d04abaf",
+          "role": "assistant",
+          "content": "亲～，按给同事和自己分别搭配、每份不超过四十元的思路，我整理了三套方案供您比较😊\n\n首选是香辣牛肉干（1件） + 无糖气泡水（1件），香辣牛肉干是辣味，适合自己想吃辣的需求，搭配起来两边都照顾到了，含运费41.80元，这套未完全匹配口味、包装等偏好。\n\n备选一是原味海苔脆片（1件） + 香辣牛肉干（1件），原味海苔脆片不辣，给同事吃这款更合适，总价比首选高一些，含运费45.80元，这套未完全匹配口味、包装等偏好。\n\n备选二是原味燕麦小饼干（1件） + 香辣牛肉干（1件），原味燕麦小饼干不辣，给同事是另一款不辣选择，总价比首选高一些，含运费48.80元，这套未完全匹配口味、包装等偏好。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_a7937a7ceaf5c36a13ac",
+              "plan_type": "bundle",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_colleague",
+              "items": [
+                {
+                  "sku_id": "P005",
+                  "product_name": "香辣牛肉干",
+                  "quantity": 1,
+                  "unit_price_fen": 2990,
+                  "image_url": null
+                },
+                {
+                  "sku_id": "P027",
+                  "product_name": "无糖气泡水",
+                  "quantity": 1,
+                  "unit_price_fen": 590,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 3580,
+                "discounts": [],
+                "merchandise_payable_fen": 3580,
+                "shipping_fen": 600,
+                "total_payable_fen": 4180,
+                "conditions": []
+              },
+              "reasons": [
+                "香辣牛肉干是辣味，适合自己想吃辣的需求",
+                "无糖气泡水不辣且独立包装，给同事方便分次取用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "需求组 1：无糖气泡水 × 1",
+                "需求组 2：香辣牛肉干 × 1",
+                "以上对象合并为一个订单计价；优惠券只使用一次。",
+                "这套未完全匹配口味、包装等偏好。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_4ca0c6d49ee05c44eaa5",
+              "plan_type": "bundle",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_colleague",
+              "items": [
+                {
+                  "sku_id": "P002",
+                  "product_name": "原味海苔脆片",
+                  "quantity": 1,
+                  "unit_price_fen": 990,
+                  "image_url": null
+                },
+                {
+                  "sku_id": "P005",
+                  "product_name": "香辣牛肉干",
+                  "quantity": 1,
+                  "unit_price_fen": 2990,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 3980,
+                "discounts": [],
+                "merchandise_payable_fen": 3980,
+                "shipping_fen": 600,
+                "total_payable_fen": 4580,
+                "conditions": []
+              },
+              "reasons": [
+                "原味海苔脆片不辣，给同事吃这款更合适",
+                "香辣牛肉干辣味独立内包，自己吃辣选它方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "需求组 1：原味海苔脆片 × 1",
+                "需求组 2：香辣牛肉干 × 1",
+                "以上对象合并为一个订单计价；优惠券只使用一次。",
+                "这套未完全匹配口味、包装等偏好。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_f00b5fd207b704127ab3",
+              "plan_type": "bundle",
+              "title": "备选方案 2",
+              "rank": 3,
+              "group_id": "group_colleague",
+              "items": [
+                {
+                  "sku_id": "P001",
+                  "product_name": "原味燕麦小饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 1290,
+                  "image_url": null
+                },
+                {
+                  "sku_id": "P005",
+                  "product_name": "香辣牛肉干",
+                  "quantity": 1,
+                  "unit_price_fen": 2990,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 4280,
+                "discounts": [],
+                "merchandise_payable_fen": 4280,
+                "shipping_fen": 600,
+                "total_payable_fen": 4880,
+                "conditions": []
+              },
+              "reasons": [
+                "原味燕麦小饼干不辣，给同事是另一款不辣选择",
+                "香辣牛肉干辣味独立内包，自己吃辣可以选"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "需求组 1：原味燕麦小饼干 × 1",
+                "需求组 2：香辣牛肉干 × 1",
+                "以上对象合并为一个订单计价；优惠券只使用一次。",
+                "这套未完全匹配口味、包装等偏好。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_b723b8a62c67499586495be7f17efe7e",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_colleague",
+                "label": "给同事的不辣零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": 4000,
+                  "strictness": "strict",
+                  "scope": "per_unit",
+                  "source_text": "每份 40 元以内",
+                  "min_is_hard": false,
+                  "source_turn_id": "turn_118ddfc9c1c04fcdad48c7e02f544bf6"
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_colleague_spice",
+                    "field": "taste",
+                    "operator": "equals",
+                    "value": "spice:none",
+                    "strength": "hard",
+                    "source_text": "不辣的",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_118ddfc9c1c04fcdad48c7e02f544bf6"
+                  },
+                  {
+                    "constraint_id": "c_colleague_purpose",
+                    "field": "purpose",
+                    "operator": "equals",
+                    "value": "gift",
+                    "strength": "soft",
+                    "source_text": "给同事买",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_118ddfc9c1c04fcdad48c7e02f544bf6"
+                  }
+                ]
+              },
+              {
+                "group_id": "group_self",
+                "label": "自己吃的辣味零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": 4000,
+                  "strictness": "strict",
+                  "scope": "per_unit",
+                  "source_text": "每份 40 元以内",
+                  "min_is_hard": false,
+                  "source_turn_id": "turn_118ddfc9c1c04fcdad48c7e02f544bf6"
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_self_spice",
+                    "field": "taste",
+                    "operator": "equals",
+                    "value": "spice:hot",
+                    "strength": "hard",
+                    "source_text": "辣的",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_118ddfc9c1c04fcdad48c7e02f544bf6"
+                  },
+                  {
+                    "constraint_id": "c_self_purpose",
+                    "field": "purpose",
+                    "operator": "equals",
+                    "value": "self",
+                    "strength": "soft",
+                    "source_text": "我自己想要",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_118ddfc9c1c04fcdad48c7e02f544bf6"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_367b74b7081c49b39d8fa1fa9d04abaf",
+              "turn_id": "turn_118ddfc9c1c04fcdad48c7e02f544bf6",
+              "plan_order": [
+                {
+                  "plan_id": "plan_a7937a7ceaf5c36a13ac",
+                  "sku_ids": [
+                    "P005",
+                    "P027"
+                  ]
+                },
+                {
+                  "plan_id": "plan_4ca0c6d49ee05c44eaa5",
+                  "sku_ids": [
+                    "P002",
+                    "P005"
+                  ]
+                },
+                {
+                  "plan_id": "plan_f00b5fd207b704127ab3",
+                  "sku_ids": [
+                    "P001",
+                    "P005"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_5b9316ab980e4e37a6cc49a6032e4257",
+          "role": "user",
+          "content": "给同事买不辣的，我自己想要辣的，每份 40 元以内",
+          "turn_id": "turn_118ddfc9c1c04fcdad48c7e02f544bf6"
+        },
+        {
+          "id": "msg_367b74b7081c49b39d8fa1fa9d04abaf",
+          "role": "assistant",
+          "content": "亲～，按给同事和自己分别搭配、每份不超过四十元的思路，我整理了三套方案供您比较😊\n\n首选是香辣牛肉干（1件） + 无糖气泡水（1件），香辣牛肉干是辣味，适合自己想吃辣的需求，搭配起来两边都照顾到了，含运费41.80元，这套未完全匹配口味、包装等偏好。\n\n备选一是原味海苔脆片（1件） + 香辣牛肉干（1件），原味海苔脆片不辣，给同事吃这款更合适，总价比首选高一些，含运费45.80元，这套未完全匹配口味、包装等偏好。\n\n备选二是原味燕麦小饼干（1件） + 香辣牛肉干（1件），原味燕麦小饼干不辣，给同事是另一款不辣选择，总价比首选高一些，含运费48.80元，这套未完全匹配口味、包装等偏好。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_a7937a7ceaf5c36a13ac",
+              "plan_type": "bundle",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_colleague",
+              "items": [
+                {
+                  "sku_id": "P005",
+                  "product_name": "香辣牛肉干",
+                  "quantity": 1,
+                  "unit_price_fen": 2990,
+                  "image_url": null
+                },
+                {
+                  "sku_id": "P027",
+                  "product_name": "无糖气泡水",
+                  "quantity": 1,
+                  "unit_price_fen": 590,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 3580,
+                "discounts": [],
+                "merchandise_payable_fen": 3580,
+                "shipping_fen": 600,
+                "total_payable_fen": 4180,
+                "conditions": []
+              },
+              "reasons": [
+                "香辣牛肉干是辣味，适合自己想吃辣的需求",
+                "无糖气泡水不辣且独立包装，给同事方便分次取用"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "需求组 1：无糖气泡水 × 1",
+                "需求组 2：香辣牛肉干 × 1",
+                "以上对象合并为一个订单计价；优惠券只使用一次。",
+                "这套未完全匹配口味、包装等偏好。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_4ca0c6d49ee05c44eaa5",
+              "plan_type": "bundle",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_colleague",
+              "items": [
+                {
+                  "sku_id": "P002",
+                  "product_name": "原味海苔脆片",
+                  "quantity": 1,
+                  "unit_price_fen": 990,
+                  "image_url": null
+                },
+                {
+                  "sku_id": "P005",
+                  "product_name": "香辣牛肉干",
+                  "quantity": 1,
+                  "unit_price_fen": 2990,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 3980,
+                "discounts": [],
+                "merchandise_payable_fen": 3980,
+                "shipping_fen": 600,
+                "total_payable_fen": 4580,
+                "conditions": []
+              },
+              "reasons": [
+                "原味海苔脆片不辣，给同事吃这款更合适",
+                "香辣牛肉干辣味独立内包，自己吃辣选它方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "需求组 1：原味海苔脆片 × 1",
+                "需求组 2：香辣牛肉干 × 1",
+                "以上对象合并为一个订单计价；优惠券只使用一次。",
+                "这套未完全匹配口味、包装等偏好。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_f00b5fd207b704127ab3",
+              "plan_type": "bundle",
+              "title": "备选方案 2",
+              "rank": 3,
+              "group_id": "group_colleague",
+              "items": [
+                {
+                  "sku_id": "P001",
+                  "product_name": "原味燕麦小饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 1290,
+                  "image_url": null
+                },
+                {
+                  "sku_id": "P005",
+                  "product_name": "香辣牛肉干",
+                  "quantity": 1,
+                  "unit_price_fen": 2990,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 4280,
+                "discounts": [],
+                "merchandise_payable_fen": 4280,
+                "shipping_fen": 600,
+                "total_payable_fen": 4880,
+                "conditions": []
+              },
+              "reasons": [
+                "原味燕麦小饼干不辣，给同事是另一款不辣选择",
+                "香辣牛肉干辣味独立内包，自己吃辣可以选"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "需求组 1：原味燕麦小饼干 × 1",
+                "需求组 2：香辣牛肉干 × 1",
+                "以上对象合并为一个订单计价；优惠券只使用一次。",
+                "这套未完全匹配口味、包装等偏好。"
+              ]
+            }
+          ],
+          "turn_id": "turn_118ddfc9c1c04fcdad48c7e02f544bf6",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_colleague": {
+            "P004": [
+              "constraint:c_colleague_spice"
+            ],
+            "P005": [
+              "constraint:c_colleague_spice"
+            ],
+            "P020": [
+              "constraint:c_colleague_spice"
+            ],
+            "P022": [
+              "stock_unknown_or_empty"
+            ],
+            "P023": [
+              "constraint:c_colleague_spice"
+            ],
+            "P025": [
+              "expired_or_unknown"
+            ],
+            "P026": [
+              "price_unknown"
+            ],
+            "P030": [
+              "constraint:c_colleague_spice"
+            ]
+          },
+          "group_self": {
+            "P001": [
+              "constraint:c_self_spice"
+            ],
+            "P002": [
+              "constraint:c_self_spice"
+            ],
+            "P003": [
+              "constraint:c_self_spice"
+            ],
+            "P004": [
+              "constraint:c_self_spice"
+            ],
+            "P006": [
+              "constraint:c_self_spice"
+            ],
+            "P007": [
+              "constraint:c_self_spice"
+            ],
+            "P008": [
+              "constraint:c_self_spice"
+            ],
+            "P009": [
+              "constraint:c_self_spice"
+            ],
+            "P010": [
+              "constraint:c_self_spice"
+            ],
+            "P011": [
+              "constraint:c_self_spice"
+            ],
+            "P012": [
+              "constraint:c_self_spice"
+            ],
+            "P013": [
+              "constraint:c_self_spice"
+            ],
+            "P014": [
+              "constraint:c_self_spice"
+            ],
+            "P015": [
+              "constraint:c_self_spice"
+            ],
+            "P016": [
+              "constraint:c_self_spice"
+            ],
+            "P017": [
+              "constraint:c_self_spice"
+            ],
+            "P018": [
+              "constraint:c_self_spice"
+            ],
+            "P019": [
+              "constraint:c_self_spice"
+            ],
+            "P020": [
+              "constraint:c_self_spice"
+            ],
+            "P021": [
+              "constraint:c_self_spice"
+            ],
+            "P022": [
+              "stock_unknown_or_empty",
+              "constraint:c_self_spice"
+            ],
+            "P023": [
+              "constraint:c_self_spice"
+            ],
+            "P024": [
+              "constraint:c_self_spice"
+            ],
+            "P025": [
+              "expired_or_unknown",
+              "constraint:c_self_spice"
+            ],
+            "P026": [
+              "price_unknown",
+              "constraint:c_self_spice"
+            ],
+            "P027": [
+              "constraint:c_self_spice"
+            ],
+            "P028": [
+              "constraint:c_self_spice"
+            ],
+            "P029": [
+              "constraint:c_self_spice"
+            ],
+            "P030": [
+              "constraint:c_self_spice"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 22,
+        "priced_cart_count": 22,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 1,
+        "reply_review_passed": true
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "给同事买不辣的，我自己想要辣的，每份 40 元以内",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_colleague",
+            "label": "给同事的不辣零食",
+            "budget": {
+              "min_fen": null,
+              "max_fen": 4000,
+              "strictness": "strict",
+              "scope": "per_unit",
+              "source_text": "每份 40 元以内",
+              "min_is_hard": false
+            },
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_colleague_spice",
+                "field": "taste",
+                "operator": "equals",
+                "value": "spice:none",
+                "strength": "hard",
+                "source_text": "不辣的",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_colleague_purpose",
+                "field": "purpose",
+                "operator": "equals",
+                "value": "gift",
+                "strength": "soft",
+                "source_text": "给同事买",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          },
+          {
+            "group_id": "group_self",
+            "label": "自己吃的辣味零食",
+            "budget": {
+              "min_fen": null,
+              "max_fen": 4000,
+              "strictness": "strict",
+              "scope": "per_unit",
+              "source_text": "每份 40 元以内",
+              "min_is_hard": false
+            },
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_self_spice",
+                "field": "taste",
+                "operator": "equals",
+                "value": "spice:hot",
+                "strength": "hard",
+                "source_text": "辣的",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_self_purpose",
+                "field": "purpose",
+                "operator": "equals",
+                "value": "self",
+                "strength": "soft",
+                "source_text": "我自己想要",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "shared_budget": null,
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 2.404
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "给同事买不辣的，我自己想要辣的，每份 40 元以内",
+        "need_summary": "给不同对象分别搭配、每件最多40.00元",
+        "plans": [
+          {
+            "plan_id": "plan_a7937a7ceaf5c36a13ac",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P005",
+                "product_name": "香辣牛肉干",
+                "quantity": 1,
+                "unit_price_fen": 2990,
+                "image_url": null
+              },
+              {
+                "sku_id": "P027",
+                "product_name": "无糖气泡水",
+                "quantity": 1,
+                "unit_price_fen": 590,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "香辣牛肉干，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "香辣牛肉干：辣味。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "香辣牛肉干：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "香辣牛肉干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "香辣牛肉干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "香辣牛肉干：已知单个内包20克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "香辣牛肉干：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "香辣牛肉干：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "香辣牛肉干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "香辣牛肉干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "香辣牛肉干：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "purchase",
+                "text": "无糖气泡水，购买1件。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "spice_level",
+                "text": "无糖气泡水：不辣。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "sugar_label",
+                "text": "无糖气泡水：无糖标签。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "sweetness",
+                "text": "无糖气泡水：无甜味标签。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "packaging",
+                "text": "无糖气泡水：独立内包装。"
+              },
+              {
+                "id": "p1_f18",
+                "kind": "ingredients",
+                "text": "无糖气泡水：ingredients=['water', 'carbon_dioxide']"
+              },
+              {
+                "id": "p1_f19",
+                "kind": "declared_allergens",
+                "text": "无糖气泡水：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f20",
+                "kind": "may_contain_allergens",
+                "text": "无糖气泡水：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f21",
+                "kind": "selling_points",
+                "text": "无糖气泡水：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f22",
+                "kind": "scene_tags",
+                "text": "无糖气泡水：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f24",
+                "kind": "pricing",
+                "text": "含运费41.80元；商品应付35.80元。"
+              },
+              {
+                "id": "p1_f25",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p1_f26",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:hot，符合的商品仅为：香辣牛肉干。"
+              },
+              {
+                "id": "p1_f27",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals self，符合的商品仅为：香辣牛肉干、无糖气泡水。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_4ca0c6d49ee05c44eaa5",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 990,
+                "image_url": null
+              },
+              {
+                "sku_id": "P005",
+                "product_name": "香辣牛肉干",
+                "quantity": 1,
+                "unit_price_fen": 2990,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "purchase",
+                "text": "香辣牛肉干，购买1件。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "spice_level",
+                "text": "香辣牛肉干：辣味。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "sugar_label",
+                "text": "香辣牛肉干：普通糖标签。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "sweetness",
+                "text": "香辣牛肉干：低甜度标签。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "packaging",
+                "text": "香辣牛肉干：独立内包装。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "packaging",
+                "text": "香辣牛肉干：已知单个内包20克。"
+              },
+              {
+                "id": "p2_f19",
+                "kind": "ingredients",
+                "text": "香辣牛肉干：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p2_f20",
+                "kind": "declared_allergens",
+                "text": "香辣牛肉干：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p2_f21",
+                "kind": "may_contain_allergens",
+                "text": "香辣牛肉干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f22",
+                "kind": "selling_points",
+                "text": "香辣牛肉干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f23",
+                "kind": "scene_tags",
+                "text": "香辣牛肉干：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p2_f25",
+                "kind": "pricing",
+                "text": "含运费45.80元；商品应付39.80元。"
+              },
+              {
+                "id": "p2_f26",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p2_f27",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:hot，符合的商品仅为：香辣牛肉干。"
+              },
+              {
+                "id": "p2_f28",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals self，符合的商品仅为：原味海苔脆片、香辣牛肉干。"
+              },
+              {
+                "id": "p2_f34",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_f00b5fd207b704127ab3",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 1290,
+                "image_url": null
+              },
+              {
+                "sku_id": "P005",
+                "product_name": "香辣牛肉干",
+                "quantity": 1,
+                "unit_price_fen": 2990,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "原味燕麦小饼干，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "原味燕麦小饼干：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "原味燕麦小饼干：低糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "原味燕麦小饼干：低甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "原味燕麦小饼干：ingredients=['oats', 'wheat', 'soy']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "原味燕麦小饼干：declared_allergens=['gluten', 'soy']"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味燕麦小饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "原味燕麦小饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "原味燕麦小饼干：scene_tags=['office', 'breakfast']"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "purchase",
+                "text": "香辣牛肉干，购买1件。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "spice_level",
+                "text": "香辣牛肉干：辣味。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "sugar_label",
+                "text": "香辣牛肉干：普通糖标签。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "sweetness",
+                "text": "香辣牛肉干：低甜度标签。"
+              },
+              {
+                "id": "p3_f17",
+                "kind": "packaging",
+                "text": "香辣牛肉干：独立内包装。"
+              },
+              {
+                "id": "p3_f18",
+                "kind": "packaging",
+                "text": "香辣牛肉干：已知单个内包20克。"
+              },
+              {
+                "id": "p3_f19",
+                "kind": "ingredients",
+                "text": "香辣牛肉干：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p3_f20",
+                "kind": "declared_allergens",
+                "text": "香辣牛肉干：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p3_f21",
+                "kind": "may_contain_allergens",
+                "text": "香辣牛肉干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f22",
+                "kind": "selling_points",
+                "text": "香辣牛肉干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f23",
+                "kind": "scene_tags",
+                "text": "香辣牛肉干：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p3_f25",
+                "kind": "pricing",
+                "text": "含运费48.80元；商品应付42.80元。"
+              },
+              {
+                "id": "p3_f26",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p3_f27",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:hot，符合的商品仅为：香辣牛肉干。"
+              },
+              {
+                "id": "p3_f28",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals self，符合的商品仅为：原味燕麦小饼干、香辣牛肉干。"
+              },
+              {
+                "id": "p3_f34",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_a7937a7ceaf5c36a13ac",
+            "reasons": [
+              {
+                "text": "香辣牛肉干是辣味，适合自己想吃辣的需求",
+                "fact_ids": [
+                  "p1_f2",
+                  "p1_f26"
+                ]
+              },
+              {
+                "text": "无糖气泡水不辣且独立包装，给同事方便分次取用",
+                "fact_ids": [
+                  "p1_f14",
+                  "p1_f17",
+                  "p1_f25"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_4ca0c6d49ee05c44eaa5",
+            "reasons": [
+              {
+                "text": "原味海苔脆片不辣，给同事吃这款更合适",
+                "fact_ids": [
+                  "p2_f2",
+                  "p2_f26"
+                ]
+              },
+              {
+                "text": "香辣牛肉干辣味独立内包，自己吃辣选它方便",
+                "fact_ids": [
+                  "p2_f14",
+                  "p2_f17",
+                  "p2_f27"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_f00b5fd207b704127ab3",
+            "reasons": [
+              {
+                "text": "原味燕麦小饼干不辣，给同事是另一款不辣选择",
+                "fact_ids": [
+                  "p3_f2",
+                  "p3_f26"
+                ]
+              },
+              {
+                "text": "香辣牛肉干辣味独立内包，自己吃辣可以选",
+                "fact_ids": [
+                  "p3_f14",
+                  "p3_f17",
+                  "p3_f27"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 1.989
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "给同事买不辣的，我自己想要辣的，每份 40 元以内",
+        "need_summary": "给不同对象分别搭配、每件最多40.00元",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_colleague",
+              "label": "给同事的不辣零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": 4000,
+                "strictness": "strict",
+                "scope": "per_unit",
+                "source_text": "每份 40 元以内",
+                "min_is_hard": false,
+                "source_turn_id": "turn_118ddfc9c1c04fcdad48c7e02f544bf6"
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_colleague_spice",
+                  "field": "taste",
+                  "operator": "equals",
+                  "value": "spice:none",
+                  "strength": "hard",
+                  "source_text": "不辣的",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_118ddfc9c1c04fcdad48c7e02f544bf6"
+                },
+                {
+                  "constraint_id": "c_colleague_purpose",
+                  "field": "purpose",
+                  "operator": "equals",
+                  "value": "gift",
+                  "strength": "soft",
+                  "source_text": "给同事买",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_118ddfc9c1c04fcdad48c7e02f544bf6"
+                }
+              ]
+            },
+            {
+              "group_id": "group_self",
+              "label": "自己吃的辣味零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": 4000,
+                "strictness": "strict",
+                "scope": "per_unit",
+                "source_text": "每份 40 元以内",
+                "min_is_hard": false,
+                "source_turn_id": "turn_118ddfc9c1c04fcdad48c7e02f544bf6"
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_self_spice",
+                  "field": "taste",
+                  "operator": "equals",
+                  "value": "spice:hot",
+                  "strength": "hard",
+                  "source_text": "辣的",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_118ddfc9c1c04fcdad48c7e02f544bf6"
+                },
+                {
+                  "constraint_id": "c_self_purpose",
+                  "field": "purpose",
+                  "operator": "equals",
+                  "value": "self",
+                  "strength": "soft",
+                  "source_text": "我自己想要",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_118ddfc9c1c04fcdad48c7e02f544bf6"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_a7937a7ceaf5c36a13ac",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P005",
+                "product_name": "香辣牛肉干",
+                "quantity": 1,
+                "unit_price_fen": 2990,
+                "image_url": null
+              },
+              {
+                "sku_id": "P027",
+                "product_name": "无糖气泡水",
+                "quantity": 1,
+                "unit_price_fen": 590,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 3580,
+              "discounts": [],
+              "merchandise_payable_fen": 3580,
+              "shipping_fen": 600,
+              "total_payable_fen": 4180,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "香辣牛肉干，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "香辣牛肉干：辣味。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "香辣牛肉干：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "香辣牛肉干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "香辣牛肉干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "香辣牛肉干：已知单个内包20克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "香辣牛肉干：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "香辣牛肉干：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "香辣牛肉干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "香辣牛肉干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "香辣牛肉干：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "香辣牛肉干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "purchase",
+                "text": "无糖气泡水，购买1件。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "spice_level",
+                "text": "无糖气泡水：不辣。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "sugar_label",
+                "text": "无糖气泡水：无糖标签。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "sweetness",
+                "text": "无糖气泡水：无甜味标签。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "packaging",
+                "text": "无糖气泡水：独立内包装。"
+              },
+              {
+                "id": "p1_f18",
+                "kind": "ingredients",
+                "text": "无糖气泡水：ingredients=['water', 'carbon_dioxide']"
+              },
+              {
+                "id": "p1_f19",
+                "kind": "declared_allergens",
+                "text": "无糖气泡水：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f20",
+                "kind": "may_contain_allergens",
+                "text": "无糖气泡水：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f21",
+                "kind": "selling_points",
+                "text": "无糖气泡水：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f22",
+                "kind": "scene_tags",
+                "text": "无糖气泡水：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f23",
+                "kind": "expiry",
+                "text": "无糖气泡水：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f24",
+                "kind": "pricing",
+                "text": "含运费41.80元；商品应付35.80元。"
+              },
+              {
+                "id": "p1_f25",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p1_f26",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:hot，符合的商品仅为：香辣牛肉干。"
+              },
+              {
+                "id": "p1_f27",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals self，符合的商品仅为：香辣牛肉干、无糖气泡水。"
+              },
+              {
+                "id": "p1_f28",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f29",
+                "kind": "boundary",
+                "text": "需求组 1：无糖气泡水 × 1"
+              },
+              {
+                "id": "p1_f30",
+                "kind": "boundary",
+                "text": "需求组 2：香辣牛肉干 × 1"
+              },
+              {
+                "id": "p1_f31",
+                "kind": "boundary",
+                "text": "以上对象合并为一个订单计价；优惠券只使用一次。"
+              },
+              {
+                "id": "p1_f32",
+                "kind": "boundary",
+                "text": "这套未完全匹配口味、包装等偏好。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_4ca0c6d49ee05c44eaa5",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 990,
+                "image_url": null
+              },
+              {
+                "sku_id": "P005",
+                "product_name": "香辣牛肉干",
+                "quantity": 1,
+                "unit_price_fen": 2990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 3980,
+              "discounts": [],
+              "merchandise_payable_fen": 3980,
+              "shipping_fen": 600,
+              "total_payable_fen": 4580,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "原味海苔脆片：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "purchase",
+                "text": "香辣牛肉干，购买1件。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "spice_level",
+                "text": "香辣牛肉干：辣味。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "sugar_label",
+                "text": "香辣牛肉干：普通糖标签。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "sweetness",
+                "text": "香辣牛肉干：低甜度标签。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "packaging",
+                "text": "香辣牛肉干：独立内包装。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "packaging",
+                "text": "香辣牛肉干：已知单个内包20克。"
+              },
+              {
+                "id": "p2_f19",
+                "kind": "ingredients",
+                "text": "香辣牛肉干：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p2_f20",
+                "kind": "declared_allergens",
+                "text": "香辣牛肉干：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p2_f21",
+                "kind": "may_contain_allergens",
+                "text": "香辣牛肉干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f22",
+                "kind": "selling_points",
+                "text": "香辣牛肉干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f23",
+                "kind": "scene_tags",
+                "text": "香辣牛肉干：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p2_f24",
+                "kind": "expiry",
+                "text": "香辣牛肉干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f25",
+                "kind": "pricing",
+                "text": "含运费45.80元；商品应付39.80元。"
+              },
+              {
+                "id": "p2_f26",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p2_f27",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:hot，符合的商品仅为：香辣牛肉干。"
+              },
+              {
+                "id": "p2_f28",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals self，符合的商品仅为：原味海苔脆片、香辣牛肉干。"
+              },
+              {
+                "id": "p2_f29",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f30",
+                "kind": "boundary",
+                "text": "需求组 1：原味海苔脆片 × 1"
+              },
+              {
+                "id": "p2_f31",
+                "kind": "boundary",
+                "text": "需求组 2：香辣牛肉干 × 1"
+              },
+              {
+                "id": "p2_f32",
+                "kind": "boundary",
+                "text": "以上对象合并为一个订单计价；优惠券只使用一次。"
+              },
+              {
+                "id": "p2_f33",
+                "kind": "boundary",
+                "text": "这套未完全匹配口味、包装等偏好。"
+              },
+              {
+                "id": "p2_f34",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_f00b5fd207b704127ab3",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 1290,
+                "image_url": null
+              },
+              {
+                "sku_id": "P005",
+                "product_name": "香辣牛肉干",
+                "quantity": 1,
+                "unit_price_fen": 2990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 4280,
+              "discounts": [],
+              "merchandise_payable_fen": 4280,
+              "shipping_fen": 600,
+              "total_payable_fen": 4880,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "原味燕麦小饼干，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "原味燕麦小饼干：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "原味燕麦小饼干：低糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "原味燕麦小饼干：低甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "原味燕麦小饼干：ingredients=['oats', 'wheat', 'soy']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "原味燕麦小饼干：declared_allergens=['gluten', 'soy']"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味燕麦小饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "原味燕麦小饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "原味燕麦小饼干：scene_tags=['office', 'breakfast']"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "expiry",
+                "text": "原味燕麦小饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "purchase",
+                "text": "香辣牛肉干，购买1件。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "spice_level",
+                "text": "香辣牛肉干：辣味。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "sugar_label",
+                "text": "香辣牛肉干：普通糖标签。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "sweetness",
+                "text": "香辣牛肉干：低甜度标签。"
+              },
+              {
+                "id": "p3_f17",
+                "kind": "packaging",
+                "text": "香辣牛肉干：独立内包装。"
+              },
+              {
+                "id": "p3_f18",
+                "kind": "packaging",
+                "text": "香辣牛肉干：已知单个内包20克。"
+              },
+              {
+                "id": "p3_f19",
+                "kind": "ingredients",
+                "text": "香辣牛肉干：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p3_f20",
+                "kind": "declared_allergens",
+                "text": "香辣牛肉干：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p3_f21",
+                "kind": "may_contain_allergens",
+                "text": "香辣牛肉干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f22",
+                "kind": "selling_points",
+                "text": "香辣牛肉干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f23",
+                "kind": "scene_tags",
+                "text": "香辣牛肉干：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p3_f24",
+                "kind": "expiry",
+                "text": "香辣牛肉干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f25",
+                "kind": "pricing",
+                "text": "含运费48.80元；商品应付42.80元。"
+              },
+              {
+                "id": "p3_f26",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p3_f27",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:hot，符合的商品仅为：香辣牛肉干。"
+              },
+              {
+                "id": "p3_f28",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals self，符合的商品仅为：原味燕麦小饼干、香辣牛肉干。"
+              },
+              {
+                "id": "p3_f29",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f30",
+                "kind": "boundary",
+                "text": "需求组 1：原味燕麦小饼干 × 1"
+              },
+              {
+                "id": "p3_f31",
+                "kind": "boundary",
+                "text": "需求组 2：香辣牛肉干 × 1"
+              },
+              {
+                "id": "p3_f32",
+                "kind": "boundary",
+                "text": "以上对象合并为一个订单计价；优惠券只使用一次。"
+              },
+              {
+                "id": "p3_f33",
+                "kind": "boundary",
+                "text": "这套未完全匹配口味、包装等偏好。"
+              },
+              {
+                "id": "p3_f34",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "给不同对象分别搭配、每件最多40.00元",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "香辣牛肉干（1件） + 无糖气泡水（1件）",
+          "p1_price": "含运费41.80元",
+          "p1_notice": "这套未完全匹配口味、包装等偏好。",
+          "p2_items": "原味海苔脆片（1件） + 香辣牛肉干（1件）",
+          "p2_price": "含运费45.80元",
+          "p2_difference": "总价比首选高一些",
+          "p2_notice": "这套未完全匹配口味、包装等偏好。",
+          "p3_items": "原味燕麦小饼干（1件） + 香辣牛肉干（1件）",
+          "p3_price": "含运费48.80元",
+          "p3_difference": "总价比首选高一些",
+          "p3_notice": "这套未完全匹配口味、包装等偏好。",
+          "p1_reason_1": "香辣牛肉干是辣味，适合自己想吃辣的需求",
+          "p1_reason_2": "无糖气泡水不辣且独立包装，给同事方便分次取用",
+          "p2_reason_1": "原味海苔脆片不辣，给同事吃这款更合适",
+          "p2_reason_2": "香辣牛肉干辣味独立内包，自己吃辣选它方便",
+          "p3_reason_1": "原味燕麦小饼干不辣，给同事是另一款不辣选择",
+          "p3_reason_2": "香辣牛肉干辣味独立内包，自己吃辣可以选"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_a7937a7ceaf5c36a13ac",
+              "reasons": [
+                {
+                  "text": "香辣牛肉干是辣味，适合自己想吃辣的需求",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f26"
+                  ]
+                },
+                {
+                  "text": "无糖气泡水不辣且独立包装，给同事方便分次取用",
+                  "fact_ids": [
+                    "p1_f14",
+                    "p1_f17",
+                    "p1_f25"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_4ca0c6d49ee05c44eaa5",
+              "reasons": [
+                {
+                  "text": "原味海苔脆片不辣，给同事吃这款更合适",
+                  "fact_ids": [
+                    "p2_f2",
+                    "p2_f26"
+                  ]
+                },
+                {
+                  "text": "香辣牛肉干辣味独立内包，自己吃辣选它方便",
+                  "fact_ids": [
+                    "p2_f14",
+                    "p2_f17",
+                    "p2_f27"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_f00b5fd207b704127ab3",
+              "reasons": [
+                {
+                  "text": "原味燕麦小饼干不辣，给同事是另一款不辣选择",
+                  "fact_ids": [
+                    "p3_f2",
+                    "p3_f26"
+                  ]
+                },
+                {
+                  "text": "香辣牛肉干辣味独立内包，自己吃辣可以选",
+                  "fact_ids": [
+                    "p3_f14",
+                    "p3_f17",
+                    "p3_f27"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，按给同事和自己分别搭配、每份不超过四十元的思路，我整理了三套方案供您比较😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，搭配起来两边都照顾到了，{{p1_price}}，{{p1_notice}}\n\n备选一是{{p2_items}}，{{p2_reason_1}}，{{p2_difference}}，{{p2_price}}，{{p2_notice}}\n\n备选二是{{p3_items}}，{{p3_reason_1}}，{{p3_difference}}，{{p3_price}}，{{p3_notice}}\n\n{{follow_up}}"
+      },
+      "seconds": 1.42
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "给同事买不辣的，我自己想要辣的，每份 40 元以内",
+        "need_summary": "给不同对象分别搭配、每件最多40.00元",
+        "plans": [
+          {
+            "plan_id": "plan_a7937a7ceaf5c36a13ac",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P005",
+                "product_name": "香辣牛肉干",
+                "quantity": 1,
+                "unit_price_fen": 2990,
+                "image_url": null
+              },
+              {
+                "sku_id": "P027",
+                "product_name": "无糖气泡水",
+                "quantity": 1,
+                "unit_price_fen": 590,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 3580,
+              "discounts": [],
+              "merchandise_payable_fen": 3580,
+              "shipping_fen": 600,
+              "total_payable_fen": 4180,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "香辣牛肉干，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "香辣牛肉干：辣味。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "香辣牛肉干：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "香辣牛肉干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "香辣牛肉干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "香辣牛肉干：已知单个内包20克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "香辣牛肉干：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "香辣牛肉干：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "香辣牛肉干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "香辣牛肉干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "香辣牛肉干：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "香辣牛肉干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "purchase",
+                "text": "无糖气泡水，购买1件。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "spice_level",
+                "text": "无糖气泡水：不辣。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "sugar_label",
+                "text": "无糖气泡水：无糖标签。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "sweetness",
+                "text": "无糖气泡水：无甜味标签。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "packaging",
+                "text": "无糖气泡水：独立内包装。"
+              },
+              {
+                "id": "p1_f18",
+                "kind": "ingredients",
+                "text": "无糖气泡水：ingredients=['water', 'carbon_dioxide']"
+              },
+              {
+                "id": "p1_f19",
+                "kind": "declared_allergens",
+                "text": "无糖气泡水：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f20",
+                "kind": "may_contain_allergens",
+                "text": "无糖气泡水：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f21",
+                "kind": "selling_points",
+                "text": "无糖气泡水：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f22",
+                "kind": "scene_tags",
+                "text": "无糖气泡水：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f23",
+                "kind": "expiry",
+                "text": "无糖气泡水：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f24",
+                "kind": "pricing",
+                "text": "含运费41.80元；商品应付35.80元。"
+              },
+              {
+                "id": "p1_f25",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p1_f26",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:hot，符合的商品仅为：香辣牛肉干。"
+              },
+              {
+                "id": "p1_f27",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals self，符合的商品仅为：香辣牛肉干、无糖气泡水。"
+              },
+              {
+                "id": "p1_f28",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f29",
+                "kind": "boundary",
+                "text": "需求组 1：无糖气泡水 × 1"
+              },
+              {
+                "id": "p1_f30",
+                "kind": "boundary",
+                "text": "需求组 2：香辣牛肉干 × 1"
+              },
+              {
+                "id": "p1_f31",
+                "kind": "boundary",
+                "text": "以上对象合并为一个订单计价；优惠券只使用一次。"
+              },
+              {
+                "id": "p1_f32",
+                "kind": "boundary",
+                "text": "这套未完全匹配口味、包装等偏好。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_4ca0c6d49ee05c44eaa5",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P002",
+                "product_name": "原味海苔脆片",
+                "quantity": 1,
+                "unit_price_fen": 990,
+                "image_url": null
+              },
+              {
+                "sku_id": "P005",
+                "product_name": "香辣牛肉干",
+                "quantity": 1,
+                "unit_price_fen": 2990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 3980,
+              "discounts": [],
+              "merchandise_payable_fen": 3980,
+              "shipping_fen": 600,
+              "total_payable_fen": 4580,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "原味海苔脆片，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "原味海苔脆片：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "原味海苔脆片：普通糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "原味海苔脆片：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "原味海苔脆片：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "原味海苔脆片：已知单个内包5克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "原味海苔脆片：ingredients=['seaweed', 'vegetable_oil', 'salt']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "原味海苔脆片：declared_allergens=[]"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味海苔脆片：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "原味海苔脆片：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "原味海苔脆片：scene_tags=['office', 'watching_tv']"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "原味海苔脆片：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "purchase",
+                "text": "香辣牛肉干，购买1件。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "spice_level",
+                "text": "香辣牛肉干：辣味。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "sugar_label",
+                "text": "香辣牛肉干：普通糖标签。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "sweetness",
+                "text": "香辣牛肉干：低甜度标签。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "packaging",
+                "text": "香辣牛肉干：独立内包装。"
+              },
+              {
+                "id": "p2_f18",
+                "kind": "packaging",
+                "text": "香辣牛肉干：已知单个内包20克。"
+              },
+              {
+                "id": "p2_f19",
+                "kind": "ingredients",
+                "text": "香辣牛肉干：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p2_f20",
+                "kind": "declared_allergens",
+                "text": "香辣牛肉干：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p2_f21",
+                "kind": "may_contain_allergens",
+                "text": "香辣牛肉干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f22",
+                "kind": "selling_points",
+                "text": "香辣牛肉干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f23",
+                "kind": "scene_tags",
+                "text": "香辣牛肉干：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p2_f24",
+                "kind": "expiry",
+                "text": "香辣牛肉干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f25",
+                "kind": "pricing",
+                "text": "含运费45.80元；商品应付39.80元。"
+              },
+              {
+                "id": "p2_f26",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：原味海苔脆片。"
+              },
+              {
+                "id": "p2_f27",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:hot，符合的商品仅为：香辣牛肉干。"
+              },
+              {
+                "id": "p2_f28",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals self，符合的商品仅为：原味海苔脆片、香辣牛肉干。"
+              },
+              {
+                "id": "p2_f29",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f30",
+                "kind": "boundary",
+                "text": "需求组 1：原味海苔脆片 × 1"
+              },
+              {
+                "id": "p2_f31",
+                "kind": "boundary",
+                "text": "需求组 2：香辣牛肉干 × 1"
+              },
+              {
+                "id": "p2_f32",
+                "kind": "boundary",
+                "text": "以上对象合并为一个订单计价；优惠券只使用一次。"
+              },
+              {
+                "id": "p2_f33",
+                "kind": "boundary",
+                "text": "这套未完全匹配口味、包装等偏好。"
+              },
+              {
+                "id": "p2_f34",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_f00b5fd207b704127ab3",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 1290,
+                "image_url": null
+              },
+              {
+                "sku_id": "P005",
+                "product_name": "香辣牛肉干",
+                "quantity": 1,
+                "unit_price_fen": 2990,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 4280,
+              "discounts": [],
+              "merchandise_payable_fen": 4280,
+              "shipping_fen": 600,
+              "total_payable_fen": 4880,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "原味燕麦小饼干，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "原味燕麦小饼干：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "原味燕麦小饼干：低糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "原味燕麦小饼干：低甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "原味燕麦小饼干：ingredients=['oats', 'wheat', 'soy']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "原味燕麦小饼干：declared_allergens=['gluten', 'soy']"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味燕麦小饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "原味燕麦小饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "原味燕麦小饼干：scene_tags=['office', 'breakfast']"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "expiry",
+                "text": "原味燕麦小饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "purchase",
+                "text": "香辣牛肉干，购买1件。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "spice_level",
+                "text": "香辣牛肉干：辣味。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "sugar_label",
+                "text": "香辣牛肉干：普通糖标签。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "sweetness",
+                "text": "香辣牛肉干：低甜度标签。"
+              },
+              {
+                "id": "p3_f17",
+                "kind": "packaging",
+                "text": "香辣牛肉干：独立内包装。"
+              },
+              {
+                "id": "p3_f18",
+                "kind": "packaging",
+                "text": "香辣牛肉干：已知单个内包20克。"
+              },
+              {
+                "id": "p3_f19",
+                "kind": "ingredients",
+                "text": "香辣牛肉干：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p3_f20",
+                "kind": "declared_allergens",
+                "text": "香辣牛肉干：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p3_f21",
+                "kind": "may_contain_allergens",
+                "text": "香辣牛肉干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f22",
+                "kind": "selling_points",
+                "text": "香辣牛肉干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f23",
+                "kind": "scene_tags",
+                "text": "香辣牛肉干：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p3_f24",
+                "kind": "expiry",
+                "text": "香辣牛肉干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f25",
+                "kind": "pricing",
+                "text": "含运费48.80元；商品应付42.80元。"
+              },
+              {
+                "id": "p3_f26",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p3_f27",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:hot，符合的商品仅为：香辣牛肉干。"
+              },
+              {
+                "id": "p3_f28",
+                "kind": "need_match",
+                "text": "对于需求 purpose equals self，符合的商品仅为：原味燕麦小饼干、香辣牛肉干。"
+              },
+              {
+                "id": "p3_f29",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f30",
+                "kind": "boundary",
+                "text": "需求组 1：原味燕麦小饼干 × 1"
+              },
+              {
+                "id": "p3_f31",
+                "kind": "boundary",
+                "text": "需求组 2：香辣牛肉干 × 1"
+              },
+              {
+                "id": "p3_f32",
+                "kind": "boundary",
+                "text": "以上对象合并为一个订单计价；优惠券只使用一次。"
+              },
+              {
+                "id": "p3_f33",
+                "kind": "boundary",
+                "text": "这套未完全匹配口味、包装等偏好。"
+              },
+              {
+                "id": "p3_f34",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "给不同对象分别搭配、每件最多40.00元",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "香辣牛肉干（1件） + 无糖气泡水（1件）",
+          "p1_price": "含运费41.80元",
+          "p1_notice": "这套未完全匹配口味、包装等偏好。",
+          "p2_items": "原味海苔脆片（1件） + 香辣牛肉干（1件）",
+          "p2_price": "含运费45.80元",
+          "p2_difference": "总价比首选高一些",
+          "p2_notice": "这套未完全匹配口味、包装等偏好。",
+          "p3_items": "原味燕麦小饼干（1件） + 香辣牛肉干（1件）",
+          "p3_price": "含运费48.80元",
+          "p3_difference": "总价比首选高一些",
+          "p3_notice": "这套未完全匹配口味、包装等偏好。",
+          "p1_reason_1": "香辣牛肉干是辣味，适合自己想吃辣的需求",
+          "p1_reason_2": "无糖气泡水不辣且独立包装，给同事方便分次取用",
+          "p2_reason_1": "原味海苔脆片不辣，给同事吃这款更合适",
+          "p2_reason_2": "香辣牛肉干辣味独立内包，自己吃辣选它方便",
+          "p3_reason_1": "原味燕麦小饼干不辣，给同事是另一款不辣选择",
+          "p3_reason_2": "香辣牛肉干辣味独立内包，自己吃辣可以选"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_a7937a7ceaf5c36a13ac",
+              "reasons": [
+                {
+                  "text": "香辣牛肉干是辣味，适合自己想吃辣的需求",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f26"
+                  ]
+                },
+                {
+                  "text": "无糖气泡水不辣且独立包装，给同事方便分次取用",
+                  "fact_ids": [
+                    "p1_f14",
+                    "p1_f17",
+                    "p1_f25"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_4ca0c6d49ee05c44eaa5",
+              "reasons": [
+                {
+                  "text": "原味海苔脆片不辣，给同事吃这款更合适",
+                  "fact_ids": [
+                    "p2_f2",
+                    "p2_f26"
+                  ]
+                },
+                {
+                  "text": "香辣牛肉干辣味独立内包，自己吃辣选它方便",
+                  "fact_ids": [
+                    "p2_f14",
+                    "p2_f17",
+                    "p2_f27"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_f00b5fd207b704127ab3",
+              "reasons": [
+                {
+                  "text": "原味燕麦小饼干不辣，给同事是另一款不辣选择",
+                  "fact_ids": [
+                    "p3_f2",
+                    "p3_f26"
+                  ]
+                },
+                {
+                  "text": "香辣牛肉干辣味独立内包，自己吃辣可以选",
+                  "fact_ids": [
+                    "p3_f14",
+                    "p3_f17",
+                    "p3_f27"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，按给同事和自己分别搭配、每份不超过四十元的思路，我整理了三套方案供您比较😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，搭配起来两边都照顾到了，{{p1_price}}，{{p1_notice}}\n\n备选一是{{p2_items}}，{{p2_reason_1}}，{{p2_difference}}，{{p2_price}}，{{p2_notice}}\n\n备选二是{{p3_items}}，{{p3_reason_1}}，{{p3_difference}}，{{p3_price}}，{{p3_notice}}\n\n{{follow_up}}",
+        "reply": "亲～，按给同事和自己分别搭配、每份不超过四十元的思路，我整理了三套方案供您比较😊\n\n首选是香辣牛肉干（1件） + 无糖气泡水（1件），香辣牛肉干是辣味，适合自己想吃辣的需求，搭配起来两边都照顾到了，含运费41.80元，这套未完全匹配口味、包装等偏好。\n\n备选一是原味海苔脆片（1件） + 香辣牛肉干（1件），原味海苔脆片不辣，给同事吃这款更合适，总价比首选高一些，含运费45.80元，这套未完全匹配口味、包装等偏好。\n\n备选二是原味燕麦小饼干（1件） + 香辣牛肉干（1件），原味燕麦小饼干不辣，给同事是另一款不辣选择，总价比首选高一些，含运费48.80元，这套未完全匹配口味、包装等偏好。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 1.138
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 6.995,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "completed"
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "两对象分组、每份独立40元预算",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "两组口味互不混淆",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": true
+}

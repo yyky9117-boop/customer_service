@@ -1,0 +1,1203 @@
+{
+  "case_id": "P06",
+  "title": "折扣方向与封顶",
+  "repetition": 1,
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "executed_at": "2026-10-08T13:11:23.950299+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_034c9ece41bc435493843f391e4ae265",
+        "expected_revision": 0,
+        "message": "三件低糖谷物棒用八折券",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_827c6f7bfaca4351bd37ba21bcebb402",
+        "request_id": "req_034c9ece41bc435493843f391e4ae265",
+        "turn_id": "turn_d92b0ba892fd4ccd89a232467499020d",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_d292543d3b2e419d8120857a495b25a8",
+          "role": "assistant",
+          "content": "亲～，想找低糖谷物棒、一次买三件的话，我帮您对了一下，有这一套可以看看😊\n\n首选是低糖谷物棒（3件），低糖标签谷物棒，满足低糖偏好，正好对上您要的低糖和件数；含运费62.70元，已计入谷物棒满 50 元 8 折最多减 12 元。\n\n目前符合低糖谷物棒这个方向的就是这套，没有其他同类备选可对比。数量、价格或搭配想调整，选中卡片上的商品就能改。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_39dfa40243a8cd8e3aea",
+              "plan_type": "multi_quantity",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P013",
+                  "product_name": "低糖谷物棒",
+                  "quantity": 3,
+                  "unit_price_fen": 2290,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 6870,
+                "discounts": [
+                  {
+                    "kind": "coupon",
+                    "id": "C_GRAIN",
+                    "label": "谷物棒满 50 元 8 折最多减 12 元",
+                    "amount_fen": 1200,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 5670,
+                "shipping_fen": 600,
+                "total_payable_fen": 6270,
+                "conditions": []
+              },
+              "reasons": [
+                "低糖标签谷物棒，满足低糖偏好。",
+                "独立内包装30克，办公室或外出分次取用方便。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_827c6f7bfaca4351bd37ba21bcebb402",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_self",
+                "label": "低糖谷物棒",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_category",
+                    "field": "category",
+                    "operator": "include",
+                    "value": [
+                      "grain_bar"
+                    ],
+                    "strength": "hard",
+                    "source_text": "谷物棒",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_d92b0ba892fd4ccd89a232467499020d"
+                  },
+                  {
+                    "constraint_id": "c_taste_sugar",
+                    "field": "taste",
+                    "operator": "equals",
+                    "value": "sugar:low_sugar",
+                    "strength": "hard",
+                    "source_text": "低糖",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_d92b0ba892fd4ccd89a232467499020d"
+                  },
+                  {
+                    "constraint_id": "c_quantity",
+                    "field": "quantity",
+                    "operator": "equals",
+                    "value": 3,
+                    "strength": "hard",
+                    "source_text": "三件",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_d92b0ba892fd4ccd89a232467499020d"
+                  },
+                  {
+                    "constraint_id": "c_sku",
+                    "field": "other",
+                    "operator": "equals",
+                    "value": "sku:P013",
+                    "strength": "hard",
+                    "source_text": "低糖谷物棒",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_d92b0ba892fd4ccd89a232467499020d"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_d292543d3b2e419d8120857a495b25a8",
+              "turn_id": "turn_d92b0ba892fd4ccd89a232467499020d",
+              "plan_order": [
+                {
+                  "plan_id": "plan_39dfa40243a8cd8e3aea",
+                  "sku_ids": [
+                    "P013"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_7ecbd9be4eac40f8ac0ec2ae453c4628",
+          "role": "user",
+          "content": "三件低糖谷物棒用八折券",
+          "turn_id": "turn_d92b0ba892fd4ccd89a232467499020d"
+        },
+        {
+          "id": "msg_d292543d3b2e419d8120857a495b25a8",
+          "role": "assistant",
+          "content": "亲～，想找低糖谷物棒、一次买三件的话，我帮您对了一下，有这一套可以看看😊\n\n首选是低糖谷物棒（3件），低糖标签谷物棒，满足低糖偏好，正好对上您要的低糖和件数；含运费62.70元，已计入谷物棒满 50 元 8 折最多减 12 元。\n\n目前符合低糖谷物棒这个方向的就是这套，没有其他同类备选可对比。数量、价格或搭配想调整，选中卡片上的商品就能改。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_39dfa40243a8cd8e3aea",
+              "plan_type": "multi_quantity",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P013",
+                  "product_name": "低糖谷物棒",
+                  "quantity": 3,
+                  "unit_price_fen": 2290,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 6870,
+                "discounts": [
+                  {
+                    "kind": "coupon",
+                    "id": "C_GRAIN",
+                    "label": "谷物棒满 50 元 8 折最多减 12 元",
+                    "amount_fen": 1200,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 5670,
+                "shipping_fen": 600,
+                "total_payable_fen": 6270,
+                "conditions": []
+              },
+              "reasons": [
+                "低糖标签谷物棒，满足低糖偏好。",
+                "独立内包装30克，办公室或外出分次取用方便。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_d92b0ba892fd4ccd89a232467499020d",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_self": {
+            "P001": [
+              "constraint:c_category",
+              "constraint:c_sku"
+            ],
+            "P002": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P003": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P004": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P005": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P006": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P007": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P008": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P009": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P010": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P011": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P012": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P014": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P015": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P016": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P017": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P018": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P019": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P020": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P021": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P022": [
+              "stock_unknown_or_empty",
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P023": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P024": [
+              "constraint:c_category",
+              "constraint:c_sku"
+            ],
+            "P025": [
+              "expired_or_unknown",
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P026": [
+              "price_unknown",
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P027": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P028": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P029": [
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ],
+            "P030": [
+              "constraint:c_category",
+              "constraint:c_taste_sugar",
+              "constraint:c_sku"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 1,
+        "priced_cart_count": 1,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 1,
+        "reply_review_passed": true
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "三件低糖谷物棒用八折券",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "低糖谷物棒",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_category",
+                "field": "category",
+                "operator": "include",
+                "value": [
+                  "grain_bar"
+                ],
+                "strength": "hard",
+                "source_text": "谷物棒",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_taste_sugar",
+                "field": "taste",
+                "operator": "equals",
+                "value": "sugar:low_sugar",
+                "strength": "hard",
+                "source_text": "低糖",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_quantity",
+                "field": "quantity",
+                "operator": "equals",
+                "value": 3,
+                "strength": "hard",
+                "source_text": "三件",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_sku",
+                "field": "other",
+                "operator": "equals",
+                "value": "sku:P013",
+                "strength": "hard",
+                "source_text": "低糖谷物棒",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": [
+          "P013"
+        ]
+      },
+      "seconds": 1.878
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "三件低糖谷物棒用八折券",
+        "need_summary": "低糖、买3件",
+        "plans": [
+          {
+            "plan_id": "plan_39dfa40243a8cd8e3aea",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P013",
+                "product_name": "低糖谷物棒",
+                "quantity": 3,
+                "unit_price_fen": 2290,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "低糖谷物棒，购买3件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "低糖谷物棒：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "低糖谷物棒：低糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "低糖谷物棒：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "低糖谷物棒：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "低糖谷物棒：已知单个内包30克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "低糖谷物棒：ingredients=['oats', 'sesame', 'milk']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "低糖谷物棒：declared_allergens=['gluten', 'sesame', 'milk']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "低糖谷物棒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "低糖谷物棒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "低糖谷物棒：scene_tags=['office', 'outdoor']"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费62.70元；商品应付56.70元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include ['grain_bar']，符合的商品仅为：低糖谷物棒。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 taste equals sugar:low_sugar，符合的商品仅为：低糖谷物棒。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P013，符合的商品仅为：低糖谷物棒。"
+              },
+              {
+                "id": "p1_f18",
+                "kind": "offer",
+                "text": "已计入谷物棒满 50 元 8 折最多减 12 元。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_39dfa40243a8cd8e3aea",
+            "reasons": [
+              {
+                "text": "低糖标签谷物棒，满足低糖偏好。",
+                "fact_ids": [
+                  "p1_f3"
+                ]
+              },
+              {
+                "text": "独立内包装30克，办公室或外出分次取用方便。",
+                "fact_ids": [
+                  "p1_f5",
+                  "p1_f6"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 1.105
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "三件低糖谷物棒用八折券",
+        "need_summary": "低糖、买3件",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_self",
+              "label": "低糖谷物棒",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_category",
+                  "field": "category",
+                  "operator": "include",
+                  "value": [
+                    "grain_bar"
+                  ],
+                  "strength": "hard",
+                  "source_text": "谷物棒",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_d92b0ba892fd4ccd89a232467499020d"
+                },
+                {
+                  "constraint_id": "c_taste_sugar",
+                  "field": "taste",
+                  "operator": "equals",
+                  "value": "sugar:low_sugar",
+                  "strength": "hard",
+                  "source_text": "低糖",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_d92b0ba892fd4ccd89a232467499020d"
+                },
+                {
+                  "constraint_id": "c_quantity",
+                  "field": "quantity",
+                  "operator": "equals",
+                  "value": 3,
+                  "strength": "hard",
+                  "source_text": "三件",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_d92b0ba892fd4ccd89a232467499020d"
+                },
+                {
+                  "constraint_id": "c_sku",
+                  "field": "other",
+                  "operator": "equals",
+                  "value": "sku:P013",
+                  "strength": "hard",
+                  "source_text": "低糖谷物棒",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_d92b0ba892fd4ccd89a232467499020d"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_39dfa40243a8cd8e3aea",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P013",
+                "product_name": "低糖谷物棒",
+                "quantity": 3,
+                "unit_price_fen": 2290,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 6870,
+              "discounts": [
+                {
+                  "kind": "coupon",
+                  "id": "C_GRAIN",
+                  "label": "谷物棒满 50 元 8 折最多减 12 元",
+                  "amount_fen": 1200,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 5670,
+              "shipping_fen": 600,
+              "total_payable_fen": 6270,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "低糖谷物棒，购买3件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "低糖谷物棒：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "低糖谷物棒：低糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "低糖谷物棒：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "低糖谷物棒：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "低糖谷物棒：已知单个内包30克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "低糖谷物棒：ingredients=['oats', 'sesame', 'milk']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "低糖谷物棒：declared_allergens=['gluten', 'sesame', 'milk']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "低糖谷物棒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "低糖谷物棒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "低糖谷物棒：scene_tags=['office', 'outdoor']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "低糖谷物棒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费62.70元；商品应付56.70元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include ['grain_bar']，符合的商品仅为：低糖谷物棒。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 taste equals sugar:low_sugar，符合的商品仅为：低糖谷物棒。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P013，符合的商品仅为：低糖谷物棒。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f18",
+                "kind": "offer",
+                "text": "已计入谷物棒满 50 元 8 折最多减 12 元。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "低糖、买3件",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "低糖谷物棒（3件）",
+          "p1_price": "含运费62.70元",
+          "p1_offer": "已计入谷物棒满 50 元 8 折最多减 12 元。",
+          "p1_reason_1": "低糖标签谷物棒，满足低糖偏好",
+          "p1_reason_2": "独立内包装30克，办公室或外出分次取用方便"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_39dfa40243a8cd8e3aea",
+              "reasons": [
+                {
+                  "text": "低糖标签谷物棒，满足低糖偏好。",
+                  "fact_ids": [
+                    "p1_f3"
+                  ]
+                },
+                {
+                  "text": "独立内包装30克，办公室或外出分次取用方便。",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f6"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，想找低糖谷物棒、一次买三件的话，我帮您对了一下，有这一套可以看看😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，正好对上您要的低糖和件数；{{p1_price}}，{{p1_offer}}\n\n目前符合低糖谷物棒这个方向的就是这套，没有其他同类备选可对比。数量、价格或搭配想调整，选中卡片上的商品就能改。\n\n{{follow_up}}"
+      },
+      "seconds": 1.338
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "三件低糖谷物棒用八折券",
+        "need_summary": "低糖、买3件",
+        "plans": [
+          {
+            "plan_id": "plan_39dfa40243a8cd8e3aea",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P013",
+                "product_name": "低糖谷物棒",
+                "quantity": 3,
+                "unit_price_fen": 2290,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 6870,
+              "discounts": [
+                {
+                  "kind": "coupon",
+                  "id": "C_GRAIN",
+                  "label": "谷物棒满 50 元 8 折最多减 12 元",
+                  "amount_fen": 1200,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 5670,
+              "shipping_fen": 600,
+              "total_payable_fen": 6270,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "低糖谷物棒，购买3件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "低糖谷物棒：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "低糖谷物棒：低糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "低糖谷物棒：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "低糖谷物棒：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "低糖谷物棒：已知单个内包30克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "低糖谷物棒：ingredients=['oats', 'sesame', 'milk']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "低糖谷物棒：declared_allergens=['gluten', 'sesame', 'milk']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "低糖谷物棒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "低糖谷物棒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "低糖谷物棒：scene_tags=['office', 'outdoor']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "低糖谷物棒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费62.70元；商品应付56.70元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include ['grain_bar']，符合的商品仅为：低糖谷物棒。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 taste equals sugar:low_sugar，符合的商品仅为：低糖谷物棒。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P013，符合的商品仅为：低糖谷物棒。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f18",
+                "kind": "offer",
+                "text": "已计入谷物棒满 50 元 8 折最多减 12 元。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "低糖、买3件",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "低糖谷物棒（3件）",
+          "p1_price": "含运费62.70元",
+          "p1_offer": "已计入谷物棒满 50 元 8 折最多减 12 元。",
+          "p1_reason_1": "低糖标签谷物棒，满足低糖偏好",
+          "p1_reason_2": "独立内包装30克，办公室或外出分次取用方便"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_39dfa40243a8cd8e3aea",
+              "reasons": [
+                {
+                  "text": "低糖标签谷物棒，满足低糖偏好。",
+                  "fact_ids": [
+                    "p1_f3"
+                  ]
+                },
+                {
+                  "text": "独立内包装30克，办公室或外出分次取用方便。",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f6"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，想找低糖谷物棒、一次买三件的话，我帮您对了一下，有这一套可以看看😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，正好对上您要的低糖和件数；{{p1_price}}，{{p1_offer}}\n\n目前符合低糖谷物棒这个方向的就是这套，没有其他同类备选可对比。数量、价格或搭配想调整，选中卡片上的商品就能改。\n\n{{follow_up}}",
+        "reply": "亲～，想找低糖谷物棒、一次买三件的话，我帮您对了一下，有这一套可以看看😊\n\n首选是低糖谷物棒（3件），低糖标签谷物棒，满足低糖偏好，正好对上您要的低糖和件数；含运费62.70元，已计入谷物棒满 50 元 8 折最多减 12 元。\n\n目前符合低糖谷物棒这个方向的就是这套，没有其他同类备选可对比。数量、价格或搭配想调整，选中卡片上的商品就能改。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 1.145
+    }
+  ],
+  "pricing_goldens": [
+    {
+      "id": "G014",
+      "passed": true,
+      "expected": {
+        "eligible": true,
+        "activity_discount_fen": 0,
+        "coupon_discount_fen": 1200,
+        "merchandise_payable_fen": 5670,
+        "shipping_fen": 600,
+        "total_payable_fen": 6270,
+        "pricing_status": "confirmed",
+        "gifts": []
+      },
+      "actual": {
+        "eligible": true,
+        "activity_id": null,
+        "coupon_id": "C_GRAIN",
+        "activity_discount_fen": 0,
+        "coupon_discount_fen": 1200,
+        "merchandise_payable_fen": 5670,
+        "shipping_fen": 600,
+        "total_payable_fen": 6270,
+        "pricing_status": "confirmed",
+        "coupon_conditional": false,
+        "gifts": [],
+        "line_allocations": [
+          {
+            "sku_id": "P013",
+            "activity_discount_fen": 0,
+            "coupon_discount_fen": 1200,
+            "payable_fen": 5670
+          }
+        ]
+      }
+    }
+  ],
+  "seconds": 5.508,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "completed"
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "关联固定购物方案的独立数值基准",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": true
+}

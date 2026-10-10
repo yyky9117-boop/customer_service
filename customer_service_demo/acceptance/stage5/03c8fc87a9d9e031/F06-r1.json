@@ -1,0 +1,1265 @@
+{
+  "case_id": "F06",
+  "title": "不要临期不能被便宜抵消",
+  "repetition": 1,
+  "implementation_hash": "03c8fc87a9d9e031",
+  "executed_at": "2026-10-08T12:51:32.482060+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_7709e7e030194ab2a34d4ee67bdd9bdc",
+        "expected_revision": 0,
+        "message": "低糖饼干，不要临期",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_f2d53934a3054a49a987a08b69b23d43",
+        "request_id": "req_7709e7e030194ab2a34d4ee67bdd9bdc",
+        "turn_id": "turn_c51a069b444c495bb906d6e98b4ca1cd",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_a5332142707a4ebb8dc499d42a05b865",
+          "role": "assistant",
+          "content": "亲～，按饼干、低糖、不要临期来看，主要看低糖和不要临期这两点😊\n\n首选就是原味燕麦小饼干（1件），低糖标签，契合你对低糖饼干的要求，标注的到期时间也比较靠后，不用赶着吃，含运费18.90元。\n\n这款是同款单件，一个人分次吃比较合适。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_5aaf50a01cde38b586c5",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P001",
+                  "product_name": "原味燕麦小饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 1290,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 1290,
+                "discounts": [],
+                "merchandise_payable_fen": 1290,
+                "shipping_fen": 600,
+                "total_payable_fen": 1890,
+                "conditions": []
+              },
+              "reasons": [
+                "低糖标签，契合你对低糖饼干的要求",
+                "独立内包装，办公室分次取用更方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_f2d53934a3054a49a987a08b69b23d43",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_self",
+                "label": "低糖饼干",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_category_biscuits",
+                    "field": "category",
+                    "operator": "include",
+                    "value": "biscuits",
+                    "strength": "hard",
+                    "source_text": "饼干",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_c51a069b444c495bb906d6e98b4ca1cd"
+                  },
+                  {
+                    "constraint_id": "c_sugar_low",
+                    "field": "taste",
+                    "operator": "equals",
+                    "value": "sugar:low_sugar",
+                    "strength": "hard",
+                    "source_text": "低糖",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_c51a069b444c495bb906d6e98b4ca1cd"
+                  },
+                  {
+                    "constraint_id": "c_not_near_expiry",
+                    "field": "other",
+                    "operator": "equals",
+                    "value": "not_near_expiry",
+                    "strength": "hard",
+                    "source_text": "不要临期",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_c51a069b444c495bb906d6e98b4ca1cd"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_a5332142707a4ebb8dc499d42a05b865",
+              "turn_id": "turn_c51a069b444c495bb906d6e98b4ca1cd",
+              "plan_order": [
+                {
+                  "plan_id": "plan_5aaf50a01cde38b586c5",
+                  "sku_ids": [
+                    "P001"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_d33d7f34b08f4badbc0cb29750f32534",
+          "role": "user",
+          "content": "低糖饼干，不要临期",
+          "turn_id": "turn_c51a069b444c495bb906d6e98b4ca1cd"
+        },
+        {
+          "id": "msg_a5332142707a4ebb8dc499d42a05b865",
+          "role": "assistant",
+          "content": "亲～，按饼干、低糖、不要临期来看，主要看低糖和不要临期这两点😊\n\n首选就是原味燕麦小饼干（1件），低糖标签，契合你对低糖饼干的要求，标注的到期时间也比较靠后，不用赶着吃，含运费18.90元。\n\n这款是同款单件，一个人分次吃比较合适。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_5aaf50a01cde38b586c5",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P001",
+                  "product_name": "原味燕麦小饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 1290,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 1290,
+                "discounts": [],
+                "merchandise_payable_fen": 1290,
+                "shipping_fen": 600,
+                "total_payable_fen": 1890,
+                "conditions": []
+              },
+              "reasons": [
+                "低糖标签，契合你对低糖饼干的要求",
+                "独立内包装，办公室分次取用更方便"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_c51a069b444c495bb906d6e98b4ca1cd",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 2,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_self": {
+            "P024": [
+              "constraint:c_not_near_expiry"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 1,
+        "priced_cart_count": 1,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 2,
+        "reply_review_passed": true
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "低糖饼干，不要临期",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "低糖饼干",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_category",
+                "field": "category",
+                "operator": "include",
+                "value": "biscuits",
+                "strength": "hard",
+                "source_text": "饼干",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_sugar",
+                "field": "taste",
+                "operator": "equals",
+                "value": "sugar:low_sugar",
+                "strength": "hard",
+                "source_text": "低糖",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_not_near_expiry",
+                "field": "other",
+                "operator": "equals",
+                "value": "not_near_expiry",
+                "strength": "hard",
+                "source_text": "不要临期",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": [],
+        "reference_action": null,
+        "reference_source_text": null
+      },
+      "seconds": 1.081
+    },
+    {
+      "stage": "extract",
+      "repair": "需求 JSON 结构错误: None is not one of ['retain_selected', 'replace_selected', 'recommend_alternatives']",
+      "input": {
+        "message": "低糖饼干，不要临期",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "低糖饼干",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_category_biscuits",
+                "field": "category",
+                "operator": "include",
+                "value": "biscuits",
+                "strength": "hard",
+                "source_text": "饼干",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_sugar_low",
+                "field": "taste",
+                "operator": "equals",
+                "value": "sugar:low_sugar",
+                "strength": "hard",
+                "source_text": "低糖",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_not_near_expiry",
+                "field": "other",
+                "operator": "equals",
+                "value": "not_near_expiry",
+                "strength": "hard",
+                "source_text": "不要临期",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.671
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "低糖饼干，不要临期",
+        "need_summary": "饼干、低糖、不要临期",
+        "plans": [
+          {
+            "plan_id": "plan_5aaf50a01cde38b586c5",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 1290,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味燕麦小饼干，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味燕麦小饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味燕麦小饼干：低糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味燕麦小饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味燕麦小饼干：ingredients=['oats', 'wheat', 'soy']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味燕麦小饼干：declared_allergens=['gluten', 'soy']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味燕麦小饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味燕麦小饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味燕麦小饼干：scene_tags=['office', 'breakfast']"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费18.90元；商品应付12.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 taste equals sugar:low_sugar，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "need_match",
+                "text": "对于需求 other equals not_near_expiry，符合的商品仅为：原味燕麦小饼干。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_5aaf50a01cde38b586c5",
+            "reasons": [
+              {
+                "text": "低糖标签，契合你对低糖饼干的要求",
+                "fact_ids": [
+                  "p1_f3"
+                ]
+              },
+              {
+                "text": "独立内包装，办公室分次取用更方便",
+                "fact_ids": [
+                  "p1_f5",
+                  "p1_f11"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 1.036
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "低糖饼干，不要临期",
+        "need_summary": "饼干、低糖、不要临期",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_self",
+              "label": "低糖饼干",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_category_biscuits",
+                  "field": "category",
+                  "operator": "include",
+                  "value": "biscuits",
+                  "strength": "hard",
+                  "source_text": "饼干",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_c51a069b444c495bb906d6e98b4ca1cd"
+                },
+                {
+                  "constraint_id": "c_sugar_low",
+                  "field": "taste",
+                  "operator": "equals",
+                  "value": "sugar:low_sugar",
+                  "strength": "hard",
+                  "source_text": "低糖",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_c51a069b444c495bb906d6e98b4ca1cd"
+                },
+                {
+                  "constraint_id": "c_not_near_expiry",
+                  "field": "other",
+                  "operator": "equals",
+                  "value": "not_near_expiry",
+                  "strength": "hard",
+                  "source_text": "不要临期",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_c51a069b444c495bb906d6e98b4ca1cd"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_5aaf50a01cde38b586c5",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 1290,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 1290,
+              "discounts": [],
+              "merchandise_payable_fen": 1290,
+              "shipping_fen": 600,
+              "total_payable_fen": 1890,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味燕麦小饼干，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味燕麦小饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味燕麦小饼干：低糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味燕麦小饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味燕麦小饼干：ingredients=['oats', 'wheat', 'soy']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味燕麦小饼干：declared_allergens=['gluten', 'soy']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味燕麦小饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味燕麦小饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味燕麦小饼干：scene_tags=['office', 'breakfast']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味燕麦小饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费18.90元；商品应付12.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 taste equals sugar:low_sugar，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "need_match",
+                "text": "对于需求 other equals not_near_expiry，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "饼干、低糖、不要临期",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味燕麦小饼干（1件）",
+          "p1_price": "含运费18.90元",
+          "p1_reason_1": "低糖标签，契合你对低糖饼干的要求",
+          "p1_reason_2": "独立内包装，办公室分次取用更方便"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_5aaf50a01cde38b586c5",
+              "reasons": [
+                {
+                  "text": "低糖标签，契合你对低糖饼干的要求",
+                  "fact_ids": [
+                    "p1_f3"
+                  ]
+                },
+                {
+                  "text": "独立内包装，办公室分次取用更方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f11"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，按{{need_summary}}来看，主要看低糖和避免临期这两点😊\n\n首选{{p1_items}}，{{p1_reason_1}}，同时标注的到期时间比较远，不用赶着吃，{{p1_price}}。\n\n这款是同款单件，先试试口味或者一个人分次吃比较合适。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊{{follow_up}}"
+      },
+      "seconds": 1.064
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "低糖饼干，不要临期",
+        "need_summary": "饼干、低糖、不要临期",
+        "plans": [
+          {
+            "plan_id": "plan_5aaf50a01cde38b586c5",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 1290,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 1290,
+              "discounts": [],
+              "merchandise_payable_fen": 1290,
+              "shipping_fen": 600,
+              "total_payable_fen": 1890,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味燕麦小饼干，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味燕麦小饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味燕麦小饼干：低糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味燕麦小饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味燕麦小饼干：ingredients=['oats', 'wheat', 'soy']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味燕麦小饼干：declared_allergens=['gluten', 'soy']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味燕麦小饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味燕麦小饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味燕麦小饼干：scene_tags=['office', 'breakfast']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味燕麦小饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费18.90元；商品应付12.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 taste equals sugar:low_sugar，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "need_match",
+                "text": "对于需求 other equals not_near_expiry，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "饼干、低糖、不要临期",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味燕麦小饼干（1件）",
+          "p1_price": "含运费18.90元",
+          "p1_reason_1": "低糖标签，契合你对低糖饼干的要求",
+          "p1_reason_2": "独立内包装，办公室分次取用更方便"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_5aaf50a01cde38b586c5",
+              "reasons": [
+                {
+                  "text": "低糖标签，契合你对低糖饼干的要求",
+                  "fact_ids": [
+                    "p1_f3"
+                  ]
+                },
+                {
+                  "text": "独立内包装，办公室分次取用更方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f11"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，按{{need_summary}}来看，主要看低糖和避免临期这两点😊\n\n首选{{p1_items}}，{{p1_reason_1}}，同时标注的到期时间比较远，不用赶着吃，{{p1_price}}。\n\n这款是同款单件，先试试口味或者一个人分次吃比较合适。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊{{follow_up}}",
+        "reply": "亲～，按饼干、低糖、不要临期来看，主要看低糖和避免临期这两点😊\n\n首选原味燕麦小饼干（1件），低糖标签，契合你对低糖饼干的要求，同时标注的到期时间比较远，不用赶着吃，含运费18.90元。\n\n这款是同款单件，先试试口味或者一个人分次吃比较合适。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": false,
+        "issues": [
+          "结尾句重复且拼接了模板占位符和其已渲染内容，形成“想改数量、预算或搭配，可以选中卡片上的商品继续聊想改数量、预算或搭配，可以选中卡片上的商品继续聊”，属于自由文字错误。",
+          "“先试试口味”暗示对未在资料中出现的口感进行评价，属于编造资料中没有的口感评价。"
+        ],
+        "rewrite_instruction": "删除结尾重复的“想改数量、预算或搭配，可以选中卡片上的商品继续聊”，只保留一次；并将“先试试口味或者一个人分次吃比较合适”改为不引用口感评价的表述，例如“这款是同款单件，一个人分次吃比较合适”或改用已有理由占位符。"
+      },
+      "seconds": 1.731
+    },
+    {
+      "stage": "compose_reply",
+      "repair": "独立质检未通过：结尾句重复且拼接了模板占位符和其已渲染内容，形成“想改数量、预算或搭配，可以选中卡片上的商品继续聊想改数量、预算或搭配，可以选中卡片上的商品继续聊”，属于自由文字错误。；“先试试口味”暗示对未在资料中出现的口感进行评价，属于编造资料中没有的口感评价。；删除结尾重复的“想改数量、预算或搭配，可以选中卡片上的商品继续聊”，只保留一次；并将“先试试口味或者一个人分次吃比较合适”改为不引用口感评价的表述，例如“这款是同款单件，一个人分次吃比较合适”或改用已有理由占位符。\n上次错误草稿（不是事实）：{\"template\": \"亲～，按{{need_summary}}来看，主要看低糖和避免临期这两点😊\\n\\n首选{{p1_items}}，{{p1_reason_1}}，同时标注的到期时间比较远，不用赶着吃，{{p1_price}}。\\n\\n这款是同款单件，先试试口味或者一个人分次吃比较合适。\\n\\n想改数量、预算或搭配，可以选中卡片上的商品继续聊{{follow_up}}\"}",
+      "input": {
+        "user_message": "低糖饼干，不要临期",
+        "need_summary": "饼干、低糖、不要临期",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_self",
+              "label": "低糖饼干",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_category_biscuits",
+                  "field": "category",
+                  "operator": "include",
+                  "value": "biscuits",
+                  "strength": "hard",
+                  "source_text": "饼干",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_c51a069b444c495bb906d6e98b4ca1cd"
+                },
+                {
+                  "constraint_id": "c_sugar_low",
+                  "field": "taste",
+                  "operator": "equals",
+                  "value": "sugar:low_sugar",
+                  "strength": "hard",
+                  "source_text": "低糖",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_c51a069b444c495bb906d6e98b4ca1cd"
+                },
+                {
+                  "constraint_id": "c_not_near_expiry",
+                  "field": "other",
+                  "operator": "equals",
+                  "value": "not_near_expiry",
+                  "strength": "hard",
+                  "source_text": "不要临期",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_c51a069b444c495bb906d6e98b4ca1cd"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_5aaf50a01cde38b586c5",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 1290,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 1290,
+              "discounts": [],
+              "merchandise_payable_fen": 1290,
+              "shipping_fen": 600,
+              "total_payable_fen": 1890,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味燕麦小饼干，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味燕麦小饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味燕麦小饼干：低糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味燕麦小饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味燕麦小饼干：ingredients=['oats', 'wheat', 'soy']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味燕麦小饼干：declared_allergens=['gluten', 'soy']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味燕麦小饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味燕麦小饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味燕麦小饼干：scene_tags=['office', 'breakfast']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味燕麦小饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费18.90元；商品应付12.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 taste equals sugar:low_sugar，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "need_match",
+                "text": "对于需求 other equals not_near_expiry，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "饼干、低糖、不要临期",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味燕麦小饼干（1件）",
+          "p1_price": "含运费18.90元",
+          "p1_reason_1": "低糖标签，契合你对低糖饼干的要求",
+          "p1_reason_2": "独立内包装，办公室分次取用更方便"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_5aaf50a01cde38b586c5",
+              "reasons": [
+                {
+                  "text": "低糖标签，契合你对低糖饼干的要求",
+                  "fact_ids": [
+                    "p1_f3"
+                  ]
+                },
+                {
+                  "text": "独立内包装，办公室分次取用更方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f11"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，按{{need_summary}}来看，主要看低糖和不要临期这两点😊\n\n首选就是{{p1_items}}，{{p1_reason_1}}，标注的到期时间也比较靠后，不用赶着吃，{{p1_price}}。\n\n这款是同款单件，一个人分次吃比较合适。\n\n{{follow_up}}"
+      },
+      "seconds": 0.977
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "低糖饼干，不要临期",
+        "need_summary": "饼干、低糖、不要临期",
+        "plans": [
+          {
+            "plan_id": "plan_5aaf50a01cde38b586c5",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P001",
+                "product_name": "原味燕麦小饼干",
+                "quantity": 1,
+                "unit_price_fen": 1290,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 1290,
+              "discounts": [],
+              "merchandise_payable_fen": 1290,
+              "shipping_fen": 600,
+              "total_payable_fen": 1890,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "原味燕麦小饼干，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "原味燕麦小饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "原味燕麦小饼干：低糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "原味燕麦小饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "原味燕麦小饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "原味燕麦小饼干：ingredients=['oats', 'wheat', 'soy']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "原味燕麦小饼干：declared_allergens=['gluten', 'soy']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "原味燕麦小饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "原味燕麦小饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "原味燕麦小饼干：scene_tags=['office', 'breakfast']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "原味燕麦小饼干：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费18.90元；商品应付12.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 category include biscuits，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 taste equals sugar:low_sugar，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "need_match",
+                "text": "对于需求 other equals not_near_expiry，符合的商品仅为：原味燕麦小饼干。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "饼干、低糖、不要临期",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "原味燕麦小饼干（1件）",
+          "p1_price": "含运费18.90元",
+          "p1_reason_1": "低糖标签，契合你对低糖饼干的要求",
+          "p1_reason_2": "独立内包装，办公室分次取用更方便"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_5aaf50a01cde38b586c5",
+              "reasons": [
+                {
+                  "text": "低糖标签，契合你对低糖饼干的要求",
+                  "fact_ids": [
+                    "p1_f3"
+                  ]
+                },
+                {
+                  "text": "独立内包装，办公室分次取用更方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f11"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，按{{need_summary}}来看，主要看低糖和不要临期这两点😊\n\n首选就是{{p1_items}}，{{p1_reason_1}}，标注的到期时间也比较靠后，不用赶着吃，{{p1_price}}。\n\n这款是同款单件，一个人分次吃比较合适。\n\n{{follow_up}}",
+        "reply": "亲～，按饼干、低糖、不要临期来看，主要看低糖和不要临期这两点😊\n\n首选就是原味燕麦小饼干（1件），低糖标签，契合你对低糖饼干的要求，标注的到期时间也比较靠后，不用赶着吃，含运费18.90元。\n\n这款是同款单件，一个人分次吃比较合适。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 0.858
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 8.449,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "completed"
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "明确排除及未知资料边界",
+      "passed": true,
+      "actual": [
+        "P001"
+      ]
+    }
+  ],
+  "passed": true
+}

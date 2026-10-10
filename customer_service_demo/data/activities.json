@@ -1,0 +1,297 @@
+[
+  {
+    "activity_id": "A_ORDER",
+    "name": "商品满 100 元减 10 元",
+    "type": "amount_off",
+    "scope": {
+      "categories": [],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 10000,
+    "minimum_quantity": 1,
+    "minus_fen": 1000,
+    "discount_off_bps": 0,
+    "fixed_unit_price_fen": null,
+    "maximum_quantity": null,
+    "gift": null,
+    "stack_with_coupon": true,
+    "rule_complete": true,
+    "is_demo": true
+  },
+  {
+    "activity_id": "A_NUTS",
+    "name": "坚果满 80 元减 12 元",
+    "type": "amount_off",
+    "scope": {
+      "categories": [
+        "nuts"
+      ],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 8000,
+    "minimum_quantity": 1,
+    "minus_fen": 1200,
+    "discount_off_bps": 0,
+    "fixed_unit_price_fen": null,
+    "maximum_quantity": null,
+    "gift": null,
+    "stack_with_coupon": false,
+    "rule_complete": true,
+    "is_demo": true
+  },
+  {
+    "activity_id": "A_MEAT",
+    "name": "肉类两件及以上 9 折",
+    "type": "percentage",
+    "scope": {
+      "categories": [
+        "meat"
+      ],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 0,
+    "minimum_quantity": 2,
+    "minus_fen": 0,
+    "discount_off_bps": 1000,
+    "fixed_unit_price_fen": null,
+    "maximum_quantity": null,
+    "gift": null,
+    "stack_with_coupon": true,
+    "rule_complete": true,
+    "is_demo": true
+  },
+  {
+    "activity_id": "A_GIFT",
+    "name": "礼盒 9 折",
+    "type": "percentage",
+    "scope": {
+      "categories": [
+        "gift_box"
+      ],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 0,
+    "minimum_quantity": 1,
+    "minus_fen": 0,
+    "discount_off_bps": 1000,
+    "fixed_unit_price_fen": null,
+    "maximum_quantity": null,
+    "gift": null,
+    "stack_with_coupon": false,
+    "rule_complete": true,
+    "is_demo": true
+  },
+  {
+    "activity_id": "A_SEA_GIFT",
+    "name": "海苔买三件赠一件",
+    "type": "gift",
+    "scope": {
+      "categories": [
+        "seaweed"
+      ],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 0,
+    "minimum_quantity": 3,
+    "minus_fen": 0,
+    "discount_off_bps": 0,
+    "fixed_unit_price_fen": null,
+    "maximum_quantity": null,
+    "gift": {
+      "sku_id": "P002",
+      "quantity": 1
+    },
+    "stack_with_coupon": true,
+    "rule_complete": true,
+    "is_demo": true
+  },
+  {
+    "activity_id": "A_FIXED",
+    "name": "苏打饼干限两件秒杀价",
+    "type": "fixed_price",
+    "scope": {
+      "categories": [],
+      "sku_ids": [
+        "P019"
+      ]
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-07T12:00:00+08:00",
+    "end_at": "2026-10-07T12:30:00+08:00",
+    "threshold_fen": 0,
+    "minimum_quantity": 1,
+    "minus_fen": 0,
+    "discount_off_bps": 0,
+    "fixed_unit_price_fen": 890,
+    "maximum_quantity": 2,
+    "gift": null,
+    "stack_with_coupon": true,
+    "rule_complete": true,
+    "is_demo": true
+  },
+  {
+    "activity_id": "A_VIP",
+    "name": "会员商品 85 折",
+    "type": "percentage",
+    "scope": {
+      "categories": [],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [
+        "vip"
+      ],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 0,
+    "minimum_quantity": 1,
+    "minus_fen": 0,
+    "discount_off_bps": 1500,
+    "fixed_unit_price_fen": null,
+    "maximum_quantity": null,
+    "gift": null,
+    "stack_with_coupon": false,
+    "rule_complete": true,
+    "is_demo": true
+  },
+  {
+    "activity_id": "A_INCOMPLETE",
+    "name": "规则待补充活动",
+    "type": "unknown",
+    "scope": {
+      "categories": [],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 0,
+    "minimum_quantity": 1,
+    "minus_fen": 0,
+    "discount_off_bps": 0,
+    "fixed_unit_price_fen": null,
+    "maximum_quantity": null,
+    "gift": null,
+    "stack_with_coupon": true,
+    "rule_complete": false,
+    "is_demo": true
+  },
+  {
+    "activity_id": "A_FUTURE",
+    "name": "明日才开始的活动",
+    "type": "amount_off",
+    "scope": {
+      "categories": [],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-08T00:00:00+08:00",
+    "end_at": "2026-11-01T00:00:00+08:00",
+    "threshold_fen": 5000,
+    "minimum_quantity": 1,
+    "minus_fen": 2000,
+    "discount_off_bps": 0,
+    "fixed_unit_price_fen": null,
+    "maximum_quantity": null,
+    "gift": null,
+    "stack_with_coupon": true,
+    "rule_complete": true,
+    "is_demo": true
+  },
+  {
+    "activity_id": "A_EXPIRED",
+    "name": "已经结束的活动",
+    "type": "amount_off",
+    "scope": {
+      "categories": [],
+      "sku_ids": []
+    },
+    "audience": {
+      "member_levels": [],
+      "customer_types": []
+    },
+    "channels": [
+      "web"
+    ],
+    "start_at": "2026-10-01T00:00:00+08:00",
+    "end_at": "2026-10-07T00:00:00+08:00",
+    "threshold_fen": 5000,
+    "minimum_quantity": 1,
+    "minus_fen": 2000,
+    "discount_off_bps": 0,
+    "fixed_unit_price_fen": null,
+    "maximum_quantity": null,
+    "gift": null,
+    "stack_with_coupon": true,
+    "rule_complete": true,
+    "is_demo": true
+  }
+]

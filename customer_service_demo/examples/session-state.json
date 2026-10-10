@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "conversation_id": "conv_demo_001",
+  "revision": 1,
+  "active_module": "product_recommendation",
+  "updated_at": "2026-10-07T00:00:00Z",
+  "module_states": {
+    "product_recommendation": {
+      "need_groups": [
+        {
+          "group_id": "group_self",
+          "label": "自己在办公室吃",
+          "budget": {
+            "min_fen": null,
+            "max_fen": 10000,
+            "strictness": "strict",
+            "scope": "goods_total",
+            "source_turn_id": "turn_demo_001",
+            "source_text": "100 元以内"
+          },
+          "constraints": [
+            {
+              "constraint_id": "c_package",
+              "field": "package",
+              "operator": "equals",
+              "value": "独立小包",
+              "strength": "hard",
+              "status": "active",
+              "source_turn_id": "turn_demo_001",
+              "source_text": "独立小包"
+            },
+            {
+              "constraint_id": "c_taste",
+              "field": "taste",
+              "operator": "exclude",
+              "value": "辣",
+              "strength": "hard",
+              "status": "active",
+              "source_turn_id": "turn_demo_001",
+              "source_text": "不要辣"
+            }
+          ]
+        }
+      ],
+      "pending_clarification": null,
+      "last_presentation": {
+        "message_id": "msg_demo_001",
+        "turn_id": "turn_demo_001",
+        "plan_order": [
+          {
+            "plan_id": "plan_demo_001",
+            "sku_ids": [
+              "demo_a",
+              "demo_b"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

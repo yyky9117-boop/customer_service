@@ -1,0 +1,340 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:snack-customer-service:need-patch:v1",
+  "type": "object",
+  "properties": {
+    "intent": {
+      "enum": [
+        "recommend",
+        "unsupported"
+      ]
+    },
+    "reset": {
+      "type": "boolean"
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,80}$"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "budget": {
+            "type": "object",
+            "properties": {
+              "min_fen": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "max_fen": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "strictness": {
+                "enum": [
+                  "strict",
+                  "approximate",
+                  "unknown"
+                ]
+              },
+              "scope": {
+                "enum": [
+                  "per_unit",
+                  "per_recipient",
+                  "goods_total",
+                  "order_total",
+                  "unknown"
+                ]
+              },
+              "source_text": {
+                "type": "string"
+              },
+              "min_is_hard": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "min_fen",
+              "max_fen",
+              "strictness",
+              "scope",
+              "source_text",
+              "min_is_hard"
+            ],
+            "additionalProperties": false
+          },
+          "upsert_constraints": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "constraint_id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9_-]{1,80}$"
+                },
+                "field": {
+                  "enum": [
+                    "category",
+                    "taste",
+                    "package",
+                    "ingredient",
+                    "scene",
+                    "purpose",
+                    "quantity",
+                    "gift_need",
+                    "other"
+                  ]
+                },
+                "operator": {
+                  "enum": [
+                    "include",
+                    "exclude",
+                    "equals",
+                    "at_least",
+                    "at_most"
+                  ]
+                },
+                "value": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    {
+                      "type": "boolean"
+                    },
+                    {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "uniqueItems": true
+                    }
+                  ]
+                },
+                "strength": {
+                  "enum": [
+                    "hard",
+                    "soft"
+                  ]
+                },
+                "source_text": {
+                  "type": "string",
+                  "maxLength": 2000
+                },
+                "origin": {
+                  "enum": [
+                    "explicit",
+                    "inferred"
+                  ]
+                },
+                "derived_from": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_-]{1,80}$"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "constraint_id",
+                "field",
+                "operator",
+                "value",
+                "strength",
+                "source_text",
+                "origin",
+                "derived_from"
+              ],
+              "additionalProperties": false
+            },
+            "maxItems": 30
+          },
+          "remove_constraint_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{1,80}$"
+            },
+            "uniqueItems": true,
+            "maxItems": 30
+          }
+        },
+        "required": [
+          "group_id",
+          "upsert_constraints",
+          "remove_constraint_ids"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 3
+    },
+    "remove_group_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9_-]{1,80}$"
+      },
+      "uniqueItems": true
+    },
+    "shared_budget": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "min_fen": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "max_fen": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "strictness": {
+              "enum": [
+                "strict",
+                "approximate",
+                "unknown"
+              ]
+            },
+            "scope": {
+              "enum": [
+                "per_unit",
+                "per_recipient",
+                "goods_total",
+                "order_total",
+                "unknown"
+              ]
+            },
+            "source_text": {
+              "type": "string"
+            },
+            "min_is_hard": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "min_fen",
+            "max_fen",
+            "strictness",
+            "scope",
+            "source_text",
+            "min_is_hard"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "clarification": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "question": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 180
+            },
+            "asked_fields": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "budget",
+                  "budget_scope",
+                  "quantity",
+                  "taste",
+                  "category",
+                  "allergy",
+                  "reference",
+                  "conflict",
+                  "purpose",
+                  "package"
+                ]
+              },
+              "minItems": 1,
+              "maxItems": 2,
+              "uniqueItems": true
+            },
+            "group_id": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9_-]{1,80}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "question",
+            "asked_fields",
+            "group_id"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "retrieval_hints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9_-]{1,80}$"
+      },
+      "maxItems": 30
+    },
+    "reference_action": {
+      "enum": [
+        "retain_selected",
+        "replace_selected",
+        "recommend_alternatives"
+      ]
+    },
+    "reference_source_text": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    }
+  },
+  "required": [
+    "intent",
+    "reset",
+    "groups",
+    "remove_group_ids",
+    "clarification",
+    "retrieval_hints"
+  ],
+  "additionalProperties": false
+}

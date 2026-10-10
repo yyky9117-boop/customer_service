@@ -1,0 +1,27 @@
+{
+  "version": "order-reply-demo-v1",
+  "source": "reconstructed_demo",
+  "source_note": "按订单客服场景补建的演示话术库，不是从原 Coze 知识库导出的正文。",
+  "entries": [
+    {"id":"ask_identifier","scene":"need_more_info","keywords":["订单","帮我查","忘了","手机号"],"guide":"先表示愿意帮忙，再只问能定位订单的信息。未定位订单时不能说已经查到，也不要一次问多个无关问题。","opening":"亲～，我可以帮你查😊","closing":"提供其中一种就可以，我再帮你核对。"},
+    {"id":"choose_order","scene":"multiple_orders","keywords":["牛肉干","饼干","坚果","手机号","哪个"],"guide":"说明找到了多笔匹配订单，引导用户选一笔；不要把候选订单当成已选定订单回复发货或物流。","opening":"亲～，我按你提供的信息查了一下😊","closing":"点选下面的订单，或者告诉我完整订单号，我再继续帮你看。"},
+    {"id":"no_order","scene":"not_found","keywords":["没找到","订单号","手机号","查"],"guide":"平和地说明本次查询未匹配，不指责用户，不推断订单不存在；建议核对号码或当前演示账号。","opening":"亲～，我按这次提供的信息查过了😊","closing":"可以核对一下订单号和当前账号，再发给我看看。"},
+    {"id":"narrow_query","scene":"narrow_search","keywords":["订单","查"],"guide":"查询范围太大时请用户缩小范围，不宣称没有订单。","opening":"亲～，我可以继续帮你核对😊","closing":"告诉我完整订单号，会更方便定位这笔订单。"},
+    {"id":"query_error","scene":"query_failed","keywords":["查","订单","失败"],"guide":"说明本次查询未完成，不把接口失败解释成没有订单；给出重试方向，不声称已经转接人工。","opening":"亲～，这次查询暂时没能完成😊","closing":"可以稍后再试，或者通过联系人工入口进一步核实。"},
+    {"id":"waiting_payment","scene":"pending_payment","keywords":["付款","发货","什么时候"],"guide":"先说明待付款，不承诺付款后何时发货，也不说已经通知仓库。","opening":"亲～，我帮你核对了一下😊","closing":"可以先在订单页面确认付款情况。"},
+    {"id":"cancelled_order","scene":"cancelled","keywords":["取消","发货","物流"],"guide":"直接说明取消状态，不擅自说明取消原因或退款到账时间。","opening":"亲～，我帮你看了这笔订单😊","closing":"如果还想核实取消原因，可以联系人工客服。"},
+    {"id":"waiting_shipment","scene":"unshipped","keywords":["发货","多久","什么时候","还没"],"guide":"先承接用户想知道是否发货的诉求，再说明当前待发货。没有发货时间就不推测，没有催单接口就不说已经催促。","opening":"亲～，我帮你看了一下这笔订单😊","closing":"目前还没有确认的发出时间，后续发货情况可以再来查。"},
+    {"id":"waiting_shipment_urgent","scene":"unshipped","keywords":["着急","急","等了","催","赶紧"],"guide":"用户明确表示着急时先简短承接情绪；不能捏造已催单、已通知仓库或加急成功。","opening":"亲～，知道你想尽快收到，我帮你核对了当前状态😊","closing":"如果需要进一步核实发货安排，可以点击联系人工。"},
+    {"id":"shipped_order","scene":"shipped","keywords":["发货","发了吗","发了没"],"guide":"用户只问是否发货时简短回答，不编造或主动拼接未查询的物流轨迹。","opening":"亲～，我帮你确认了一下😊","closing":"如果想看包裹到哪了，也可以继续问我。"},
+    {"id":"parcel_transport","scene":"in_transit","keywords":["物流","到哪","快递","包裹"],"guide":"先给当前运输进度，再说明有来源的预计时间；没有预计时间不要承诺今天或明天送达。","opening":"亲～，我帮你看了最新的物流信息😊","closing":"后续进度以快递更新为准，有变化可以再来查。"},
+    {"id":"arrival_time","scene":"in_transit","keywords":["什么时候到","多久到","何时到","预计","送到"],"guide":"优先回答预计送达。必须区分预计与保证，时间只认本轮接口事实；没有预计时间要明确说明。","opening":"亲～，我帮你核对了这次的物流结果😊","closing":"预计时间可能随配送更新变化，可以继续关注后续轨迹。"},
+    {"id":"out_for_delivery","scene":"delivering","keywords":["到哪","快递","多久","派送"],"guide":"说明当前派送进度，不承诺具体送到时点，不声称已联系配送员。","opening":"亲～，我帮你看了最新进度😊","closing":"具体送到时间还要以配送更新为准。"},
+    {"id":"signed_parcel","scene":"delivered","keywords":["签收","到哪","收到了","什么时候到"],"guide":"说明接口显示已签收；用户说没收到时不要认定其本人签收，也不能保证已经赔偿。","opening":"亲～，我帮你核对了物流记录😊","closing":"如果你实际还没收到，可以点击联系人工进一步核实。"},
+    {"id":"missing_trace","scene":"no_records","keywords":["物流","到哪","没有","快递"],"guide":"区别已发货和暂无物流记录，不能把没轨迹说成没发货或丢件。","opening":"亲～，我帮你查了当前信息😊","closing":"后续可以再查一次，看看快递是否更新了轨迹。"},
+    {"id":"split_parcels","scene":"partially_shipped","keywords":["全部","发货","几个","包裹","物流"],"guide":"明确部分发货，逐个保留包裹结果，不能把一个包裹的状态概括为整个订单。","opening":"亲～，我帮你按包裹分别核对了一下😊","closing":"各包裹进度可能不同，可以按对应运单继续查看。"},
+    {"id":"delivery_problem","scene":"exception","keywords":["异常","没收到","慢","物流","为什么"],"guide":"承接用户疑问，说明接口返回的异常或长期未更新；原因未确认就不推断丢件、地址错误或退款资格。","opening":"亲～，我帮你核对了这次的配送信息😊","closing":"这类情况需要人工进一步核实。"},
+    {"id":"courier_unavailable","scene":"logistics_failed","keywords":["物流","快递","到哪","什么时候到"],"guide":"保留已确认的订单发货状态，说明本轮物流查询失败；不要重复使用旧轨迹冒充最新结果。","opening":"亲～，订单状态我帮你核对到了😊","closing":"最新物流这次没能确认，可以稍后重试。"},
+    {"id":"unknown_state","scene":"unknown_shipping","keywords":["发货","查","订单"],"guide":"说明状态尚未确认，不推断已经发货或尚未发货；引导人工核实，不声称工单已经创建。","opening":"亲～，我帮你查看了这笔订单😊","closing":"这项状态还需要进一步核实。"},
+    {"id":"human_or_after_sales","scene":"after_sales","keywords":["人工","退货","退款","换货","赔偿","投诉"],"guide":"承接用户的售后或人工诉求，保留订单事实；不承诺退款、赔偿、退货批准，不把建议转人工说成已接入坐席。","opening":"亲～，你的诉求我了解了😊","closing":"具体处理结果需要人工客服核实后确认。"}
+  ]
+}

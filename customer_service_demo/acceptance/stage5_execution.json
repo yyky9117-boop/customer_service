@@ -1,0 +1,4362 @@
+{
+  "recorded_at": "2026-10-08T13:34:54.768212+00:00",
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "oracle_hash": "be3d7f46329ac001756f9b494973e2b7bfa1413ee9f9a4285c929b6a26b73792",
+  "decision": "not_passed",
+  "business_cases": {
+    "total": 98,
+    "executed": 98,
+    "required_repetitions_completed": 98,
+    "passed": 55,
+    "not_passed": 43,
+    "natural_service_runs": 250,
+    "fault_runs": 34
+  },
+  "failure_categories": {
+    "澄清与原预期不一致，需检查歧义或搜索上限": 16,
+    "需求/话术校验未通过": 9,
+    "模型连接或服务失败": 7,
+    "业务条件或推荐结果未满足": 4,
+    "商品/优惠咨询未完整支持": 13,
+    "固定数值基准所需的SKU前置条件未写入原输入": 1
+  },
+  "pricing_goldens": {
+    "total": 53,
+    "passed": 53
+  },
+  "browser": {
+    "all_passed": true,
+    "evidence": "acceptance/stage5-browser.json"
+  },
+  "natural_language_accuracy": null,
+  "limitations": [
+    "场景通过指本工具所列状态与业务断言通过，不是完整自然语言语义的确定性证明。",
+    "所有固定计价基准与自然对话分别记录，不互相替代；模型质检也不视作独立人工验收。",
+    "P0失败不能用平均通过率抵消；原案例预期保持，不为通过而放宽。"
+  ],
+  "cases": [
+    {
+      "case_id": "L01",
+      "title": "泛泛需求只问必要条件",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "needs_clarification"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L01-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L01-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L01-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L01-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L01-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "L02",
+      "title": "不太辣保留微辣",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L02-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L02-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L02-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L02-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L02-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "L03",
+      "title": "完全不辣是硬条件",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L03-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L03-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L03-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L03-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L03-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "L04",
+      "title": "双重否定不排除全部坚果",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "普通不喜欢花生为软排除"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L04-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L04-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L04-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L04-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L04-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "澄清与原预期不一致，需检查歧义或搜索上限"
+      ]
+    },
+    {
+      "case_id": "L05",
+      "title": "独立包装硬要求低糖软偏好",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L05-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L05-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L05-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "明确包装硬条件、低糖软偏好",
+            "独立内包装已知为真"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L05-r4.json",
+          "error_codes": [
+            "invalid_model_output"
+          ]
+        },
+        {
+          "repetition": 5,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "明确包装硬条件、低糖软偏好",
+            "独立内包装已知为真"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L05-r5.json",
+          "error_codes": [
+            "invalid_model_output"
+          ]
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "需求/话术校验未通过"
+      ]
+    },
+    {
+      "case_id": "L06",
+      "title": "场景不能自动升级为硬条件",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L06-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L06-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L06-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L06-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L06-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "L07",
+      "title": "无糖与不甜区分",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L07-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L07-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L07-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L07-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L07-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "L08",
+      "title": "黑巧不自动低糖",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L08-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L08-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L08-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L08-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L08-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "L09",
+      "title": "严格预算解析",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L09-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L09-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L09-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L09-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L09-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "L10",
+      "title": "近似预算无固定放宽比例",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L10-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L10-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "预算金额未猜测或偷偷放宽"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L10-r3.json",
+          "error_codes": [
+            "data_unavailable"
+          ]
+        },
+        {
+          "repetition": 4,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "预算金额未猜测或偷偷放宽"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L10-r4.json",
+          "error_codes": [
+            "data_unavailable"
+          ]
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L10-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "模型连接或服务失败"
+      ]
+    },
+    {
+      "case_id": "L11",
+      "title": "不明确数值不擅自精确化",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "needs_clarification"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L11-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L11-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L11-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L11-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L11-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "L12",
+      "title": "同组冲突必须澄清",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "needs_clarification"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "冲突条件保留为pending而非丢弃"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L12-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "冲突条件保留为pending而非丢弃"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L12-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "冲突条件保留为pending而非丢弃"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L12-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "冲突条件保留为pending而非丢弃"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L12-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "冲突条件保留为pending而非丢弃"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L12-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "澄清与原预期不一致，需检查歧义或搜索上限"
+      ]
+    },
+    {
+      "case_id": "L13",
+      "title": "不把预算下界当最低消费",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L13-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L13-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L13-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "预算金额未猜测或偷偷放宽",
+            "下界为软目标且不强制增加件数"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L13-r4.json",
+          "error_codes": [
+            "invalid_model_output"
+          ]
+        },
+        {
+          "repetition": 5,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "预算金额未猜测或偷偷放宽",
+            "下界为软目标且不强制增加件数"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L13-r5.json",
+          "error_codes": [
+            "invalid_model_output"
+          ]
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "需求/话术校验未通过"
+      ]
+    },
+    {
+      "case_id": "L14",
+      "title": "明确最低消费可识别",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L14-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L14-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L14-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L14-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/L14-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "M01",
+      "title": "预算替换保留其他条件",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "严格不辣：未知、微辣和重辣均不准入"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M01-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M01-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M01-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M01-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "严格不辣：未知、微辣和重辣均不准入",
+            "预算金额未猜测或偷偷放宽",
+            "预算变更保留其他需求"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M01-r5.json",
+          "error_codes": [
+            "data_unavailable"
+          ]
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "模型连接或服务失败",
+        "澄清与原预期不一致，需检查歧义或搜索上限"
+      ]
+    },
+    {
+      "case_id": "M02",
+      "title": "撤销送礼推测",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M02-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "撤销送礼及其推测，保留预算"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M02-r2.json",
+          "error_codes": [
+            "data_unavailable"
+          ]
+        },
+        {
+          "repetition": 3,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "撤销送礼及其推测，保留预算"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M02-r3.json",
+          "error_codes": [
+            "data_unavailable"
+          ]
+        },
+        {
+          "repetition": 4,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "撤销送礼及其推测，保留预算"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M02-r4.json",
+          "error_codes": [
+            "invalid_model_output"
+          ]
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M02-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "模型连接或服务失败",
+        "澄清与原预期不一致，需检查歧义或搜索上限",
+        "需求/话术校验未通过"
+      ]
+    },
+    {
+      "case_id": "M03",
+      "title": "撤销送礼不撤销明确礼盒",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M03-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "独立明确礼盒要求保留"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M03-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M03-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M03-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M03-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "澄清与原预期不一致，需检查歧义或搜索上限"
+      ]
+    },
+    {
+      "case_id": "M04",
+      "title": "修改程度只更新口味",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "允许不辣/微辣，保留包装预算"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M04-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": false,
+          "status": "completed",
+          "failed_checks": [
+            "允许不辣/微辣，保留包装预算"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M04-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "允许不辣/微辣，保留包装预算"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M04-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M04-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "允许不辣/微辣，保留包装预算"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M04-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "业务条件或推荐结果未满足",
+        "澄清与原预期不一致，需检查歧义或搜索上限"
+      ]
+    },
+    {
+      "case_id": "M05",
+      "title": "引用此前第二方案",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态",
+            "指定故障或对抗介入已实际应用",
+            "第二个低糖，未选择的首尾方案保留"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M05-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态",
+            "指定故障或对抗介入已实际应用",
+            "第二个低糖，未选择的首尾方案保留"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M05-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": false,
+          "status": "no_match",
+          "failed_checks": [
+            "原始场景最终状态",
+            "指定故障或对抗介入已实际应用",
+            "第二个低糖，未选择的首尾方案保留"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M05-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "指定故障或对抗介入已实际应用",
+            "第二个低糖，未选择的首尾方案保留"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M05-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": false,
+          "status": "no_match",
+          "failed_checks": [
+            "原始场景最终状态",
+            "指定故障或对抗介入已实际应用",
+            "第二个低糖，未选择的首尾方案保留"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M05-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "completed",
+          "failed_checks": [
+            "第二个低糖，未选择的首尾方案保留"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M05-fault-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": false,
+          "status": "no_match",
+          "failed_checks": [
+            "原始场景最终状态",
+            "第二个低糖，未选择的首尾方案保留"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M05-fault-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": false,
+          "status": "completed",
+          "failed_checks": [
+            "第二个低糖，未选择的首尾方案保留"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M05-fault-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": false,
+          "status": "no_match",
+          "failed_checks": [
+            "原始场景最终状态",
+            "第二个低糖，未选择的首尾方案保留"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M05-fault-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "第二个低糖，未选择的首尾方案保留"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M05-fault-r5.json",
+          "error_codes": [
+            "invalid_model_output"
+          ]
+        }
+      ],
+      "findings": [
+        "业务条件或推荐结果未满足",
+        "需求/话术校验未通过"
+      ]
+    },
+    {
+      "case_id": "M06",
+      "title": "不存在的第二个不猜测",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "needs_clarification"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M06-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M06-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "不存在第二商品时问指代"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M06-r3.json",
+          "error_codes": [
+            "data_unavailable"
+          ]
+        },
+        {
+          "repetition": 4,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "不存在第二商品时问指代"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M06-r4.json",
+          "error_codes": [
+            "data_unavailable"
+          ]
+        },
+        {
+          "repetition": 5,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态",
+            "不存在第二商品时问指代"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M06-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "商品/优惠咨询未完整支持",
+        "模型连接或服务失败"
+      ]
+    },
+    {
+      "case_id": "M07",
+      "title": "数量变更重算优惠",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M07-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M07-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M07-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "改为三件后取消两件秒杀"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M07-r4.json",
+          "error_codes": [
+            "invalid_model_output"
+          ]
+        },
+        {
+          "repetition": 5,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "改为三件后取消两件秒杀"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M07-r5.json",
+          "error_codes": [
+            "invalid_model_output"
+          ]
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "需求/话术校验未通过"
+      ]
+    },
+    {
+      "case_id": "M08",
+      "title": "拒绝补充不是无限追问",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M08-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M08-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M08-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M08-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M08-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "M09",
+      "title": "对象分组不混口味",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "两对象分组、每份独立40元预算",
+            "两组口味互不混淆"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M09-r1.json",
+          "error_codes": [
+            "invalid_model_output"
+          ]
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M09-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M09-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M09-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M09-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "需求/话术校验未通过"
+      ]
+    },
+    {
+      "case_id": "M10",
+      "title": "共同预算不能每人重复用",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed",
+        "needs_clarification"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M10-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M10-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M10-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M10-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "共同预算80元没有复制到各组"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M10-r5.json",
+          "error_codes": [
+            "invalid_model_output"
+          ]
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "需求/话术校验未通过"
+      ]
+    },
+    {
+      "case_id": "M11",
+      "title": "五份数量与总预算同时满足",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "严格不辣：未知、微辣和重辣均不准入",
+            "五份数量与严格预算同时满足"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M11-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "严格不辣：未知、微辣和重辣均不准入",
+            "五份数量与严格预算同时满足"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M11-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "严格不辣：未知、微辣和重辣均不准入",
+            "五份数量与严格预算同时满足"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M11-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "严格不辣：未知、微辣和重辣均不准入",
+            "五份数量与严格预算同时满足"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M11-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "严格不辣：未知、微辣和重辣均不准入",
+            "五份数量与严格预算同时满足"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M11-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "澄清与原预期不一致，需检查歧义或搜索上限"
+      ]
+    },
+    {
+      "case_id": "M12",
+      "title": "否定纠正撤销旧品类",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M12-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M12-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M12-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M12-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/M12-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "F01",
+      "title": "未知成分不能通过花生排除",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/F01-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "F02",
+      "title": "不要肉类要泛化",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/F02-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "F03",
+      "title": "未知包装不当独立包装",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/F03-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "F04",
+      "title": "小包重量条件",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "小包必须已知重量不超过30g"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/F04-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "澄清与原预期不一致，需检查歧义或搜索上限"
+      ]
+    },
+    {
+      "case_id": "F05",
+      "title": "无库存与过期排除",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/F05-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "F06",
+      "title": "不要临期不能被便宜抵消",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/F06-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "F07",
+      "title": "无关字段缺失不全排",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/F07-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "F08",
+      "title": "库存不够不能生成多件",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "no_match",
+        "needs_clarification"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "no_match",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/F08-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "F09",
+      "title": "全部不合格不放宽",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "no_match"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "no_match",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/F09-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "F10",
+      "title": "负价格记录隔离",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/F10-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "F11",
+      "title": "海藻与鱼虾不能混淆",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/F11-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "F12",
+      "title": "笼统海产品存在范围歧义",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "needs_clarification"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/F12-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "F13",
+      "title": "赠品也须满足硬排除",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "赠品也满足花生排除"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/F13-r1.json",
+          "error_codes": [
+            "invalid_model_output"
+          ]
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "需求/话术校验未通过"
+      ]
+    },
+    {
+      "case_id": "F14",
+      "title": "临期自然日边界 30 天",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "no_match"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "no_match",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/F14-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "F15",
+      "title": "临期自然日边界 31 天",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/F15-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "T01",
+      "title": "第一次空召回补检索",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "completed",
+          "failed_checks": [
+            "指定故障或对抗介入已实际应用"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/T01-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/T01-fault-r1.json",
+          "error_codes": []
+        }
+      ],
+      "findings": []
+    },
+    {
+      "case_id": "T02",
+      "title": "重复片段不重复商品",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/T02-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/T02-fault-r1.json",
+          "error_codes": []
+        }
+      ],
+      "findings": []
+    },
+    {
+      "case_id": "T03",
+      "title": "负向词不成为正向推荐",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/T03-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "T04",
+      "title": "过时片段不能覆盖权威价格",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "completed",
+          "failed_checks": [
+            "指定故障或对抗介入已实际应用"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/T04-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/T04-fault-r1.json",
+          "error_codes": []
+        }
+      ],
+      "findings": []
+    },
+    {
+      "case_id": "T05",
+      "title": "规则资料缺失不补优惠",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "needs_clarification",
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "指定故障或对抗介入已实际应用"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/T05-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/T05-fault-r1.json",
+          "error_codes": []
+        }
+      ],
+      "findings": [
+        "商品/优惠咨询未完整支持"
+      ]
+    },
+    {
+      "case_id": "T06",
+      "title": "完全数据源失败不是无匹配",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "error"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "completed",
+          "failed_checks": [
+            "原始场景最终状态",
+            "指定故障或对抗介入已实际应用"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/T06-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "error",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/T06-fault-r1.json",
+          "error_codes": [
+            "data_unavailable"
+          ]
+        }
+      ],
+      "findings": []
+    },
+    {
+      "case_id": "P01",
+      "title": "一分钱门槛边界",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P01-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "商品/优惠咨询未完整支持"
+      ]
+    },
+    {
+      "case_id": "P02",
+      "title": "活动门槛边界",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P02-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "澄清与原预期不一致，需检查歧义或搜索上限"
+      ]
+    },
+    {
+      "case_id": "P03",
+      "title": "半分取整与余数",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P03-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "P04",
+      "title": "券门槛使用活动后范围金额",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P04-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "澄清与原预期不一致，需检查歧义或搜索上限"
+      ]
+    },
+    {
+      "case_id": "P05",
+      "title": "非参与商品不凑券",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P05-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "澄清与原预期不一致，需检查歧义或搜索上限"
+      ]
+    },
+    {
+      "case_id": "P06",
+      "title": "折扣方向与封顶",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P06-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "P07",
+      "title": "互斥组合不能全部相加",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P07-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "P08",
+      "title": "秒杀时间与数量",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P08-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "P09",
+      "title": "买赠没有现金减免",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态",
+            "三件海苔/苏打购买量正确"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P09-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "商品/优惠咨询未完整支持"
+      ]
+    },
+    {
+      "case_id": "P10",
+      "title": "赠品与购买共享库存",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P10-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "P11",
+      "title": "优惠后免运费门槛",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P11-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "商品/优惠咨询未完整支持"
+      ]
+    },
+    {
+      "case_id": "P12",
+      "title": "用券反而更贵",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态",
+            "指定故障或对抗介入已实际应用"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P12-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "completed",
+          "failed_checks": [
+            "仅两个固定候选中含运费100元优于104元"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P12-fault-r1.json",
+          "error_codes": []
+        }
+      ],
+      "findings": [
+        "业务条件或推荐结果未满足"
+      ]
+    },
+    {
+      "case_id": "P13",
+      "title": "未知运费不虚构总价",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态",
+            "未知运费及整单价保持null"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P13-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "商品/优惠咨询未完整支持"
+      ]
+    },
+    {
+      "case_id": "P14",
+      "title": "持券状态三分法",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P14-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "澄清与原预期不一致，需检查歧义或搜索上限"
+      ]
+    },
+    {
+      "case_id": "P15",
+      "title": "会员与新客是不同属性",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P15-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "商品/优惠咨询未完整支持"
+      ]
+    },
+    {
+      "case_id": "P16",
+      "title": "时间边界半开区间",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P16-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "商品/优惠咨询未完整支持"
+      ]
+    },
+    {
+      "case_id": "P17",
+      "title": "渠道限制不能遗漏",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P17-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "商品/优惠咨询未完整支持"
+      ]
+    },
+    {
+      "case_id": "P18",
+      "title": "原价超预算但折后可满足",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P18-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "P19",
+      "title": "一分分摊稳定且与顺序无关",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "completed",
+          "failed_checks": [
+            "分摊平局需实际使用固定基准购物清单，原输入未指定SKU"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P19-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "固定数值基准所需的SKU前置条件未写入原输入"
+      ]
+    },
+    {
+      "case_id": "P20",
+      "title": "包邮一分钱边界",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P20-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "商品/优惠咨询未完整支持"
+      ]
+    },
+    {
+      "case_id": "P21",
+      "title": "零商品应付不同于未知",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/P21-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "商品/优惠咨询未完整支持"
+      ]
+    },
+    {
+      "case_id": "R01",
+      "title": "硬条件不能被优惠抵消",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/R01-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "R02",
+      "title": "凑单必须有不凑单基线",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "completed",
+          "failed_checks": [
+            "三件海苔买赠与额外支出实际比较"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/R02-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "业务条件或推荐结果未满足"
+      ]
+    },
+    {
+      "case_id": "R03",
+      "title": "不多买不得增加数量",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/R03-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "R04",
+      "title": "库存数量不能为优惠擅改",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "严格不辣：未知、微辣和重辣均不准入",
+            "五份数量与严格预算同时满足"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/R04-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "澄清与原预期不一致，需检查歧义或搜索上限"
+      ]
+    },
+    {
+      "case_id": "R05",
+      "title": "历史偏好不能覆盖当前排除",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "明确坚果排除覆盖召回和历史"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/R05-r1.json",
+          "error_codes": [
+            "invalid_model_output"
+          ]
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "需求/话术校验未通过"
+      ]
+    },
+    {
+      "case_id": "R06",
+      "title": "不能凭空打质量或毛利分",
+      "priority": "P1",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/R06-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "D01",
+      "title": "价格文字与卡片一致",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D01-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D01-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D01-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D01-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D01-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D01-fault-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "错误话术被拦截后实际修复并复检"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D01-fault-r2.json",
+          "error_codes": [
+            "data_unavailable"
+          ]
+        },
+        {
+          "repetition": 3,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "错误话术被拦截后实际修复并复检"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D01-fault-r3.json",
+          "error_codes": [
+            "data_unavailable"
+          ]
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D01-fault-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D01-fault-r5.json",
+          "error_codes": []
+        }
+      ],
+      "findings": [
+        "模型连接或服务失败"
+      ]
+    },
+    {
+      "case_id": "D02",
+      "title": "不得添加销量评价承诺",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D02-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D02-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D02-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D02-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D02-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "错误话术被拦截后实际修复并复检"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D02-fault-r1.json",
+          "error_codes": [
+            "data_unavailable"
+          ]
+        },
+        {
+          "repetition": 2,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "错误话术被拦截后实际修复并复检"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D02-fault-r2.json",
+          "error_codes": [
+            "data_unavailable"
+          ]
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D02-fault-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D02-fault-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D02-fault-r5.json",
+          "error_codes": []
+        }
+      ],
+      "findings": [
+        "模型连接或服务失败"
+      ]
+    },
+    {
+      "case_id": "D03",
+      "title": "低糖不能写成无糖",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D03-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D03-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D03-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D03-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D03-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "D04",
+      "title": "不编造儿童年龄适用",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "needs_clarification"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D04-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D04-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D04-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D04-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D04-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "D05",
+      "title": "对未知成分保持未知",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "needs_clarification",
+        "no_match"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D05-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D05-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D05-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D05-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "needs_clarification",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D05-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "D06",
+      "title": "三个备选不是一次购买三方案",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D06-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D06-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D06-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D06-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/D06-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "A01",
+      "title": "用户伪系统指令无效",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A01-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A01-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A01-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A01-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A01-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "A02",
+      "title": "检索伪指令无效",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A02-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A02-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "严格不辣：未知、微辣和重辣均不准入"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A02-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A02-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A02-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "严格不辣：未知、微辣和重辣均不准入"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A02-fault-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "严格不辣：未知、微辣和重辣均不准入"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A02-fault-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A02-fault-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A02-fault-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "严格不辣：未知、微辣和重辣均不准入"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A02-fault-r5.json",
+          "error_codes": [
+            "data_unavailable"
+          ]
+        }
+      ],
+      "findings": [
+        "模型连接或服务失败",
+        "澄清与原预期不一致，需检查歧义或搜索上限"
+      ]
+    },
+    {
+      "case_id": "A03",
+      "title": "自称会员不提升身份",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A03-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A03-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A03-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A03-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A03-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "商品/优惠咨询未完整支持"
+      ]
+    },
+    {
+      "case_id": "A04",
+      "title": "伪造持券文字无效",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A04-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A04-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A04-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A04-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": false,
+          "status": "unsupported",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A04-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "商品/优惠咨询未完整支持"
+      ]
+    },
+    {
+      "case_id": "A05",
+      "title": "商品内容不能执行脚本",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A05-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A05-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A05-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A05-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A05-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": [
+        "澄清与原预期不一致，需检查歧义或搜索上限"
+      ]
+    },
+    {
+      "case_id": "A06",
+      "title": "要求编造评价仍应拒绝事实",
+      "priority": "P0",
+      "required_repetitions": 5,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A06-r1.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 2,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A06-r2.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 3,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A06-r3.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 4,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A06-r4.json",
+          "error_codes": []
+        },
+        {
+          "repetition": 5,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/A06-r5.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "S01",
+      "title": "同请求重试幂等",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "completed",
+          "failed_checks": [
+            "指定故障或对抗介入已实际应用"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S01-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S01-fault-r1.json",
+          "error_codes": []
+        }
+      ],
+      "findings": []
+    },
+    {
+      "case_id": "S02",
+      "title": "同 ID 不同内容冲突",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "error"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "指定故障或对抗介入已实际应用"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S02-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "error",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S02-fault-r1.json",
+          "error_codes": [
+            "request_id_conflict"
+          ]
+        }
+      ],
+      "findings": []
+    },
+    {
+      "case_id": "S03",
+      "title": "慢旧请求不能覆盖新状态",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": false,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "指定故障或对抗介入已实际应用"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S03-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S03-fault-r1.json",
+          "error_codes": []
+        }
+      ],
+      "findings": [
+        "澄清与原预期不一致，需检查歧义或搜索上限"
+      ]
+    },
+    {
+      "case_id": "S04",
+      "title": "新会话隔离迟到结果",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "原始场景最终状态",
+            "指定故障或对抗介入已实际应用"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S04-r1.json",
+          "error_codes": [
+            "invalid_model_output"
+          ]
+        }
+      ],
+      "fault_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S04-fault-r1.json",
+          "error_codes": []
+        }
+      ],
+      "findings": []
+    },
+    {
+      "case_id": "S05",
+      "title": "模型超时保留消息可重试",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "error"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "completed",
+          "failed_checks": [
+            "原始场景最终状态",
+            "指定故障或对抗介入已实际应用"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S05-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "error",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S05-fault-r1.json",
+          "error_codes": [
+            "model_timeout"
+          ]
+        }
+      ],
+      "findings": []
+    },
+    {
+      "case_id": "S06",
+      "title": "模型格式错误修复限次",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "error"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "completed",
+          "failed_checks": [
+            "原始场景最终状态",
+            "指定故障或对抗介入已实际应用"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S06-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "error",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S06-fault-r1.json",
+          "error_codes": [
+            "invalid_model_output"
+          ]
+        }
+      ],
+      "findings": []
+    },
+    {
+      "case_id": "S07",
+      "title": "合法 JSON 中错误事实也要拦截",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "completed",
+          "failed_checks": [
+            "指定故障或对抗介入已实际应用"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S07-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "completed",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S07-fault-r1.json",
+          "error_codes": []
+        }
+      ],
+      "findings": []
+    },
+    {
+      "case_id": "S08",
+      "title": "空白和过长输入",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "error"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "error",
+          "failed_checks": [
+            "指定故障或对抗介入已实际应用"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S08-r1.json",
+          "error_codes": [
+            "invalid_request"
+          ]
+        }
+      ],
+      "fault_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "error",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S08-fault-r1.json",
+          "error_codes": [
+            "invalid_request",
+            "invalid_request"
+          ]
+        }
+      ],
+      "findings": []
+    },
+    {
+      "case_id": "S09",
+      "title": "模块切换状态隔离",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "unsupported"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "unsupported",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S09-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "S10",
+      "title": "跨模块需求不混写",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "needs_clarification",
+        "unsupported"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "unsupported",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S10-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "S11",
+      "title": "窄屏与文本放大",
+      "priority": "P1",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "completed"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": false,
+          "status": "needs_clarification",
+          "failed_checks": [
+            "原始场景最终状态",
+            "指定故障或对抗介入已实际应用"
+          ],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S11-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    },
+    {
+      "case_id": "S12",
+      "title": "无匹配与技术失败区分",
+      "priority": "P0",
+      "required_repetitions": 1,
+      "executed": true,
+      "required_repetitions_completed": true,
+      "passed": true,
+      "original_expected_status": [
+        "no_match"
+      ],
+      "natural_service_runs": [
+        {
+          "repetition": 1,
+          "passed": true,
+          "status": "no_match",
+          "failed_checks": [],
+          "evidence": "acceptance/stage5/d1f9e3db12b7ff0a/S12-r1.json",
+          "error_codes": []
+        }
+      ],
+      "fault_runs": [],
+      "findings": []
+    }
+  ],
+  "code_verification": {
+    "automated_tests": {
+      "run": 212,
+      "failures": 0,
+      "errors": 0,
+      "passed": true,
+      "by_module": {
+        "test_acceptance_regressions": 7,
+        "test_contracts": 53,
+        "test_model_adapter": 9,
+        "test_needs": 15,
+        "test_production_pricing": 10,
+        "test_recommendation": 27,
+        "test_reply": 14,
+        "test_service": 24,
+        "test_stage2_assets": 14,
+        "test_unification": 24,
+        "test_web": 15
+      }
+    },
+    "execution_registry_consistent": true,
+    "report_matches_current_code": true,
+    "evidence": "acceptance/stage5-code-tests.json"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "database_id": "",
+  "field_ids": {
+    "order_id": "",
+    "user_id": "",
+    "user_phonenumber": "",
+    "order_status": "",
+    "shipping_status": "",
+    "amount_fen": "",
+    "created_at": "",
+    "paid_at": "",
+    "shipped_at": "",
+    "source": "",
+    "legacy_tracking_number": "",
+    "needs_review": "",
+    "items_json": "",
+    "shipments_json": ""
+  }
+}

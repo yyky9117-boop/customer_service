@@ -1,0 +1,4107 @@
+{
+  "case_id": "M05",
+  "title": "引用此前第二方案",
+  "repetition": 1,
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "executed_at": "2026-10-08T13:18:35.477277+00:00",
+  "layer": "fault_injection_with_real_model",
+  "intervention": "preload_three_stable_plan_ids",
+  "intervention_applied": true,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_ebdb91862a9a42cfafe6d61a245016c1",
+        "request_id": "req_c54414476a2846a6bd7af5a1c5e7369e",
+        "expected_revision": 1,
+        "message": "办公室不辣零食，预算 80",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_ebdb91862a9a42cfafe6d61a245016c1",
+        "request_id": "req_c54414476a2846a6bd7af5a1c5e7369e",
+        "turn_id": "turn_a46a0708a4f24213a97f8d60b730f502",
+        "base_revision": 1,
+        "revision": 2,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_8300c0be9cf14509b6199cfaa6f1a41a",
+          "role": "assistant",
+          "content": "亲～，按不辣、商品合计最多80.00元这个方向看，我先给你挑了一款最稳妥的😊\n\n首选是无糖气泡水（1件），无糖气泡水不辣，适合办公室当饮品；含运费11.90元。\n\n备选可以看临期燕麦饼干（1件），燕麦饼干不辣，低糖标签适合偏好低糖；和首选相比，总价比首选高一些，含运费12.90元。另外要提醒一下，临期燕麦饼干为临期商品，标注到期日为2026年10月20日。\n\n还有无糖薄荷糖（1件），薄荷糖不辣，无糖标签对应无糖需求；总价比首选高一些，含运费13.90元。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_84008dc75ba191de05d7",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P027",
+                  "product_name": "无糖气泡水",
+                  "quantity": 1,
+                  "unit_price_fen": 590,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 590,
+                "discounts": [],
+                "merchandise_payable_fen": 590,
+                "shipping_fen": 600,
+                "total_payable_fen": 1190,
+                "conditions": []
+              },
+              "reasons": [
+                "无糖气泡水不辣，适合办公室当饮品。",
+                "独立内包装，放工位分次取用方便。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_c628746e167f565481cf",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P024",
+                  "product_name": "临期燕麦饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 690,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 690,
+                "discounts": [],
+                "merchandise_payable_fen": 690,
+                "shipping_fen": 600,
+                "total_payable_fen": 1290,
+                "conditions": []
+              },
+              "reasons": [
+                "燕麦饼干不辣，低糖标签适合偏好低糖。",
+                "独立内包装每包18克，适合办公室分次取用。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_7e50c091f706908c6671",
+              "plan_type": "single_product",
+              "title": "备选方案 2",
+              "rank": 3,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P009",
+                  "product_name": "无糖薄荷糖",
+                  "quantity": 1,
+                  "unit_price_fen": 790,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 790,
+                "discounts": [],
+                "merchandise_payable_fen": 790,
+                "shipping_fen": 600,
+                "total_payable_fen": 1390,
+                "conditions": []
+              },
+              "reasons": [
+                "薄荷糖不辣，无糖标签对应无糖需求。",
+                "独立内包装每颗3克，方便办公室分次取用。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_ebdb91862a9a42cfafe6d61a245016c1",
+        "revision": 2,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_self",
+                "label": "办公室零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": 8000,
+                  "strictness": "strict",
+                  "scope": "goods_total",
+                  "source_text": "预算 80",
+                  "min_is_hard": false,
+                  "source_turn_id": "turn_a46a0708a4f24213a97f8d60b730f502"
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_seed",
+                    "field": "taste",
+                    "operator": "equals",
+                    "value": "spice:none",
+                    "strength": "hard",
+                    "source_text": "不辣",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_a46a0708a4f24213a97f8d60b730f502"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_8300c0be9cf14509b6199cfaa6f1a41a",
+              "turn_id": "turn_a46a0708a4f24213a97f8d60b730f502",
+              "plan_order": [
+                {
+                  "plan_id": "plan_84008dc75ba191de05d7",
+                  "sku_ids": [
+                    "P027"
+                  ]
+                },
+                {
+                  "plan_id": "plan_c628746e167f565481cf",
+                  "sku_ids": [
+                    "P024"
+                  ]
+                },
+                {
+                  "plan_id": "plan_7e50c091f706908c6671",
+                  "sku_ids": [
+                    "P009"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_2f09e918c7e341b6843e014cab2235fe",
+          "role": "user",
+          "content": "办公室不辣零食，商品合计预算80元",
+          "turn_id": "turn_de00b0fe425a47ba8a7f295f487a8909"
+        },
+        {
+          "id": "msg_a5ed955827c0446f8d6b37235708c189",
+          "role": "assistant",
+          "content": "根据这次需求，以下是可选方案；每张卡片是一种购买选择。\n1. 无糖气泡水 × 1；商品应付 5.90 元，运费 6.00 元，整单 11.90 元。\n2. 临期燕麦饼干 × 1；商品应付 6.90 元，运费 6.00 元，整单 12.90 元。 临期燕麦饼干为临期商品，标注到期日为2026年10月20日。\n3. 无糖薄荷糖 × 1；商品应付 7.90 元，运费 6.00 元，整单 13.90 元。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_19256fdb93d5509731ef",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P027",
+                  "product_name": "无糖气泡水",
+                  "quantity": 1,
+                  "unit_price_fen": 590,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 590,
+                "discounts": [],
+                "merchandise_payable_fen": 590,
+                "shipping_fen": 600,
+                "total_payable_fen": 1190,
+                "conditions": []
+              },
+              "reasons": [
+                "符合已确认的硬条件和基础购买数量。",
+                "商品应付和运费分别列出，便于比较实际支出。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_4506c9d3aa3f1b313bdb",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P024",
+                  "product_name": "临期燕麦饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 690,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 690,
+                "discounts": [],
+                "merchandise_payable_fen": 690,
+                "shipping_fen": 600,
+                "total_payable_fen": 1290,
+                "conditions": []
+              },
+              "reasons": [
+                "符合已确认的硬条件和基础购买数量。",
+                "商品应付和运费分别列出，便于比较实际支出。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_4670798f20e14552f492",
+              "plan_type": "single_product",
+              "title": "备选方案 2",
+              "rank": 3,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P009",
+                  "product_name": "无糖薄荷糖",
+                  "quantity": 1,
+                  "unit_price_fen": 790,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 790,
+                "discounts": [],
+                "merchandise_payable_fen": 790,
+                "shipping_fen": 600,
+                "total_payable_fen": 1390,
+                "conditions": []
+              },
+              "reasons": [
+                "符合已确认的硬条件和基础购买数量。",
+                "商品应付和运费分别列出，便于比较实际支出。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_de00b0fe425a47ba8a7f295f487a8909",
+          "status": "completed"
+        },
+        {
+          "id": "msg_b317ea059b3c4fa7a5fba22abb45a3f4",
+          "role": "user",
+          "content": "办公室不辣零食，预算 80",
+          "turn_id": "turn_a46a0708a4f24213a97f8d60b730f502"
+        },
+        {
+          "id": "msg_8300c0be9cf14509b6199cfaa6f1a41a",
+          "role": "assistant",
+          "content": "亲～，按不辣、商品合计最多80.00元这个方向看，我先给你挑了一款最稳妥的😊\n\n首选是无糖气泡水（1件），无糖气泡水不辣，适合办公室当饮品；含运费11.90元。\n\n备选可以看临期燕麦饼干（1件），燕麦饼干不辣，低糖标签适合偏好低糖；和首选相比，总价比首选高一些，含运费12.90元。另外要提醒一下，临期燕麦饼干为临期商品，标注到期日为2026年10月20日。\n\n还有无糖薄荷糖（1件），薄荷糖不辣，无糖标签对应无糖需求；总价比首选高一些，含运费13.90元。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_84008dc75ba191de05d7",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P027",
+                  "product_name": "无糖气泡水",
+                  "quantity": 1,
+                  "unit_price_fen": 590,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 590,
+                "discounts": [],
+                "merchandise_payable_fen": 590,
+                "shipping_fen": 600,
+                "total_payable_fen": 1190,
+                "conditions": []
+              },
+              "reasons": [
+                "无糖气泡水不辣，适合办公室当饮品。",
+                "独立内包装，放工位分次取用方便。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_c628746e167f565481cf",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P024",
+                  "product_name": "临期燕麦饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 690,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 690,
+                "discounts": [],
+                "merchandise_payable_fen": 690,
+                "shipping_fen": 600,
+                "total_payable_fen": 1290,
+                "conditions": []
+              },
+              "reasons": [
+                "燕麦饼干不辣，低糖标签适合偏好低糖。",
+                "独立内包装每包18克，适合办公室分次取用。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_7e50c091f706908c6671",
+              "plan_type": "single_product",
+              "title": "备选方案 2",
+              "rank": 3,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P009",
+                  "product_name": "无糖薄荷糖",
+                  "quantity": 1,
+                  "unit_price_fen": 790,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 790,
+                "discounts": [],
+                "merchandise_payable_fen": 790,
+                "shipping_fen": 600,
+                "total_payable_fen": 1390,
+                "conditions": []
+              },
+              "reasons": [
+                "薄荷糖不辣，无糖标签对应无糖需求。",
+                "独立内包装每颗3克，方便办公室分次取用。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_a46a0708a4f24213a97f8d60b730f502",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 2,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_self": {
+            "P004": [
+              "constraint:c_seed"
+            ],
+            "P005": [
+              "constraint:c_seed"
+            ],
+            "P020": [
+              "constraint:c_seed"
+            ],
+            "P022": [
+              "stock_unknown_or_empty"
+            ],
+            "P023": [
+              "constraint:c_seed"
+            ],
+            "P025": [
+              "expired_or_unknown"
+            ],
+            "P026": [
+              "price_unknown"
+            ],
+            "P030": [
+              "constraint:c_seed"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 22,
+        "priced_cart_count": 22,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 1,
+        "reply_review_passed": true
+      }
+    },
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_ebdb91862a9a42cfafe6d61a245016c1",
+        "request_id": "req_f6af48babf4a49b8881c486ea2153963",
+        "expected_revision": 2,
+        "message": "第二个换成低糖的",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_ebdb91862a9a42cfafe6d61a245016c1",
+        "request_id": "req_f6af48babf4a49b8881c486ea2153963",
+        "turn_id": "turn_afa938707d724a439d72fb51e1ad7742",
+        "base_revision": 2,
+        "revision": 3,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_362ddad1703945eea2cd38fd6d6a8464",
+          "role": "assistant",
+          "content": "亲～，按不辣、低糖、商品合计八十元以内的需求，帮您把第二个方案换成低糖的了😊\n\n首选是临期燕麦饼干（1件），低糖标签，适合低糖偏好；独立内包装，分次取用方便，正好接上您低糖的想法；价格方面含运费12.90元。需要提醒的是，临期燕麦饼干为临期商品，标注到期日为2026年10月20日。\n\n这个组合目前就这一款，商品也符合不辣的要求。您要是觉得量或预算还想再调，想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_026c26e434293a8e1d8d",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P024",
+                  "product_name": "临期燕麦饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 690,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 690,
+                "discounts": [],
+                "merchandise_payable_fen": 690,
+                "shipping_fen": 600,
+                "total_payable_fen": 1290,
+                "conditions": []
+              },
+              "reasons": [
+                "低糖标签，适合低糖偏好；独立内包装，分次取用方便。",
+                "不辣且为低糖标签，对应不辣与低糖两项要求。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_ebdb91862a9a42cfafe6d61a245016c1",
+        "revision": 3,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_self",
+                "label": "办公室零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": 8000,
+                  "strictness": "strict",
+                  "scope": "goods_total",
+                  "source_text": "预算 80",
+                  "min_is_hard": false,
+                  "source_turn_id": "turn_a46a0708a4f24213a97f8d60b730f502"
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_seed",
+                    "field": "taste",
+                    "operator": "equals",
+                    "value": "spice:none",
+                    "strength": "hard",
+                    "source_text": "不辣",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_a46a0708a4f24213a97f8d60b730f502"
+                  },
+                  {
+                    "constraint_id": "c_swap_second",
+                    "field": "other",
+                    "operator": "equals",
+                    "value": "sku:P024",
+                    "strength": "hard",
+                    "source_text": "第二个换成低糖的",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_afa938707d724a439d72fb51e1ad7742"
+                  },
+                  {
+                    "constraint_id": "c_sugar",
+                    "field": "taste",
+                    "operator": "equals",
+                    "value": "sugar:low_sugar",
+                    "strength": "hard",
+                    "source_text": "低糖的",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_afa938707d724a439d72fb51e1ad7742"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_362ddad1703945eea2cd38fd6d6a8464",
+              "turn_id": "turn_afa938707d724a439d72fb51e1ad7742",
+              "plan_order": [
+                {
+                  "plan_id": "plan_026c26e434293a8e1d8d",
+                  "sku_ids": [
+                    "P024"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_2f09e918c7e341b6843e014cab2235fe",
+          "role": "user",
+          "content": "办公室不辣零食，商品合计预算80元",
+          "turn_id": "turn_de00b0fe425a47ba8a7f295f487a8909"
+        },
+        {
+          "id": "msg_a5ed955827c0446f8d6b37235708c189",
+          "role": "assistant",
+          "content": "根据这次需求，以下是可选方案；每张卡片是一种购买选择。\n1. 无糖气泡水 × 1；商品应付 5.90 元，运费 6.00 元，整单 11.90 元。\n2. 临期燕麦饼干 × 1；商品应付 6.90 元，运费 6.00 元，整单 12.90 元。 临期燕麦饼干为临期商品，标注到期日为2026年10月20日。\n3. 无糖薄荷糖 × 1；商品应付 7.90 元，运费 6.00 元，整单 13.90 元。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_19256fdb93d5509731ef",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P027",
+                  "product_name": "无糖气泡水",
+                  "quantity": 1,
+                  "unit_price_fen": 590,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 590,
+                "discounts": [],
+                "merchandise_payable_fen": 590,
+                "shipping_fen": 600,
+                "total_payable_fen": 1190,
+                "conditions": []
+              },
+              "reasons": [
+                "符合已确认的硬条件和基础购买数量。",
+                "商品应付和运费分别列出，便于比较实际支出。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_4506c9d3aa3f1b313bdb",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P024",
+                  "product_name": "临期燕麦饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 690,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 690,
+                "discounts": [],
+                "merchandise_payable_fen": 690,
+                "shipping_fen": 600,
+                "total_payable_fen": 1290,
+                "conditions": []
+              },
+              "reasons": [
+                "符合已确认的硬条件和基础购买数量。",
+                "商品应付和运费分别列出，便于比较实际支出。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_4670798f20e14552f492",
+              "plan_type": "single_product",
+              "title": "备选方案 2",
+              "rank": 3,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P009",
+                  "product_name": "无糖薄荷糖",
+                  "quantity": 1,
+                  "unit_price_fen": 790,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 790,
+                "discounts": [],
+                "merchandise_payable_fen": 790,
+                "shipping_fen": 600,
+                "total_payable_fen": 1390,
+                "conditions": []
+              },
+              "reasons": [
+                "符合已确认的硬条件和基础购买数量。",
+                "商品应付和运费分别列出，便于比较实际支出。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_de00b0fe425a47ba8a7f295f487a8909",
+          "status": "completed"
+        },
+        {
+          "id": "msg_b317ea059b3c4fa7a5fba22abb45a3f4",
+          "role": "user",
+          "content": "办公室不辣零食，预算 80",
+          "turn_id": "turn_a46a0708a4f24213a97f8d60b730f502"
+        },
+        {
+          "id": "msg_8300c0be9cf14509b6199cfaa6f1a41a",
+          "role": "assistant",
+          "content": "亲～，按不辣、商品合计最多80.00元这个方向看，我先给你挑了一款最稳妥的😊\n\n首选是无糖气泡水（1件），无糖气泡水不辣，适合办公室当饮品；含运费11.90元。\n\n备选可以看临期燕麦饼干（1件），燕麦饼干不辣，低糖标签适合偏好低糖；和首选相比，总价比首选高一些，含运费12.90元。另外要提醒一下，临期燕麦饼干为临期商品，标注到期日为2026年10月20日。\n\n还有无糖薄荷糖（1件），薄荷糖不辣，无糖标签对应无糖需求；总价比首选高一些，含运费13.90元。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_84008dc75ba191de05d7",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P027",
+                  "product_name": "无糖气泡水",
+                  "quantity": 1,
+                  "unit_price_fen": 590,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 590,
+                "discounts": [],
+                "merchandise_payable_fen": 590,
+                "shipping_fen": 600,
+                "total_payable_fen": 1190,
+                "conditions": []
+              },
+              "reasons": [
+                "无糖气泡水不辣，适合办公室当饮品。",
+                "独立内包装，放工位分次取用方便。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_c628746e167f565481cf",
+              "plan_type": "single_product",
+              "title": "备选方案 1",
+              "rank": 2,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P024",
+                  "product_name": "临期燕麦饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 690,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 690,
+                "discounts": [],
+                "merchandise_payable_fen": 690,
+                "shipping_fen": 600,
+                "total_payable_fen": 1290,
+                "conditions": []
+              },
+              "reasons": [
+                "燕麦饼干不辣，低糖标签适合偏好低糖。",
+                "独立内包装每包18克，适合办公室分次取用。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              ]
+            },
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_7e50c091f706908c6671",
+              "plan_type": "single_product",
+              "title": "备选方案 2",
+              "rank": 3,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P009",
+                  "product_name": "无糖薄荷糖",
+                  "quantity": 1,
+                  "unit_price_fen": 790,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 790,
+                "discounts": [],
+                "merchandise_payable_fen": 790,
+                "shipping_fen": 600,
+                "total_payable_fen": 1390,
+                "conditions": []
+              },
+              "reasons": [
+                "薄荷糖不辣，无糖标签对应无糖需求。",
+                "独立内包装每颗3克，方便办公室分次取用。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_a46a0708a4f24213a97f8d60b730f502",
+          "status": "completed"
+        },
+        {
+          "id": "msg_c95401e2f2424ce0ade65f84a5ab98db",
+          "role": "user",
+          "content": "第二个换成低糖的",
+          "turn_id": "turn_afa938707d724a439d72fb51e1ad7742"
+        },
+        {
+          "id": "msg_362ddad1703945eea2cd38fd6d6a8464",
+          "role": "assistant",
+          "content": "亲～，按不辣、低糖、商品合计八十元以内的需求，帮您把第二个方案换成低糖的了😊\n\n首选是临期燕麦饼干（1件），低糖标签，适合低糖偏好；独立内包装，分次取用方便，正好接上您低糖的想法；价格方面含运费12.90元。需要提醒的是，临期燕麦饼干为临期商品，标注到期日为2026年10月20日。\n\n这个组合目前就这一款，商品也符合不辣的要求。您要是觉得量或预算还想再调，想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_026c26e434293a8e1d8d",
+              "plan_type": "single_product",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_self",
+              "items": [
+                {
+                  "sku_id": "P024",
+                  "product_name": "临期燕麦饼干",
+                  "quantity": 1,
+                  "unit_price_fen": 690,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 690,
+                "discounts": [],
+                "merchandise_payable_fen": 690,
+                "shipping_fen": 600,
+                "total_payable_fen": 1290,
+                "conditions": []
+              },
+              "reasons": [
+                "低糖标签，适合低糖偏好；独立内包装，分次取用方便。",
+                "不辣且为低糖标签，对应不辣与低糖两项要求。"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。",
+                "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              ]
+            }
+          ],
+          "turn_id": "turn_afa938707d724a439d72fb51e1ad7742",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_self": {
+            "P001": [
+              "constraint:c_swap_second"
+            ],
+            "P002": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P003": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P004": [
+              "constraint:c_seed",
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P005": [
+              "constraint:c_seed",
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P006": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P007": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P008": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P009": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P010": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P011": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P012": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P013": [
+              "constraint:c_swap_second"
+            ],
+            "P014": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P015": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P016": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P017": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P018": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P019": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P020": [
+              "constraint:c_seed",
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P021": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P022": [
+              "stock_unknown_or_empty",
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P023": [
+              "constraint:c_seed",
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P025": [
+              "expired_or_unknown",
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P026": [
+              "price_unknown",
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P027": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P028": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P029": [
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ],
+            "P030": [
+              "constraint:c_seed",
+              "constraint:c_swap_second",
+              "constraint:c_sugar"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 1,
+        "priced_cart_count": 1,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 1,
+        "reply_review_passed": true
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "办公室不辣零食，预算 80",
+        "module_state": {
+          "need_groups": [
+            {
+              "group_id": "group_self",
+              "label": "办公室零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": 8000,
+                "strictness": "strict",
+                "scope": "goods_total",
+                "source_text": "商品合计预算80元",
+                "min_is_hard": false,
+                "source_turn_id": "turn_seed_c816b7e5da6c4455a1f4334ba681edec"
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_seed",
+                  "field": "taste",
+                  "operator": "equals",
+                  "value": "spice:none",
+                  "strength": "hard",
+                  "source_text": "不辣",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_seed_c816b7e5da6c4455a1f4334ba681edec"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": {
+            "message_id": "msg_a5ed955827c0446f8d6b37235708c189",
+            "turn_id": "turn_de00b0fe425a47ba8a7f295f487a8909",
+            "plan_order": [
+              {
+                "plan_id": "plan_19256fdb93d5509731ef",
+                "sku_ids": [
+                  "P027"
+                ]
+              },
+              {
+                "plan_id": "plan_4506c9d3aa3f1b313bdb",
+                "sku_ids": [
+                  "P024"
+                ]
+              },
+              {
+                "plan_id": "plan_4670798f20e14552f492",
+                "sku_ids": [
+                  "P009"
+                ]
+              }
+            ]
+          },
+          "shared_budget": null
+        },
+        "history": [
+          {
+            "id": "msg_2f09e918c7e341b6843e014cab2235fe",
+            "role": "user",
+            "content": "办公室不辣零食，商品合计预算80元",
+            "turn_id": "turn_de00b0fe425a47ba8a7f295f487a8909"
+          },
+          {
+            "id": "msg_a5ed955827c0446f8d6b37235708c189",
+            "role": "assistant",
+            "content": "根据这次需求，以下是可选方案；每张卡片是一种购买选择。\n1. 无糖气泡水 × 1；商品应付 5.90 元，运费 6.00 元，整单 11.90 元。\n2. 临期燕麦饼干 × 1；商品应付 6.90 元，运费 6.00 元，整单 12.90 元。 临期燕麦饼干为临期商品，标注到期日为2026年10月20日。\n3. 无糖薄荷糖 × 1；商品应付 7.90 元，运费 6.00 元，整单 13.90 元。",
+            "cards": [
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_19256fdb93d5509731ef",
+                "plan_type": "single_product",
+                "title": "首选方案",
+                "rank": 1,
+                "group_id": "group_self",
+                "items": [
+                  {
+                    "sku_id": "P027",
+                    "product_name": "无糖气泡水",
+                    "quantity": 1,
+                    "unit_price_fen": 590,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 590,
+                  "discounts": [],
+                  "merchandise_payable_fen": 590,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 1190,
+                  "conditions": []
+                },
+                "reasons": [
+                  "符合已确认的硬条件和基础购买数量。",
+                  "商品应付和运费分别列出，便于比较实际支出。"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。"
+                ]
+              },
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_4506c9d3aa3f1b313bdb",
+                "plan_type": "single_product",
+                "title": "备选方案 1",
+                "rank": 2,
+                "group_id": "group_self",
+                "items": [
+                  {
+                    "sku_id": "P024",
+                    "product_name": "临期燕麦饼干",
+                    "quantity": 1,
+                    "unit_price_fen": 690,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 690,
+                  "discounts": [],
+                  "merchandise_payable_fen": 690,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 1290,
+                  "conditions": []
+                },
+                "reasons": [
+                  "符合已确认的硬条件和基础购买数量。",
+                  "商品应付和运费分别列出，便于比较实际支出。"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。",
+                  "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+                ]
+              },
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_4670798f20e14552f492",
+                "plan_type": "single_product",
+                "title": "备选方案 2",
+                "rank": 3,
+                "group_id": "group_self",
+                "items": [
+                  {
+                    "sku_id": "P009",
+                    "product_name": "无糖薄荷糖",
+                    "quantity": 1,
+                    "unit_price_fen": 790,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 790,
+                  "discounts": [],
+                  "merchandise_payable_fen": 790,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 1390,
+                  "conditions": []
+                },
+                "reasons": [
+                  "符合已确认的硬条件和基础购买数量。",
+                  "商品应付和运费分别列出，便于比较实际支出。"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。"
+                ]
+              }
+            ],
+            "turn_id": "turn_de00b0fe425a47ba8a7f295f487a8909",
+            "status": "completed"
+          }
+        ],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "办公室零食",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_spice",
+                "field": "taste",
+                "operator": "equals",
+                "value": "spice:none",
+                "strength": "hard",
+                "source_text": "不辣",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_scene",
+                "field": "scene",
+                "operator": "include",
+                "value": "office",
+                "strength": "soft",
+                "source_text": "办公室",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "shared_budget": null,
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.066
+    },
+    {
+      "stage": "extract",
+      "repair": "当前原话包含明确预算数字，不能遗漏预算或置为null；把本轮金额与口径写入对应预算，口径不明时使用unknown并澄清。",
+      "input": {
+        "message": "办公室不辣零食，预算 80",
+        "module_state": {
+          "need_groups": [
+            {
+              "group_id": "group_self",
+              "label": "办公室零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": 8000,
+                "strictness": "strict",
+                "scope": "goods_total",
+                "source_text": "商品合计预算80元",
+                "min_is_hard": false,
+                "source_turn_id": "turn_seed_c816b7e5da6c4455a1f4334ba681edec"
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_seed",
+                  "field": "taste",
+                  "operator": "equals",
+                  "value": "spice:none",
+                  "strength": "hard",
+                  "source_text": "不辣",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_seed_c816b7e5da6c4455a1f4334ba681edec"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": {
+            "message_id": "msg_a5ed955827c0446f8d6b37235708c189",
+            "turn_id": "turn_de00b0fe425a47ba8a7f295f487a8909",
+            "plan_order": [
+              {
+                "plan_id": "plan_19256fdb93d5509731ef",
+                "sku_ids": [
+                  "P027"
+                ]
+              },
+              {
+                "plan_id": "plan_4506c9d3aa3f1b313bdb",
+                "sku_ids": [
+                  "P024"
+                ]
+              },
+              {
+                "plan_id": "plan_4670798f20e14552f492",
+                "sku_ids": [
+                  "P009"
+                ]
+              }
+            ]
+          },
+          "shared_budget": null
+        },
+        "history": [
+          {
+            "id": "msg_2f09e918c7e341b6843e014cab2235fe",
+            "role": "user",
+            "content": "办公室不辣零食，商品合计预算80元",
+            "turn_id": "turn_de00b0fe425a47ba8a7f295f487a8909"
+          },
+          {
+            "id": "msg_a5ed955827c0446f8d6b37235708c189",
+            "role": "assistant",
+            "content": "根据这次需求，以下是可选方案；每张卡片是一种购买选择。\n1. 无糖气泡水 × 1；商品应付 5.90 元，运费 6.00 元，整单 11.90 元。\n2. 临期燕麦饼干 × 1；商品应付 6.90 元，运费 6.00 元，整单 12.90 元。 临期燕麦饼干为临期商品，标注到期日为2026年10月20日。\n3. 无糖薄荷糖 × 1；商品应付 7.90 元，运费 6.00 元，整单 13.90 元。",
+            "cards": [
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_19256fdb93d5509731ef",
+                "plan_type": "single_product",
+                "title": "首选方案",
+                "rank": 1,
+                "group_id": "group_self",
+                "items": [
+                  {
+                    "sku_id": "P027",
+                    "product_name": "无糖气泡水",
+                    "quantity": 1,
+                    "unit_price_fen": 590,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 590,
+                  "discounts": [],
+                  "merchandise_payable_fen": 590,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 1190,
+                  "conditions": []
+                },
+                "reasons": [
+                  "符合已确认的硬条件和基础购买数量。",
+                  "商品应付和运费分别列出，便于比较实际支出。"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。"
+                ]
+              },
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_4506c9d3aa3f1b313bdb",
+                "plan_type": "single_product",
+                "title": "备选方案 1",
+                "rank": 2,
+                "group_id": "group_self",
+                "items": [
+                  {
+                    "sku_id": "P024",
+                    "product_name": "临期燕麦饼干",
+                    "quantity": 1,
+                    "unit_price_fen": 690,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 690,
+                  "discounts": [],
+                  "merchandise_payable_fen": 690,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 1290,
+                  "conditions": []
+                },
+                "reasons": [
+                  "符合已确认的硬条件和基础购买数量。",
+                  "商品应付和运费分别列出，便于比较实际支出。"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。",
+                  "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+                ]
+              },
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_4670798f20e14552f492",
+                "plan_type": "single_product",
+                "title": "备选方案 2",
+                "rank": 3,
+                "group_id": "group_self",
+                "items": [
+                  {
+                    "sku_id": "P009",
+                    "product_name": "无糖薄荷糖",
+                    "quantity": 1,
+                    "unit_price_fen": 790,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 790,
+                  "discounts": [],
+                  "merchandise_payable_fen": 790,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 1390,
+                  "conditions": []
+                },
+                "reasons": [
+                  "符合已确认的硬条件和基础购买数量。",
+                  "商品应付和运费分别列出，便于比较实际支出。"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。"
+                ]
+              }
+            ],
+            "turn_id": "turn_de00b0fe425a47ba8a7f295f487a8909",
+            "status": "completed"
+          }
+        ],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "办公室零食",
+            "budget": {
+              "min_fen": null,
+              "max_fen": 8000,
+              "strictness": "strict",
+              "scope": "goods_total",
+              "source_text": "预算 80",
+              "min_is_hard": false
+            },
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_seed",
+                "field": "taste",
+                "operator": "equals",
+                "value": "spice:none",
+                "strength": "hard",
+                "source_text": "不辣",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 1.075
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "办公室不辣零食，预算 80",
+        "need_summary": "不辣、商品合计最多80.00元",
+        "plans": [
+          {
+            "plan_id": "plan_84008dc75ba191de05d7",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P027",
+                "product_name": "无糖气泡水",
+                "quantity": 1,
+                "unit_price_fen": 590,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "无糖气泡水，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "无糖气泡水：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "无糖气泡水：无糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "无糖气泡水：无甜味标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "无糖气泡水：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "ingredients",
+                "text": "无糖气泡水：ingredients=['water', 'carbon_dioxide']"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "declared_allergens",
+                "text": "无糖气泡水：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "may_contain_allergens",
+                "text": "无糖气泡水：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "selling_points",
+                "text": "无糖气泡水：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "scene_tags",
+                "text": "无糖气泡水：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "pricing",
+                "text": "含运费11.90元；商品应付5.90元。"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：无糖气泡水。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_c628746e167f565481cf",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费12.90元；商品应付6.90元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_7e50c091f706908c6671",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P009",
+                "product_name": "无糖薄荷糖",
+                "quantity": 1,
+                "unit_price_fen": 790,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "无糖薄荷糖，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "无糖薄荷糖：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "无糖薄荷糖：无糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "无糖薄荷糖：中甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：已知单个内包3克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "无糖薄荷糖：ingredients=['mint', 'sweetener']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "无糖薄荷糖：declared_allergens=[]"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "无糖薄荷糖：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "无糖薄荷糖：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "无糖薄荷糖：scene_tags=['office']"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "pricing",
+                "text": "含运费13.90元；商品应付7.90元。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_84008dc75ba191de05d7",
+            "reasons": [
+              {
+                "text": "无糖气泡水不辣，适合办公室当饮品。",
+                "fact_ids": [
+                  "p1_f2",
+                  "p1_f3"
+                ]
+              },
+              {
+                "text": "独立内包装，放工位分次取用方便。",
+                "fact_ids": [
+                  "p1_f5",
+                  "p1_f9"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_c628746e167f565481cf",
+            "reasons": [
+              {
+                "text": "燕麦饼干不辣，低糖标签适合偏好低糖。",
+                "fact_ids": [
+                  "p2_f2",
+                  "p2_f3"
+                ]
+              },
+              {
+                "text": "独立内包装每包18克，适合办公室分次取用。",
+                "fact_ids": [
+                  "p2_f5",
+                  "p2_f6"
+                ]
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_7e50c091f706908c6671",
+            "reasons": [
+              {
+                "text": "薄荷糖不辣，无糖标签对应无糖需求。",
+                "fact_ids": [
+                  "p3_f2",
+                  "p3_f3"
+                ]
+              },
+              {
+                "text": "独立内包装每颗3克，方便办公室分次取用。",
+                "fact_ids": [
+                  "p3_f5",
+                  "p3_f6"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 1.281
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "办公室不辣零食，预算 80",
+        "need_summary": "不辣、商品合计最多80.00元",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_self",
+              "label": "办公室零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": 8000,
+                "strictness": "strict",
+                "scope": "goods_total",
+                "source_text": "预算 80",
+                "min_is_hard": false,
+                "source_turn_id": "turn_a46a0708a4f24213a97f8d60b730f502"
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_seed",
+                  "field": "taste",
+                  "operator": "equals",
+                  "value": "spice:none",
+                  "strength": "hard",
+                  "source_text": "不辣",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_a46a0708a4f24213a97f8d60b730f502"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": {
+            "message_id": "msg_a5ed955827c0446f8d6b37235708c189",
+            "turn_id": "turn_de00b0fe425a47ba8a7f295f487a8909",
+            "plan_order": [
+              {
+                "plan_id": "plan_19256fdb93d5509731ef",
+                "sku_ids": [
+                  "P027"
+                ]
+              },
+              {
+                "plan_id": "plan_4506c9d3aa3f1b313bdb",
+                "sku_ids": [
+                  "P024"
+                ]
+              },
+              {
+                "plan_id": "plan_4670798f20e14552f492",
+                "sku_ids": [
+                  "P009"
+                ]
+              }
+            ]
+          },
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_84008dc75ba191de05d7",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P027",
+                "product_name": "无糖气泡水",
+                "quantity": 1,
+                "unit_price_fen": 590,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 590,
+              "discounts": [],
+              "merchandise_payable_fen": 590,
+              "shipping_fen": 600,
+              "total_payable_fen": 1190,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "无糖气泡水，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "无糖气泡水：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "无糖气泡水：无糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "无糖气泡水：无甜味标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "无糖气泡水：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "ingredients",
+                "text": "无糖气泡水：ingredients=['water', 'carbon_dioxide']"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "declared_allergens",
+                "text": "无糖气泡水：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "may_contain_allergens",
+                "text": "无糖气泡水：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "selling_points",
+                "text": "无糖气泡水：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "scene_tags",
+                "text": "无糖气泡水：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "expiry",
+                "text": "无糖气泡水：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "pricing",
+                "text": "含运费11.90元；商品应付5.90元。"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_c628746e167f565481cf",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 690,
+              "discounts": [],
+              "merchandise_payable_fen": 690,
+              "shipping_fen": 600,
+              "total_payable_fen": 1290,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "临期燕麦饼干：标注到期时间 2026-10-20T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费12.90元；商品应付6.90元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "boundary",
+                "text": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_7e50c091f706908c6671",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P009",
+                "product_name": "无糖薄荷糖",
+                "quantity": 1,
+                "unit_price_fen": 790,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 790,
+              "discounts": [],
+              "merchandise_payable_fen": 790,
+              "shipping_fen": 600,
+              "total_payable_fen": 1390,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "无糖薄荷糖，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "无糖薄荷糖：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "无糖薄荷糖：无糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "无糖薄荷糖：中甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：已知单个内包3克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "无糖薄荷糖：ingredients=['mint', 'sweetener']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "无糖薄荷糖：declared_allergens=[]"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "无糖薄荷糖：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "无糖薄荷糖：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "无糖薄荷糖：scene_tags=['office']"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "expiry",
+                "text": "无糖薄荷糖：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "pricing",
+                "text": "含运费13.90元；商品应付7.90元。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "不辣、商品合计最多80.00元",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "无糖气泡水（1件）",
+          "p1_price": "含运费11.90元",
+          "p2_items": "临期燕麦饼干（1件）",
+          "p2_price": "含运费12.90元",
+          "p2_difference": "总价比首选高一些",
+          "p2_notice": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。",
+          "p3_items": "无糖薄荷糖（1件）",
+          "p3_price": "含运费13.90元",
+          "p3_difference": "总价比首选高一些",
+          "p1_reason_1": "无糖气泡水不辣，适合办公室当饮品",
+          "p1_reason_2": "独立内包装，放工位分次取用方便",
+          "p2_reason_1": "燕麦饼干不辣，低糖标签适合偏好低糖",
+          "p2_reason_2": "独立内包装每包18克，适合办公室分次取用",
+          "p3_reason_1": "薄荷糖不辣，无糖标签对应无糖需求",
+          "p3_reason_2": "独立内包装每颗3克，方便办公室分次取用"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_84008dc75ba191de05d7",
+              "reasons": [
+                {
+                  "text": "无糖气泡水不辣，适合办公室当饮品。",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f3"
+                  ]
+                },
+                {
+                  "text": "独立内包装，放工位分次取用方便。",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f9"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_c628746e167f565481cf",
+              "reasons": [
+                {
+                  "text": "燕麦饼干不辣，低糖标签适合偏好低糖。",
+                  "fact_ids": [
+                    "p2_f2",
+                    "p2_f3"
+                  ]
+                },
+                {
+                  "text": "独立内包装每包18克，适合办公室分次取用。",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f6"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_7e50c091f706908c6671",
+              "reasons": [
+                {
+                  "text": "薄荷糖不辣，无糖标签对应无糖需求。",
+                  "fact_ids": [
+                    "p3_f2",
+                    "p3_f3"
+                  ]
+                },
+                {
+                  "text": "独立内包装每颗3克，方便办公室分次取用。",
+                  "fact_ids": [
+                    "p3_f5",
+                    "p3_f6"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，按{{need_summary}}这个方向看，我先给你挑了一款最稳妥的😊\n\n首选是{{p1_items}}，{{p1_reason_1}}；{{p1_price}}。\n\n备选可以看{{p2_items}}，{{p2_reason_1}}；和首选相比，{{p2_difference}}，{{p2_price}}。另外要提醒一下，{{p2_notice}}\n\n还有{{p3_items}}，{{p3_reason_1}}；{{p3_difference}}，{{p3_price}}。\n\n{{follow_up}}"
+      },
+      "seconds": 1.241
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "办公室不辣零食，预算 80",
+        "need_summary": "不辣、商品合计最多80.00元",
+        "plans": [
+          {
+            "plan_id": "plan_84008dc75ba191de05d7",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P027",
+                "product_name": "无糖气泡水",
+                "quantity": 1,
+                "unit_price_fen": 590,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 590,
+              "discounts": [],
+              "merchandise_payable_fen": 590,
+              "shipping_fen": 600,
+              "total_payable_fen": 1190,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "无糖气泡水，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "无糖气泡水：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "无糖气泡水：无糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "无糖气泡水：无甜味标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "无糖气泡水：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "ingredients",
+                "text": "无糖气泡水：ingredients=['water', 'carbon_dioxide']"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "declared_allergens",
+                "text": "无糖气泡水：declared_allergens=[]"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "may_contain_allergens",
+                "text": "无糖气泡水：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "selling_points",
+                "text": "无糖气泡水：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "scene_tags",
+                "text": "无糖气泡水：scene_tags=['office']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "expiry",
+                "text": "无糖气泡水：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "pricing",
+                "text": "含运费11.90元；商品应付5.90元。"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：无糖气泡水。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_c628746e167f565481cf",
+            "rank": 2,
+            "items": [
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 690,
+              "discounts": [],
+              "merchandise_payable_fen": 690,
+              "shipping_fen": 600,
+              "total_payable_fen": 1290,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p2_f1",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p2_f2",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p2_f3",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p2_f4",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p2_f5",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p2_f6",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p2_f7",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p2_f8",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p2_f9",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p2_f10",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p2_f11",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p2_f12",
+                "kind": "expiry",
+                "text": "临期燕麦饼干：标注到期时间 2026-10-20T23:59:59+08:00"
+              },
+              {
+                "id": "p2_f13",
+                "kind": "pricing",
+                "text": "含运费12.90元；商品应付6.90元。"
+              },
+              {
+                "id": "p2_f14",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p2_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p2_f16",
+                "kind": "boundary",
+                "text": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              },
+              {
+                "id": "p2_f17",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          },
+          {
+            "plan_id": "plan_7e50c091f706908c6671",
+            "rank": 3,
+            "items": [
+              {
+                "sku_id": "P009",
+                "product_name": "无糖薄荷糖",
+                "quantity": 1,
+                "unit_price_fen": 790,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 790,
+              "discounts": [],
+              "merchandise_payable_fen": 790,
+              "shipping_fen": 600,
+              "total_payable_fen": 1390,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p3_f1",
+                "kind": "purchase",
+                "text": "无糖薄荷糖，购买1件。"
+              },
+              {
+                "id": "p3_f2",
+                "kind": "spice_level",
+                "text": "无糖薄荷糖：不辣。"
+              },
+              {
+                "id": "p3_f3",
+                "kind": "sugar_label",
+                "text": "无糖薄荷糖：无糖标签。"
+              },
+              {
+                "id": "p3_f4",
+                "kind": "sweetness",
+                "text": "无糖薄荷糖：中甜度标签。"
+              },
+              {
+                "id": "p3_f5",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：独立内包装。"
+              },
+              {
+                "id": "p3_f6",
+                "kind": "packaging",
+                "text": "无糖薄荷糖：已知单个内包3克。"
+              },
+              {
+                "id": "p3_f7",
+                "kind": "ingredients",
+                "text": "无糖薄荷糖：ingredients=['mint', 'sweetener']"
+              },
+              {
+                "id": "p3_f8",
+                "kind": "declared_allergens",
+                "text": "无糖薄荷糖：declared_allergens=[]"
+              },
+              {
+                "id": "p3_f9",
+                "kind": "may_contain_allergens",
+                "text": "无糖薄荷糖：may_contain_allergens=[]"
+              },
+              {
+                "id": "p3_f10",
+                "kind": "selling_points",
+                "text": "无糖薄荷糖：selling_points=['独立包装']"
+              },
+              {
+                "id": "p3_f11",
+                "kind": "scene_tags",
+                "text": "无糖薄荷糖：scene_tags=['office']"
+              },
+              {
+                "id": "p3_f12",
+                "kind": "expiry",
+                "text": "无糖薄荷糖：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p3_f13",
+                "kind": "pricing",
+                "text": "含运费13.90元；商品应付7.90元。"
+              },
+              {
+                "id": "p3_f14",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：无糖薄荷糖。"
+              },
+              {
+                "id": "p3_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p3_f16",
+                "kind": "comparison",
+                "text": "总价比首选高一些。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "不辣、商品合计最多80.00元",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "无糖气泡水（1件）",
+          "p1_price": "含运费11.90元",
+          "p2_items": "临期燕麦饼干（1件）",
+          "p2_price": "含运费12.90元",
+          "p2_difference": "总价比首选高一些",
+          "p2_notice": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。",
+          "p3_items": "无糖薄荷糖（1件）",
+          "p3_price": "含运费13.90元",
+          "p3_difference": "总价比首选高一些",
+          "p1_reason_1": "无糖气泡水不辣，适合办公室当饮品",
+          "p1_reason_2": "独立内包装，放工位分次取用方便",
+          "p2_reason_1": "燕麦饼干不辣，低糖标签适合偏好低糖",
+          "p2_reason_2": "独立内包装每包18克，适合办公室分次取用",
+          "p3_reason_1": "薄荷糖不辣，无糖标签对应无糖需求",
+          "p3_reason_2": "独立内包装每颗3克，方便办公室分次取用"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_84008dc75ba191de05d7",
+              "reasons": [
+                {
+                  "text": "无糖气泡水不辣，适合办公室当饮品。",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f3"
+                  ]
+                },
+                {
+                  "text": "独立内包装，放工位分次取用方便。",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f9"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_c628746e167f565481cf",
+              "reasons": [
+                {
+                  "text": "燕麦饼干不辣，低糖标签适合偏好低糖。",
+                  "fact_ids": [
+                    "p2_f2",
+                    "p2_f3"
+                  ]
+                },
+                {
+                  "text": "独立内包装每包18克，适合办公室分次取用。",
+                  "fact_ids": [
+                    "p2_f5",
+                    "p2_f6"
+                  ]
+                }
+              ]
+            },
+            {
+              "plan_id": "plan_7e50c091f706908c6671",
+              "reasons": [
+                {
+                  "text": "薄荷糖不辣，无糖标签对应无糖需求。",
+                  "fact_ids": [
+                    "p3_f2",
+                    "p3_f3"
+                  ]
+                },
+                {
+                  "text": "独立内包装每颗3克，方便办公室分次取用。",
+                  "fact_ids": [
+                    "p3_f5",
+                    "p3_f6"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，按{{need_summary}}这个方向看，我先给你挑了一款最稳妥的😊\n\n首选是{{p1_items}}，{{p1_reason_1}}；{{p1_price}}。\n\n备选可以看{{p2_items}}，{{p2_reason_1}}；和首选相比，{{p2_difference}}，{{p2_price}}。另外要提醒一下，{{p2_notice}}\n\n还有{{p3_items}}，{{p3_reason_1}}；{{p3_difference}}，{{p3_price}}。\n\n{{follow_up}}",
+        "reply": "亲～，按不辣、商品合计最多80.00元这个方向看，我先给你挑了一款最稳妥的😊\n\n首选是无糖气泡水（1件），无糖气泡水不辣，适合办公室当饮品；含运费11.90元。\n\n备选可以看临期燕麦饼干（1件），燕麦饼干不辣，低糖标签适合偏好低糖；和首选相比，总价比首选高一些，含运费12.90元。另外要提醒一下，临期燕麦饼干为临期商品，标注到期日为2026年10月20日。\n\n还有无糖薄荷糖（1件），薄荷糖不辣，无糖标签对应无糖需求；总价比首选高一些，含运费13.90元。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 1.27
+    },
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "第二个换成低糖的",
+        "module_state": {
+          "need_groups": [
+            {
+              "group_id": "group_self",
+              "label": "办公室零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": 8000,
+                "strictness": "strict",
+                "scope": "goods_total",
+                "source_text": "预算 80",
+                "min_is_hard": false,
+                "source_turn_id": "turn_a46a0708a4f24213a97f8d60b730f502"
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_seed",
+                  "field": "taste",
+                  "operator": "equals",
+                  "value": "spice:none",
+                  "strength": "hard",
+                  "source_text": "不辣",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_a46a0708a4f24213a97f8d60b730f502"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": {
+            "message_id": "msg_8300c0be9cf14509b6199cfaa6f1a41a",
+            "turn_id": "turn_a46a0708a4f24213a97f8d60b730f502",
+            "plan_order": [
+              {
+                "plan_id": "plan_84008dc75ba191de05d7",
+                "sku_ids": [
+                  "P027"
+                ]
+              },
+              {
+                "plan_id": "plan_c628746e167f565481cf",
+                "sku_ids": [
+                  "P024"
+                ]
+              },
+              {
+                "plan_id": "plan_7e50c091f706908c6671",
+                "sku_ids": [
+                  "P009"
+                ]
+              }
+            ]
+          },
+          "shared_budget": null
+        },
+        "history": [
+          {
+            "id": "msg_2f09e918c7e341b6843e014cab2235fe",
+            "role": "user",
+            "content": "办公室不辣零食，商品合计预算80元",
+            "turn_id": "turn_de00b0fe425a47ba8a7f295f487a8909"
+          },
+          {
+            "id": "msg_a5ed955827c0446f8d6b37235708c189",
+            "role": "assistant",
+            "content": "根据这次需求，以下是可选方案；每张卡片是一种购买选择。\n1. 无糖气泡水 × 1；商品应付 5.90 元，运费 6.00 元，整单 11.90 元。\n2. 临期燕麦饼干 × 1；商品应付 6.90 元，运费 6.00 元，整单 12.90 元。 临期燕麦饼干为临期商品，标注到期日为2026年10月20日。\n3. 无糖薄荷糖 × 1；商品应付 7.90 元，运费 6.00 元，整单 13.90 元。",
+            "cards": [
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_19256fdb93d5509731ef",
+                "plan_type": "single_product",
+                "title": "首选方案",
+                "rank": 1,
+                "group_id": "group_self",
+                "items": [
+                  {
+                    "sku_id": "P027",
+                    "product_name": "无糖气泡水",
+                    "quantity": 1,
+                    "unit_price_fen": 590,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 590,
+                  "discounts": [],
+                  "merchandise_payable_fen": 590,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 1190,
+                  "conditions": []
+                },
+                "reasons": [
+                  "符合已确认的硬条件和基础购买数量。",
+                  "商品应付和运费分别列出，便于比较实际支出。"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。"
+                ]
+              },
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_4506c9d3aa3f1b313bdb",
+                "plan_type": "single_product",
+                "title": "备选方案 1",
+                "rank": 2,
+                "group_id": "group_self",
+                "items": [
+                  {
+                    "sku_id": "P024",
+                    "product_name": "临期燕麦饼干",
+                    "quantity": 1,
+                    "unit_price_fen": 690,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 690,
+                  "discounts": [],
+                  "merchandise_payable_fen": 690,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 1290,
+                  "conditions": []
+                },
+                "reasons": [
+                  "符合已确认的硬条件和基础购买数量。",
+                  "商品应付和运费分别列出，便于比较实际支出。"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。",
+                  "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+                ]
+              },
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_4670798f20e14552f492",
+                "plan_type": "single_product",
+                "title": "备选方案 2",
+                "rank": 3,
+                "group_id": "group_self",
+                "items": [
+                  {
+                    "sku_id": "P009",
+                    "product_name": "无糖薄荷糖",
+                    "quantity": 1,
+                    "unit_price_fen": 790,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 790,
+                  "discounts": [],
+                  "merchandise_payable_fen": 790,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 1390,
+                  "conditions": []
+                },
+                "reasons": [
+                  "符合已确认的硬条件和基础购买数量。",
+                  "商品应付和运费分别列出，便于比较实际支出。"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。"
+                ]
+              }
+            ],
+            "turn_id": "turn_de00b0fe425a47ba8a7f295f487a8909",
+            "status": "completed"
+          },
+          {
+            "id": "msg_b317ea059b3c4fa7a5fba22abb45a3f4",
+            "role": "user",
+            "content": "办公室不辣零食，预算 80",
+            "turn_id": "turn_a46a0708a4f24213a97f8d60b730f502"
+          },
+          {
+            "id": "msg_8300c0be9cf14509b6199cfaa6f1a41a",
+            "role": "assistant",
+            "content": "亲～，按不辣、商品合计最多80.00元这个方向看，我先给你挑了一款最稳妥的😊\n\n首选是无糖气泡水（1件），无糖气泡水不辣，适合办公室当饮品；含运费11.90元。\n\n备选可以看临期燕麦饼干（1件），燕麦饼干不辣，低糖标签适合偏好低糖；和首选相比，总价比首选高一些，含运费12.90元。另外要提醒一下，临期燕麦饼干为临期商品，标注到期日为2026年10月20日。\n\n还有无糖薄荷糖（1件），薄荷糖不辣，无糖标签对应无糖需求；总价比首选高一些，含运费13.90元。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+            "cards": [
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_84008dc75ba191de05d7",
+                "plan_type": "single_product",
+                "title": "首选方案",
+                "rank": 1,
+                "group_id": "group_self",
+                "items": [
+                  {
+                    "sku_id": "P027",
+                    "product_name": "无糖气泡水",
+                    "quantity": 1,
+                    "unit_price_fen": 590,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 590,
+                  "discounts": [],
+                  "merchandise_payable_fen": 590,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 1190,
+                  "conditions": []
+                },
+                "reasons": [
+                  "无糖气泡水不辣，适合办公室当饮品。",
+                  "独立内包装，放工位分次取用方便。"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。"
+                ]
+              },
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_c628746e167f565481cf",
+                "plan_type": "single_product",
+                "title": "备选方案 1",
+                "rank": 2,
+                "group_id": "group_self",
+                "items": [
+                  {
+                    "sku_id": "P024",
+                    "product_name": "临期燕麦饼干",
+                    "quantity": 1,
+                    "unit_price_fen": 690,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 690,
+                  "discounts": [],
+                  "merchandise_payable_fen": 690,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 1290,
+                  "conditions": []
+                },
+                "reasons": [
+                  "燕麦饼干不辣，低糖标签适合偏好低糖。",
+                  "独立内包装每包18克，适合办公室分次取用。"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。",
+                  "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+                ]
+              },
+              {
+                "type": "recommendation_plan",
+                "plan_id": "plan_7e50c091f706908c6671",
+                "plan_type": "single_product",
+                "title": "备选方案 2",
+                "rank": 3,
+                "group_id": "group_self",
+                "items": [
+                  {
+                    "sku_id": "P009",
+                    "product_name": "无糖薄荷糖",
+                    "quantity": 1,
+                    "unit_price_fen": 790,
+                    "image_url": null
+                  }
+                ],
+                "pricing": {
+                  "currency": "CNY",
+                  "status": "confirmed",
+                  "subtotal_fen": 790,
+                  "discounts": [],
+                  "merchandise_payable_fen": 790,
+                  "shipping_fen": 600,
+                  "total_payable_fen": 1390,
+                  "conditions": []
+                },
+                "reasons": [
+                  "薄荷糖不辣，无糖标签对应无糖需求。",
+                  "独立内包装每颗3克，方便办公室分次取用。"
+                ],
+                "notes": [
+                  "商品、身份与优惠为演示资料。"
+                ]
+              }
+            ],
+            "turn_id": "turn_a46a0708a4f24213a97f8d60b730f502",
+            "status": "completed"
+          }
+        ],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "办公室零食",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_swap_second",
+                "field": "other",
+                "operator": "equals",
+                "value": "sku:P024",
+                "strength": "hard",
+                "source_text": "第二个换成低糖的",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_sugar",
+                "field": "taste",
+                "operator": "equals",
+                "value": "sugar:low_sugar",
+                "strength": "hard",
+                "source_text": "低糖的",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": [
+          "P024"
+        ],
+        "reference_action": "replace_selected",
+        "reference_source_text": "第二个换成低糖的"
+      },
+      "seconds": 1.491
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "第二个换成低糖的",
+        "need_summary": "不辣、低糖、商品合计最多80.00元",
+        "plans": [
+          {
+            "plan_id": "plan_026c26e434293a8e1d8d",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费12.90元；商品应付6.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P024，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "need_match",
+                "text": "对于需求 taste equals sugar:low_sugar，符合的商品仅为：临期燕麦饼干。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_026c26e434293a8e1d8d",
+            "reasons": [
+              {
+                "text": "低糖标签，适合低糖偏好；独立内包装，分次取用方便。",
+                "fact_ids": [
+                  "p1_f3",
+                  "p1_f5"
+                ]
+              },
+              {
+                "text": "不辣且为低糖标签，对应不辣与低糖两项要求。",
+                "fact_ids": [
+                  "p1_f2",
+                  "p1_f3"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 1.062
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "第二个换成低糖的",
+        "need_summary": "不辣、低糖、商品合计最多80.00元",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_self",
+              "label": "办公室零食",
+              "budget": {
+                "min_fen": null,
+                "max_fen": 8000,
+                "strictness": "strict",
+                "scope": "goods_total",
+                "source_text": "预算 80",
+                "min_is_hard": false,
+                "source_turn_id": "turn_a46a0708a4f24213a97f8d60b730f502"
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_seed",
+                  "field": "taste",
+                  "operator": "equals",
+                  "value": "spice:none",
+                  "strength": "hard",
+                  "source_text": "不辣",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_a46a0708a4f24213a97f8d60b730f502"
+                },
+                {
+                  "constraint_id": "c_swap_second",
+                  "field": "other",
+                  "operator": "equals",
+                  "value": "sku:P024",
+                  "strength": "hard",
+                  "source_text": "第二个换成低糖的",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_afa938707d724a439d72fb51e1ad7742"
+                },
+                {
+                  "constraint_id": "c_sugar",
+                  "field": "taste",
+                  "operator": "equals",
+                  "value": "sugar:low_sugar",
+                  "strength": "hard",
+                  "source_text": "低糖的",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_afa938707d724a439d72fb51e1ad7742"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": {
+            "message_id": "msg_8300c0be9cf14509b6199cfaa6f1a41a",
+            "turn_id": "turn_a46a0708a4f24213a97f8d60b730f502",
+            "plan_order": [
+              {
+                "plan_id": "plan_84008dc75ba191de05d7",
+                "sku_ids": [
+                  "P027"
+                ]
+              },
+              {
+                "plan_id": "plan_c628746e167f565481cf",
+                "sku_ids": [
+                  "P024"
+                ]
+              },
+              {
+                "plan_id": "plan_7e50c091f706908c6671",
+                "sku_ids": [
+                  "P009"
+                ]
+              }
+            ]
+          },
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_026c26e434293a8e1d8d",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 690,
+              "discounts": [],
+              "merchandise_payable_fen": 690,
+              "shipping_fen": 600,
+              "total_payable_fen": 1290,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "临期燕麦饼干：标注到期时间 2026-10-20T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费12.90元；商品应付6.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P024，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "need_match",
+                "text": "对于需求 taste equals sugar:low_sugar，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f18",
+                "kind": "boundary",
+                "text": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "不辣、低糖、商品合计最多80.00元",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "临期燕麦饼干（1件）",
+          "p1_price": "含运费12.90元",
+          "p1_notice": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。",
+          "p1_reason_1": "低糖标签，适合低糖偏好；独立内包装，分次取用方便",
+          "p1_reason_2": "不辣且为低糖标签，对应不辣与低糖两项要求"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_026c26e434293a8e1d8d",
+              "reasons": [
+                {
+                  "text": "低糖标签，适合低糖偏好；独立内包装，分次取用方便。",
+                  "fact_ids": [
+                    "p1_f3",
+                    "p1_f5"
+                  ]
+                },
+                {
+                  "text": "不辣且为低糖标签，对应不辣与低糖两项要求。",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f3"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，按不辣、低糖、商品合计八十元以内的需求，帮您把第二个方案换成低糖的了😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，正好接上您低糖的想法；价格方面{{p1_price}}。需要提醒的是，{{p1_notice}}\n\n这个组合目前就这一款，商品也符合不辣的要求。您要是觉得量或预算还想再调，{{follow_up}}"
+      },
+      "seconds": 1.517
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "第二个换成低糖的",
+        "need_summary": "不辣、低糖、商品合计最多80.00元",
+        "plans": [
+          {
+            "plan_id": "plan_026c26e434293a8e1d8d",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 690,
+              "discounts": [],
+              "merchandise_payable_fen": 690,
+              "shipping_fen": 600,
+              "total_payable_fen": 1290,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "临期燕麦饼干，购买1件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "临期燕麦饼干：不辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "临期燕麦饼干：低糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "临期燕麦饼干：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "临期燕麦饼干：已知单个内包18克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "临期燕麦饼干：ingredients=['oats', 'wheat']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "临期燕麦饼干：declared_allergens=['gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "临期燕麦饼干：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "临期燕麦饼干：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "临期燕麦饼干：scene_tags=[]"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "临期燕麦饼干：标注到期时间 2026-10-20T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费12.90元；商品应付6.90元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 taste equals spice:none，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P024，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "need_match",
+                "text": "对于需求 taste equals sugar:low_sugar，符合的商品仅为：临期燕麦饼干。"
+              },
+              {
+                "id": "p1_f17",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f18",
+                "kind": "boundary",
+                "text": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "不辣、低糖、商品合计最多80.00元",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "临期燕麦饼干（1件）",
+          "p1_price": "含运费12.90元",
+          "p1_notice": "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。",
+          "p1_reason_1": "低糖标签，适合低糖偏好；独立内包装，分次取用方便",
+          "p1_reason_2": "不辣且为低糖标签，对应不辣与低糖两项要求"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_026c26e434293a8e1d8d",
+              "reasons": [
+                {
+                  "text": "低糖标签，适合低糖偏好；独立内包装，分次取用方便。",
+                  "fact_ids": [
+                    "p1_f3",
+                    "p1_f5"
+                  ]
+                },
+                {
+                  "text": "不辣且为低糖标签，对应不辣与低糖两项要求。",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f3"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，按不辣、低糖、商品合计八十元以内的需求，帮您把第二个方案换成低糖的了😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，正好接上您低糖的想法；价格方面{{p1_price}}。需要提醒的是，{{p1_notice}}\n\n这个组合目前就这一款，商品也符合不辣的要求。您要是觉得量或预算还想再调，{{follow_up}}",
+        "reply": "亲～，按不辣、低糖、商品合计八十元以内的需求，帮您把第二个方案换成低糖的了😊\n\n首选是临期燕麦饼干（1件），低糖标签，适合低糖偏好；独立内包装，分次取用方便，正好接上您低糖的想法；价格方面含运费12.90元。需要提醒的是，临期燕麦饼干为临期商品，标注到期日为2026年10月20日。\n\n这个组合目前就这一款，商品也符合不辣的要求。您要是觉得量或预算还想再调，想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 0.712
+    }
+  ],
+  "concurrency_evidence": null,
+  "preload": {
+    "source": "explicit_structured_fixture_not_model_understanding",
+    "response": {
+      "schema_version": "1.0",
+      "conversation_id": "conv_ebdb91862a9a42cfafe6d61a245016c1",
+      "request_id": "req_seed_088e3adbf62f443d97bff9136e874d3f",
+      "turn_id": "turn_de00b0fe425a47ba8a7f295f487a8909",
+      "base_revision": 0,
+      "revision": 1,
+      "module": "product_recommendation",
+      "status": "completed",
+      "message": {
+        "id": "msg_a5ed955827c0446f8d6b37235708c189",
+        "role": "assistant",
+        "content": "根据这次需求，以下是可选方案；每张卡片是一种购买选择。\n1. 无糖气泡水 × 1；商品应付 5.90 元，运费 6.00 元，整单 11.90 元。\n2. 临期燕麦饼干 × 1；商品应付 6.90 元，运费 6.00 元，整单 12.90 元。 临期燕麦饼干为临期商品，标注到期日为2026年10月20日。\n3. 无糖薄荷糖 × 1；商品应付 7.90 元，运费 6.00 元，整单 13.90 元。",
+        "cards": [
+          {
+            "type": "recommendation_plan",
+            "plan_id": "plan_19256fdb93d5509731ef",
+            "plan_type": "single_product",
+            "title": "首选方案",
+            "rank": 1,
+            "group_id": "group_self",
+            "items": [
+              {
+                "sku_id": "P027",
+                "product_name": "无糖气泡水",
+                "quantity": 1,
+                "unit_price_fen": 590,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 590,
+              "discounts": [],
+              "merchandise_payable_fen": 590,
+              "shipping_fen": 600,
+              "total_payable_fen": 1190,
+              "conditions": []
+            },
+            "reasons": [
+              "符合已确认的硬条件和基础购买数量。",
+              "商品应付和运费分别列出，便于比较实际支出。"
+            ],
+            "notes": [
+              "商品、身份与优惠为演示资料。"
+            ]
+          },
+          {
+            "type": "recommendation_plan",
+            "plan_id": "plan_4506c9d3aa3f1b313bdb",
+            "plan_type": "single_product",
+            "title": "备选方案 1",
+            "rank": 2,
+            "group_id": "group_self",
+            "items": [
+              {
+                "sku_id": "P024",
+                "product_name": "临期燕麦饼干",
+                "quantity": 1,
+                "unit_price_fen": 690,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 690,
+              "discounts": [],
+              "merchandise_payable_fen": 690,
+              "shipping_fen": 600,
+              "total_payable_fen": 1290,
+              "conditions": []
+            },
+            "reasons": [
+              "符合已确认的硬条件和基础购买数量。",
+              "商品应付和运费分别列出，便于比较实际支出。"
+            ],
+            "notes": [
+              "商品、身份与优惠为演示资料。",
+              "临期燕麦饼干为临期商品，标注到期日为2026年10月20日。"
+            ]
+          },
+          {
+            "type": "recommendation_plan",
+            "plan_id": "plan_4670798f20e14552f492",
+            "plan_type": "single_product",
+            "title": "备选方案 2",
+            "rank": 3,
+            "group_id": "group_self",
+            "items": [
+              {
+                "sku_id": "P009",
+                "product_name": "无糖薄荷糖",
+                "quantity": 1,
+                "unit_price_fen": 790,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 790,
+              "discounts": [],
+              "merchandise_payable_fen": 790,
+              "shipping_fen": 600,
+              "total_payable_fen": 1390,
+              "conditions": []
+            },
+            "reasons": [
+              "符合已确认的硬条件和基础购买数量。",
+              "商品应付和运费分别列出，便于比较实际支出。"
+            ],
+            "notes": [
+              "商品、身份与优惠为演示资料。"
+            ]
+          }
+        ]
+      },
+      "clarification": null,
+      "error": null
+    }
+  },
+  "pricing_goldens": [],
+  "seconds": 10.795,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "completed"
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "指定故障或对抗介入已实际应用",
+      "passed": true,
+      "actual": "preload_three_stable_plan_ids"
+    },
+    {
+      "name": "第二个低糖，未选择的首尾方案保留",
+      "passed": false,
+      "actual": null
+    }
+  ],
+  "passed": false
+}

@@ -1,0 +1,13 @@
+{
+  "verified_on": "2026-10-07",
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "direct_connection_passed": true,
+  "structured_extraction_passed": true,
+  "customer_service_restarted": true,
+  "order_query_engine": "deepseek",
+  "database_order_match_passed": true,
+  "conversation_followup_passed": true,
+  "is_demo": true,
+  "credentials_included": false
+}

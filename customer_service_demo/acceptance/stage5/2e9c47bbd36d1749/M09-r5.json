@@ -1,0 +1,585 @@
+{
+  "case_id": "M09",
+  "title": "对象分组不混口味",
+  "repetition": 5,
+  "implementation_hash": "2e9c47bbd36d1749",
+  "executed_at": "2026-10-08T12:59:05.741145+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_ea41ef4f0cdd41949906883507bb0048",
+        "expected_revision": 0,
+        "message": "给同事买不辣的，我自己想要辣的，每份 40 元以内",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_74d2363cafd84ca6ad3a69384f0f4b5e",
+        "request_id": "req_ea41ef4f0cdd41949906883507bb0048",
+        "turn_id": "turn_42e1226df0e64f96ac61bb5d309f951c",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "no_match",
+        "message": {
+          "id": "msg_44920d62c27d4e34b53d5f6c1ac7f734",
+          "role": "assistant",
+          "content": "现有演示商品和已确认优惠中，没有同时满足购买数量及预算的方案。没有擅自放宽预算或减少数量。",
+          "cards": []
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_74d2363cafd84ca6ad3a69384f0f4b5e",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_colleague",
+                "label": "给同事的零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": 4000,
+                  "strictness": "strict",
+                  "scope": "per_unit",
+                  "source_text": "每份 40 元以内",
+                  "min_is_hard": false,
+                  "source_turn_id": "turn_42e1226df0e64f96ac61bb5d309f951c"
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_colleague_spice",
+                    "field": "taste",
+                    "operator": "equals",
+                    "value": "spice:none",
+                    "strength": "hard",
+                    "source_text": "给同事买不辣的",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_42e1226df0e64f96ac61bb5d309f951c"
+                  },
+                  {
+                    "constraint_id": "c_colleague_purpose",
+                    "field": "purpose",
+                    "operator": "equals",
+                    "value": "gift",
+                    "strength": "hard",
+                    "source_text": "给同事买",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_42e1226df0e64f96ac61bb5d309f951c"
+                  }
+                ]
+              },
+              {
+                "group_id": "group_self",
+                "label": "我自己的零食",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": 4000,
+                  "strictness": "strict",
+                  "scope": "per_unit",
+                  "source_text": "每份 40 元以内",
+                  "min_is_hard": false,
+                  "source_turn_id": "turn_42e1226df0e64f96ac61bb5d309f951c"
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_self_spice",
+                    "field": "taste",
+                    "operator": "equals",
+                    "value": "spice:hot",
+                    "strength": "hard",
+                    "source_text": "我自己想要辣的",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_42e1226df0e64f96ac61bb5d309f951c"
+                  },
+                  {
+                    "constraint_id": "c_self_purpose",
+                    "field": "purpose",
+                    "operator": "equals",
+                    "value": "self",
+                    "strength": "hard",
+                    "source_text": "我自己想要辣的",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_42e1226df0e64f96ac61bb5d309f951c"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": null,
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_0c0155e2044c4d5e9d1973377e13a796",
+          "role": "user",
+          "content": "给同事买不辣的，我自己想要辣的，每份 40 元以内",
+          "turn_id": "turn_42e1226df0e64f96ac61bb5d309f951c"
+        },
+        {
+          "id": "msg_44920d62c27d4e34b53d5f6c1ac7f734",
+          "role": "assistant",
+          "content": "现有演示商品和已确认优惠中，没有同时满足购买数量及预算的方案。没有擅自放宽预算或减少数量。",
+          "cards": [],
+          "turn_id": "turn_42e1226df0e64f96ac61bb5d309f951c",
+          "status": "no_match"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_colleague": {
+            "P001": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P002": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P003": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P004": [
+              "constraint:c_colleague_spice",
+              "constraint:c_colleague_purpose"
+            ],
+            "P005": [
+              "constraint:c_colleague_spice",
+              "constraint:c_colleague_purpose"
+            ],
+            "P006": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P007": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P008": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P009": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P010": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P011": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P012": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P013": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P016": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P017": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P018": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P019": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P020": [
+              "constraint:c_colleague_spice",
+              "constraint:c_colleague_purpose"
+            ],
+            "P021": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P022": [
+              "stock_unknown_or_empty",
+              "constraint:c_colleague_purpose"
+            ],
+            "P023": [
+              "constraint:c_colleague_spice",
+              "constraint:c_colleague_purpose"
+            ],
+            "P024": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P025": [
+              "expired_or_unknown",
+              "constraint:c_colleague_purpose"
+            ],
+            "P026": [
+              "price_unknown",
+              "constraint:c_colleague_purpose"
+            ],
+            "P027": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P028": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P029": [
+              "constraint:c_colleague_purpose"
+            ],
+            "P030": [
+              "constraint:c_colleague_spice",
+              "constraint:c_colleague_purpose"
+            ]
+          },
+          "group_self": {
+            "P001": [
+              "constraint:c_self_spice"
+            ],
+            "P002": [
+              "constraint:c_self_spice"
+            ],
+            "P003": [
+              "constraint:c_self_spice"
+            ],
+            "P004": [
+              "constraint:c_self_spice"
+            ],
+            "P006": [
+              "constraint:c_self_spice"
+            ],
+            "P007": [
+              "constraint:c_self_spice"
+            ],
+            "P008": [
+              "constraint:c_self_spice"
+            ],
+            "P009": [
+              "constraint:c_self_spice"
+            ],
+            "P010": [
+              "constraint:c_self_spice"
+            ],
+            "P011": [
+              "constraint:c_self_spice"
+            ],
+            "P012": [
+              "constraint:c_self_spice"
+            ],
+            "P013": [
+              "constraint:c_self_spice"
+            ],
+            "P014": [
+              "constraint:c_self_spice"
+            ],
+            "P015": [
+              "constraint:c_self_spice"
+            ],
+            "P016": [
+              "constraint:c_self_spice"
+            ],
+            "P017": [
+              "constraint:c_self_spice"
+            ],
+            "P018": [
+              "constraint:c_self_spice"
+            ],
+            "P019": [
+              "constraint:c_self_spice"
+            ],
+            "P020": [
+              "constraint:c_self_spice"
+            ],
+            "P021": [
+              "constraint:c_self_spice"
+            ],
+            "P022": [
+              "stock_unknown_or_empty",
+              "constraint:c_self_spice"
+            ],
+            "P023": [
+              "constraint:c_self_spice"
+            ],
+            "P024": [
+              "constraint:c_self_spice"
+            ],
+            "P025": [
+              "expired_or_unknown",
+              "constraint:c_self_spice"
+            ],
+            "P026": [
+              "price_unknown",
+              "constraint:c_self_spice"
+            ],
+            "P027": [
+              "constraint:c_self_spice"
+            ],
+            "P028": [
+              "constraint:c_self_spice"
+            ],
+            "P029": [
+              "constraint:c_self_spice"
+            ],
+            "P030": [
+              "constraint:c_self_spice"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 2,
+        "priced_cart_count": 2
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "给同事买不辣的，我自己想要辣的，每份 40 元以内",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_colleague",
+            "label": "给同事的零食",
+            "budget": {
+              "min_fen": null,
+              "max_fen": 4000,
+              "strictness": "strict",
+              "scope": "per_unit",
+              "source_text": "每份 40 元以内",
+              "min_is_hard": false
+            },
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_colleague_spice",
+                "field": "taste",
+                "operator": "equals",
+                "value": "spice:none",
+                "strength": "hard",
+                "source_text": "给同事买不辣的",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_colleague_purpose",
+                "field": "purpose",
+                "operator": "equals",
+                "value": "gift",
+                "strength": "hard",
+                "source_text": "给同事买",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          },
+          {
+            "group_id": "group_self",
+            "label": "我自己的零食",
+            "budget": {
+              "min_fen": null,
+              "max_fen": 4000,
+              "strictness": "strict",
+              "scope": "per_unit",
+              "source_text": "每份 40 元以内",
+              "min_is_hard": false
+            },
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_self_spice",
+                "field": "taste",
+                "operator": "equals",
+                "value": "spice:hot",
+                "strength": "hard",
+                "source_text": "我自己想要辣的",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_self_purpose",
+                "field": "purpose",
+                "operator": "equals",
+                "value": "self",
+                "strength": "hard",
+                "source_text": "我自己想要辣的",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "shared_budget": null,
+        "clarification": null,
+        "retrieval_hints": []
+      },
+      "seconds": 2.662
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 2.698,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": false,
+      "actual": "no_match"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "两对象分组、每份独立40元预算",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "两组口味互不混淆",
+      "passed": false,
+      "actual": null
+    }
+  ],
+  "passed": false
+}

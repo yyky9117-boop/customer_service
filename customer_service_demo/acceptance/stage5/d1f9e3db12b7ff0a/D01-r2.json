@@ -1,0 +1,1210 @@
+{
+  "case_id": "D01",
+  "title": "价格文字与卡片一致",
+  "repetition": 2,
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "executed_at": "2026-10-08T13:11:50.494140+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_3913326ec1af420ca14d438b3cbdf15e",
+        "expected_revision": 0,
+        "message": "四件微辣牛肉粒多少钱",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_f2f5bf18face446197bcb48562d7bf24",
+        "request_id": "req_3913326ec1af420ca14d438b3cbdf15e",
+        "turn_id": "turn_207d7c3283a14d0f8187402a5f65d687",
+        "base_revision": 0,
+        "revision": 1,
+        "module": "product_recommendation",
+        "status": "completed",
+        "message": {
+          "id": "msg_e878563303034b3894a10bf5f4a9ff83",
+          "role": "assistant",
+          "content": "亲～，您想要四件微辣牛肉粒，这款就能直接对上您的需求😊\n\n首选是微辣牛肉粒（4件），独立内包装，看剧时随手开一包取用方便，价格方面含运费99.24元，已计入肉类两件及以上 9 折。\n\n另外提醒一下，这款商品您要的件数一次取用可能稍多，具体配送区域还没确认，如果调整数量或搭配再聊就好。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_73eb79f27826ef05b2d6",
+              "plan_type": "multi_quantity",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_beef_cube",
+              "items": [
+                {
+                  "sku_id": "P004",
+                  "product_name": "微辣牛肉粒",
+                  "quantity": 4,
+                  "unit_price_fen": 2590,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 10360,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_MEAT",
+                    "label": "肉类两件及以上 9 折",
+                    "amount_fen": 1036,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 9324,
+                "shipping_fen": 600,
+                "total_payable_fen": 9924,
+                "conditions": []
+              },
+              "reasons": [
+                "独立内包装，看剧时随手开一包取用方便",
+                "微辣风味且低甜度标签，符合微辣偏好"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ]
+        },
+        "clarification": null,
+        "error": null
+      },
+      "session": {
+        "schema_version": "1.0",
+        "conversation_id": "conv_f2f5bf18face446197bcb48562d7bf24",
+        "revision": 1,
+        "active_module": "product_recommendation",
+        "updated_at": "2026-10-07T12:00:00+08:00",
+        "module_states": {
+          "product_recommendation": {
+            "need_groups": [
+              {
+                "group_id": "group_beef_cube",
+                "label": "微辣牛肉粒",
+                "budget": {
+                  "min_fen": null,
+                  "max_fen": null,
+                  "strictness": "unknown",
+                  "scope": "unknown",
+                  "source_turn_id": null,
+                  "source_text": ""
+                },
+                "constraints": [
+                  {
+                    "constraint_id": "c_sku_beef_cube",
+                    "field": "other",
+                    "operator": "equals",
+                    "value": "sku:P004",
+                    "strength": "hard",
+                    "source_text": "微辣牛肉粒",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_207d7c3283a14d0f8187402a5f65d687"
+                  },
+                  {
+                    "constraint_id": "c_qty_beef_cube",
+                    "field": "quantity",
+                    "operator": "equals",
+                    "value": 4,
+                    "strength": "hard",
+                    "source_text": "四件微辣牛肉粒",
+                    "origin": "explicit",
+                    "derived_from": [],
+                    "status": "active",
+                    "source_turn_id": "turn_207d7c3283a14d0f8187402a5f65d687"
+                  }
+                ]
+              }
+            ],
+            "pending_clarification": null,
+            "last_presentation": {
+              "message_id": "msg_e878563303034b3894a10bf5f4a9ff83",
+              "turn_id": "turn_207d7c3283a14d0f8187402a5f65d687",
+              "plan_order": [
+                {
+                  "plan_id": "plan_73eb79f27826ef05b2d6",
+                  "sku_ids": [
+                    "P004"
+                  ]
+                }
+              ]
+            },
+            "shared_budget": null
+          }
+        }
+      },
+      "history": [
+        {
+          "id": "msg_7530e34bdac441e28cf80e1793e37cf1",
+          "role": "user",
+          "content": "四件微辣牛肉粒多少钱",
+          "turn_id": "turn_207d7c3283a14d0f8187402a5f65d687"
+        },
+        {
+          "id": "msg_e878563303034b3894a10bf5f4a9ff83",
+          "role": "assistant",
+          "content": "亲～，您想要四件微辣牛肉粒，这款就能直接对上您的需求😊\n\n首选是微辣牛肉粒（4件），独立内包装，看剧时随手开一包取用方便，价格方面含运费99.24元，已计入肉类两件及以上 9 折。\n\n另外提醒一下，这款商品您要的件数一次取用可能稍多，具体配送区域还没确认，如果调整数量或搭配再聊就好。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "cards": [
+            {
+              "type": "recommendation_plan",
+              "plan_id": "plan_73eb79f27826ef05b2d6",
+              "plan_type": "multi_quantity",
+              "title": "首选方案",
+              "rank": 1,
+              "group_id": "group_beef_cube",
+              "items": [
+                {
+                  "sku_id": "P004",
+                  "product_name": "微辣牛肉粒",
+                  "quantity": 4,
+                  "unit_price_fen": 2590,
+                  "image_url": null
+                }
+              ],
+              "pricing": {
+                "currency": "CNY",
+                "status": "confirmed",
+                "subtotal_fen": 10360,
+                "discounts": [
+                  {
+                    "kind": "activity",
+                    "id": "A_MEAT",
+                    "label": "肉类两件及以上 9 折",
+                    "amount_fen": 1036,
+                    "eligibility": "eligible"
+                  }
+                ],
+                "merchandise_payable_fen": 9324,
+                "shipping_fen": 600,
+                "total_payable_fen": 9924,
+                "conditions": []
+              },
+              "reasons": [
+                "独立内包装，看剧时随手开一包取用方便",
+                "微辣风味且低甜度标签，符合微辣偏好"
+              ],
+              "notes": [
+                "商品、身份与优惠为演示资料。"
+              ]
+            }
+          ],
+          "turn_id": "turn_207d7c3283a14d0f8187402a5f65d687",
+          "status": "completed"
+        }
+      ],
+      "diagnostics": {
+        "model_attempts": 1,
+        "engine": "structured_recommendation",
+        "rejections": {
+          "group_beef_cube": {
+            "P001": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P002": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P003": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P005": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P006": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P007": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P008": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P009": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P010": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P011": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P012": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P013": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P014": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P015": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P016": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P017": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P018": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P019": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P020": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P021": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P022": [
+              "stock_unknown_or_empty",
+              "constraint:c_sku_beef_cube"
+            ],
+            "P023": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P024": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P025": [
+              "expired_or_unknown",
+              "constraint:c_sku_beef_cube"
+            ],
+            "P026": [
+              "price_unknown",
+              "constraint:c_sku_beef_cube"
+            ],
+            "P027": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P028": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P029": [
+              "constraint:c_sku_beef_cube"
+            ],
+            "P030": [
+              "constraint:c_sku_beef_cube"
+            ]
+          }
+        },
+        "quarantined_skus": [],
+        "candidate_count": 1,
+        "priced_cart_count": 1,
+        "reply_mode": "deepseek_reasons_composition_review",
+        "reason_attempts": 1,
+        "reply_attempts": 2,
+        "reply_review_passed": true
+      }
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "四件微辣牛肉粒多少钱",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P001",
+            "product_name": "原味燕麦小饼干"
+          },
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P003",
+            "product_name": "蒜香青豆"
+          },
+          {
+            "sku_id": "P004",
+            "product_name": "微辣牛肉粒"
+          },
+          {
+            "sku_id": "P005",
+            "product_name": "香辣牛肉干"
+          },
+          {
+            "sku_id": "P006",
+            "product_name": "原味腰果"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          },
+          {
+            "sku_id": "P008",
+            "product_name": "黑巧克力"
+          },
+          {
+            "sku_id": "P009",
+            "product_name": "无糖薄荷糖"
+          },
+          {
+            "sku_id": "P010",
+            "product_name": "果汁软糖"
+          },
+          {
+            "sku_id": "P011",
+            "product_name": "果干分享袋"
+          },
+          {
+            "sku_id": "P012",
+            "product_name": "原味爆米花"
+          },
+          {
+            "sku_id": "P013",
+            "product_name": "低糖谷物棒"
+          },
+          {
+            "sku_id": "P014",
+            "product_name": "混合坚果礼盒"
+          },
+          {
+            "sku_id": "P015",
+            "product_name": "饼干礼盒"
+          },
+          {
+            "sku_id": "P016",
+            "product_name": "每日坚果混合包"
+          },
+          {
+            "sku_id": "P017",
+            "product_name": "芝士夹心饼干"
+          },
+          {
+            "sku_id": "P018",
+            "product_name": "陈皮梅"
+          },
+          {
+            "sku_id": "P019",
+            "product_name": "原味苏打饼干"
+          },
+          {
+            "sku_id": "P020",
+            "product_name": "牛肉粒家庭装"
+          },
+          {
+            "sku_id": "P021",
+            "product_name": "糖渍山楂条"
+          },
+          {
+            "sku_id": "P022",
+            "product_name": "原味海苔片（无库存）"
+          },
+          {
+            "sku_id": "P023",
+            "product_name": "资料待补充的混合零食"
+          },
+          {
+            "sku_id": "P024",
+            "product_name": "临期燕麦饼干"
+          },
+          {
+            "sku_id": "P025",
+            "product_name": "已过期曲奇"
+          },
+          {
+            "sku_id": "P026",
+            "product_name": "价格待确认的海苔"
+          },
+          {
+            "sku_id": "P027",
+            "product_name": "无糖气泡水"
+          },
+          {
+            "sku_id": "P028",
+            "product_name": "烘焙南瓜子"
+          },
+          {
+            "sku_id": "P029",
+            "product_name": "户外谷物棒"
+          },
+          {
+            "sku_id": "P030",
+            "product_name": "黑椒猪肉脯"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_beef_cube",
+            "label": "微辣牛肉粒",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_sku_beef_cube",
+                "field": "other",
+                "operator": "equals",
+                "value": "sku:P004",
+                "strength": "hard",
+                "source_text": "微辣牛肉粒",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_qty_beef_cube",
+                "field": "quantity",
+                "operator": "equals",
+                "value": 4,
+                "strength": "hard",
+                "source_text": "四件微辣牛肉粒",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": [
+          "P004"
+        ]
+      },
+      "seconds": 1.134
+    },
+    {
+      "stage": "generate_reasons",
+      "repair": null,
+      "input": {
+        "user_message": "四件微辣牛肉粒多少钱",
+        "need_summary": "买4件",
+        "plans": [
+          {
+            "plan_id": "plan_73eb79f27826ef05b2d6",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P004",
+                "product_name": "微辣牛肉粒",
+                "quantity": 4,
+                "unit_price_fen": 2590,
+                "image_url": null
+              }
+            ],
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "微辣牛肉粒，购买4件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "微辣牛肉粒：微辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "微辣牛肉粒：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "微辣牛肉粒：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "微辣牛肉粒：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "微辣牛肉粒：已知单个内包20克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "微辣牛肉粒：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "微辣牛肉粒：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "微辣牛肉粒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "微辣牛肉粒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "微辣牛肉粒：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费99.24元；商品应付93.24元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P004，符合的商品仅为：微辣牛肉粒。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "offer",
+                "text": "已计入肉类两件及以上 9 折。"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "plans": [
+          {
+            "plan_id": "plan_73eb79f27826ef05b2d6",
+            "reasons": [
+              {
+                "text": "独立内包装，看剧时随手开一包取用方便",
+                "fact_ids": [
+                  "p1_f5",
+                  "p1_f11"
+                ]
+              },
+              {
+                "text": "微辣风味且低甜度标签，符合微辣偏好",
+                "fact_ids": [
+                  "p1_f2",
+                  "p1_f4"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "seconds": 1.152
+    },
+    {
+      "stage": "compose_reply",
+      "repair": null,
+      "input": {
+        "user_message": "四件微辣牛肉粒多少钱",
+        "need_summary": "买4件",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_beef_cube",
+              "label": "微辣牛肉粒",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_sku_beef_cube",
+                  "field": "other",
+                  "operator": "equals",
+                  "value": "sku:P004",
+                  "strength": "hard",
+                  "source_text": "微辣牛肉粒",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_207d7c3283a14d0f8187402a5f65d687"
+                },
+                {
+                  "constraint_id": "c_qty_beef_cube",
+                  "field": "quantity",
+                  "operator": "equals",
+                  "value": 4,
+                  "strength": "hard",
+                  "source_text": "四件微辣牛肉粒",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_207d7c3283a14d0f8187402a5f65d687"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_73eb79f27826ef05b2d6",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P004",
+                "product_name": "微辣牛肉粒",
+                "quantity": 4,
+                "unit_price_fen": 2590,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 10360,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_MEAT",
+                  "label": "肉类两件及以上 9 折",
+                  "amount_fen": 1036,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 9324,
+              "shipping_fen": 600,
+              "total_payable_fen": 9924,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "微辣牛肉粒，购买4件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "微辣牛肉粒：微辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "微辣牛肉粒：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "微辣牛肉粒：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "微辣牛肉粒：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "微辣牛肉粒：已知单个内包20克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "微辣牛肉粒：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "微辣牛肉粒：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "微辣牛肉粒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "微辣牛肉粒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "微辣牛肉粒：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "微辣牛肉粒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费99.24元；商品应付93.24元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P004，符合的商品仅为：微辣牛肉粒。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "offer",
+                "text": "已计入肉类两件及以上 9 折。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "买4件",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "微辣牛肉粒（4件）",
+          "p1_price": "含运费99.24元",
+          "p1_offer": "已计入肉类两件及以上 9 折。",
+          "p1_reason_1": "独立内包装，看剧时随手开一包取用方便",
+          "p1_reason_2": "微辣风味且低甜度标签，符合微辣偏好"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_73eb79f27826ef05b2d6",
+              "reasons": [
+                {
+                  "text": "独立内包装，看剧时随手开一包取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f11"
+                  ]
+                },
+                {
+                  "text": "微辣风味且低甜度标签，符合微辣偏好",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f4"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，您问的是4件微辣牛肉粒的价格，我帮您看了一下，目前只有这一款直接对上您要的微辣牛肉粒，购买4件比较直接😊\n\n首选就是{{p1_items}}，{{p1_reason_1}}，而且{{p1_offer}}，算下来{{p1_price}}。\n\n这款就是微辣牛肉粒本身，微辣风味也和您说的需求一致；如果想换组合或调整件数，现在没有别的更贴合“微辣牛肉粒4件”的方案可选。\n\n{{follow_up}}"
+      },
+      "seconds": 1.537
+    },
+    {
+      "stage": "compose_reply",
+      "repair": "商品、数量、价格、日期必须由已提供的占位符引用，不能自行填写数字\n上次错误草稿（不是事实）：{\"template\": \"亲～，您问的是4件微辣牛肉粒的价格，我帮您看了一下，目前只有这一款直接对上您要的微辣牛肉粒，购买4件比较直接😊\\n\\n首选就是{{p1_items}}，{{p1_reason_1}}，而且{{p1_offer}}，算下来{{p1_price}}。\\n\\n这款就是微辣牛肉粒本身，微辣风味也和您说的需求一致；如果想换组合或调整件数，现在没有别的更贴合“微辣牛肉粒4件”的方案可选。\\n\\n{{follow_up}}\"}",
+      "input": {
+        "user_message": "四件微辣牛肉粒多少钱",
+        "need_summary": "买4件",
+        "needs": {
+          "need_groups": [
+            {
+              "group_id": "group_beef_cube",
+              "label": "微辣牛肉粒",
+              "budget": {
+                "min_fen": null,
+                "max_fen": null,
+                "strictness": "unknown",
+                "scope": "unknown",
+                "source_turn_id": null,
+                "source_text": ""
+              },
+              "constraints": [
+                {
+                  "constraint_id": "c_sku_beef_cube",
+                  "field": "other",
+                  "operator": "equals",
+                  "value": "sku:P004",
+                  "strength": "hard",
+                  "source_text": "微辣牛肉粒",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_207d7c3283a14d0f8187402a5f65d687"
+                },
+                {
+                  "constraint_id": "c_qty_beef_cube",
+                  "field": "quantity",
+                  "operator": "equals",
+                  "value": 4,
+                  "strength": "hard",
+                  "source_text": "四件微辣牛肉粒",
+                  "origin": "explicit",
+                  "derived_from": [],
+                  "status": "active",
+                  "source_turn_id": "turn_207d7c3283a14d0f8187402a5f65d687"
+                }
+              ]
+            }
+          ],
+          "pending_clarification": null,
+          "last_presentation": null,
+          "shared_budget": null
+        },
+        "plans": [
+          {
+            "plan_id": "plan_73eb79f27826ef05b2d6",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P004",
+                "product_name": "微辣牛肉粒",
+                "quantity": 4,
+                "unit_price_fen": 2590,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 10360,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_MEAT",
+                  "label": "肉类两件及以上 9 折",
+                  "amount_fen": 1036,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 9324,
+              "shipping_fen": 600,
+              "total_payable_fen": 9924,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "微辣牛肉粒，购买4件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "微辣牛肉粒：微辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "微辣牛肉粒：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "微辣牛肉粒：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "微辣牛肉粒：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "微辣牛肉粒：已知单个内包20克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "微辣牛肉粒：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "微辣牛肉粒：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "微辣牛肉粒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "微辣牛肉粒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "微辣牛肉粒：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "微辣牛肉粒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费99.24元；商品应付93.24元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P004，符合的商品仅为：微辣牛肉粒。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "offer",
+                "text": "已计入肉类两件及以上 9 折。"
+              }
+            ]
+          }
+        ],
+        "tokens": {
+          "need_summary": "买4件",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "微辣牛肉粒（4件）",
+          "p1_price": "含运费99.24元",
+          "p1_offer": "已计入肉类两件及以上 9 折。",
+          "p1_reason_1": "独立内包装，看剧时随手开一包取用方便",
+          "p1_reason_2": "微辣风味且低甜度标签，符合微辣偏好"
+        },
+        "reason_candidates": {
+          "plans": [
+            {
+              "plan_id": "plan_73eb79f27826ef05b2d6",
+              "reasons": [
+                {
+                  "text": "独立内包装，看剧时随手开一包取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f11"
+                  ]
+                },
+                {
+                  "text": "微辣风味且低甜度标签，符合微辣偏好",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f4"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "output": {
+        "template": "亲～，您想要四件微辣牛肉粒，这款就能直接对上您的需求😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，价格方面{{p1_price}}，{{p1_offer}}\n\n另外提醒一下，这款商品您要的件数一次取用可能稍多，具体配送区域还没确认，如果调整数量或搭配再聊就好。\n\n{{follow_up}}"
+      },
+      "seconds": 0.966
+    },
+    {
+      "stage": "review_reply",
+      "repair": null,
+      "input": {
+        "user_message": "四件微辣牛肉粒多少钱",
+        "need_summary": "买4件",
+        "plans": [
+          {
+            "plan_id": "plan_73eb79f27826ef05b2d6",
+            "rank": 1,
+            "items": [
+              {
+                "sku_id": "P004",
+                "product_name": "微辣牛肉粒",
+                "quantity": 4,
+                "unit_price_fen": 2590,
+                "image_url": null
+              }
+            ],
+            "pricing": {
+              "currency": "CNY",
+              "status": "confirmed",
+              "subtotal_fen": 10360,
+              "discounts": [
+                {
+                  "kind": "activity",
+                  "id": "A_MEAT",
+                  "label": "肉类两件及以上 9 折",
+                  "amount_fen": 1036,
+                  "eligibility": "eligible"
+                }
+              ],
+              "merchandise_payable_fen": 9324,
+              "shipping_fen": 600,
+              "total_payable_fen": 9924,
+              "conditions": []
+            },
+            "facts": [
+              {
+                "id": "p1_f1",
+                "kind": "purchase",
+                "text": "微辣牛肉粒，购买4件。"
+              },
+              {
+                "id": "p1_f2",
+                "kind": "spice_level",
+                "text": "微辣牛肉粒：微辣。"
+              },
+              {
+                "id": "p1_f3",
+                "kind": "sugar_label",
+                "text": "微辣牛肉粒：普通糖标签。"
+              },
+              {
+                "id": "p1_f4",
+                "kind": "sweetness",
+                "text": "微辣牛肉粒：低甜度标签。"
+              },
+              {
+                "id": "p1_f5",
+                "kind": "packaging",
+                "text": "微辣牛肉粒：独立内包装。"
+              },
+              {
+                "id": "p1_f6",
+                "kind": "packaging",
+                "text": "微辣牛肉粒：已知单个内包20克。"
+              },
+              {
+                "id": "p1_f7",
+                "kind": "ingredients",
+                "text": "微辣牛肉粒：ingredients=['beef', 'chili', 'soy_sauce']"
+              },
+              {
+                "id": "p1_f8",
+                "kind": "declared_allergens",
+                "text": "微辣牛肉粒：declared_allergens=['soy', 'gluten']"
+              },
+              {
+                "id": "p1_f9",
+                "kind": "may_contain_allergens",
+                "text": "微辣牛肉粒：may_contain_allergens=[]"
+              },
+              {
+                "id": "p1_f10",
+                "kind": "selling_points",
+                "text": "微辣牛肉粒：selling_points=['独立包装']"
+              },
+              {
+                "id": "p1_f11",
+                "kind": "scene_tags",
+                "text": "微辣牛肉粒：scene_tags=['watching_tv']"
+              },
+              {
+                "id": "p1_f12",
+                "kind": "expiry",
+                "text": "微辣牛肉粒：标注到期时间 2027-03-31T23:59:59+08:00"
+              },
+              {
+                "id": "p1_f13",
+                "kind": "pricing",
+                "text": "含运费99.24元；商品应付93.24元。"
+              },
+              {
+                "id": "p1_f14",
+                "kind": "need_match",
+                "text": "对于需求 other equals sku:P004，符合的商品仅为：微辣牛肉粒。"
+              },
+              {
+                "id": "p1_f15",
+                "kind": "boundary",
+                "text": "商品、身份与优惠为演示资料。"
+              },
+              {
+                "id": "p1_f16",
+                "kind": "offer",
+                "text": "已计入肉类两件及以上 9 折。"
+              }
+            ]
+          }
+        ],
+        "protected_tokens": {
+          "need_summary": "买4件",
+          "follow_up": "想改数量、预算或搭配，可以选中卡片上的商品继续聊。",
+          "p1_items": "微辣牛肉粒（4件）",
+          "p1_price": "含运费99.24元",
+          "p1_offer": "已计入肉类两件及以上 9 折。",
+          "p1_reason_1": "独立内包装，看剧时随手开一包取用方便",
+          "p1_reason_2": "微辣风味且低甜度标签，符合微辣偏好"
+        },
+        "generated_reasons": {
+          "plans": [
+            {
+              "plan_id": "plan_73eb79f27826ef05b2d6",
+              "reasons": [
+                {
+                  "text": "独立内包装，看剧时随手开一包取用方便",
+                  "fact_ids": [
+                    "p1_f5",
+                    "p1_f11"
+                  ]
+                },
+                {
+                  "text": "微辣风味且低甜度标签，符合微辣偏好",
+                  "fact_ids": [
+                    "p1_f2",
+                    "p1_f4"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "template": "亲～，您想要四件微辣牛肉粒，这款就能直接对上您的需求😊\n\n首选是{{p1_items}}，{{p1_reason_1}}，价格方面{{p1_price}}，{{p1_offer}}\n\n另外提醒一下，这款商品您要的件数一次取用可能稍多，具体配送区域还没确认，如果调整数量或搭配再聊就好。\n\n{{follow_up}}",
+        "reply": "亲～，您想要四件微辣牛肉粒，这款就能直接对上您的需求😊\n\n首选是微辣牛肉粒（4件），独立内包装，看剧时随手开一包取用方便，价格方面含运费99.24元，已计入肉类两件及以上 9 折。\n\n另外提醒一下，这款商品您要的件数一次取用可能稍多，具体配送区域还没确认，如果调整数量或搭配再聊就好。\n\n想改数量、预算或搭配，可以选中卡片上的商品继续聊。"
+      },
+      "output": {
+        "pass": true,
+        "issues": [],
+        "rewrite_instruction": ""
+      },
+      "seconds": 0.575
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 5.405,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": true,
+      "actual": "completed"
+    },
+    {
+      "name": "理由、话术及质检实际执行",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "客服话术包含需求、具体理由和友好引导",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "商品价格与名称来自权威商品表",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "库存、有效期与购买量",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "优惠资格与金额复核",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "passed": true
+}

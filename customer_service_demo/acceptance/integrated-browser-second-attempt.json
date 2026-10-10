@@ -1,0 +1,8 @@
+{
+  "verified_at": "2026-10-08T14:33:05.368Z",
+  "phase": "integrated",
+  "all_passed": false,
+  "checks": [],
+  "error": "Error: 需求理解结果未通过核验，请重新描述；本轮未保存。",
+  "console_errors": []
+}

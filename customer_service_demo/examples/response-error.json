@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "conversation_id": null,
+  "request_id": "req_demo_001",
+  "turn_id": null,
+  "base_revision": 0,
+  "revision": 0,
+  "module": "product_recommendation",
+  "status": "error",
+  "message": {
+    "id": "msg_demo_001",
+    "role": "assistant",
+    "content": "这次请求暂时没有完成，可以重试。",
+    "cards": []
+  },
+  "clarification": null,
+  "error": {
+    "code": "model_timeout",
+    "retryable": true
+  }
+}

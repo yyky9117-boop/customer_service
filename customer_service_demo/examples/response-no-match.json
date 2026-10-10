@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "conversation_id": "conv_demo_001",
+  "request_id": "req_demo_001",
+  "turn_id": "turn_demo_001",
+  "base_revision": 0,
+  "revision": 1,
+  "module": "product_recommendation",
+  "status": "no_match",
+  "message": {
+    "id": "msg_demo_001",
+    "role": "assistant",
+    "content": "目前没有同时满足这些条件的演示商品。您愿意调整包装要求吗？",
+    "cards": []
+  },
+  "clarification": null,
+  "error": null
+}

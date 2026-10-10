@@ -1,0 +1,218 @@
+{
+  "case_id": "F13",
+  "title": "赠品也须满足硬排除",
+  "repetition": 1,
+  "implementation_hash": "d1f9e3db12b7ff0a",
+  "executed_at": "2026-10-08T13:11:04.498262+00:00",
+  "layer": "real_deepseek_service",
+  "intervention": null,
+  "intervention_applied": false,
+  "turns": [
+    {
+      "request": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_a99480f584834b1bad0e12b01b7b7c4b",
+        "expected_revision": 0,
+        "message": "三件海苔，不要花生或含花生赠品",
+        "selected_reference": null
+      },
+      "response": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "request_id": "req_a99480f584834b1bad0e12b01b7b7c4b",
+        "turn_id": null,
+        "base_revision": 0,
+        "revision": 0,
+        "module": "product_recommendation",
+        "status": "error",
+        "message": {
+          "id": "msg_85d16cb10ab04e8e8ffc3573dba00f75",
+          "role": "assistant",
+          "content": "需求理解结果未通过核验，请重新描述；本轮未保存。",
+          "cards": []
+        },
+        "clarification": null,
+        "error": {
+          "code": "invalid_model_output",
+          "retryable": true
+        }
+      },
+      "session": null,
+      "history": [],
+      "diagnostics": null
+    }
+  ],
+  "model_calls": [
+    {
+      "stage": "extract",
+      "repair": null,
+      "input": {
+        "message": "三件海苔，不要花生或含花生赠品",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "海苔",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_category",
+                "field": "category",
+                "operator": "equals",
+                "value": "seaweed",
+                "strength": "hard",
+                "source_text": "海苔",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_quantity",
+                "field": "quantity",
+                "operator": "equals",
+                "value": 3,
+                "strength": "hard",
+                "source_text": "三件海苔",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_allergen_peanut",
+                "field": "ingredient",
+                "operator": "exclude",
+                "value": "allergen:peanut",
+                "strength": "hard",
+                "source_text": "不要花生或含花生赠品",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": [
+          "P002"
+        ],
+        "reference_action": null,
+        "reference_source_text": null
+      },
+      "seconds": 1.674
+    },
+    {
+      "stage": "extract",
+      "repair": "需求 JSON 结构错误: None is not one of ['retain_selected', 'replace_selected', 'recommend_alternatives']",
+      "input": {
+        "message": "三件海苔，不要花生或含花生赠品",
+        "module_state": {},
+        "history": [],
+        "selected_reference": null,
+        "catalog_identifiers": [
+          {
+            "sku_id": "P002",
+            "product_name": "原味海苔脆片"
+          },
+          {
+            "sku_id": "P007",
+            "product_name": "蜜汁花生米"
+          }
+        ]
+      },
+      "output": {
+        "intent": "recommend",
+        "reset": false,
+        "groups": [
+          {
+            "group_id": "group_self",
+            "label": "海苔零食",
+            "upsert_constraints": [
+              {
+                "constraint_id": "c_cat",
+                "field": "category",
+                "operator": "include",
+                "value": "seaweed",
+                "strength": "hard",
+                "source_text": "海苔",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_qty",
+                "field": "quantity",
+                "operator": "equals",
+                "value": 3,
+                "strength": "hard",
+                "source_text": "三件海苔",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_peanut",
+                "field": "ingredient",
+                "operator": "exclude",
+                "value": "ingredient:peanut",
+                "strength": "hard",
+                "source_text": "不要花生",
+                "origin": "explicit",
+                "derived_from": []
+              },
+              {
+                "constraint_id": "c_gift_peanut",
+                "field": "other",
+                "operator": "exclude",
+                "value": "peanut_gift",
+                "strength": "hard",
+                "source_text": "或含花生赠品",
+                "origin": "explicit",
+                "derived_from": []
+              }
+            ],
+            "remove_constraint_ids": []
+          }
+        ],
+        "remove_group_ids": [],
+        "clarification": null,
+        "retrieval_hints": [
+          "P002"
+        ]
+      },
+      "seconds": 1.483
+    }
+  ],
+  "pricing_goldens": [],
+  "seconds": 3.181,
+  "checks": [
+    {
+      "name": "原始场景最终状态",
+      "passed": false,
+      "actual": "error"
+    },
+    {
+      "name": "非完成状态无商品卡片",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "赠品也满足花生排除",
+      "passed": false,
+      "actual": null
+    }
+  ],
+  "passed": false
+}
